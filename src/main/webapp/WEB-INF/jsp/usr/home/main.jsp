@@ -20,8 +20,7 @@
 	비번: test2
 	테스트아이디: test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	비번: again!!
-	테스트아이디: !!!!!!
-	asdfasdklfjhaslkdjfasdf
+	테스트아이디: mainmain
 	
 	</div>
 	
