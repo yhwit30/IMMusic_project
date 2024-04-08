@@ -21,7 +21,7 @@
 
 
 	비번: again!!
-	테스트아이디: mainmain
+	테스트아이디: main
 
 	
 	</div>
