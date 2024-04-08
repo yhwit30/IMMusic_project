@@ -18,10 +18,7 @@
 	비번: test1<br/>
 	테스트아이디: test2
 	비번: test2
-	테스트아이디: test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	비번: again!!
-	테스트아이디: !!!!!!
-	asdfasdklfjhaslkdjfasdf
+
 	
 	</div>
 	
