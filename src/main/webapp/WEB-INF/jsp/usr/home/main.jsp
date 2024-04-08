@@ -18,9 +18,17 @@
 	비번: test1<br/>
 	테스트아이디: test2
 	비번: test2
+
 	테스트아이디: test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	비번: again!!
+<<<<<<< HEAD
 	테스트아이디: mainmain
+=======
+	테스트아이디: develop develop
+
+
+
+>>>>>>> develop
 	
 	</div>
 	
