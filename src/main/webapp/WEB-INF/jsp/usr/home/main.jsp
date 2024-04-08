@@ -24,6 +24,8 @@
 	테스트아이디: mainmain
 	
 	yhw added after 'git pull'
+	
+	main pushed. And yhw updated
 
 	
 	</div>
