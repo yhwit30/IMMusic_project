@@ -38,7 +38,10 @@
 <body>
 	<header>
 		<div class="h-14 flex items-center text-3xl">
-			<a href="/"> LOGO </a>
+			<a href="/"> 
+			 <img id="logo" src="/resource/IMMusicLogo.png" />
+			
+			</a>
 
 			<!-- 게시판 헤드 -->
 			<div class="flex-grow "></div>
