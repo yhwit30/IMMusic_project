@@ -19,27 +19,8 @@
 	테스트아이디: test2
 	비번: test2
 
+원상복귀 테스트
 
-	비번: again!!
-
-    
-	테스트아이디: mainmain
-	
-	yhw added after 'git pull'
-	
-	main pushed. And yhw updated
-
-          
-	테스트아이디: main
-	
-	이제 push만 해도 되나?
-=====
-yhw update again
-    
-    ====
-    and again
-
-	
 	</div>
 	
 
