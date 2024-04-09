@@ -28,23 +28,7 @@
 
 원상복귀 테스트!!!!!!!!!!!!
 
-<<<<<<< HEAD
-ohj branch add!!!!!!!!!!
-
-=======
-<<<<<<< HEAD
-yhw branch add
-
-=======
-ohj branch add
-    
->>>>>>> 4d5f1e41055629833f92cefbd2ca5a80eaa29649
->>>>>>> 2f2acf8081f956b89b5cd3b6d870c87e7e502eef
-	</div>
-	
-
-</div>
-
+ohj branch add~~~~~~~
 
 <style type="text/css">
 .mainSearch {
