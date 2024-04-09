@@ -28,13 +28,6 @@
 
 원상복귀 테스트!!!!!!!!!!!!
 
-<<<<<<< HEAD
-yhw branch add
-
-=======
-ohj branch add
-    
->>>>>>> 4d5f1e41055629833f92cefbd2ca5a80eaa29649
 	</div>
 	
 
