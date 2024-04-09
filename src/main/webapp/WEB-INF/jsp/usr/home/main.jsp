@@ -12,9 +12,10 @@
 	</div>
 	<div>
 	푸바오 귀여워!!
-
 	</div>
-	
+	<div>
+	테스트중~
+	</div>
 	<div>
 	테스트아이디: admin
 	비번: admin <br/>
@@ -22,12 +23,7 @@
 	비번: test1<br/>
 	테스트아이디: test2
 	비번: test2
-
 	</div>
-	
-
-</div>
-
 
 <style type="text/css">
 .mainSearch {
