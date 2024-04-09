@@ -1,32 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="MAIN"></c:set>
 <%@ include file="../common/head.jspf"%>
 
 
 <div class="page mt-10 mx-auto">
-	
+
 	<div>
-		<a class="btn btn-outline w-full" href="/usr/article/list">커뮤니티 보기(필요없음 코드더미용)</a>
-		<img src="/resource/community.png" alt="" />
+		<a class="btn btn-outline w-full" href="/usr/article/list">커뮤니티
+			보기(필요없음 코드더미용)</a> <img src="/resource/community.png" alt="" />
 	</div>
+	<div>푸바오 귀여워!!</div>
+	<div>테스트중~</div>
 	<div>
-	푸바오 귀여워!!
-	</div>
-	<div>
-	테스트중~
-	</div>
-	<div>
-	테스트아이디: admin
-	비번: admin <br/>
-	테스트아이디: test1
-	비번: test1<br/>
-	테스트아이디: test2
-	비번: test2
+		테스트아이디: admin 비번: admin <br /> 테스트아이디: test1 비번: test1<br /> 테스트아이디:
+		test2 비번: test2
+
+		<div>yhw branch add div로 감쌈</div>
 
 	</div>
 
-<style type="text/css">
+	<style type="text/css">
 .mainSearch {
 	text-align: center;
 }
@@ -70,5 +65,5 @@
 
 
 
-<!-- 페이지 하단 -->
-<%@ include file="../common/foot.jspf"%>
+	<!-- 페이지 하단 -->
+	<%@ include file="../common/foot.jspf"%>
