@@ -11,7 +11,11 @@
 		<img src="/resource/community.png" alt="" />
 	</div>
 	<div>
-	안뇽!!!sdfsdf
+	푸바오 귀여워!!
+	</div>
+	
+		<div>
+	점심 맛있게 드세요.
 	</div>
 	
 	<div>
@@ -24,7 +28,7 @@
 
 원상복귀 테스트
 
-ohj branch add
+ohj branch add!!!!!!!!!!
 
 	</div>
 	
