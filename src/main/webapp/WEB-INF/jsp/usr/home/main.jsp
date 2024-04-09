@@ -11,7 +11,7 @@
 		<img src="/resource/community.png" alt="" />
 	</div>
 	<div>
-	안뇽!!!sdfsdf
+	푸바오 귀여워!!
 	</div>
 	
 	<div>
