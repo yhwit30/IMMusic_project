@@ -10,6 +10,13 @@
 		<a class="btn btn-outline w-full" href="/usr/article/list">커뮤니티 보기(필요없음 코드더미용)</a>
 		<img src="/resource/community.png" alt="" />
 	</div>
+	<div>
+	푸바오 귀여워!!
+	</div>
+	
+		<div>
+	점심 맛있게 드세요.
+	</div>
 	
 	<div>
 	테스트아이디: admin
@@ -19,10 +26,15 @@
 	테스트아이디: test2
 	비번: test2
 
-원상복귀 테스트
+원상복귀 테스트!!!!!!!!!!!!
 
+<<<<<<< HEAD
 yhw branch add
 
+=======
+ohj branch add
+    
+>>>>>>> 4d5f1e41055629833f92cefbd2ca5a80eaa29649
 	</div>
 	
 
