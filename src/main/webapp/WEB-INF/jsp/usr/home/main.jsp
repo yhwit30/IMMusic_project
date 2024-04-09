@@ -10,6 +10,9 @@
 		<a class="btn btn-outline w-full" href="/usr/article/list">커뮤니티 보기(필요없음 코드더미용)</a>
 		<img src="/resource/community.png" alt="" />
 	</div>
+	<div>
+	안뇽!!!
+	</div>
 	
 	<div>
 	테스트아이디: admin
