@@ -24,9 +24,6 @@
 	테스트아이디: test2
 	비번: test2
 
-yhw branch add
-
-
 	</div>
 
 <style type="text/css">
