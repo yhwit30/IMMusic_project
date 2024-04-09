@@ -13,11 +13,9 @@
 	<div>
 	푸바오 귀여워!!
 	</div>
-	
-		<div>
-	점심 맛있게 드세요.
+	<div>
+	테스트중~
 	</div>
-	
 	<div>
 	테스트아이디: admin
 	비번: admin <br/>
@@ -25,10 +23,7 @@
 	비번: test1<br/>
 	테스트아이디: test2
 	비번: test2
-
-원상복귀 테스트!!!!!!!!!!!!
-
-213213231232
+	</div>
 
 <style type="text/css">
 .mainSearch {
