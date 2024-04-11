@@ -136,9 +136,9 @@ body {
 	font-size: 5rem; /* 텍스트 폰트 크기 설정 */
 }
 
-text {
+/* text {
 	font-size: 2rem;
-}
+} */
 
 /* 타임라인 스타일을 설정합니다. */
 .timeline ul {
@@ -191,12 +191,12 @@ text {
 	height: auto; /* 이미지 비율을 유지하면서 너비에 맞춰 조정 */
 }
 
-.solid {
+/* .solid {
 	border: 5px solid;
-}
+} */ 
 
-.double {
-	border: 5px double;
+.solid {
+	border: 2px solid;
 }
 
 title {
@@ -245,11 +245,11 @@ time {
 	display: block; /* 블록 요소로 설정 */
 	font-size: 1.2rem; /* 폰트 크기 설정 */
 	font-weight: bold; /* 폰트 두껍게 설정 */
-	margin-bottom: 8px; /* 하단 마진 설정 */
+	/* margin-bottom: 8px; 하단 마진 설정 */
 }
 
 .period {
-	font-size: 2.5rem; /* 폰트 크기 설정 */
+	font-size: 20px; /* 폰트 크기 설정 */
 }
 
 /* 타임라인 아이템의 효과 스타일을 설정합니다. */
