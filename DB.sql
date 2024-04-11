@@ -1,9 +1,9 @@
-DROP DATABASE IF EXISTS `Spring_AM_01`;
-CREATE DATABASE `Spring_AM_01`;
-USE `Spring_AM_01`;
+DROP DATABASE IF EXISTS `IMMusicDB`;
+CREATE DATABASE `IMMusicDB`;
+USE `IMMusicDB`;
 
-# article 테이블 생성
-CREATE TABLE article(
+# press 테이블 생성
+CREATE TABLE press(
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     regDate DATETIME NOT NULL,
     updateDate DATETIME NOT NULL,
@@ -28,26 +28,26 @@ CREATE TABLE `member`(
 );
 
 
-# article TD 생성
-INSERT INTO article
+# press TD 생성
+INSERT INTO press
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목1',
 `body` = '내용1';
 
-INSERT INTO article
+INSERT INTO press
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목2',
 `body` = '내용2';
 
-INSERT INTO article
+INSERT INTO press
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목3',
 `body` = '내용3';
 
-INSERT INTO article
+INSERT INTO press
 SET regDate = NOW(),
 updateDate = NOW(),
 title = '제목4',
@@ -88,13 +88,13 @@ nickname = '회원2',
 cellphoneNum = '01056785678',
 email = 'abcdef@gmail.com';
 
-ALTER TABLE article ADD COLUMN memberId INT(10) UNSIGNED NOT NULL AFTER updateDate;
+ALTER TABLE press ADD COLUMN memberId INT(10) UNSIGNED NOT NULL AFTER updateDate;
 
-UPDATE article
+UPDATE press
 SET memberId = 2
 WHERE id IN (1,2);
 
-UPDATE article
+UPDATE press
 SET memberId = 3
 WHERE id IN (3,4);
 
@@ -129,21 +129,21 @@ updateDate = NOW(),
 `code` = 'QnA',
 `name` = '질의응답';
 
-ALTER TABLE article ADD COLUMN boardId INT(10) UNSIGNED NOT NULL AFTER `memberId`;
+ALTER TABLE press ADD COLUMN boardId INT(10) UNSIGNED NOT NULL AFTER `memberId`;
 
-UPDATE article
+UPDATE press
 SET boardId = 1
 WHERE id IN (1,2);
 
-UPDATE article
+UPDATE press
 SET boardId = 2
 WHERE id = 3;
 
-UPDATE article
+UPDATE press
 SET boardId = 3
 WHERE id = 4;
 
-ALTER TABLE article ADD COLUMN hitCount INT(10) UNSIGNED NOT NULL DEFAULT 0 AFTER `body`;
+ALTER TABLE press ADD COLUMN hitCount INT(10) UNSIGNED NOT NULL DEFAULT 0 AFTER `body`;
 
 # reactionPoint 테이블 생성
 CREATE TABLE reactionPoint(
@@ -162,7 +162,7 @@ INSERT INTO reactionPoint
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 1,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `point` = -1;
 
@@ -171,7 +171,7 @@ INSERT INTO reactionPoint
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 1,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 2,
 `point` = 1;
 
@@ -180,7 +180,7 @@ INSERT INTO reactionPoint
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 2,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `point` = -1;
 
@@ -189,7 +189,7 @@ INSERT INTO reactionPoint
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 2,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 2,
 `point` = -1;
 
@@ -198,16 +198,16 @@ INSERT INTO reactionPoint
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 3,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `point` = 1;
 
-# article 테이블에 좋아요 관련 컬럼 추가
-ALTER TABLE article ADD COLUMN goodReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT 0;
-ALTER TABLE article ADD COLUMN badReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT 0;
+# press 테이블에 좋아요 관련 컬럼 추가
+ALTER TABLE press ADD COLUMN goodReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE press ADD COLUMN badReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT 0;
 
 # update join -> 기존 게시물의 good,bad RP 값을 RP 테이블에서 가져온 데이터로 채운다
-UPDATE article AS A
+UPDATE press AS A
 INNER JOIN (
     SELECT RP.relTypeCode,RP.relId,
     SUM(IF(RP.point > 0, RP.point, 0)) AS goodReactionPoint,
@@ -235,7 +235,7 @@ INSERT INTO reply
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 2,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `body` = '댓글 1';
 
@@ -244,7 +244,7 @@ INSERT INTO reply
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 2,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `body` = '댓글 2';
 
@@ -253,7 +253,7 @@ INSERT INTO reply
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 3,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 1,
 `body` = '댓글 3';
 
@@ -262,7 +262,7 @@ INSERT INTO reply
 SET regDate = NOW(),
 updateDate = NOW(),
 memberId = 2,
-relTypeCode = 'article',
+relTypeCode = 'press',
 relId = 2,
 `body` = '댓글 4';
 
@@ -336,7 +336,7 @@ CREATE TABLE genFile (
   updateDate DATETIME DEFAULT NULL, # 갱신날짜
   delDate DATETIME DEFAULT NULL, # 삭제날짜
   delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
-  relTypeCode CHAR(50) NOT NULL, # 관련 데이터 타입(article, member)
+  relTypeCode CHAR(50) NOT NULL, # 관련 데이터 타입(press, member)
   relId INT(10) UNSIGNED NOT NULL, # 관련 데이터 번호
   originFileName VARCHAR(100) NOT NULL, # 업로드 당시의 파일이름
   fileExt CHAR(10) NOT NULL, # 확장자
@@ -357,9 +357,9 @@ SET loginPw = SHA2(loginPw,256);
 
 ###############################################
 
-SELECT MAX(id) FROM article;
+SELECT MAX(id) FROM press;
 
-SELECT * FROM article;
+SELECT * FROM press;
 
 SELECT * FROM `member`;
 
@@ -373,11 +373,11 @@ SELECT * FROM `genFile`;
 
 SELECT *
 FROM reply
-WHERE relTypeCode = 'article'
+WHERE relTypeCode = 'press'
 AND relId = 1;
 
 SELECT A.*, M.nickname AS extra__writer, IFNULL(R.cnt,0) AS cnt
-FROM article AS A
+FROM press AS A
 INNER JOIN `member` AS M
 ON A.memberId = M.id
 LEFT JOIN (SELECT relId, COUNT(*) AS cnt FROM reply GROUP BY relId) AS R
@@ -387,7 +387,7 @@ ORDER BY A.id DESC;
 
 
 SELECT A.*, M.nickname AS extra__writer, COUNT(R.id) AS cnt
-FROM article AS A
+FROM press AS A
 INNER JOIN `member` AS M ON A.memberId = M.id
 LEFT JOIN `reply` AS R ON A.id = R.relId
 GROUP BY A.id
@@ -399,32 +399,32 @@ ORDER BY A.id DESC;
 
 
 SELECT goodReactionPoint
-FROM article 
+FROM press 
 WHERE id = 1
 
-INSERT INTO article
+INSERT INTO press
 (
     regDate, updateDate, memberId, boardId, title, `body`
 )
 SELECT NOW(),NOW(), FLOOR(RAND() * 2) + 2, FLOOR(RAND() * 3) + 1, CONCAT('제목_',RAND()), CONCAT('내용_',RAND())
-FROM article;
+FROM press;
 
 SELECT IFNULL(SUM(RP.point),0)
 FROM reactionPoint AS RP
-WHERE RP.relTypeCode = 'article'
+WHERE RP.relTypeCode = 'press'
 AND RP.relId = 3
 AND RP.memberId = 1;
 
 
-UPDATE article 
+UPDATE press 
 SET title = '제목5'
 WHERE id = 5;
 
-UPDATE article 
+UPDATE press 
 SET title = '제목11'
 WHERE id = 6;
 
-UPDATE article 
+UPDATE press 
 SET title = '제목45'
 WHERE id = 7;
 
@@ -441,7 +441,7 @@ DESC `member`;
 SELECT LAST_INSERT_ID();
 
 SELECT *
-FROM article AS A
+FROM press AS A
 WHERE 1
 
 	AND boardId = 1
@@ -452,7 +452,7 @@ WHERE 1
 ORDER BY id DESC
 
 SELECT COUNT(*)
-FROM article AS A
+FROM press AS A
 WHERE 1
 AND boardId = 1
 AND A.title LIKE CONCAT('%','0000','%')
@@ -461,26 +461,26 @@ ORDER BY id DESC
 
 
 SELECT hitCount
-FROM article
+FROM press
 WHERE id = 374;
 
 SELECT A.*
-FROM article AS A
+FROM press AS A
 WHERE A.id = 1
 
 SELECT A.*, M.nickname AS extra__writer
-FROM article AS A
+FROM press AS A
 INNER JOIN `member` AS M
 ON A.memberId = M.id
 WHERE A.id = 1
 
 # LEFT JOIN
 SELECT A.*, M.nickname AS extra__writer, RP.point
-FROM article AS A
+FROM press AS A
 INNER JOIN `member` AS M
 ON A.memberId = M.id
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'article'
+ON A.id = RP.relId AND RP.relTypeCode = 'press'
 GROUP BY A.id
 ORDER BY A.id DESC;
 
@@ -491,12 +491,12 @@ IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
 IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
 FROM (
     SELECT A.*, M.nickname AS extra__writer 
-    FROM article AS A
+    FROM press AS A
     INNER JOIN `member` AS M
     ON A.memberId = M.id
     ) AS A
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'article'
+ON A.id = RP.relId AND RP.relTypeCode = 'press'
 GROUP BY A.id
 ORDER BY A.id DESC;
 
@@ -505,11 +505,11 @@ SELECT A.*, M.nickname AS extra__writer,
 IFNULL(SUM(RP.point),0) AS extra__sumReactionPoint,
 IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
 IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
-FROM article AS A
+FROM press AS A
 INNER JOIN `member` AS M
 ON A.memberId = M.id
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'article'
+ON A.id = RP.relId AND RP.relTypeCode = 'press'
 GROUP BY A.id
 ORDER BY A.id DESC;
 
