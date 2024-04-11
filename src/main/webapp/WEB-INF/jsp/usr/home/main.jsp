@@ -18,19 +18,6 @@
 		테스트아이디: admin 비번: admin <br /> 테스트아이디: test1 비번: test1<br /> 테스트아이디:
 		test2 비번: test2
 
-		<div>yhw branch add div로 감쌈</div>
-
-		<div>yhw branch add div로 감쌈</div>
-
-
-yhw branch add
-yhw branch add
-
-
-		테스트아이디: admin 비번: admin <br /> 테스트아이디: test1 비번: test1<br /> 테스트아이디:
-		test2 비번: test2
-
-
 	</div>
 
 	<style type="text/css">
