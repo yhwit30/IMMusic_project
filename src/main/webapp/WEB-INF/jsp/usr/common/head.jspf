@@ -37,7 +37,7 @@
 </head>
 <body>
 	<header>
-		<div class="h-14 flex items-center text-3xl">
+		<div class="flex items-center text-3xl">
 			<a href="/"> 
 			 <img id="logo" src="/resource/IMMusicLogo.png" />
 			
@@ -47,7 +47,7 @@
 			<div class="flex-grow "></div>
 			<ul class="flex ">
 				<li>
-					<a href="/">ABOUT</a>
+					<a href="../about/about">ABOUT</a>
 				</li>
 				<li>
 					<a href="/">ARTIST</a>

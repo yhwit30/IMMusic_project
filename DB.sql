@@ -207,7 +207,7 @@ ALTER TABLE press ADD COLUMN goodReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT
 ALTER TABLE press ADD COLUMN badReactionPoint INT(10) UNSIGNED NOT NULL DEFAULT 0;
 
 # update join -> 기존 게시물의 good,bad RP 값을 RP 테이블에서 가져온 데이터로 채운다
-UPDATE press AS A
+UPDATE press AS P
 INNER JOIN (
     SELECT RP.relTypeCode,RP.relId,
     SUM(IF(RP.point > 0, RP.point, 0)) AS goodReactionPoint,
@@ -215,9 +215,9 @@ INNER JOIN (
     FROM reactionPoint AS RP
     GROUP BY RP.relTypeCode, RP.relId
 ) AS RP_SUM
-ON A.id = RP_SUM.relId
-SET A.goodReactionPoint = RP_SUM.goodReactionPoint,
-A.badReactionPoint = RP_SUM.badReactionPoint;
+ON P.id = RP_SUM.relId
+SET P.goodReactionPoint = RP_SUM.goodReactionPoint,
+P.badReactionPoint = RP_SUM.badReactionPoint;
 
 # reply 테이블 생성
 CREATE TABLE reply (
@@ -376,22 +376,22 @@ FROM reply
 WHERE relTypeCode = 'press'
 AND relId = 1;
 
-SELECT A.*, M.nickname AS extra__writer, IFNULL(R.cnt,0) AS cnt
-FROM press AS A
+SELECT P.*, M.nickname AS extra__writer, IFNULL(R.cnt,0) AS cnt
+FROM press AS P
 INNER JOIN `member` AS M
-ON A.memberId = M.id
+ON P.memberId = M.id
 LEFT JOIN (SELECT relId, COUNT(*) AS cnt FROM reply GROUP BY relId) AS R
-ON A.id = R.relId
-GROUP BY A.id
-ORDER BY A.id DESC;
+ON P.id = R.relId
+GROUP BY P.id
+ORDER BY P.id DESC;
 
 
-SELECT A.*, M.nickname AS extra__writer, COUNT(R.id) AS cnt
-FROM press AS A
-INNER JOIN `member` AS M ON A.memberId = M.id
-LEFT JOIN `reply` AS R ON A.id = R.relId
-GROUP BY A.id
-ORDER BY A.id DESC;
+SELECT P.*, M.nickname AS extra__writer, COUNT(R.id) AS cnt
+FROM press AS P
+INNER JOIN `member` AS M ON P.memberId = M.id
+LEFT JOIN `reply` AS R ON P.id = R.relId
+GROUP BY P.id
+ORDER BY P.id DESC;
 
 
 
@@ -441,22 +441,22 @@ DESC `member`;
 SELECT LAST_INSERT_ID();
 
 SELECT *
-FROM press AS A
+FROM press AS P
 WHERE 1
 
 	AND boardId = 1
 
-			AND A.title LIKE CONCAT('%','0000','%')
-			OR A.body LIKE CONCAT('%','0000','%')
+			AND P.title LIKE CONCAT('%','0000','%')
+			OR P.body LIKE CONCAT('%','0000','%')
 
 ORDER BY id DESC
 
 SELECT COUNT(*)
-FROM press AS A
+FROM press AS P
 WHERE 1
 AND boardId = 1
-AND A.title LIKE CONCAT('%','0000','%')
-OR A.body LIKE CONCAT('%','0000','%')
+AND P.title LIKE CONCAT('%','0000','%')
+OR P.body LIKE CONCAT('%','0000','%')
 ORDER BY id DESC
 
 
@@ -464,54 +464,54 @@ SELECT hitCount
 FROM press
 WHERE id = 374;
 
-SELECT A.*
-FROM press AS A
-WHERE A.id = 1
+SELECT P.*
+FROM press AS P
+WHERE P.id = 1
 
-SELECT A.*, M.nickname AS extra__writer
-FROM press AS A
+SELECT P.*, M.nickname AS extra__writer
+FROM press AS P
 INNER JOIN `member` AS M
-ON A.memberId = M.id
-WHERE A.id = 1
+ON P.memberId = M.id
+WHERE P.id = 1
 
 # LEFT JOIN
-SELECT A.*, M.nickname AS extra__writer, RP.point
-FROM press AS A
+SELECT P.*, M.nickname AS extra__writer, RP.point
+FROM press AS P
 INNER JOIN `member` AS M
-ON A.memberId = M.id
+ON P.memberId = M.id
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY A.id
-ORDER BY A.id DESC;
+ON P.id = RP.relId AND RP.relTypeCode = 'press'
+GROUP BY P.id
+ORDER BY P.id DESC;
 
 # 서브쿼리
-SELECT A.*,
+SELECT P.*,
 IFNULL(SUM(RP.point),0) AS extra__sumReactionPoint,
 IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
 IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
 FROM (
-    SELECT A.*, M.nickname AS extra__writer 
-    FROM press AS A
+    SELECT P.*, M.nickname AS extra__writer 
+    FROM press AS P
     INNER JOIN `member` AS M
-    ON A.memberId = M.id
-    ) AS A
+    ON P.memberId = M.id
+    ) AS P
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY A.id
-ORDER BY A.id DESC;
+ON P.id = RP.relId AND RP.relTypeCode = 'press'
+GROUP BY P.id
+ORDER BY P.id DESC;
 
 # 조인
-SELECT A.*, M.nickname AS extra__writer,
+SELECT P.*, M.nickname AS extra__writer,
 IFNULL(SUM(RP.point),0) AS extra__sumReactionPoint,
 IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
 IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
-FROM press AS A
+FROM press AS P
 INNER JOIN `member` AS M
-ON A.memberId = M.id
+ON P.memberId = M.id
 LEFT JOIN reactionPoint AS RP
-ON A.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY A.id
-ORDER BY A.id DESC;
+ON P.id = RP.relId AND RP.relTypeCode = 'press'
+GROUP BY P.id
+ORDER BY P.id DESC;
 
 
 SELECT *, COUNT(*)

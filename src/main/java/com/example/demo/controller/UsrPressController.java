@@ -144,7 +144,7 @@ public class UsrPressController {
 		List<Press> presses = pressService.getForPrintPresses(boardId, pagination.getItemsInAPage(), page,
 				searchKeywordTypeCode, searchKeyword);
 
-		model.addAttribute("pressCount", pressCount);
+		model.addAttribute("pressesCount", pressesCount);
 		model.addAttribute("page", page);
 		model.addAttribute("pagination", pagination);
 		model.addAttribute("board", board);

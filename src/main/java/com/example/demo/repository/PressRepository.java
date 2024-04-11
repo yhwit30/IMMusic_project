@@ -8,14 +8,14 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.example.demo.vo.Article;
+import com.example.demo.vo.Press;
 
 @Mapper
-public interface ArticleRepository {
+public interface PressRepository {
 
 	@Insert("""
 			INSERT INTO
-			article SET
+			press SET
 			regDate = NOW(),
 			updateDate = NOW(),
 			memberId = #{memberId},
@@ -23,21 +23,21 @@ public interface ArticleRepository {
 			`body` = #{body},
 			boardId = #{boardId}
 			""")
-	public void writeArticle(String title, String body, int memberId, int boardId);
+	public void writePress(String title, String body, int memberId, int boardId);
 
 	@Select("SELECT LAST_INSERT_ID()")
 	public int getLastInsertId();
 
 	@Select("""
 			SELECT *
-			FROM article
+			FROM press
 			WHERE id = #{id}
 			""")
-	public Article getArticle(int id);
+	public Press getPress(int id);
 
 	@Select("""
 			SELECT A.*, M.nickname AS extra__writer, B.code AS board_code
-			FROM article AS A
+			FROM press AS A
 			INNER JOIN `member` AS M
 			ON A.memberId = M.id
 			INNER JOIN board AS B
@@ -45,33 +45,33 @@ public interface ArticleRepository {
 			GROUP BY A.id
 			HAVING A.id = #{id}
 			""")
-	public Article getForPrintArticle(int id);
+	public Press getForPrintPress(int id);
 
-	@Delete("DELETE FROM article WHERE id = #{id}")
-	public void deleteArticle(int id);
+	@Delete("DELETE FROM press WHERE id = #{id}")
+	public void deletePress(int id);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET title = #{title},
 			`body` = #{body},
 			updateDate = NOW()
 			WHERE id = #{id}
 				""")
-	public void modifyArticle(int id, String title, String body);
+	public void modifyPress(int id, String title, String body);
 
 	@Select("""
 			SELECT A.*, M.nickname AS extra__writer
-			FROM article AS A
+			FROM press AS A
 			INNER JOIN `member` AS M
 			ON A.memberId = M.id
 			ORDER BY A.id DESC
 			""")
-	public List<Article> getArticles();
+	public List<Press> getPresses();
 
 	@Select("""
 			<script>
 			SELECT A.*, M.nickname AS extra__writer, IFNULL(COUNT(R.id),0) AS extra__repliesCnt
-			FROM article AS A
+			FROM press AS A
 			INNER JOIN `member` AS M
 			ON A.memberId = M.id
 			LEFT JOIN `reply` AS R 
@@ -105,13 +105,13 @@ public interface ArticleRepository {
 
 			</script>
 			""")
-	public List<Article> getForPrintArticles(int boardId, int limitFrom, int limitTake, String searchKeywordTypeCode,
+	public List<Press> getForPrintPresses(int boardId, int limitFrom, int limitTake, String searchKeywordTypeCode,
 			String searchKeyword);
 
 	@Select("""
 			<script>
 			SELECT COUNT(*) AS cnt
-			FROM article AS A
+			FROM press AS A
 			INNER JOIN `member` AS M
 			ON A.memberId = M.id
 			WHERE 1
@@ -138,10 +138,10 @@ public interface ArticleRepository {
 			ORDER BY A.id DESC
 			</script>
 			""")
-	public int getArticlesCount(Integer boardId, String searchKeywordTypeCode, String searchKeyword);
+	public int getPressesCount(Integer boardId, String searchKeywordTypeCode, String searchKeyword);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET	hitCount = hitCount + 1
 			WHERE id = #{id}
 			""")
@@ -149,34 +149,34 @@ public interface ArticleRepository {
 
 	@Select("""
 			SELECT hitCount
-			FROM article
+			FROM press
 			WHERE id = #{id}
 			""")
-	public int getArticleHitCount(int id);
+	public int getPressHitCount(int id);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET goodReactionPoint = goodReactionPoint + 1
 			WHERE id = #{relId}
 			""")
 	public int increaseGoodReactionPoint(int relId);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET goodReactionPoint = goodReactionPoint - 1
 			WHERE id = #{relId}
 			""")
 	public int decreaseGoodReactionPoint(int relId);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET badReactionPoint = badReactionPoint + 1
 			WHERE id = #{relId}
 			""")
 	public int increaseBadReactionPoint(int relId);
 
 	@Update("""
-			UPDATE article
+			UPDATE press
 			SET badReactionPoint = badReactionPoint - 1
 			WHERE id = #{relId}
 			""")
@@ -184,21 +184,21 @@ public interface ArticleRepository {
 
 	@Select("""
 			SELECT goodReactionPoint
-			FROM article
+			FROM press
 			WHERE id = #{relId}
 			""")
 	public int getGoodRP(int relId);
 
 	@Select("""
 			SELECT badReactionPoint
-			FROM article
+			FROM press
 			WHERE id = #{relId}
 			""")
 	public int getBadRP(int relId);
 	
 	@Select("""
 			SELECT MAX(id) + 1
-			FROM article
+			FROM press
 			""")
-	public int getCurrentArticleId();
+	public int getCurrentPressId();
 }
