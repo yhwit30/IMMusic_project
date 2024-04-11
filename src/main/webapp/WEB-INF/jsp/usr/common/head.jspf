@@ -50,13 +50,13 @@
 					<a href="../about/about">ABOUT</a>
 				</li>
 				<li>
-					<a href="/">ARTIST</a>
+					<a href="../artist/artist">ARTIST</a>
 				</li>
 				<li>
-					<a href="/">PRESS</a>
+					<a href="../press/list">PRESS</a>
 				</li>
 				<li>
-					<a href="/">CONTACT</a>
+					<a href="../contactUs/contactUs">CONTACT US</a>
 				</li>
 
 

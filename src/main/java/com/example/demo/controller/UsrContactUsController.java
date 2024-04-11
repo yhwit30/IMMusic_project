@@ -4,14 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class UsrArtistController {
+public class UsrContactUsController {
 
 	
-	
-	@RequestMapping("/usr/artist/artist")
+	@RequestMapping("/usr/contactUs/contactUs")
 	public String showAbout() {
 
-		return "usr/artist/artist";
+		return "usr/contactUs/contactUs";
 	}
 
 }

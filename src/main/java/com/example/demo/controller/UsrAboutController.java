@@ -9,8 +9,6 @@ public class UsrAboutController {
 	@RequestMapping("/usr/about/about")
 	public String showAbout() {
 
-	
-
 		return "usr/about/about";
 	}
 	
