@@ -10,7 +10,7 @@ import com.example.demo.vo.ResultData;
 public class ReactionPointService {
 
 	@Autowired
-	private ArticleService articleService;
+	private PressService articleService;
 
 	@Autowired
 	private ReactionPointRepository reactionPointRepository;

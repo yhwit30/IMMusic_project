@@ -47,7 +47,7 @@
 			<div class="flex-grow "></div>
 			<ul class="flex ">
 				<li>
-					<a href="#">#</a>
+					<a href="../about/about">ABOUT</a>
 				</li>
 				<li>
 					<a href="/">ARTIST</a>

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.demo.service.ArticleService;
+import com.example.demo.service.PressService;
 import com.example.demo.service.ReactionPointService;
 import com.example.demo.vo.ResultData;
 import com.example.demo.vo.Rq;
@@ -17,7 +17,7 @@ public class UsrReactionPointController {
 	private Rq rq;
 	
 	@Autowired
-	private ArticleService articleService;
+	private PressService articleService;
 
 	@Autowired
 	private ReactionPointService reactionPointService;
