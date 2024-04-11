@@ -22,9 +22,7 @@ html>body {
 }
 
 /* 커스텀 */
-header>div>ul>li {
-	margin-right: 30px;
-}
+
 
 /* 표 디자인 */
 .table-box-1 {
@@ -88,43 +86,6 @@ header>div>ul>li {
 
 
 
-
-/* 기본 네비게이션 2차 메뉴 스타일 */
-header>div>ul>li>ul {
-	display: none;
-	position: absolute;
-	background-color: white;
-	z-index: 1;
-}
-
-/* 네비게이션 2차 메뉴 호버 스타일 */
-header>div>ul>li:hover>ul {
-	display: block;
-}
-
-/* 대쉬보드 메뉴바 */
-.side_bar {
-	width: 100px;
-	height: 100%;
-	overflow: auto;
-	position: fixed;
-	border-right: thin solid gold; /* 	색깔 임시로 */
-}
-
-.side_menu>ul>li>a {
-	display: block;
-	padding-right: 10px;
-	padding-left: 5px;
-	padding-top: 10px;
-	/* 	background-color: skyblue; */
-	border-bottom: 1px solid black;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-.side_bar_push {
-	margin-left: 100px;
-}
 
 /* 페이지 제목 위치 */
 #pageTitle {
