@@ -109,28 +109,20 @@
 			<version>2.0.1</version>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.9.0</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.4</version>
 		</dependency>
-		
+
 		<!-- 파일 업로드를 위한 -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>31.1-jre</version>
 		</dependency>
-		
+
 		<!-- 메일 보내기 위한 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
