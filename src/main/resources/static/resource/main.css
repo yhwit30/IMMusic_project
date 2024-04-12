@@ -1,43 +1,24 @@
 /* 폰트 */
 @font-face {
-	font-family: 'LotteMartDream';
-	font-style: normal;
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
 	font-weight: 400;
-	src:
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2')
-		format('woff2'),
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff')
-		format('woff');
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'LotteMartDream';
-	font-style: normal;
+	font-family: 'LINESeedKR-Bd';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2')
+		format('woff2');
 	font-weight: 700;
-	src:
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2')
-		format('woff2'),
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff')
-		format('woff');
-}
-
-@font-face {
-	font-family: 'LotteMartDream';
 	font-style: normal;
-	font-weight: 300;
-	src:
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2')
-		format('woff2'),
-		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff')
-		format('woff');
-}
-
-.lottemartdream * {
-	font-family: 'LotteMartDream', sans-serif;
 }
 
 html>body {
-	font-family: 'LotteMartDream', sans-serif;
+	font-family: 'Pretendard-Regular';
 }
 
 /* 라이브러리 */

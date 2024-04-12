@@ -9,6 +9,8 @@
 <title>${pageTitle }</title>
 <link rel="stylesheet" href="/resource/common.css" />
 <script src="/resource/common.js" defer="defer"></script>
+<link rel="stylesheet" href="/resource/main.css" />
+<script src="/resource/main.js" defer="defer"></script>
 <!-- 테일윈드 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
