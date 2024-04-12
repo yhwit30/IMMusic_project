@@ -7,7 +7,7 @@
 
 <div>인사말</div>
 
-<section class="flex justify-between">
+<section class="flex justify-around">
 
 	<div>
 		<img id="heoImage" src="/resource/허원경 프로필사진.jpg" />
