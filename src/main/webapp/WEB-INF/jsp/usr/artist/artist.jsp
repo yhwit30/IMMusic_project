@@ -106,6 +106,7 @@ h1{
     top: 0;
     left: 0;
     width: 100%;
+    height: 500px;
 }
 
 .inner{
@@ -115,13 +116,17 @@ h1{
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 3rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     outline: 1px solid transparent;
     -webkit-perspective: inherit;
             perspective: inherit;
     z-index: 2;
+}
+img {
+	height: 500px;
+	object-fit: cover;
 }
 
 .container .back{
@@ -169,6 +174,9 @@ h1{
   right: 0;
   margin: 0 auto;
   bottom: -.75rem;
+}
+p {
+ 	font-size: 20px; 
 }
 
 .front .inner span{
@@ -220,15 +228,16 @@ h1{
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
 					<div class="front">
-						<img src="/resource/원유현 프로필사진.png"  />
+						<img src="/resource/원유현 프로필사진 편집.png"  />
 						<div class="inner">
 							<p>원유현</p>
-              <span>Lorem ipsum</span>
+              <span></span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-							<p>약력</p>
+							<p>서울대학교 음악대학 졸업</p>
+							<p>서울대학교 음악대학 석사</p>
 						</div>
 					</div>
 				</div>
