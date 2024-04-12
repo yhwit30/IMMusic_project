@@ -31,16 +31,16 @@
 			</div>
 		</li>
 		<li>
-			<div class="solid">
-				<time class="period">2. artist</time>
-				~~~~
-			</div>
-		</li>
-		<li>
 			<div>
 				<time>
 					<img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/44wc/image/YNKjhMm9IyEdSKJXIcieW0bEXQ0.jpg" />
 				</time>
+			</div>
+		</li>
+		<li>
+			<div class="solid">
+				<time class="period">2. artist</time>
+				~~~~
 			</div>
 		</li>
 
