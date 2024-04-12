@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UsrContactUsController {
 
 	
-	@RequestMapping("/usr/contactUs/contactUs")
-	public String showAbout() {
+	@RequestMapping("/usr/contactUs/concert")
+	public String contactUsconcert() {
 
-		return "usr/contactUs/contactUs";
+		return "usr/contactUs/concert";
 	}
 	
-	@RequestMapping("/usr/contactUs/artist")
-	public String showAboutArtist() {
+	@RequestMapping("/usr/contactUs/application")
+	public String contactUsapplication() {
 
-		return "usr/contactUs/artist";
+		return "usr/contactUs/application";
 	}
 
 
