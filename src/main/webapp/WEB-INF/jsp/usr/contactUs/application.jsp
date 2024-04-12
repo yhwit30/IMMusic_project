@@ -63,8 +63,8 @@ form {
 }
 
 .signup-form button {
-	background-color: #800808;
-	color: white;
+	background-color: #f2ede2;
+	color: black;
 	padding: 10px 15px;
 	border: none;
 	border-radius: 4px;
@@ -106,31 +106,30 @@ form {
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form1" action="../member/doJoin" method="POST">
-			<div class="text">*는 필수정보</div>
 			<div>
-				<label for="contactUs">*문의:</label>
+				<label for="contactUs">문의:</label>
 				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
 				required> <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
 				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
 				class="form-check-label text-xs mr-5">연주문의</label>
 			</div>
 			<div>
-				<label for="username">*아이디:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
+				<label for="username">아이디:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
 				<%-- console.log("${ajaxCalled}"); --%>
 				<div class="msg" style="display: none;"></div>
 			</div>
 
 			<div>
-				<label for="password">*비밀번호:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
+				<label for="password">비밀번호:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
 					onclick="callByAjax();" required>
 			</div>
 
 			<div>
-				<label for="birth">*생년월일:</label> <input type="date" id="birth" name="birth" required max="">
+				<label for="birth">생년월일:</label> <input type="date" id="birth" name="birth" required max="">
 			</div>
 
 			<div>
-				<label for="name">*이름:</label> <input type="text" id="text" name="mname" autocomplete="off" required>
+				<label for="name">이름:</label> <input type="text" id="text" name="mname" autocomplete="off" required>
 			</div>
 
 			<div>
@@ -139,7 +138,7 @@ form {
 			</div>
 			<div class="info">※ -없이 숫자만 입력가능합니다.</div>
 			<div>
-				<label for="email">*이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="email">이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
