@@ -86,7 +86,7 @@ h1{
     height: 100%;
     content: '';
     display: block;
-    opacity: .6;
+    opacity: .1;
     background-color: #000;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -203,9 +203,10 @@ h1{
   <div class="cols">
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+					<div class="front">
+					<img src="/resource/구보근 프로필사진.png"  />
 						<div class="inner">
-							<p>이름</p>
+							<p>구보근</p>
               <span>생년월일?</span>
 						</div>
 					</div>
@@ -218,45 +219,48 @@ h1{
 			</div>
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="url(https://unsplash.it/511/511/)">
+					<div class="front">
+						<img src="/resource/원유현 프로필사진.png"  />
 						<div class="inner">
-							<p>Rocogged</p>
+							<p>원유현</p>
               <span>Lorem ipsum</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+							<p>약력</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+					<div class="front">
+					<img src="/resource/임재민 프로필사진2.png"  />
 						<div class="inner">
-							<p>Strizzes</p>
+							<p>임재민</p>
               <span>Lorem ipsum</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+							<p>약력</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+					<div class="front">
+					<img src="/resource/허원경 프로필사진.png"  />
 						<div class="inner">
-							<p>Clossyo</p>
+							<p>허원경</p>
               <span>Lorem ipsum</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+							<p>약력</p>
 						</div>
 					</div>
 				</div>
