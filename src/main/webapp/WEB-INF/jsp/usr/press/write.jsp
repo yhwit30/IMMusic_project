@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="pageTitle" value="ARTICLE WRITE"></c:set>
+<c:set var="pageTitle" value="PRESS WRITE"></c:set>
 <%@ include file="../common/head.jspf"%>
 <%@ include file="../common/toastUiEditorLib.jspf"%>
 <!-- Article write 관련 -->
 <script type="text/javascript">
-	let ArticleWrite__submitFormDone = false;
-	function ArticleWrite__submit(form) {
-		if (ArticleWrite__submitFormDone) {
+	let PressWrite__submitFormDone = false;
+	function PressWrite__submit(form) {
+		if (PressWrite__submitFormDone) {
 			return;
 		}
 		form.title.value = form.title.value.trim();
@@ -25,11 +25,11 @@
 		}
 		
 // 		alert(${currentId});
-		$('#fileInput').attr('name', 'file__article__' + ${currentId} + '__extra__Img__1');
+		$('#fileInput').attr('name', 'file__press__' + ${currentId} + '__extra__Img__1');
 		
 		form.body.value = markdown;
 		
-		ArticleWrite__submitFormDone = true;
+		PressWrite__submitFormDone = true;
 		form.submit();
 	}
 </script>
@@ -37,7 +37,7 @@
 <section class="mt-8 text-xl px-4">
 	<div class="mx-auto">
 		<div>${currentId }</div>
-		<form action="../article/doWrite" method="POST" onsubmit="ArticleWrite__submit(this); return false;"
+		<form action="../press/doWrite" method="POST" onsubmit="PressWrite__submit(this); return false;"
 			enctype="multipart/form-data">
 			<input type="hidden" name=">${currentId }">
 			<input type="hidden" name="body">
