@@ -18,6 +18,13 @@ public class UsrContactUsController {
 
 		return "usr/contactUs/application";
 	}
+	
+	@RequestMapping("/usr/contactUs/artist")
+	public String showAboutArtist() {
+
+		return "usr/contactUs/artist";
+	}
+
 
 
 }
