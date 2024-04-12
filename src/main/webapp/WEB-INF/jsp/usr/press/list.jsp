@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="pageTitle" value="#{board.code } ARTICLE LIST"></c:set>
+<c:set var="pageTitle" value="#{board.code } PRESS LIST"></c:set>
 <%@ include file="../common/head.jspf"%>
 
 
 <section class="mt-2 text-xl px-4">
 	<div class="mx-auto overflow-x-auto">
-		<div class="badge badge-outline">${articlesCount }개</div>
+		<div class="badge badge-outline">${pressesCount }개</div>
 		<table class="table-box-1 table" border="1">
 			<colgroup>
 				<col style="width: 10%" />
@@ -27,21 +27,21 @@
 			</thead>
 			<tbody>
 
-				<c:forEach var="article" items="${articles }">
+				<c:forEach var="press" items="${presses }">
 					<tr class="hover">
-						<td>${article.id }</td>
-						<td>${article.regDate.substring(0,10) }</td>
+						<td>${press.id }</td>
+						<td>${press.regDate.substring(0,10) }</td>
 						<td>
-							<a href="detail?id=${article.id }">${article.title }
-							<c:if test="${article.extra__repliesCnt > 0 }">
-								<span style="color: red;">[${article.extra__repliesCnt }]</span>
+							<a href="detail?id=${press.id }">${press.title }
+							<c:if test="${press.extra__repliesCnt > 0 }">
+								<span style="color: red;">[${press.extra__repliesCnt }]</span>
 							</c:if>
 						</a>
 						</td>
-						<td>${article.extra__writer }</td>
-						<td>${article.goodReactionPoint }</td>
-						<td>${article.badReactionPoint }</td>
-						<td>${article.hitCount }</td>
+						<td>${press.extra__writer }</td>
+						<td>${press.goodReactionPoint }</td>
+						<td>${press.badReactionPoint }</td>
+						<td>${press.hitCount }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
