@@ -64,8 +64,8 @@ form {
 }
 
 .signup-form button {
-	background-color: #800808;
-	color: white;
+	background-color: #f2ede2;
+	color: black;
 	padding: 10px 15px;
 	border: none;
 	border-radius: 4px;
@@ -82,7 +82,15 @@ form {
 	font-size: 0.75rem;
 	color: #a32222;
 }
-    
+
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 85%;
+	display: flex;
+	align-items: flex-end;
+}
+   
 </style>
 
 <script>
@@ -107,9 +115,8 @@ form {
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form1" action="" method="POST">
-			<div class="text">*는 필수정보</div>
 			<div>
-				<label for="contactUs">*문의:</label>
+				<label for="contactUs">문의:</label>
 				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
 				required> <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
 				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
@@ -122,8 +129,7 @@ form {
 			</div>
 
 			<div>
-				<label for="password">이메일:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
-					onclick="callByAjax();" required>
+				<label for="email">이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
@@ -137,11 +143,11 @@ form {
 			</div>
 
 			<div>
-				<label for="email">*공연장소:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="email">공연장소:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
-				<label for="email">*문의사항:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="text">문의사항:</label> <textarea id="text" name="text" autocomplete="off" required></textarea>
 			</div>
 
 			<div class="center-text mt-5">
