@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="MAIN"></c:set>
 
-<%@ include file="../common/mainHead.jspf"%>
+<%@ include file="../common/head.jspf"%>
 
 
 
