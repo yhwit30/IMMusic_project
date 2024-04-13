@@ -237,7 +237,7 @@ p {
 					<div class="back">
 						<div class="inner">
 							<p>서울대학교 음악대학 졸업</p>
-							<p>서울대학교 음악대학 석사</p>
+							<p>lorem ipsum</p>
 						</div>
 					</div>
 				</div>
