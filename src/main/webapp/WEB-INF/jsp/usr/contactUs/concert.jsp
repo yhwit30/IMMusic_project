@@ -8,7 +8,7 @@
 .signup-form {
 	max-width: 380px;
 	background-color: rgba(255, 255, 255, 0.4);
-	margin: 100px auto;
+	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
 }
@@ -28,6 +28,10 @@ form {
 	width: 100%;
 	font-size: 1rem;
 	text-align: left;
+}
+
+.signup-form div:first-child {
+	padding-bottom: 8px;
 }
 
 .signup-form div:last-child {
@@ -53,10 +57,10 @@ form {
 	box-sizing: border-box;
 }
 
-.signup-form .form-check-label {
-    width: 90px;
-    height: 15px; /* 원하는 크기로 설정하세요 */
-    margin: 0; /* 기본 마진 제거 */
+.signup-form .formlabel {
+	width: 90px;
+	height: 15px; /* 원하는 크기로 설정하세요 */
+	margin: 0; /* 기본 마진 제거 */
 }
 
 .signup-form .cellphoneNum {
@@ -74,13 +78,13 @@ form {
 }
 
 .signup-form button:hover {
-	background-color: #260301;
+	background-color: #b3a78f;
 }
 
 /* 안내문구 */
 .signup-form .info {
 	font-size: 0.75rem;
-	color: #a32222;
+	color: #b3a78f;
 }
 
 textarea {
@@ -92,35 +96,42 @@ textarea {
 }
    
 </style>
-
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
         var applicationRadio = document.getElementById("application");
+        var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
+        var concertlabel = document.getElementById("concertlabel");
         
         concertRadio.checked = true;
         
         applicationRadio.addEventListener('click', function() {
             window.location.href = '/usr/contactUs/application';
         });
+        applicationlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/application';
+        });
 
         concertRadio.addEventListener('click', function() {
-            window.location.href = '/usr/contactUs/concert';
-            
+            window.location.href = '/usr/contactUs/concert';   
+        });
+        concertlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/concert';   
         });
     });
 
 </script>
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form1" action="" method="POST">
+		<form name="form1" action="../member/doJoin" method="POST">
 			<div>
 				<label for="contactUs">문의:</label>
 				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-				required> <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
+				required> <label for="open" id="applicationlabel" class="formlabel mr-5 text-xs">연주자 가입신청</label>
 				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-				class="form-check-label text-xs mr-5">연주문의</label>
+				id="concertlabel" class="formlabel text-xs mr-5">연주문의</label>
 			</div>
 			<div>
 				<label for="username">이름:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>

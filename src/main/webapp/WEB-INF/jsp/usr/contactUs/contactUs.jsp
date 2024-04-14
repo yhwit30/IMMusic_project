@@ -150,7 +150,7 @@ form {
 			<div>
 				<label for="level">*등급:</label>
 		        <input type="radio" id="artist" name="level" class="form-check-input" value="1" required>
-		        <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
+		        <label for="open" class="form-check-label mr-5 text-xs" onclick = "">연주자 가입신청</label>
 		        <input type="radio" id="performance" name="level" class="form-check-input" value="2" required>
 		        <label for="open" class="form-check-label text-xs mr-5">연주문의</label>
 			</div>
