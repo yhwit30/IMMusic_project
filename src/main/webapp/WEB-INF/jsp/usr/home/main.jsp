@@ -7,7 +7,7 @@
 
 
 <section class="intro">
-	<div class="container">
+	<div class="video-container">
 		<video muted autoplay loop class="fullscreen-video">
 			<source src="/resource/IMMusicVideo.mp4" type="video/mp4">
 		</video>
@@ -43,7 +43,8 @@
 				~~~~
 			</div>
 		</li>
-
+</ul>
+</section>
 
 		<!-- 페이지 하단 -->
 		<%@ include file="../common/foot.jspf"%>

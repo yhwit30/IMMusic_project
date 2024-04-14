@@ -89,8 +89,10 @@ html>body {
 
 /* 페이지 제목 위치 */
 #pageTitle {
-	left: 105px;
+	left: 130px;
 	position: absolute;
-	top: 35px;
+	top: 70px;
 }
+
+
 
