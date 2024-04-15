@@ -26,7 +26,33 @@
 		<li>
 			<div>
 				<time>
-					<img src="https://cdn.class101.net/images/3214a220-8a83-465c-9a16-99f6f3354663/1200x630" />
+					<img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHwzfHxndWl0YXJ8ZW58MHx8fHwxNzEyODM5MTU4fDA&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450" />
+				</time>
+			</div>
+		</li>
+		<li>
+			<div>
+				<time>
+					<img src="https://plus.unsplash.com/premium_photo-1681396936527-ac08137f243b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHw0NXx8Z3VpdGFyfGVufDB8fHx8MTcxMjg4MDY2N3ww&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450" />
+				</time>
+			</div>
+		</li>
+		<li>
+			<div class="solid">
+				<time class="period">2. artist</time>
+				~~~~
+			</div>
+		</li>
+		<li>
+			<div class="solid">
+				<time class="period">3. press</time>
+				~~~~
+			</div>
+		</li>
+		<li>
+			<div>
+				<time>
+					<img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHwzfHxndWl0YXJ8ZW58MHx8fHwxNzEyODM5MTU4fDA&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450" />
 				</time>
 			</div>
 		</li>
@@ -39,7 +65,7 @@
 		</li>
 		<li>
 			<div class="solid">
-				<time class="period">2. artist</time>
+				<time class="period">4. contact</time>
 				~~~~
 			</div>
 		</li>
