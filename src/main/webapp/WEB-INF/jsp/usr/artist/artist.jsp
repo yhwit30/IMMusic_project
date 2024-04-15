@@ -655,17 +655,21 @@ a {
 }
 
 .velo-slide__figure {
-    width: 100%; /* Set the width of the figure to 100% of its container */
-    max-width: 800px; /* Optionally, set a maximum width to avoid stretching the image too much */
-    margin: 0 auto; /* Center the figure horizontally */
-    overflow: hidden; /* Hide any content that overflows the figure */
+	width: 100%; /* Set the width of the figure to 100% of its container */
+	max-width: 800px;
+	/* Optionally, set a maximum width to avoid stretching the image too much */
+	margin: 0 auto; /* Center the figure horizontally */
+	overflow: hidden; /* Hide any content that overflows the figure */
 }
 
 .velo-slide__figure img {
-    width: 100%; /* Set the width of the image to 100% of its container */
-    height: auto; /* Allow the height to adjust proportionally based on the image's aspect ratio */
-    max-height: 100%; /* Limit the maximum height of the image to 100% of its container */
-    object-fit: cover; /* Maintain the aspect ratio while covering the container */
+	width: 100%; /* Set the width of the image to 100% of its container */
+	height: 100%;
+	/* Allow the height to adjust proportionally based on the image's aspect ratio */
+	max-height: 100%;
+	/* Limit the maximum height of the image to 100% of its container */
+	object-fit: cover;
+	/* Maintain the aspect ratio while covering the container */
 }
 </style>
 </head>
@@ -713,23 +717,8 @@ a {
 					<figure class="velo-slide__figure">
 						<img src="/resource/원유현 프로필사진 편집.png" alt="Profile Photo" />
 					</figure>
-			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front">
-						<img src="/resource/원유현 프로필사진 편집.png"  />
-						<div class="inner">
-							<p>원유현</p>
-              <span></span>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p>서울대학교 음악대학 졸업</p>
-							<p>수원대학교 음악대학원 기타페다고지 석사과정</p>
-						</div>
-					</div>
 				</div>
+
 
 				<!-- Header -->
 				<header class="velo-slide__header">
@@ -750,7 +739,7 @@ a {
 				<!-- Pretitle Hint -->
 				<span class="velo-slider__hint"><span><span>아티스트</span></span></span>
 				<!-- Slide BG -->
-								<div class="velo-slide__bg">
+				<div class="velo-slide__bg">
 					<!-- Img -->
 					<figure class="velo-slide__figure">
 						<img src="/resource/임재민 프로필사진2.png" alt="Profile Photo" />
