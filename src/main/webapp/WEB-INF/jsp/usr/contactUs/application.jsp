@@ -33,7 +33,7 @@ form {
 }
 
 .signup-form .radio-box{
-	padding-bottom: 8px;
+	padding-bottom: 10px;
 }
 
 .signup-form .radio-box label{
@@ -47,7 +47,7 @@ form {
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -86,29 +86,30 @@ form {
 }
 
 /* 파일 업로드 */
-.signup-form .file111 {
-	border-style: none;
+.signup-form .filebox {
 	width: 88%;
 }
 
-.filebox .upload-name, .filebox label {
+.filebox input, .filebox label {
     display: inline-block;
     height: 40px;
-    padding: 0 10px;
-    vertical-align: middle;
     border: 1px solid #dddddd;
     border-radius: 4px;
-    width: 50%;
+    width: 35%;
 }
 
 .filebox label {
 	border-style: none;
 	background-color: #f2ede2;
     margin-left: 10px;
-    width: 100px;
+    width: 80px;
     font-size: 0.8rem;
     text-align: center;
     align-content: center;
+}
+
+.filebox label:hover {
+	background-color: #b3a78f;
 }
 
 .filebox input[type="file"] {
@@ -136,7 +137,12 @@ form {
 	background-color: #b3a78f;
 }
 
-/* 개인정보 수집 동의 */
+/* 개인정보 수집 동의, 자기소개 */
+
+.signup-form .information {
+	width: 20%;
+}
+
 .signup-form .form-control, textarea{
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -145,6 +151,42 @@ form {
 	width: 98.3%;
 	height: 20%;
 	padding: 10px;
+}
+
+/* 스크롤바 디자인 */
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f2ede2;
+}
+
+textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f2ede2;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #b3a78f;
+}
+
+/* Scrollbar design for .form-control div */
+.form-control::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f2ede2;
+}
+
+.form-control::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f2ede2;
+}
+
+.form-control::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #b3a78f;
 }
 
 </style>
@@ -202,14 +244,22 @@ form {
 	});
 	
 	// 파일 업로드
-	
-	$("#file").on('change',function(){
-	  var fileName = $("#file").val();
-	  $(".upload-name").val(fileName);
-	});
-	
 </script>
 
+<script>
+$(document).ready(function() {
+    $("#file-profile").on('change', function() {
+        var profilefile = $(this).val();
+        $(".upload-profile").val(profilefile);
+    });
+    
+    $("#file-resume").on('change', function() {
+        var resumefile = $(this).val();
+        $(".upload-resume").val(resumefile);
+    });
+});
+	
+</script>
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
@@ -226,7 +276,7 @@ form {
 				</div>
 	
 				<div>
-					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="클릭시 생년월일 선택이 가능합니다.">
+					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
 	
 				<div class = "mb-2">
@@ -319,14 +369,19 @@ form {
 					<label for="email">SNS ID</label> <input type="email" id="email" name="email" autocomplete="off" required>
 				</div>
 				<div>
-					<label for="email">사진등록</label> <input id="fileInput" class ="file111" placeholder="이미지를 선택해주세요" type="file" />
+					<label for="email">사진등록</label>
+						<div class="filebox">
+							<input class="upload-profile" placeholder="파일을 선택해주세요.">
+    						<label for="file-profile" class="mb-2.5">파일찾기</label> 
+    						<input type="file" id="file-profile">
+						</div>
 				</div>
 				<div>
 					<label for="email">연주이력</label> 
-						<div class="file111 filebox">
-							<input class="upload-name" value="첨부파일" placeholder="첨부파일">
-    						<label for="file" class="mb-2.5">파일찾기</label> 
-    						<input type="file" id="file">
+						<div class="filebox">
+							<input class="upload-resume" placeholder="파일을 선택해주세요.">
+    						<label for="file-resume" class="mb-2.5">파일찾기</label> 
+    						<input type="file" id="file-resume">
 						</div>
 				</div>	
 				<div>
