@@ -687,6 +687,7 @@ a {
 						<img src="/resource/구보근 프로필사진.png" alt="Profile Photo" />
 					</figure>
 				</div>
+<<<<<<< HEAD
 
 				<!-- Header -->
 				<header class="velo-slide__header">
@@ -713,6 +714,24 @@ a {
 					<figure class="velo-slide__figure">
 						<img src="/resource/원유현 프로필사진 편집.png" alt="Profile Photo" />
 					</figure>
+=======
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front">
+						<img src="/resource/원유현 프로필사진 편집.png"  />
+						<div class="inner">
+							<p>원유현</p>
+              <span></span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>서울대학교 음악대학 졸업</p>
+							<p>수원대학교 음악대학원 기타페다고지 석사과정</p>
+						</div>
+					</div>
+>>>>>>> 6e883fb695f9fb3ee034e9977c13a85acd65304b
 				</div>
 
 				<!-- Header -->
