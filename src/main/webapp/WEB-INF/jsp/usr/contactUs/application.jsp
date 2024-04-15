@@ -36,8 +36,9 @@ form {
 	padding-bottom: 10px;
 }
 
-.signup-form .radio-box label{
+.signup-form .formlabel{
 	width: 120px;
+	cursor: pointer;
 }
 
 .signup-form label {
@@ -68,6 +69,15 @@ form {
 /* 버튼 */
 .signup-form .findbutton { 
  	width: 60px;
+ 	height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.findbutton:hover {
+	border-style: none;
+	background-color: #f2ede2;
 }
 
 #detailAddress, #extraAddress {
@@ -99,8 +109,6 @@ form {
 }
 
 .filebox label {
-	border-style: none;
-	background-color: #f2ede2;
     margin-left: 10px;
     width: 80px;
     font-size: 0.8rem;
@@ -109,7 +117,8 @@ form {
 }
 
 .filebox label:hover {
-	background-color: #b3a78f;
+	border-style: none;
+	background-color: #f2ede2;
 }
 
 .filebox input[type="file"] {
@@ -415,7 +424,7 @@ $(document).ready(function() {
 				</div>
 			
 			<div class="box center-text mt-5">
-				<button type="submit" class="mr-3">가입</button>
+				<button type="submit" class="mr-3">신청</button>
 				<button type="button" onclick="history.back();">뒤로가기</button>
 			</div>
 		</form>
