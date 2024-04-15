@@ -8,7 +8,7 @@ public class UsrArtistController {
 
 	
 	
-	@RequestMapping("/usr/artist/artist")
+	@RequestMapping("/usr/artist")
 	public String showAbout() {
 
 		return "usr/artist/artist";
