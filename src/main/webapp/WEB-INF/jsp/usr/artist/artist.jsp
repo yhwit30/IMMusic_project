@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="ARTIST TEST"></c:set>
 <%@ include file="../common/head.jspf"%>
+
 <style>
 .btn-draw, .velo-slider__hint>span {
 	font-family: "Montserrat", Helvetica, sans-serif;
@@ -1187,4 +1188,4 @@ var VeloSlider = (function() {
 // INIT
 VeloSlider.init();</script>
 
-</body>
+</body> 
