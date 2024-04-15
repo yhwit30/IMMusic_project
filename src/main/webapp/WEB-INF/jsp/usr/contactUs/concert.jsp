@@ -8,7 +8,7 @@
 .signup-form {
 	max-width: 380px;
 	background-color: rgba(255, 255, 255, 0.4);
-	margin: 100px auto;
+	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
 }
@@ -28,6 +28,10 @@ form {
 	width: 100%;
 	font-size: 1rem;
 	text-align: left;
+}
+
+.signup-form div:first-child {
+	padding-bottom: 8px;
 }
 
 .signup-form div:last-child {
@@ -53,10 +57,10 @@ form {
 	box-sizing: border-box;
 }
 
-.signup-form .form-check-label {
-    width: 90px;
-    height: 15px; /* 원하는 크기로 설정하세요 */
-    margin: 0; /* 기본 마진 제거 */
+.signup-form .formlabel {
+	width: 90px;
+	height: 15px; /* 원하는 크기로 설정하세요 */
+	margin: 0; /* 기본 마진 제거 */
 }
 
 .signup-form .cellphoneNum {
@@ -64,8 +68,8 @@ form {
 }
 
 .signup-form button {
-	background-color: #800808;
-	color: white;
+	background-color: #f2ede2;
+	color: black;
 	padding: 10px 15px;
 	border: none;
 	border-radius: 4px;
@@ -74,46 +78,60 @@ form {
 }
 
 .signup-form button:hover {
-	background-color: #260301;
+	background-color: #b3a78f;
 }
 
 /* 안내문구 */
 .signup-form .info {
 	font-size: 0.75rem;
-	color: #a32222;
+	color: #b3a78f;
 }
-    
-</style>
 
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 85%;
+	display: flex;
+	align-items: flex-end;
+}
+   
+</style>
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
         var applicationRadio = document.getElementById("application");
+        var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
+        var concertlabel = document.getElementById("concertlabel");
         
         concertRadio.checked = true;
         
         applicationRadio.addEventListener('click', function() {
             window.location.href = '/usr/contactUs/application';
         });
+        applicationlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/application';
+        });
 
         concertRadio.addEventListener('click', function() {
-            window.location.href = '/usr/contactUs/concert';
-            
+            window.location.href = '/usr/contactUs/concert';   
+        });
+        concertlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/concert';   
         });
     });
 
 </script>
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form1" action="" method="POST">
-			<div class="text">*는 필수정보</div>
+		<form name="form1" action="../member/doJoin" method="POST">
 			<div>
-				<label for="contactUs">*문의:</label>
+				<label for="contactUs">문의:</label>
 				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-				required> <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
+				required> <label for="open" id="applicationlabel" class="formlabel mr-5 text-xs">연주자 가입신청</label>
 				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-				class="form-check-label text-xs mr-5">연주문의</label>
+				id="concertlabel" class="formlabel text-xs mr-5">연주문의</label>
 			</div>
 			<div>
 				<label for="username">이름:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
@@ -122,8 +140,7 @@ form {
 			</div>
 
 			<div>
-				<label for="password">이메일:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
-					onclick="callByAjax();" required>
+				<label for="email">이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
@@ -137,11 +154,11 @@ form {
 			</div>
 
 			<div>
-				<label for="email">*공연장소:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="email">공연장소:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
-				<label for="email">*문의사항:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="text">문의사항:</label> <textarea id="text" name="text" autocomplete="off" required></textarea>
 			</div>
 
 			<div class="center-text mt-5">

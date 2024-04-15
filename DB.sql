@@ -331,7 +331,7 @@ R.badReactionPoint = RP_SUM.badReactionPoint;
 
 # 파일 테이블 추가
 CREATE TABLE genFile (
-  id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT, # 번호
+  id INT(10) UNSIGNED NOT NULL  AUTO_INCREMENT, # 번호
   regDate DATETIME DEFAULT NULL, # 작성날짜
   updateDate DATETIME DEFAULT NULL, # 갱신날짜
   delDate DATETIME DEFAULT NULL, # 삭제날짜
@@ -355,6 +355,84 @@ CREATE TABLE genFile (
 UPDATE `member`
 SET loginPw = SHA2(loginPw,256);
 
+
+
+############### IMMusic DB 작성 -> 이후에 위의 쿼리들하고 자바 레포지터리 다 정리 ###########
+
+# about 테이블 추가
+CREATE TABLE about(
+  id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  regDate DATETIME DEFAULT NULL, # 작성날짜
+  updateDate DATETIME DEFAULT NULL, # 갱신날짜
+  greet TEXT NOT NULL
+);
+
+# artist 테이블 추가
+CREATE TABLE artist (
+  id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  regDate DATETIME DEFAULT NULL, # 작성날짜
+  updateDate DATETIME DEFAULT NULL, # 갱신날짜
+  artist_name CHAR(10) NOT NULL,
+  artist_birth DATE NOT NULL,
+  artist_gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
+  artist_phone CHAR(10) NOT NULL, 
+  artist_email CHAR(10) NOT NULL, 
+  artist_adress CHAR(10) NOT NULL, 
+  artist_major CHAR(10) NOT NULL, 
+  artist_sns CHAR(10) NOT NULL, 
+  artist_photo CHAR(10) NOT NULL,
+  artist_career CHAR(10) NOT NULL,
+  delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
+  delDate DATETIME DEFAULT NULL # 삭제날짜
+);
+
+
+
+# contact 테이블 추가
+CREATE TABLE contact (
+  id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  regDate DATETIME DEFAULT NULL, # 작성날짜
+  updateDate DATETIME DEFAULT NULL, # 갱신날짜
+  `name` CHAR(10) NOT NULL,
+  birth DATE NOT NULL,
+  gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
+  phone CHAR(10) NOT NULL, 
+  email CHAR(10) NOT NULL, 
+  adress CHAR(10) NOT NULL, 
+  major CHAR(10) NOT NULL, 
+  sns CHAR(10) NOT NULL, 
+  photo CHAR(10) NOT NULL,
+  career CHAR(10) NOT NULL,
+  concert_date CHAR(10) NOT NULL, 
+  concert_location CHAR(10) NOT NULL, 
+  delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
+  delDate DATETIME DEFAULT NULL # 삭제날짜
+);
+
+
+# contact_board 테이블 생성
+CREATE TABLE contact_board(
+    id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    regDate DATETIME NOT NULL,
+    updateDate DATETIME NOT NULL,
+    `code` CHAR(50) NOT NULL UNIQUE COMMENT '연주자 가입신청, 연주문의',
+    delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '삭제 여부 (0=삭제 전, 1=삭제 후)',
+    delDate DATETIME COMMENT '삭제 날짜'
+);
+
+
+# contact_board 생성
+INSERT INTO contact_board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = '연주자 가입신청';
+
+INSERT INTO contact_board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = '연주문의';
+
+
 ###############################################
 
 SELECT MAX(id) FROM press;
@@ -371,162 +449,12 @@ SELECT * FROM `reply`;
 
 SELECT * FROM `genFile`;
 
-SELECT *
-FROM reply
-WHERE relTypeCode = 'press'
-AND relId = 1;
+SELECT * FROM about;
 
-SELECT P.*, M.nickname AS extra__writer, IFNULL(R.cnt,0) AS cnt
-FROM press AS P
-INNER JOIN `member` AS M
-ON P.memberId = M.id
-LEFT JOIN (SELECT relId, COUNT(*) AS cnt FROM reply GROUP BY relId) AS R
-ON P.id = R.relId
-GROUP BY P.id
-ORDER BY P.id DESC;
+SELECT * FROM artist;
 
+SELECT * FROM contact;
 
-SELECT P.*, M.nickname AS extra__writer, COUNT(R.id) AS cnt
-FROM press AS P
-INNER JOIN `member` AS M ON P.memberId = M.id
-LEFT JOIN `reply` AS R ON P.id = R.relId
-GROUP BY P.id
-ORDER BY P.id DESC;
-
-
-
-
-
-
-SELECT goodReactionPoint
-FROM press 
-WHERE id = 1
-
-INSERT INTO press
-(
-    regDate, updateDate, memberId, boardId, title, `body`
-)
-SELECT NOW(),NOW(), FLOOR(RAND() * 2) + 2, FLOOR(RAND() * 3) + 1, CONCAT('제목_',RAND()), CONCAT('내용_',RAND())
-FROM press;
-
-SELECT IFNULL(SUM(RP.point),0)
-FROM reactionPoint AS RP
-WHERE RP.relTypeCode = 'press'
-AND RP.relId = 3
-AND RP.memberId = 1;
-
-
-UPDATE press 
-SET title = '제목5'
-WHERE id = 5;
-
-UPDATE press 
-SET title = '제목11'
-WHERE id = 6;
-
-UPDATE press 
-SET title = '제목45'
-WHERE id = 7;
-
-SELECT FLOOR(RAND() * 2) + 2
-
-SELECT FLOOR(RAND() * 3) + 1
-
-
-SHOW FULL COLUMNS FROM `member`;
-DESC `member`;
-
-
-
-SELECT LAST_INSERT_ID();
-
-SELECT *
-FROM press AS P
-WHERE 1
-
-	AND boardId = 1
-
-			AND P.title LIKE CONCAT('%','0000','%')
-			OR P.body LIKE CONCAT('%','0000','%')
-
-ORDER BY id DESC
-
-SELECT COUNT(*)
-FROM press AS P
-WHERE 1
-AND boardId = 1
-AND P.title LIKE CONCAT('%','0000','%')
-OR P.body LIKE CONCAT('%','0000','%')
-ORDER BY id DESC
-
-
-SELECT hitCount
-FROM press
-WHERE id = 374;
-
-SELECT P.*
-FROM press AS P
-WHERE P.id = 1
-
-SELECT P.*, M.nickname AS extra__writer
-FROM press AS P
-INNER JOIN `member` AS M
-ON P.memberId = M.id
-WHERE P.id = 1
-
-# LEFT JOIN
-SELECT P.*, M.nickname AS extra__writer, RP.point
-FROM press AS P
-INNER JOIN `member` AS M
-ON P.memberId = M.id
-LEFT JOIN reactionPoint AS RP
-ON P.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY P.id
-ORDER BY P.id DESC;
-
-# 서브쿼리
-SELECT P.*,
-IFNULL(SUM(RP.point),0) AS extra__sumReactionPoint,
-IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
-IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
-FROM (
-    SELECT P.*, M.nickname AS extra__writer 
-    FROM press AS P
-    INNER JOIN `member` AS M
-    ON P.memberId = M.id
-    ) AS P
-LEFT JOIN reactionPoint AS RP
-ON P.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY P.id
-ORDER BY P.id DESC;
-
-# 조인
-SELECT P.*, M.nickname AS extra__writer,
-IFNULL(SUM(RP.point),0) AS extra__sumReactionPoint,
-IFNULL(SUM(IF(RP.point > 0, RP.point, 0)),0) AS extra__goodReactionPoint,
-IFNULL(SUM(IF(RP.point < 0, RP.point, 0)),0) AS extra__badReactionPoint
-FROM press AS P
-INNER JOIN `member` AS M
-ON P.memberId = M.id
-LEFT JOIN reactionPoint AS RP
-ON P.id = RP.relId AND RP.relTypeCode = 'press'
-GROUP BY P.id
-ORDER BY P.id DESC;
-
-
-SELECT *, COUNT(*)
-FROM reactionPoint AS RP
-GROUP BY RP.relTypeCode,RP.relId;
-
-SELECT IF(RP.point > 0, '큼','작음')
-FROM reactionPoint AS RP
-GROUP BY RP.relTypeCode,RP.relId;
-
-# 각 게시물의 좋아요, 싫어요 갯수
-SELECT RP.relTypeCode, RP.relId,
-SUM(IF(RP.point > 0,RP.point,0)) AS goodReactionPoint,
-SUM(IF(RP.point < 0,RP.point * -1,0)) AS badReactionPoint
-FROM reactionPoint AS RP
-GROUP BY RP.relTypeCode,RP.relId;
+SELECT * FROM contact_board;
 
 
