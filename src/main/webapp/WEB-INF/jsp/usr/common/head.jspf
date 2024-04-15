@@ -55,7 +55,7 @@
 	transform: translate(-50%, -50%);
 	box-shadow: 5px 5px 3px #666;
 	display: block;
-	border: 1px solid  rgba(209, 213, 219);
+	border: 1px solid rgba(209, 213, 219);
 }
 
 #intro-top {
@@ -64,6 +64,7 @@
 	height: 50%;
 	background-color: #f2ede2;
 	z-index: 998;
+	text-align: center;
 }
 
 #intro-bottom {
@@ -74,52 +75,61 @@
 	top: 50%;
 	z-index: 998;
 	top: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 </style>
 
 <script>
-$(document).ready(function() {
-    setTimeout(function() {
-        // intro-top 요소에 위로 이동 애니메이션 적용
-        $('#intro-top').animate({
-            top: '-100%' // 화면 위로 이동
-        }, 'slow');
+	$(document).ready(function() {
+		setTimeout(function() {
+			// intro-top 요소에 위로 이동 애니메이션 적용
+			$('#intro-top').animate({
+				top : '-100%' // 화면 위로 이동
+			}, 'slow');
 
-        // intro-bottom 요소에 아래로 이동 애니메이션 적용
-        $('#intro-bottom').animate({
-            top: '100%' // 화면 아래로 이동
-        }, 'slow', function() {
-            $(this).hide(); // 애니메이션 완료 후 숨김
-        });
-    }, 2000); // 1000 밀리초 = 1초
-    
-    $('#intro-logo > img').animate({
-        width: '30%',
-        height: '30%'
-    }, 'slow', function() {
-        // 애니메이션이 완료된 후에 실행될 코드
-        setTimeout(function() {
-            $('#intro-logo > img').fadeOut();
-        }, 1000); // 1000 밀리초 = 1초 후에 실행
-    });
-});
+			// intro-bottom 요소에 아래로 이동 애니메이션 적용
+			$('#intro-bottom').animate({
+				top : '100%' // 화면 아래로 이동
+			}, 'slow', function() {
+				$(this).hide(); // 애니메이션 완료 후 숨김
+			});
+		}, 2000); // 1000 밀리초 = 1초
 
+		$('#intro-logo > img').animate({
+			width : '30%',
+			height : '30%'
+		}, 'slow', function() {
+			// 애니메이션이 완료된 후에 실행될 코드
+			setTimeout(function() {
+				$('#intro-logo > img').fadeOut();
+				$('#intro-top > p').fadeOut();
+				$('#intro-bottom > p').fadeOut();
+			}, 800); // 1000 밀리초 = 1초 후에 실행
+		});
+	});
 </script>
 
 
 </head>
 <body>
 
-<c:if test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-	<div class="flex justify-center content-center">
-		<div id="intro-top"></div>
-		<div id="intro-logo">
-			<img src="/resource/IMMusicLogo자름.png" />
-		</div>
-		<div id="intro-bottom"></div>
+	<c:if
+		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
+		<div class="flex justify-center content-center">
+			<div id="intro-top">
+				<p class="mt-10">LODING</p>
+			</div>
+			<div id="intro-logo">
+				<img src="/resource/IMMusicLogo자름.png" />
+			</div>
+			<div id="intro-bottom">
+				<p class="mb-10">IMMusic</p>
+			</div>
 
-	</div>
-</c:if>
+		</div>
+	</c:if>
 
 	<header>
 		<div class="flex items-center justify-between text-lg">
