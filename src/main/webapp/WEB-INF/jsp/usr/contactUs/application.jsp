@@ -7,7 +7,7 @@
 .signup-form {
 	max-width: 380px;
 	background-color: rgba(255, 255, 255, 0.4);
-	margin: 100px auto;
+	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
 }
@@ -29,6 +29,10 @@ form {
 	text-align: left;
 }
 
+.signup-form div:first-child {
+	padding-bottom: 8px;
+}
+
 .signup-form div:last-child {
 	text-align: center;
 	padding-right: 40px;
@@ -39,11 +43,6 @@ form {
 	display: inline-block;
 }
 
-.signup-form div .msg {
-	color: #800808;
-	font-size: 0.75rem;
-}
-
 .signup-form input {
 	padding: 5px;
 	margin-bottom: 10px;
@@ -52,7 +51,7 @@ form {
 	box-sizing: border-box;
 }
 
-.signup-form .form-check-label {
+.signup-form .formlabel {
 	width: 90px;
 	height: 15px; /* 원하는 크기로 설정하세요 */
 	margin: 0; /* 기본 마진 제거 */
@@ -63,8 +62,8 @@ form {
 }
 
 .signup-form button {
-	background-color: #800808;
-	color: white;
+	background-color: #f2ede2;
+	color: black;
 	padding: 10px 15px;
 	border: none;
 	border-radius: 4px;
@@ -73,31 +72,39 @@ form {
 }
 
 .signup-form button:hover {
-	background-color: #260301;
+	background-color: #b3a78f;
 }
 
 /* 안내문구 */
 .signup-form .info {
 	font-size: 0.75rem;
-	color: #a32222;
+	color: #b3a78f;
 }
+
 </style>
 
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
         var applicationRadio = document.getElementById("application");
+        var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
+        var concertlabel = document.getElementById("concertlabel");
         
         applicationRadio.checked = true;
         
         applicationRadio.addEventListener('click', function() {
             window.location.href = '/usr/contactUs/application';
         });
+        applicationlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/application';
+        });
 
         concertRadio.addEventListener('click', function() {
-            window.location.href = '/usr/contactUs/concert';
-            
+            window.location.href = '/usr/contactUs/concert';   
+        });
+        concertlabel.addEventListener('click', function() {
+            window.location.href = '/usr/contactUs/concert';   
         });
     });
 
@@ -106,40 +113,36 @@ form {
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form1" action="../member/doJoin" method="POST">
-			<div class="text">*는 필수정보</div>
 			<div>
-				<label for="contactUs">*문의:</label>
+				<label for="contactUs">문의:</label>
 				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-				required> <label for="open" class="form-check-label mr-5 text-xs">연주자 가입신청</label>
+				required> <label for="open" id="applicationlabel" class="formlabel mr-5 text-xs">연주자 가입신청</label>
 				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-				class="form-check-label text-xs mr-5">연주문의</label>
+				id="concertlabel" class="formlabel text-xs mr-5">연주문의</label>
 			</div>
 			<div>
-				<label for="username">*아이디:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
-				<%-- console.log("${ajaxCalled}"); --%>
-				<div class="msg" style="display: none;"></div>
+				<label for="username">이름:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
 			</div>
 
 			<div>
-				<label for="password">*비밀번호:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
-					onclick="callByAjax();" required>
+				<label for="password">생년월일:</label> <input type="date" id="birth" name="birth" required max="">
 			</div>
 
 			<div>
-				<label for="birth">*생년월일:</label> <input type="date" id="birth" name="birth" required max="">
+				<label for="birth">성별:</label> 
+				<input type="radio" id="male" name="sex" class="form-check-input" value="1"
+				required> <label for="open" id="sexlabel" class="formlabel mr-5 text-xs">남성</label>
+				<input type="radio" id="female" name="sex" class="form-check-input" value="2" required> <label for="open"
+				id="sexlabel" class="formlabel text-xs mr-5">여성</label>
 			</div>
 
 			<div>
-				<label for="name">*이름:</label> <input type="text" id="text" name="mname" autocomplete="off" required>
-			</div>
-
-			<div>
-				<label for="cellphoneNum">전화번호:</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
+				<label for="cellphoneNum">연락처:</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
 					name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11">
 			</div>
 			<div class="info">※ -없이 숫자만 입력가능합니다.</div>
 			<div>
-				<label for="email">*이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="email">이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div>
@@ -209,6 +212,18 @@ form {
 								}).open();
 					}
 				</script>
+			</div>
+			<div>
+				<label for="email">전공악기:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+			</div>
+			<div>
+				<label for="email">SNS ID:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+			</div>
+			<div>
+				<label for="email">사진등록:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+			</div>
+			<div>
+				<label for="email">연주이력:</label> <input type="email" id="email" name="email" autocomplete="off" required>
 			</div>
 
 			<div class="center-text mt-5">
