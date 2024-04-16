@@ -32,7 +32,7 @@ form {
 }
 
 .signup-form .radio-box{
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .signup-form .formlabel{
@@ -47,7 +47,7 @@ form {
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -60,7 +60,11 @@ form {
 	align-items: center;
 }
 
-/* 우편번호 */
+/* 주소 */
+.place > input {
+	margin-bottom: 10px;
+}
+
 .signup-form .postcode { 
  	width: 15%;
 }
@@ -284,7 +288,7 @@ $(document).ready(function() {
 				<div>
 					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
-				<div class = "mb-2">
+				<div class = "mb-4">
 					<label for="birth">성별</label> 
 					<input type="radio" id="male" name="sex" class="form-check-input" value="1"
 					required> <label for="open" id="sexlabel" class="formlabel mr-5 text-base">남성</label>
@@ -298,7 +302,7 @@ $(document).ready(function() {
 				<div>
 					<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
 				</div>
-				<div>
+				<div class="place mb-3">
 					<label for="address">주소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input

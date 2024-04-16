@@ -30,7 +30,7 @@ form {
 }
 
 .signup-form .radio-box{
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .signup-form .formlabel{
@@ -45,7 +45,7 @@ form {
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -58,7 +58,11 @@ form {
 	align-items: center;
 }
 
-/* 우편번호 */
+/* 주소 */
+.place > input {
+	margin-bottom: 10px;
+}
+
 .signup-form .postcode { 
  	width: 15%;
 }
@@ -106,6 +110,7 @@ form {
 	width: 98.3%;
 	height: 150px;
 	padding: 10px;
+	margin-bottom: 10px;
 }
 
 /* 스크롤바 디자인 */
@@ -240,7 +245,7 @@ textarea::-webkit-scrollbar-thumb {
 			<div>
 				<label for="birth">공연날짜</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="날짜 선택이 가능합니다.">
 			</div>
-			<div>
+			<div class="place mb-3">
 					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
@@ -338,8 +343,8 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
 			</div>
-			<div class="center-text mt-5">
-				<button type="submit">가입</button>
+			<div class="box center-text mt-5">
+				<button type="submit" class="mr-3">문의</button>
 				<button type="button" onclick="history.back();">뒤로가기</button>
 			</div>
 		</form>
