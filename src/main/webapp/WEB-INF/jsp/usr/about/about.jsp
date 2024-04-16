@@ -32,6 +32,7 @@
 	width: 600px;
 	height: 700px;
  	object-fit: cover;
+ 	border: 2px solid gold;
 }
 
 section > div:nth-child(2){

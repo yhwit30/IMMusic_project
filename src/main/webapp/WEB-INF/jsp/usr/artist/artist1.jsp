@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="ARTIST TEST"></c:set>
 <%@ include file="../common/head.jspf"%>
+
+
 <style>
 *{
   margin: 0;
@@ -336,7 +338,6 @@ p {
 			</div>
 		</div>
  </div>
-
 
 
 
