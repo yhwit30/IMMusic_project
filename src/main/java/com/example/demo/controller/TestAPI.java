@@ -47,4 +47,10 @@ public class TestAPI {
 
 		return "/usr/test/weatherApiTest";
 	}
+
+	@RequestMapping("/usr/test/artistTest")
+	public String testArtist() {
+		
+		return "/usr/test/artistTest";
+	}
 }
