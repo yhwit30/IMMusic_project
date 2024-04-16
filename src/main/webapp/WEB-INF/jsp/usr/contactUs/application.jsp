@@ -9,7 +9,6 @@
 <style>
 .signup-form {
 	max-width: 80%;
-	background-color: rgba(255, 255, 255, 0.4);
 	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
@@ -158,7 +157,7 @@ form {
 	box-sizing: border-box;
 	overflow-y: auto;
 	width: 98.3%;
-	height: 20%;
+	height: 150px;
 	padding: 10px;
 }
 
@@ -180,7 +179,6 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #b3a78f;
 }
 
-/* Scrollbar design for .form-control div */
 .form-control::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
@@ -275,19 +273,17 @@ $(document).ready(function() {
 		<form name="form" action="../member/doJoin" method="POST">
 			<div>
 				<div class="box radio-box">
-					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
 					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
 					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
+					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
 				</div>
 				<div>
 					<label for="username">이름</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
 				</div>
-	
 				<div>
 					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
-	
 				<div class = "mb-2">
 					<label for="birth">성별</label> 
 					<input type="radio" id="male" name="sex" class="form-check-input" value="1"
@@ -295,7 +291,6 @@ $(document).ready(function() {
 					<input type="radio" id="female" name="sex" class="form-check-input" value="2" required> <label for="open"
 					id="sexlabel" class="formlabel text-base mr-5">여성</label>
 				</div>
-	
 				<div>
 					<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
 						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
@@ -303,7 +298,6 @@ $(document).ready(function() {
 				<div>
 					<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
 				</div>
-	
 				<div>
 					<label for="address">주소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input

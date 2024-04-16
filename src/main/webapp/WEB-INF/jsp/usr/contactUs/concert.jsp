@@ -6,8 +6,7 @@
 
 <style>
 .signup-form {
-	max-width: 380px;
-	background-color: rgba(255, 255, 255, 0.4);
+	max-width: 80%;
 	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
@@ -30,42 +29,121 @@ form {
 	text-align: left;
 }
 
-.signup-form div:first-child {
-	padding-bottom: 8px;
+.signup-form .radio-box{
+	padding-bottom: 10px;
 }
 
-.signup-form div:last-child {
-	text-align: center;
-	padding-right: 40px;
+.signup-form .formlabel{
+	width: 120px;
+	cursor: pointer;
 }
 
 .signup-form label {
-	width: 20%;
+	width: 10%;
 	display: inline-block;
-}
-
-.signup-form div .msg {
-	color: #800808;
-	font-size: 0.75rem;
 }
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
 }
 
-.signup-form .formlabel {
+.signup-form .box {
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+/* 우편번호 */
+.signup-form .postcode { 
+ 	width: 15%;
+}
+
+/* 버튼 */
+.signup-form .findbutton { 
+ 	width: 60px;
+ 	height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.findbutton:hover {
+	border-style: none;
+	background-color: #f2ede2;
+}
+
+#detailAddress, #extraAddress {
+	width: 43.8%;
+}
+
+.signup-form .form-check-input { /* 라디오 박스 */
+	width: 30px;
+	margin-bottom: 0px;
+}
+
+.signup-form .form-check-label {
 	width: 90px;
 	height: 15px; /* 원하는 크기로 설정하세요 */
 	margin: 0; /* 기본 마진 제거 */
 }
 
-.signup-form .cellphoneNum {
-	margin-bottom: 0px;
+/* 개인정보 수집 동의, 문의사항 */
+
+.signup-form .information {
+	width: 20%;
 }
+
+.signup-form .form-control, textarea{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	width: 98.3%;
+	height: 150px;
+	padding: 10px;
+}
+
+/* 스크롤바 디자인 */
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f2ede2;
+}
+
+textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f2ede2;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #b3a78f;
+}
+
+.form-control::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f2ede2;
+}
+
+.form-control::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f2ede2;
+}
+
+.form-control::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #b3a78f;
+}
+
+/* 버튼 */
 
 .signup-form button {
 	background-color: #f2ede2;
@@ -74,28 +152,15 @@ form {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 }
 
 .signup-form button:hover {
 	background-color: #b3a78f;
 }
-
-/* 안내문구 */
-.signup-form .info {
-	font-size: 0.75rem;
-	color: #b3a78f;
-}
-
-textarea {
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	width: 85%;
-	display: flex;
-	align-items: flex-end;
-}
    
 </style>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -123,44 +188,156 @@ textarea {
 
 </script>
 
+<script>
+	$(function() {
+		$("#datepicker")
+				.datepicker(
+						{
+							dateFormat : 'yy-mm-dd', //Input Display Format 변경
+							showOtherMonths : true, //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+							showMonthAfterYear : true, //년도 먼저 나오고, 뒤에 월 표시
+							changeYear : true, //콤보박스에서 년 선택 가능
+							changeMonth : true, //콤보박스에서 월 선택 가능                
+// 							showOn : "both", //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+// 							buttonImage : "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif", //버튼 이미지 경로
+							buttonImageOnly : true, //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+							buttonText : "선택", //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
+							yearSuffix : "년", //달력의 년도 부분 뒤에 붙는 텍스트
+							monthNamesShort : [ '1', '2', '3', '4', '5', '6',
+									'7', '8', '9', '10', '11', '12' ], //달력의 월 부분 텍스트
+							monthNames : [ '1월', '2월', '3월', '4월', '5월', '6월',
+									'7월', '8월', '9월', '10월', '11월', '12월' ], //달력의 월 부분 Tooltip 텍스트
+							dayNamesMin : [ '일', '월', '화', '수', '목', '금', '토' ], //달력의 요일 부분 텍스트
+							dayNames : [ '일요일', '월요일', '화요일', '수요일', '목요일',
+									'금요일', '토요일' ], //달력의 요일 부분 Tooltip 텍스트
+							yearRange : 'c-30:c+0'
+						});
+	});
+	
+	// 파일 업로드
+</script>
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form1" action="../member/doJoin" method="POST">
+			<div class="box radio-box">
+					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
+					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
+					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
+				</div>
 			<div>
-				<label for="contactUs">문의:</label>
-				<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-				required> <label for="open" id="applicationlabel" class="formlabel mr-5 text-xs">연주자 가입신청</label>
-				<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-				id="concertlabel" class="formlabel text-xs mr-5">연주문의</label>
-			</div>
-			<div>
-				<label for="username">이름:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
-				<%-- console.log("${ajaxCalled}"); --%>
+				<label for="username">이름(기관명)</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
 				<div class="msg" style="display: none;"></div>
 			</div>
+			<div>
+				<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
+			</div>
+			<div>
+				<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
+						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
+			</div>
+			<div>
+				<label for="birth">공연날짜</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="날짜 선택이 가능합니다.">
+			</div>
+			<div>
+					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
+					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
+						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
+						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
+	
+					<script>
+						function execDaumPostcode() {
+							new daum.Postcode(
+									{
+										oncomplete : function(data) {
+											// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+	
+											// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+											// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+											var addr = ''; // 주소 변수
+											var extraAddr = ''; // 참고항목 변수
+	
+											//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+											if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+												addr = data.roadAddress;
+											} else { // 사용자가 지번 주소를 선택했을 경우(J)
+												addr = data.jibunAddress;
+											}
+	
+											// 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+											if (data.userSelectedType === 'R') {
+												// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+												// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+												if (data.bname !== ''
+														&& /[동|로|가]$/g
+																.test(data.bname)) {
+													extraAddr += data.bname;
+												}
+												// 건물명이 있고, 공동주택일 경우 추가한다.
+												if (data.buildingName !== ''
+														&& data.apartment === 'Y') {
+													extraAddr += (extraAddr !== '' ? ', '
+															+ data.buildingName
+															: data.buildingName);
+												}
+												// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+												if (extraAddr !== '') {
+													extraAddr = ' (' + extraAddr
+															+ ')';
+												}
+												// 조합된 참고항목을 해당 필드에 넣는다.
+												document
+														.getElementById("extraAddress").value = extraAddr;
+	
+											} else {
+												document
+														.getElementById("extraAddress").value = '';
+											}
+	
+											// 우편번호와 주소 정보를 해당 필드에 넣는다.
+											document.getElementById('postcode').value = data.zonecode;
+											document.getElementById("address").value = addr;
+											// 커서를 상세주소 필드로 이동한다.
+											document
+													.getElementById("detailAddress")
+													.focus();
+										}
+									}).open();
+						}
+					</script>
+				</div>
 
 			<div>
-				<label for="email">이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+				<label for="text" class="mb-2">문의사항</label> <textarea id="text" name="text" autocomplete="off" required>
+				</textarea>
 			</div>
-
 			<div>
-				<label for="cellphoneNum">전화번호:</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
-					name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11">
+				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
+				<div class="form-control">
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
+				</div>
 			</div>
-			<div class="info">※ -없이 숫자만 입력가능합니다.</div>
-
-			<div>
-				<label for="name">공연날짜:</label> <input type="text" id="text" name="mname" autocomplete="off" required>
-			</div>
-
-			<div>
-				<label for="email">공연장소:</label> <input type="email" id="email" name="email" autocomplete="off" required>
-			</div>
-
-			<div>
-				<label for="text">문의사항:</label> <textarea id="text" name="text" autocomplete="off" required></textarea>
-			</div>
-
 			<div class="center-text mt-5">
 				<button type="submit">가입</button>
 				<button type="button" onclick="history.back();">뒤로가기</button>
