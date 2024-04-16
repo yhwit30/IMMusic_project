@@ -329,6 +329,9 @@ background-color:transparent;
 				<div class=" mr-20">
 					<ul class="flex gap-x-20 text-base">
 						<li>
+							<a href="/usr/test/artistTest">실험</a>
+						</li>
+						<li>
 							<a href="/usr/about">ABOUT</a>
 						</li>
 						<li>
