@@ -96,7 +96,8 @@ form {
 	margin: 0; /* 기본 마진 제거 */
 }
 
-/* 개인정보 수집 동의, 문의사항 */
+
+/* 개인정보 수집 동의, 자기소개 */
 
 .signup-form .information {
 	width: 20%;
@@ -110,7 +111,15 @@ form {
 	width: 98.3%;
 	height: 150px;
 	padding: 10px;
-	margin-bottom: 10px;
+}
+
+.signup-form .checkbox {
+	width: 20px;
+	height: 20px;
+}
+
+.signup-form .checklabel {
+	width: 70%;
 }
 
 /* 스크롤바 디자인 */
@@ -141,6 +150,7 @@ textarea::-webkit-scrollbar-thumb {
     width: 12px;
     background-color: #f2ede2;
 }
+
 
 .form-control::-webkit-scrollbar-thumb {
     border-radius: 10px;
@@ -319,7 +329,9 @@ textarea::-webkit-scrollbar-thumb {
 			</div>
 			<div>
 				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
-				<div class="form-control">
+
+				<div class="form-control mb-3">
+
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
@@ -342,6 +354,10 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
+
+				<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
+				<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
+
 			</div>
 			<div class="box center-text mt-5">
 				<button type="submit" class="mr-3">문의</button>
