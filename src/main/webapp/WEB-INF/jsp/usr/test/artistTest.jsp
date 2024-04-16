@@ -4,16 +4,14 @@
 <%@ include file="../common/head.jspf"%>
 
 
-<!-- quick fix to load assets from github -->
-<base href="https://rawcdn.githack.com/MuhammadHasann/component-frontend/7e3a0bced6f1b050e8d0b621f2a3a6e7b1cb06d3/section/category%20card-2/" />
 
 
 
 <section class="container">
 	<div class="category_container">
 		<div class="content">
-			<img src="assets/UI UX Designer.jpg" class="professio_image" alt="Profession" />
-			<img src="assets/John Doe.jpg" class="profile_image" alt="Profile" />
+			<img src="/resource/임재민 프로필사진2.png" class="professio_image" alt="Profession" />
+			<img src="/resource/임재민 프로필사진.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>John Doe</span>
 				<p>UI/UX Designer + Graphic Designer</p>
@@ -27,8 +25,8 @@
 
 		</div>
 		<div class="content">
-			<img src="assets/Photographer.jpg" class="profession_image" alt="Profession" />
-			<img src="assets/Prince Akashi.jpg" class="profile_image" alt="Profile" />
+			<img src="/resource/구보근 프로필사진.png" class="profession_image" alt="Profession" />
+			<img src="/resource/구보근 프로필사진.png" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>Prince Akashi</span>
 				<p>Photographer + Model</p>
@@ -40,8 +38,8 @@
 			</div>
 		</div>
 		<div class="content">
-			<img src="assets/Fashion Designer.jpg" class="profession_image" alt="Profession" />
-			<img src="assets/Rafaella Mendes.jpg" class="profile_image" alt="Profile" />
+			<img src="/resource/허원경 프로필사진.png" class="profession_image" alt="Profession" />
+			<img src="/resource/허원경 프로필사진.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>Rafaella Mendes</span>
 				<p>Fashion Designer + Model</p>
