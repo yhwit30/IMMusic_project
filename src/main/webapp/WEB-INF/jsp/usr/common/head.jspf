@@ -28,11 +28,17 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 
+<!-- 제이쿼리 ui 불러오기 -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
 
 <style>
 #logo {
-	height: 80px;
-	width: 90px;
+	height: 75px;
+	width: 85px;
 	object-fit: cover;
 	/* 	margin-top: -10px; */
 	/* 	margin-left: 15px; */
@@ -79,9 +85,9 @@
 	align-items: flex-end;
 }
 
-#head-bg{
+.head-bg{
 background-color: #f2ede2;
-height: 80px;
+height: 75px;
 }
 </style>
 
@@ -289,37 +295,37 @@ background-color:transparent;
 
 	 	<c:if
 		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-			<div class="flex justify-center content-center">
-				<div id="intro-top" >
-					<p class="mt-10">LOADING</p>
-				<div class="spinner center">
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	    <div class="spinner-blade"></div>
-	</div>
-				</div>
-				<div id="intro-logo">
-					<img src="/resource/IMMusicLogo자름.png" />
-				</div>
-				<div id="intro-bottom">
-					<p class="mb-10">IMMusic</p>
-				</div>
-			</div>
+<!-- 			<div class="flex justify-center content-center"> -->
+<!-- 				<div id="intro-top" > -->
+<!-- 					<p class="mt-10">LOADING</p> -->
+<!-- 				<div class="spinner center"> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	    <div class="spinner-blade"></div> -->
+<!-- 	</div> -->
+<!-- 				</div> -->
+<!-- 				<div id="intro-logo"> -->
+<!-- 					<img src="/resource/IMMusicLogo자름.png" /> -->
+<!-- 				</div> -->
+<!-- 				<div id="intro-bottom"> -->
+<!-- 					<p class="mb-10">IMMusic</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 		</c:if> 
 
 
 	<!-- 게시판 헤드 -->
 	<header>
-		<div id="head-bg" class="fixed w-full z-10">
+		<div class="head-bg fixed w-full z-10">
 			<div class="flex items-center justify-between">
 				<div class="ml-5">
 					<a href="/">
@@ -328,6 +334,9 @@ background-color:transparent;
 				</div>
 				<div class=" mr-20">
 					<ul class="flex gap-x-20 text-base">
+						<li>
+							<a href="/usr/test/artistTest">실험</a>
+						</li>
 						<li>
 							<a href="/usr/about">ABOUT</a>
 						</li>
@@ -349,6 +358,6 @@ background-color:transparent;
 		</div>
 	</header>
 	
-	<div class="h-20"></div>
+	<div class="head-bg"></div>
 	
 <%-- 	<h2 id="pageTitle">${pageTitle }</h2> --%>
