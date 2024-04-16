@@ -165,6 +165,15 @@ form {
 	padding: 10px;
 }
 
+.signup-form .checkbox {
+	width: 20px;
+	height: 20px;
+}
+
+.signup-form .checklabel {
+	width: 70%;
+}
+
 /* 스크롤바 디자인 */
 textarea::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -396,7 +405,7 @@ $(document).ready(function() {
 				</div>
 				<div>
 					<label for="positive" class="information mb-2">개인정보 수집 동의</label>
-					<div class="form-control">
+					<div class="form-control mb-3">
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
@@ -419,6 +428,8 @@ $(document).ready(function() {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					</div>
+					<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
+					<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
 			
 			<div class="box center-text mt-5">
