@@ -135,7 +135,8 @@ width: 85px;
 }
 
 .btn_gotop:hover {
-	background-color: #536976;
+	background-color: #b3a78f;
+	border-style:none;
 }
 </style>
 
