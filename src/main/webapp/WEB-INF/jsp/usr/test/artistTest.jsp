@@ -78,8 +78,6 @@
 	width: 100%;
 	height: 100dvh;
 	background-image: var(--bg-color); 
-	
-	border:2px solid blue;
 }
 
 .category_container {
