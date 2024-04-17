@@ -34,7 +34,6 @@ body {
 
 body {
 	font-family: "Montserrat", Georgia, serif;
-	line-height: 1.6;
 }
 
 body {
@@ -301,28 +300,30 @@ a {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	opacity: 0.4;
+	opacity: 0.1;
 	background: #111;
 }
 
+/* .velo-slide__figure 클래스에 대한 스타일 */
 .velo-slide__figure {
-	z-index: 0;
-	position: relative;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	transform: scale(1);
-	transition: transform 0.5s ease;
+	z-index: 0; /* 스택 순서 설정 */
+	position: relative; /* 요소의 위치를 설정하며, 다른 요소에 상대적으로 배치 */
+	height: 100%; /* figure 요소의 높이를 컨테이너의 100%로 설정 */
+	width: 100%; /* figure 요소의 너비를 컨테이너의 100%로 설정 */
+	top: 0; /* figure 요소의 위쪽 여백을 0으로 설정 */
+	left: 0; /* figure 요소의 왼쪽 여백을 0으로 설정 */
+	overflow: hidden; /* figure를 넘어가는 내용 숨김 */
+	background-position: 50%; /* 배경 이미지의 위치를 가운데로 설정 */
+	background-repeat: no-repeat; /* 배경 이미지를 반복하지 않음 */
+	background-size: cover; /* 배경 이미지를 컨테이너에 맞게 자동으로 조정 */
+	transform: scale(1); /* 요소의 크기를 지정된 배율로 조절 */
+	transition: transform 0.5s ease; /* 변화가 일어날 때 애니메이션을 부드럽게 적용 */
 }
 
+/* .is-hovering 클래스가 적용된 경우 .velo-slide__figure에 대한 스타일 */
 .is-hovering .velo-slide__figure {
-	transform: scale(1.1);
-	transition: transform 0.5s ease;
+	transform: scale(1.1); /* 호버 시 요소를 조금 더 확대하여 보여줌 */
+	transition: transform 0.5s ease; /* 변화가 일어날 때 애니메이션을 부드럽게 적용 */
 }
 
 .velo-slide__vid-wrap {
@@ -368,16 +369,17 @@ a {
 	object-fit: cover;
 }
 
+/* .velo-slide__header 클래스에 대한 스타일 */
 .velo-slide__header {
-	z-index: 9;
-	position: relative;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	overflow-y: hidden;
-	padding: 6%;
+	z-index: 9; /* 스택 순서 설정 */
+	position: relative; /* 요소의 위치를 설정하며, 다른 요소에 상대적으로 배치 */
+	height: 100%; /* header 요소의 높이를 컨테이너의 100%로 설정 */
+	display: flex; /* 요소를 플렉스 컨테이너로 설정 */
+	align-items: flex-start; /* 플렉스 아이템들을 수직으로 정렬함 (시작점에 정렬) */
+	justify-content: center; /* 플렉스 아이템들을 수평으로 중앙에 정렬함 */
+	flex-direction: column; /* 플렉스 아이템들을 수직으로 정렬하고, 위에서 아래로 쌓음 */
+	overflow-y: hidden; /* y축 방향으로 오버플로우된 내용을 숨김 */
+	padding: 6%; /* header 요소의 안쪽 여백 설정 */
 }
 
 .velo-slide__pretitle {
@@ -655,22 +657,20 @@ a {
 	content: "\e907";
 }
 
+/* .velo-slide__figure 클래스에 대한 스타일 */
 .velo-slide__figure {
-	width: 100%; /* Set the width of the figure to 100% of its container */
-	max-width: 800px;
-	/* Optionally, set a maximum width to avoid stretching the image too much */
-	margin: 0 auto; /* Center the figure horizontally */
-	overflow: hidden; /* Hide any content that overflows the figure */
+	width: 100%; /* figure 요소의 너비를 컨테이너의 100%로 설정 */
+	max-width: 800px; /* 이미지가 너무 늘어지는 것을 방지하기 위해 선택적으로 최대 너비 설정 */
+	margin: 0 auto; /* 가로로 figure를 가운데 정렬 */
+	overflow: hidden; /* figure를 넘어가는 내용 숨김 */
 }
 
+/* .velo-slide__figure 내부의 이미지에 대한 스타일 */
 .velo-slide__figure img {
-	width: 100%; /* Set the width of the image to 100% of its container */
-	height: 100%;
-	/* Allow the height to adjust proportionally based on the image's aspect ratio */
-	max-height: 100%;
-	/* Limit the maximum height of the image to 100% of its container */
-	object-fit: cover;
-	/* Maintain the aspect ratio while covering the container */
+	width: 100%; /* 이미지의 너비를 컨테이너의 100%로 설정 */
+	height: 100%; /* 이미지의 높이를 이미지의 가로 세로 비율에 맞추어 자동으로 조정 */
+	max-height: 100%; /* 이미지의 최대 높이를 컨테이너의 100%로 제한 */
+	object-fit: cover; /* 컨테이너를 덮는 방식으로 이미지의 비율을 유지함 */
 }
 </style>
 </head>

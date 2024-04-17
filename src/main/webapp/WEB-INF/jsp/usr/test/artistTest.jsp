@@ -6,8 +6,7 @@
 
 
 
-
-<section class="container">
+<section class="container_artist">
 	<div class="category_container">
 		<div class="content">
 			<img src="/resource/임재민 프로필사진2.png" class="professio_image" alt="Profession" />
@@ -54,26 +53,13 @@
 </section>
 
 
-
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-body {
-	font-family: "Inter", sans-serif;
-}
-
 :root {
 	--light: #ffe6e6;
 	--dark: #0c0c0c;
 }
 
-.container {
+.container_artist {
 	--bg-color: radial-gradient(
 		circle at 50% 0%,
 		rgba(50, 50, 50, 1) 0%,
@@ -91,7 +77,7 @@ body {
 
 	width: 100%;
 	height: 100dvh;
-	background-image: var(--bg-color);
+	background-image: var(--bg-color); 
 }
 
 .category_container {
@@ -121,7 +107,7 @@ body {
 	justify-content: flex-end;
 	gap: 1.5rem;
 
-	padding: 2.5rem;
+ 	padding: 2.5rem; 
 
 	width: calc((100% / 3) - var(--gap));
 	height: 100%;
