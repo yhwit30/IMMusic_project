@@ -14,7 +14,6 @@ html>body {
 }
 
 /* 커스텀 */
-
 /* Scrollbar design for .form-control div */
 
 html>body::-webkit-scrollbar-track {
@@ -100,11 +99,11 @@ html>body::-webkit-scrollbar-thumb {
 
 
 /* 페이지 제목 위치 */
-/* #pageTitle { */
-/* 	left: 130px; */
-/* 	position: absolute; */
-/* 	top: 60px; */
-/* } */
+#pageTitle {
+	margin-left: 70px;
+	font-size: 5rem;
+	font-weight: bold;
+}
 
 
 
