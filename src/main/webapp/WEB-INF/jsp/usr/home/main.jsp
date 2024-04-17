@@ -59,9 +59,7 @@
 					<h3 class="section_suptitle">IMMusic & Art</h3>
 					<h2 class="section_title">News & Show</h2>
 					<div class="section__Text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
-							ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
-							blanditiis architecto? Ut!</p>
+						<p>비바기타앙상블 주요 뉴스나 공연 소식</p>
 					</div>
 				</div>
 
@@ -69,8 +67,10 @@
 					<div class="card__item">
 						<div class="inner-card">
 							<div class=" card-imag">
-								<img src="https://i.postimg.cc/zbbV7kq7/1.jpg" alt="Изображение">
-								<div class="card_text">super team</div>
+								<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
+								<div class="card_text">
+									<a href="https://blog.naver.com/jazzjarasum/221102783565">피아니스트 허대욱, 에오 트리오로 만나다.</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -78,7 +78,9 @@
 						<div class="inner-card">
 							<div class="card-imag">
 								<img src="https://i.postimg.cc/y30W4YgS/2.jpg" alt="Изображение">
-								<div class="card_text">super team</div>
+								<div class="card_text">
+									<a href="https://blog.naver.com/jazzjarasum/221102783565">재즈피아니스트 '허대욱'의 유럽과 클래식</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -296,7 +298,7 @@
 							</div>
 							<div class="card-info">
 								<div class="card-name">신우철</div>
-								<div class="card-prof">단원</div>
+								<div class="card-prof">단원(매니저)</div>
 							</div>
 						</div>
 					</div>
