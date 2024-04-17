@@ -340,8 +340,8 @@ background-color:transparent;}
 				</div>
 				<div class=" mr-20">
 					<ul class="flex gap-x-20 text-base">
-						<li><a href="/usr/test/artistTest">실험</a></li>
 						<li><a href="/usr/about">ABOUT</a></li>
+						<li><a href="/usr/test/artistTest">artist실험</a></li>
 						<li><a href="/usr/artist">ARTIST</a></li>
 						<li><a href="/usr/press/list">PRESS</a></li>
 						<li><a href="/usr/contactUs/concert">CONTACT US</a></li>
@@ -356,4 +356,4 @@ background-color:transparent;}
 
 	<div class="head-bg"></div>
 
-	<%-- 	<h2 id="pageTitle">${pageTitle }</h2> --%>
+	<h2 id="pageTitle">${pageTitle }</h2>

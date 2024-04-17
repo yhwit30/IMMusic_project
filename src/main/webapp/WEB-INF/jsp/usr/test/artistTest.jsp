@@ -5,14 +5,13 @@
 
 
 
-
 <section class="container_artist">
 	<div class="category_container">
 		<div class="content">
 			<img src="/resource/임재민 프로필사진2.png" class="professio_image" alt="Profession" />
 			<img src="/resource/임재민 프로필사진.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
-				<span>John Doe</span>
+				<span>임재민</span>
 				<p>UI/UX Designer + Graphic Designer</p>
 			</div>
 
@@ -27,7 +26,7 @@
 			<img src="/resource/구보근 프로필사진.png" class="profession_image" alt="Profession" />
 			<img src="/resource/구보근 프로필사진.png" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
-				<span>Prince Akashi</span>
+				<span>구보근</span>
 				<p>Photographer + Model</p>
 			</div>
 			<div class="wrapper">				
@@ -40,7 +39,20 @@
 			<img src="/resource/허원경 프로필사진.png" class="profession_image" alt="Profession" />
 			<img src="/resource/허원경 프로필사진.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
-				<span>Rafaella Mendes</span>
+				<span>허원경</span>
+				<p>Fashion Designer + Model</p>
+			</div>
+			<div class="wrapper">				
+				<div class="profile_quote">
+					<p>"My mission in life is not merely to survive, but to thrive and to do so with some passion, some compassion, some humor, and some style."</p>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<img src="/resource/허대욱 프로필사진.jpg" class="profession_image" alt="Profession" />
+			<img src="/resource/허대욱 프로필사진.jpg" class="profile_image" alt="Profile" />
+			<div class="profile_detail">
+				<span>허대욱</span>
 				<p>Fashion Designer + Model</p>
 			</div>
 			<div class="wrapper">				
