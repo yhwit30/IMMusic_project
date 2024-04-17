@@ -3,8 +3,9 @@
 <c:set var="pageTitle" value="#{board.code } PRESS LIST"></c:set>
 <%@ include file="../common/head.jspf"%>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
-	/* 구글 폰트 서비스에서 Raleway 글꼴을 가져옵니다. */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700)
+	;
+/* 구글 폰트 서비스에서 Raleway 글꼴을 가져옵니다. */
 body {
 	height: 100vh; /* 화면 전체 높이의 100%로 설정합니다. */
 	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
@@ -150,26 +151,34 @@ body {
 .hover_wrap .effect:hover figcaption {
 	opacity: 1;
 }
+
+.hover_wrap .effect h3,
+.hover_wrap .effect em {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for smooth effect */
+}
+
+.hover_wrap .effect:hover h3,
+.hover_wrap .effect:hover em {
+    opacity: 1;
+}
 </style>
 
 
 <div class="hover_wrap">
 	<figure class="effect">
-		<img src="/resource/허대욱_트리오.png" alt="이미지">	
+		<img src="/resource/허대욱_트리오.png" alt="이미지">
 		<div class="title">
-			<h3>
-				자세히보기 <em>클릭</em>
-				<h3>
+			<h3>자세히보기 <em>클릭</em></h3>
 		</div>
-		<figcaption>허대욱 트리오 기사
-			</figcaption>
+		<figcaption>허대욱 트리오 기사</figcaption>
 	</figure>
 	<figure class="effect">
 		<img src="https://tistory3.daumcdn.net/tistory/3344028/skin/images/hover_effect10.jpg" alt="이미지">
 		<div class="title">
 			<h3>
 				Mouse <em>Hover</em>
-				<h3>
+				</h3>
 		</div>
 		<figcaption>Mouse hover effect. Mouse hover effect. Mouse hover effect.Mouse hover effect. Mouse hover
 			effect. Mouse hover effect.</figcaption>
