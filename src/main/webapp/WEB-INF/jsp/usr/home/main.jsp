@@ -26,8 +26,8 @@
 		<div class="intro" id="intro">
 			<div class="container">
 				<div class="intro_inner">
-					<h2 class="intro__suptitle">Creative Template</h2>
-					<h1 class="intro__title">Welcome to MoGo</h1>
+					<h2 class="intro__suptitle">IMMusic & Art</h2>
+					<h1 class="intro__title">Welcome</h1>
 					<a href="#" class="btn">Learn More</a>
 				</div>
 			</div>
@@ -56,8 +56,8 @@
 			<div class="container">
 
 				<div class="section_heder">
-					<h3 class="section_suptitle">What we do</h3>
-					<h2 class="section_title">Story about us</h2>
+					<h3 class="section_suptitle">IMMusic & Art</h3>
+					<h2 class="section_title">News & Show</h2>
 					<div class="section__Text">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
 							ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
@@ -150,81 +150,6 @@
 				</div>
 			</div>
 
-
-
-			<div class="section section--devices">
-				<div class="container">
-					<div class="section_heder">
-						<h3 class="section_suptitle">For all devices</h3>
-						<h2 class="section_title">Unique desing</h2>
-					</div>
-					<div class="container-imges">
-						<img class="deivice-item" src="https://i.postimg.cc/t4TPJFPK/iphone-04.png" alt="png"> <img
-							class="deivice-item deivice-item--img-pone" src="https://i.postimg.cc/j5rLHfwd/iphone-07.png" alt="png">
-
-					</div>
-				</div>
-			</div>
-
-			<section class="section">
-				<div class="container">
-					<div class="section_heder">
-						<h3 class="section_suptitle">Service</h3>
-						<h2 class="section_title">What we do</h2>
-						<div class="section__Text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
-								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
-								blanditiis architecto? Ut!</p>
-						</div>
-					</div>
-					<div class="wedo">
-						<div class="wedo-item">
-							<img class="wedo-img" src="https://i.postimg.cc/0N18Fs8V/13.jpg" alt="">
-						</div>
-						<div class="wedo-item">
-							<div class="acardion">
-
-								<div class="acardion-item " data-collapse="#wedo_1">
-									<div class="acardion-header">
-										<img src="https://i.postimg.cc/XJDtMffn/opros.png" alt="" class="accard-icon">
-										<div class="header-text">Photography</div>
-									</div>
-									<div class="acardion_content" id="wedo_1">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos ratione totam consequatur
-											voluptates minus debitis corporis architecto quo obcaecati laborum sequi quam, voluptas repellat ad suscipit
-											omnis, quidem temporibus.</p>
-									</div>
-								</div>
-
-								<div class="acardion-item " data-collapse="#wedo_2">
-									<div class="acardion-header">
-										<img src="https://i.postimg.cc/XJDtMffn/opros.png" alt="" class="accard-icon">
-										<div class="header-text">creativiti</div>
-									</div>
-									<div class="acardion_content" id="wedo_2">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos ratione totam consequatur
-											voluptates minus debitis corporis architecto quo obcaecati laborum sequi quam, voluptas repellat ad suscipit
-											omnis, quidem temporibus.</p>
-									</div>
-								</div>
-								<div class="acardion-item" data-collapse="#wedo_3">
-									<div class="acardion-header">
-										<img src="https://i.postimg.cc/XJDtMffn/opros.png" alt="" class="accard-icon">
-										<div class="header-text">web desing</div>
-									</div>
-									<div class="acardion_content" id="wedo_3">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos ratione totam consequatur
-											voluptates minus debitis corporis architecto quo obcaecati laborum sequi quam, voluptas repellat ad suscipit
-											omnis, quidem temporibus.</p>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</section>
-
 			<div class="section section-gray">
 				<div class="container">
 					<div class="reviews">
@@ -271,7 +196,7 @@
 							</div>
 							<div class="card-info">
 								<div class="card-name">구보근</div>
-								<div class="card-prof">단원</div>
+								<div class="card-prof">단원(클래식 기타)</div>
 							</div>
 						</div>
 						<div class="card__item">
@@ -291,7 +216,7 @@
 							</div>
 							<div class="card-info">
 								<div class="card-name">원유현</div>
-								<div class="card-prof">단원</div>
+								<div class="card-prof">단원(클래식 기타)</div>
 							</div>
 						</div>
 						<div class="card__item">
@@ -311,7 +236,7 @@
 							</div>
 							<div class="card-info">
 								<div class="card-name">임재민</div>
-								<div class="card-prof">단원</div>
+								<div class="card-prof">단원(클래식 기타)</div>
 							</div>
 						</div>
 						<div class="card__item">
@@ -331,7 +256,47 @@
 							</div>
 							<div class="card-info">
 								<div class="card-name">허원경</div>
-								<div class="card-prof">리더</div>
+								<div class="card-prof">리더(클래식 기타)</div>
+							</div>
+						</div>
+						<div class="card__item">
+							<div class="inner-card">
+								<div class="card-imag">
+									<img src="/resource/허대욱 프로필사진.jpg" alt="Изображение">
+									<div class="card_text">
+										<div class="social">
+											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-info">
+								<div class="card-name">허대욱</div>
+								<div class="card-prof">단원(재즈 피아노)</div>
+							</div>
+						</div>
+						<div class="card__item">
+							<div class="inner-card">
+								<div class="card-imag">
+									<img src="" alt="Изображение">
+									<div class="card_text">
+										<div class="social">
+											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-info">
+								<div class="card-name">신우철</div>
+								<div class="card-prof">단원</div>
 							</div>
 						</div>
 					</div>
