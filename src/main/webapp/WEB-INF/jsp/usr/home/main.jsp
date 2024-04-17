@@ -260,10 +260,10 @@
   	<div class="container">
   		<div class="section_heder">
    		   <h3 class="section_suptitle">Who we you</h3>
-   		   <h2 class="section_title">meet our team</h2>
+   		   <h2 class="section_title">비바기타앙상블 단원 소개</h2>
    		   <div class="section__Text">
    		   	<p>
-   		   		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis blanditiis architecto? Ut!
+   		   		“비바기타앙상블”은 2012년부터 기타리스트 허원경이 이끄는 앙상블 팀으로 서울대학교 동문으로 이루어진 클래식기타 연주팀이다.
    		   	</p>
    		   </div>
    		</div>
@@ -272,7 +272,7 @@
    		<div class="card__item">
    			<div class="inner-card">
    			   <div class=" card-imag">   				
-   					<img src="https://i.postimg.cc/K4qyY6Lg/1.jpg" alt="Изображение">
+   					<img src="/resource/구보근 프로필사진.png" alt="Изображение">
    					<div class="card_text">
    						<div class="social">
    							<a href="#" class="social_iteam" target="_blank">
@@ -292,14 +292,14 @@
    			   </div>
    			</div>
    			<div class="card-info">
-   				<div class="card-name">Metthew Dix</div>
-   				<div class="card-prof">Grephic Desing</div>
+   				<div class="card-name">구보근</div>
+   				<div class="card-prof">단원</div>
    			</div>
    		</div>
    			<div class="card__item">
    				<div class="inner-card">
    				<div class="card-imag">
-   					<img src="https://i.postimg.cc/WhxLG05N/2.jpg" alt="Изображение">
+   					<img src="/resource/원유현 프로필사진.png" alt="Изображение">
    					<div class="card_text">
    						<div class="social">
    							<a href="#" class="social_iteam" target="_blank">
@@ -319,14 +319,14 @@
    				</div>
    			  </div>
    			  <div class="card-info">
-   				<div class="card-name">Christopher Campbell</div>
-   				<div class="card-prof">Branding/UX design</div>
+   				<div class="card-name">원유현</div>
+   				<div class="card-prof">단원</div>
    			</div>
    			</div>
    			<div class="card__item">
    				<div class="inner-card">
    				  <div class="card-imag">
-   					<img src="https://i.postimg.cc/Xpr6Bsc1/3.jpg" alt="Изображение">
+   					<img src="/resource/임재민 프로필사진2.png" alt="Изображение">
    					<div class="card_text">
    						<div class="social">
    							<a href="#" class="social_iteam" target="_blank">
@@ -346,10 +346,37 @@
    				</div>
    			</div>
    			<div class="card-info">
-   				<div class="card-name">Michael Fertig</div>
-   				<div class="card-prof">Develope</div>
+   				<div class="card-name">임재민</div>
+   				<div class="card-prof">단원</div>
    			</div>
    		 </div>
+   		 <div class="card__item">
+   				<div class="inner-card">
+   				<div class="card-imag">
+   					<img src="/resource/허원경 프로필사진.png" alt="Изображение">
+   					<div class="card_text">
+   						<div class="social">
+   							<a href="#" class="social_iteam" target="_blank">
+   								<i class="fab fa-facebook-f"></i>
+   							</a>
+   							<a href="#" class="social_iteam" target="_blank">
+   								<i class="fab fa-twitter"></i>
+   							</a>
+   							<a href="#" class="social_iteam" target="_blank">
+   								<i class="fab fa-pinterest-p"></i>
+   							</a>
+   							<a href="#" class="social_iteam" target="_blank">
+   								<i class="fab fa-instagram"></i>
+   							</a>
+   						</div>
+   					</div>
+   				</div>
+   			  </div>
+   			  <div class="card-info">
+   				<div class="card-name">허원경</div>
+   				<div class="card-prof">리더</div>
+   			</div>
+   			</div>
   	 </div>
  </section>
 
