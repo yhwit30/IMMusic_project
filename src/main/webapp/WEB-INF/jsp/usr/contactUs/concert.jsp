@@ -63,6 +63,21 @@ form {
 	margin-bottom: 0px;
 }
 
+/* 이메일 */
+
+.signup-form .email { 
+ 	width: 10%;
+}
+
+.signup-form .emailoption { 
+ 	width: 20%;
+}
+
+select {
+	margin-left: 5px;
+	padding: 5px 2px;
+}
+
 /* 주소 */
 .place > input {
 	margin-bottom: 10px;
@@ -253,8 +268,19 @@ textarea::-webkit-scrollbar-thumb {
 				<div class="msg" style="display: none;"></div>
 			</div>
 			<div>
-				<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
-			</div>
+			        <label for="email">이메일</label> 
+			        <input type="text" class="email" id="emailId" value=""> 
+					<span>@</span>
+					<input id="textEmail" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<select id="select">
+				        <option value="" disabled selected>E-Mail 선택</option>
+				        <option value="naver.com" id="naver.com">naver.com</option>
+				        <option value="hanmail.net" id="hanmail.net">hanmail.net</option>
+				        <option value="gmail.com" id="gmail.com">gmail.com</option>
+				        <option value="nate.com" id="nate.com">nate.com</option>
+				        <option value="directly" id="textEmail">직접 입력하기</option>
+			        </select>
+			    </div>
 			<div>
 				<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
 						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
