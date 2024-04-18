@@ -705,6 +705,15 @@ hr {
 	padding-top: 10px;
 }
 
+.card-prof2 {
+	color: #999;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 300px;
+	padding-top: 10px;
+	
+}
+
 .logo_imge {
 	display: block;
 	max-width: 100%;
