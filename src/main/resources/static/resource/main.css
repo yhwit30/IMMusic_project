@@ -346,6 +346,7 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	background-color: #f8f8f8;
 }
 
 .card__item {

@@ -94,10 +94,9 @@
 }
 
 .head-bg {
- 	background-color: #f2ede2; 
-	height: 75px;
-/*  	border-bottom: 1px solid #0d121d; */
- 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2);
+/*   	background-color: #f2ede2;   */
+/*   	border-bottom: 1px solid #0d121d;  */
+/*  	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2); */
 }
 </style>
 
@@ -272,29 +271,34 @@ background-color:transparent;}
 
 <!-- 헤드 맨 위 투명, 그외 색 -->
 <script>
-// 	$(document).ready(function() {
-// 	    var scrolled = false;
+document.addEventListener('DOMContentLoaded', function() {
+    var headBg = document.querySelector('.head-bg');
+    var scrolled = false;
 
-// 	    // 초기 상태에서 배경을 투명하게 설정
-// 	    $('#head-bg').css('background-color', 'transparent');
+    // 초기 상태에서 배경을 투명하게 설정
+    headBg.style.backgroundColor = 'transparent';
+    headBg.style.borderBottom = 'none';
 
-// 	    $(window).scroll(function() {
-// 	        if ($(this).scrollTop() === 0) {
-// 	            // 스크롤이 0이면 배경을 투명하게 설정
-// 	            $('#head-bg').stop().animate({
-// 	                'background-color': 'transparent'
-// 	            }, 200); // 200은 애니메이션의 속도입니다. 원하는 값으로 변경할 수 있습니다.
-// 	            // 스크롤이 0일 때 scrolled 변수 초기화
-// 	            scrolled = false;
-// 	        } else if (!scrolled) {
-// 	            scrolled = true;
-// 	            // animate() 함수를 사용하여 서서히 투명하게 만듭니다.
-// 	            $('#head-bg').stop().animate({
-// 	                'background-color': '#f2ede2'
-// 	            }, 200); // 200은 애니메이션의 속도입니다. 원하는 값으로 변경할 수 있습니다.
-// 	        }
-// 	    });
-// 	});
+    window.addEventListener('scroll', function() {
+        if (window.scrollY === 0) {
+            // 스크롤이 0이면 배경을 투명하게 설정
+            headBg.style.transition = 'background-color 0.3s';
+            headBg.style.backgroundColor = 'transparent';
+            headBg.style.borderBottom = 'none';
+            headBg.style.boxShadow = 'none';
+            // 스크롤이 0일 때 scrolled 변수 초기화
+            scrolled = false;
+        } else if (!scrolled) {
+            scrolled = true;
+            // 배경색과 효과 추가
+            headBg.style.transition = 'background-color 0.3s, border-bottom 0.3s, box-shadow 0.3s';
+            headBg.style.backgroundColor = '#f2ede2';
+            headBg.style.boxShadow = '0px 0px 15px 0px rgba(0,0,0,.2)';
+        }
+    });
+});
+
+
 </script>
 
 
@@ -357,4 +361,7 @@ background-color:transparent;}
 
 	<div class="head-bg"></div>
 
-	<h2 id="pageTitle">${pageTitle }</h2>
+
+<c:if test="${not fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
+    <h2 id="pageTitle">${pageTitle}</h2>
+</c:if>
