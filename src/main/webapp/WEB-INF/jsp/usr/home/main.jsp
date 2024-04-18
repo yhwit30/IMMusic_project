@@ -426,13 +426,13 @@
 			<section class="section">
 				<div class="container">
 					<div class="section_heder">
-						<h3 class="section_suptitle">Our Storis</h3>
+						<h3 class="section_suptitle">IMMusic % Art</h3>
 						<h2 class="section_title">lates blog</h2>
 					</div>
 					<div class="blog">
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/prqkjRdk/5.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진1.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -455,7 +455,7 @@
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/bwGLGXfH/6.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진2.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -478,7 +478,7 @@
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/bwGLGXfH/6.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진3.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
