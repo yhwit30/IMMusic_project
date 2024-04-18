@@ -8,6 +8,11 @@
 	font-style: normal;
 }
 
+@font-face {
+    font-family: 'KievitSerif';
+    src: url('/resource/KievitSerif-Bold.ttf') format('truetype');
+}
+
 
 html>body {
 	font-family: 'Pretendard-Regular';
@@ -102,4 +107,5 @@ html>body::-webkit-scrollbar-thumb {
 	margin-bottom: 30px;
 	font-size: 5rem;
 	font-weight: bold;
+	font-family: 'KievitSerif';
 }
