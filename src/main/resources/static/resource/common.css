@@ -102,9 +102,9 @@ html>body::-webkit-scrollbar-thumb {
 
 /* 페이지 제목 위치 */
 #pageTitle {
-	margin-left: 70px;
-	margin-top: 100px;
-	margin-bottom: 30px;
+	padding-left: 70px;
+	padding-top: 100px;
+	padding-bottom: 30px;
 	font-size: 5rem;
 	font-weight: bold;
 	font-family: 'KievitSerif';
