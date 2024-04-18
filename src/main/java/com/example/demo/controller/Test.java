@@ -54,9 +54,9 @@ public class Test {
 		return "/usr/test/artistTest";
 	}
 	
-	@RequestMapping("/usr/home/main2")
+	@RequestMapping("/usr/artist1")
 	public String testMain() {
 		
-		return "/usr/home/main2";
+		return "/usr/artist/artist1";
 	}
 }
