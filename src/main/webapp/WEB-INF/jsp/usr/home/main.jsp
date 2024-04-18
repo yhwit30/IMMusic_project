@@ -35,24 +35,24 @@
 					<a href="#" class="btn">Learn More</a>
 				</div>
 			</div>
-			<div class="slider">
-				<div class="container">
-					<div class="slider_inner">
-						<div class="slider_item activ">
-							<span class="slider_nambur">01</span>><span class="slider--text">Intro</span>
-						</div>
-						<div class="slider_item">
-							<span class="slider_nambur">02</span><span class="slider--text">Work</span>
-						</div>
-						<div class="slider_item">
-							<span class="slider_nambur">03</span><span class="slider--text">About</span>
-						</div>
-						<div class="slider_item">
-							<span class="slider_nambur">04</span><span class="slider--text">Work</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			<!-- 			<div class="slider"> -->
+			<!-- 				<div class="container"> -->
+			<!-- 					<div class="slider_inner"> -->
+			<!-- 						<div class="slider_item activ"> -->
+			<!-- 							<span class="slider_nambur">01</span>><span class="slider--text">Intro</span> -->
+			<!-- 						</div> -->
+			<!-- 						<div class="slider_item"> -->
+			<!-- 							<span class="slider_nambur">02</span><span class="slider--text">Work</span> -->
+			<!-- 						</div> -->
+			<!-- 						<div class="slider_item"> -->
+			<!-- 							<span class="slider_nambur">03</span><span class="slider--text">About</span> -->
+			<!-- 						</div> -->
+			<!-- 						<div class="slider_item"> -->
+			<!-- 							<span class="slider_nambur">04</span><span class="slider--text">Work</span> -->
+			<!-- 						</div> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 			</div> -->
 		</div>
 
 
