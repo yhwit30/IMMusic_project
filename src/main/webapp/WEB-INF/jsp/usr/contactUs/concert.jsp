@@ -289,7 +289,7 @@ textarea::-webkit-scrollbar-thumb {
 				<label for="concertdate">공연날짜</label> <input type="text" id="datepicker" name="concertdate" required placeholder="날짜 선택이 가능합니다.">
 			</div>
 			<div class="place mb-3">
-					<label for="concertplace">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
+					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">

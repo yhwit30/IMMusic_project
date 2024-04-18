@@ -370,68 +370,39 @@ CREATE TABLE about(
 # artist 테이블 추가
 CREATE TABLE artist (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  a_name CHAR(10) NOT NULL,
+  a_birth CHAR(10) NOT NULL,
+  a_gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
+  a_phone CHAR(10) NOT NULL, 
+  a_email CHAR(10) NOT NULL, 
+  a_address CHAR(255) NOT NULL, 
+  a_major CHAR(10) NOT NULL, 
+  a_sns CHAR(50) NOT NULL, 
+  a_photo CHAR(255) NOT NULL,
+  a_career CHAR(255) NOT NULL,
+  a_introduction TEXT NOT NULL,
+  a_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
   regDate DATETIME DEFAULT NULL, # 작성날짜
   updateDate DATETIME DEFAULT NULL, # 갱신날짜
-  artist_name CHAR(10) NOT NULL,
-  artist_birth DATE NOT NULL,
-  artist_gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
-  artist_phone CHAR(10) NOT NULL, 
-  artist_email CHAR(10) NOT NULL, 
-  artist_adress CHAR(10) NOT NULL, 
-  artist_major CHAR(10) NOT NULL, 
-  artist_sns CHAR(10) NOT NULL, 
-  artist_photo CHAR(10) NOT NULL,
-  artist_career CHAR(10) NOT NULL,
   delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
   delDate DATETIME DEFAULT NULL # 삭제날짜
 );
-
-
 
 # contact 테이블 추가
-CREATE TABLE contact (
+CREATE TABLE concert (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  c_name CHAR(10) NOT NULL,
+  c_email CHAR(10) NOT NULL,
+  c_phone CHAR(10) NOT NULL,
+  c_date CHAR(10) NOT NULL, 
+  c_address CHAR(10) NOT NULL, 
+  c_inquiry TEXT NOT NULL,
+  c_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
   regDate DATETIME DEFAULT NULL, # 작성날짜
   updateDate DATETIME DEFAULT NULL, # 갱신날짜
-  `name` CHAR(10) NOT NULL,
-  birth DATE NOT NULL,
-  gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
-  phone CHAR(10) NOT NULL, 
-  email CHAR(10) NOT NULL, 
-  adress CHAR(10) NOT NULL, 
-  major CHAR(10) NOT NULL, 
-  sns CHAR(10) NOT NULL, 
-  photo CHAR(10) NOT NULL,
-  career CHAR(10) NOT NULL,
-  concert_date CHAR(10) NOT NULL, 
-  concert_location CHAR(10) NOT NULL, 
   delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
   delDate DATETIME DEFAULT NULL # 삭제날짜
 );
-
-
-# contact_board 테이블 생성
-CREATE TABLE contact_board(
-    id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    regDate DATETIME NOT NULL,
-    updateDate DATETIME NOT NULL,
-    `code` CHAR(50) NOT NULL UNIQUE COMMENT '연주자 가입신청, 연주문의',
-    delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '삭제 여부 (0=삭제 전, 1=삭제 후)',
-    delDate DATETIME COMMENT '삭제 날짜'
-);
-
-
-# contact_board 생성
-INSERT INTO contact_board
-SET regDate = NOW(),
-updateDate = NOW(),
-`code` = '연주자 가입신청';
-
-INSERT INTO contact_board
-SET regDate = NOW(),
-updateDate = NOW(),
-`code` = '연주문의';
-
 
 ###############################################
 
@@ -456,5 +427,3 @@ SELECT * FROM artist;
 SELECT * FROM contact;
 
 SELECT * FROM contact_board;
-
-
