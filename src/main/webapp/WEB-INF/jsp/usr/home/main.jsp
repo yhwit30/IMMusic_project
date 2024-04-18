@@ -427,7 +427,7 @@
 			<section class="section">
 				<div class="container">
 					<div class="section_heder">
-						<h3 class="section_suptitle">IMMusic % Art</h3>
+						<h3 class="section_suptitle">IMMusic & Art</h3>
 						<h2 class="section_title">lates blog</h2>
 					</div>
 					<div class="blog">
