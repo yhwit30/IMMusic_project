@@ -36,6 +36,7 @@ form {
 .signup-form .formlabel{
 	width: 120px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 .signup-form label {
@@ -67,10 +68,12 @@ form {
 
 .signup-form .email { 
  	width: 10%;
+ 	margin-right: 5px;
 }
 
 .signup-form .emailoption { 
  	width: 20%;
+ 	margin-left: 5px;
 }
 
 select {
@@ -205,7 +208,7 @@ textarea::-webkit-scrollbar-thumb {
         var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
         var concertlabel = document.getElementById("concertlabel");
-        
+
         concertRadio.checked = true;
         
         applicationRadio.addEventListener('click', function() {
@@ -256,28 +259,25 @@ textarea::-webkit-scrollbar-thumb {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form1" action="../member/doJoin" method="POST">
+		<form name="form" action="../member/doJoin" method="POST">
 			<div class="box radio-box">
-					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
-					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
+					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
 			<div>
-				<label for="username">이름(기관명)</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
-				<div class="msg" style="display: none;"></div>
+				<label for="name">이름(기관명)</label> <input type="text" id="name" name="name" autocomplete="off" required>
 			</div>
 			<div>
 			        <label for="email">이메일</label> 
 			        <input type="text" class="email" id="emailId" value=""> 
 					<span>@</span>
-					<input id="textEmail" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<input id="emailoption" class="emailoption" placeholder="이메일을 선택하세요."> 
 					<select id="select">
 				        <option value="" disabled selected>E-Mail 선택</option>
 				        <option value="naver.com" id="naver.com">naver.com</option>
-				        <option value="hanmail.net" id="hanmail.net">hanmail.net</option>
 				        <option value="gmail.com" id="gmail.com">gmail.com</option>
-				        <option value="nate.com" id="nate.com">nate.com</option>
 				        <option value="directly" id="textEmail">직접 입력하기</option>
 			        </select>
 			    </div>
@@ -286,14 +286,13 @@ textarea::-webkit-scrollbar-thumb {
 						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
 			</div>
 			<div>
-				<label for="birth">공연날짜</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="날짜 선택이 가능합니다.">
+				<label for="concertdate">공연날짜</label> <input type="text" id="datepicker" name="concertdate" required placeholder="날짜 선택이 가능합니다.">
 			</div>
 			<div class="place mb-3">
-					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
-					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
+					<label for="concertplace">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
+					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
-	
 					<script>
 						function execDaumPostcode() {
 							new daum.Postcode(
@@ -357,9 +356,8 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			<div>
-				<label for="text" class="mb-2">문의사항</label> <textarea id="text" name="text" autocomplete="off" required>
-				</textarea>
-			</div>
+					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" class="mb-2" name="inquiry" autocomplete="off" required></textarea>
+				</div>
 			<div>
 				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
 

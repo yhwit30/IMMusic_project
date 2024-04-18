@@ -39,6 +39,7 @@ form {
 .signup-form .formlabel{
 	width: 120px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 .signup-form label {
@@ -106,10 +107,12 @@ form {
 
 .signup-form .email { 
  	width: 10%;
+ 	margin-right: 5px;
 }
 
 .signup-form .emailoption { 
  	width: 20%;
+ 	margin-left: 5px;
 }
 
 select {
@@ -240,11 +243,16 @@ textarea::-webkit-scrollbar-thumb {
 </style>
 <script>
 
+/* 라디오 버튼 클릭 */
     document.addEventListener("DOMContentLoaded", function() {
         var applicationRadio = document.getElementById("application");
         var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
         var concertlabel = document.getElementById("concertlabel");
+        var maleRadio = document.getElementById("male");
+        var malelabel = document.getElementById("malelabel");
+        var femaleRadio = document.getElementById("female");
+        var femalelabel = document.getElementById("femalelabel");
         
         applicationRadio.checked = true;
         
@@ -261,6 +269,13 @@ textarea::-webkit-scrollbar-thumb {
         concertlabel.addEventListener('click', function() {
             window.location.href = '/usr/contactUs/concert';   
         });
+        malelabel.addEventListener('click', function() {
+        	maleRadio.checked = true;
+        });
+        femalelabel.addEventListener('click', function() {
+        	femaleRadio.checked = true;
+        });
+        
     });
 
 </script>
@@ -290,7 +305,7 @@ textarea::-webkit-scrollbar-thumb {
 							yearRange : 'c-30:c+0'
 						});
 	});
-	
+
 	// 파일 업로드
 </script>
 
@@ -330,23 +345,24 @@ $(document).ready(function() {
 		<form name="form" action="../member/doJoin" method="POST">
 			<div>
 				<div class="box radio-box">
-					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
-					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
+					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
+			<div>
 				<div>
-					<label for="username">이름</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
+				<label for="name">이름</label> <input type="text" id="name" name="name" autocomplete="off" required>
 				</div>
 				<div>
 					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
 				<div class = "mb-4">
-					<label for="birth">성별</label> 
-					<input type="radio" id="male" name="sex" class="form-check-input" value="1"
-					required> <label for="open" id="sexlabel" class="formlabel mr-5 text-base">남성</label>
-					<input type="radio" id="female" name="sex" class="form-check-input" value="2" required> <label for="open"
-					id="sexlabel" class="formlabel text-base mr-5">여성</label>
+					<label for="gender">성별</label> 
+					<input type="radio" id="male" name="gender" class="form-check-input" value="1"
+					required> <label for="open" id="malelabel" class="formlabel mr-5 text-base">남성</label>
+					<input type="radio" id="female" name="gender" class="form-check-input" value="2" required> <label for="open"
+					id="femalelabel" class="formlabel text-base mr-5">여성</label>
 				</div>
 				<div>
 					<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
@@ -360,18 +376,15 @@ $(document).ready(function() {
 					<select id="select">
 				        <option value="" disabled selected>E-Mail 선택</option>
 				        <option value="naver.com" id="naver.com">naver.com</option>
-				        <option value="hanmail.net" id="hanmail.net">hanmail.net</option>
 				        <option value="gmail.com" id="gmail.com">gmail.com</option>
-				        <option value="nate.com" id="nate.com">nate.com</option>
 				        <option value="directly" id="textEmail">직접 입력하기</option>
 			        </select>
 			    </div>
 				<div class="place mb-3">
 					<label for="address">주소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
-					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
+					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
-	
 					<script>
 						function execDaumPostcode() {
 							new daum.Postcode(
@@ -508,7 +521,6 @@ $(document).ready(function() {
 							numericValue.length - 1);
 				}
 			}
-
 		</script>
 	</div>
 </section>
