@@ -40,6 +40,10 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+<!-- 글꼴 아리따 부리 가져오기 -->
+<link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.css">
+<link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.min.css">
+
 
 
 <style>
