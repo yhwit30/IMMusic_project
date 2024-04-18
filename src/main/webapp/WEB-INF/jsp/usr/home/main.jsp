@@ -26,146 +26,133 @@
 </head>
 <body>
 	<div class="page">
+	
+			
 
 		<div class="intro" id="intro">
 			<div class="container">
 				<div class="intro_inner">
 					<h2 class="intro__suptitle">IMMusic & Art</h2>
 					<h1 class="intro__title">Welcome</h1>
-					<a href="#" class="btn">Learn More</a>
+<!-- 					<a href="#" class="btn">Learn More</a> -->
 				</div>
 			</div>
-			<!-- 			<div class="slider"> -->
-			<!-- 				<div class="container"> -->
-			<!-- 					<div class="slider_inner"> -->
-			<!-- 						<div class="slider_item activ"> -->
-			<!-- 							<span class="slider_nambur">01</span>><span class="slider--text">Intro</span> -->
-			<!-- 						</div> -->
-			<!-- 						<div class="slider_item"> -->
-			<!-- 							<span class="slider_nambur">02</span><span class="slider--text">Work</span> -->
-			<!-- 						</div> -->
-			<!-- 						<div class="slider_item"> -->
-			<!-- 							<span class="slider_nambur">03</span><span class="slider--text">About</span> -->
-			<!-- 						</div> -->
-			<!-- 						<div class="slider_item"> -->
-			<!-- 							<span class="slider_nambur">04</span><span class="slider--text">Work</span> -->
-			<!-- 						</div> -->
-			<!-- 					</div> -->
-			<!-- 				</div> -->
-			<!-- 			</div> -->
 		</div>
 
-
-		<section class="section" id="about">
-			<div class="container">
-
-				<div class="section_heder">
-					<h3 class="section_suptitle">IMMusic & Art</h3>
-					<h2 class="section_title">News & Show</h2>
-					<div class="section__Text">
-						<p>주요 뉴스 및 공연 소식</p>
-					</div>
-				</div>
-
-				<div class="cards">
-					<div class="card__item">
-						<div class="inner-card">
-							<div class=" card-imag">
-								<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
-								<div class="card_text">
-									<a href="https://blog.naver.com/jazzjarasum/221102783565">피아니스트
-										허대욱, 에오 트리오로 만나다.</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card__item">
-						<div class="inner-card">
-							<div class="card-imag">
-								<img src="/resource/공연 포스터 2.jpg" alt="Изображение">
-								<div class="card_text">
-									<a href="https://blog.naver.com/jazzjarasum/221102783565">포스터
-										2</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card__item">
-						<div class="inner-card">
-							<div class="card-imag">
-								<img src="/resource/공연 포스터 1.jpg" alt="Изображение">
-								<div class="card_text">포스터 1</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
 		<div class="stati">
-			<div class="container">
+			<section class="section" id="about">
+				<div class="container">
 
-				<div class="stat">
-
-					<div class="stat_item">
-						<h2 class="section_title">비바기타앙상블 연혁</h2>
-						<div class="stat_count">2019년</div>
-						<div class="stat_text_item">
-							<div class="stat_text">4월 10일 클래식기타와 플라멩코의 밤</div>
-							<div class="stat_text">주최: 주한 스페인 대사관, 연세대학교 학부대학 RC교육원</div>
-							<div class="stat_text">장소: 연세대학교 국제캠퍼스 교육관</div>
+					<div class="section_heder">
+						<h3 class="section_suptitle">IMMusic & Art</h3>
+						<h2 class="section_title">News & Show</h2>
+						<div class="section__Text">
+							<p>주요 뉴스 및 공연 소식</p>
 						</div>
+					</div>
 
-						<div class="stat_text_item">
-							<div class="stat_text">6월 15일 비바기타 허원경 임재민 2인 연주회</div>
-							<div class="stat_text">주최: 부산 골방 프로젝트</div>
-							<div class="stat_text">장소: 골방프로젝트</div>
-						</div>
-
-						<div class="stat_text_item">
-							<div class="stat_text">8월 13~18일 제5회 한국 국제 기타 페스티벌</div>
-							<div class="stat_text">주최: 양평군, 한국기타협회</div>
-							<div class="stat_text">장소: 양평군 백하헌</div>
-						</div>
-
-						<div class="stat_item">
-							<div class="stat_count">2021년</div>
-							<div class="stat_text_item">
-								<div class="stat_text">11월4일 이재삼 작가와 함께 하는 연주회</div>
-								<div class="stat_text">주최: 양평문화만들기</div>
-								<div class="stat_text">장소: 이재삼 작가 작업실</div>
+					<div class="cards">
+						<div class="card__item">
+							<div class="inner-card">
+								<div class=" card-imag">
+									<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
+									<div class="card_text">
+										<a href="https://blog.naver.com/jazzjarasum/221102783565">피아니스트
+											허대욱, 에오 트리오로 만나다.</a>
+									</div>
+								</div>
 							</div>
 						</div>
-
-						<div class="stat_item">
-							<div class="stat_count">2022년</div>
-							<div class="stat_text_item">
-								<div class="stat_text">12월 3일 허병훈 작가와 만남의 시간</div>
-								<div class="stat_text">장소: 온양민속박물관</div>
+						<div class="card__item">
+							<div class="inner-card">
+								<div class="card-imag">
+									<img src="/resource/공연 포스터 2.jpg" alt="Изображение">
+									<div class="card_text">
+										<a href="https://blog.naver.com/jazzjarasum/221102783565">포스터
+											2</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="stat_item">
-							<div class="stat_count">2023년</div>
-							<div class="stat_text_item">
-								<div class="stat_text">3월 11, 25, 4월 1, 15, 29일 클래식기타연주클리닉</div>
-								<div class="stat_text">장소: 영등포 술술센터 4층 술술홀</div>
+						<div class="card__item">
+							<div class="inner-card">
+								<div class="card-imag">
+									<img src="/resource/공연 포스터 1.jpg" alt="Изображение">
+									<div class="card_text">포스터 1</div>
+								</div>
 							</div>
 						</div>
-
 					</div>
 
 				</div>
-			</div>
+			</section>
+
+
+			<!-- 			<div class="container"> -->
+			<!-- 				<div class="stat"> -->
+			<!-- 					<div class="stat_item"> -->
+			<!-- 						<h2 class="section_title">비바기타앙상블 연혁</h2> -->
+			<!-- 						<div class="stat_count">2019년</div> -->
+			<!-- 						<div class="stat_text_item"> -->
+			<!-- 							<div class="stat_text">4월 10일 클래식기타와 플라멩코의 밤</div> -->
+			<!-- 							<div class="stat_text">주최: 주한 스페인 대사관, 연세대학교 학부대학 RC교육원</div> -->
+			<!-- 							<div class="stat_text">장소: 연세대학교 국제캠퍼스 교육관</div> -->
+			<!-- 						</div> -->
+
+			<!-- 						<div class="stat_text_item"> -->
+			<!-- 							<div class="stat_text">6월 15일 비바기타 허원경 임재민 2인 연주회</div> -->
+			<!-- 							<div class="stat_text">주최: 부산 골방 프로젝트</div> -->
+			<!-- 							<div class="stat_text">장소: 골방프로젝트</div> -->
+			<!-- 						</div> -->
+
+			<!-- 						<div class="stat_text_item"> -->
+			<!-- 							<div class="stat_text">8월 13~18일 제5회 한국 국제 기타 페스티벌</div> -->
+			<!-- 							<div class="stat_text">주최: 양평군, 한국기타협회</div> -->
+			<!-- 							<div class="stat_text">장소: 양평군 백하헌</div> -->
+			<!-- 						</div> -->
+
+			<!-- 						<div class="stat_item"> -->
+			<!-- 							<div class="stat_count">2021년</div> -->
+			<!-- 							<div class="stat_text_item"> -->
+			<!-- 								<div class="stat_text">11월4일 이재삼 작가와 함께 하는 연주회</div> -->
+			<!-- 								<div class="stat_text">주최: 양평문화만들기</div> -->
+			<!-- 								<div class="stat_text">장소: 이재삼 작가 작업실</div> -->
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+
+			<!-- 						<div class="stat_item"> -->
+			<!-- 							<div class="stat_count">2022년</div> -->
+			<!-- 							<div class="stat_text_item"> -->
+			<!-- 								<div class="stat_text">12월 3일 허병훈 작가와 만남의 시간</div> -->
+			<!-- 								<div class="stat_text">장소: 온양민속박물관</div> -->
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+			<!-- 						<div class="stat_item"> -->
+			<!-- 							<div class="stat_count">2023년</div> -->
+			<!-- 							<div class="stat_text_item"> -->
+			<!-- 								<div class="stat_text">3월 11, 25, 4월 1, 15, 29일 클래식기타연주클리닉</div> -->
+			<!-- 								<div class="stat_text">장소: 영등포 술술센터 4층 술술홀</div> -->
+			<!-- 							</div> -->
+			<!-- 						</div> -->
+
+			<!-- 					</div> -->
+
+			<!-- 				</div> -->
+			<!-- 			</div> -->
 
 			<section class="section section-gray">
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we you</h3>
-						<h2 class="section_title">비바기타앙상블 단원 소개</h2>
+						<h2 class="section_title">단원 소개</h2>
 						<div class="section__Text">
 							<p>“비바기타앙상블”은 2012년부터 기타리스트 허원경이 이끄는 앙상블 팀으로 서울대학교 동문으로 이루어진
 								클래식기타 연주팀이다.</p>
+							<p>Heo trio Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Minima aspernatur numquam dolorem nostrum
+								veritatis maxime iure ullam vitae hic consequuntur quia
+								molestiae consectetur. Incidunt deserunt recusandae vel eveniet
+								aspernatur delectus.</p>
 						</div>
 					</div>
 
@@ -310,8 +297,8 @@
 								</div>
 							</div>
 							<div class="card-info">
-								<div class="card-name">신우철</div>
-								<div class="card-prof">단원(매니저)</div>
+								<div class="card-name">매니저</div>
+								<div class="card-prof">매니저</div>
 							</div>
 						</div>
 					</div>

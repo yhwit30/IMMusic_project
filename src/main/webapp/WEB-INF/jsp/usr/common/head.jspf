@@ -98,10 +98,13 @@
 }
 
 .head-bg {
+/* 자바스크립트로 효과 줌 */
 /*   	background-color: #f2ede2;   */
 /*   	border-bottom: 1px solid #0d121d;  */
 /*  	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2); */
 }
+
+
 </style>
 
 
@@ -348,10 +351,11 @@ document.addEventListener('DOMContentLoaded', function() {
 					</a>
 				</div>
 				<div class=" mr-20">
-					<ul class="flex gap-x-20 text-base">
+					<ul class="flex gap-x-20 text-base blending-head-text">
 						<li><a href="/usr/about">ABOUT</a></li>
-						<li><a href="/usr/test/artistTest">artist실험</a></li>
-						<li><a href="/usr/artist">ARTIST</a></li>
+						<li><a href="/usr/test/artistTest">ARTIST1</a></li>
+						<li><a href="/usr/artist">ARTIST2</a></li>
+						<li><a href="/usr/artist1">ARTIST3</a></li>
 						<li><a href="/usr/press/list">PRESS</a></li>
 						<li><a href="/usr/contactUs/concert">CONTACT US</a></li>
 
@@ -363,7 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		</div>
 	</header>
 
-	<div class="head-bg"></div>
 
 
 <c:if test="${not fn:contains(pageContext.request.requestURI, '/usr/home/main')}">

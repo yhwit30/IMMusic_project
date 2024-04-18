@@ -37,7 +37,7 @@
 		</div>
 		<div class="content">
 			<img src="/resource/허원경 프로필사진.png" class="profession_image" alt="Profession" />
-			<img src="/resource/허원경 프로필사진.jpg" class="profile_image" alt="Profile" />
+			<img src="/resource/허원경 프로필사진2.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>허원경</span>
 				<p>Fashion Designer + Model</p>
@@ -50,7 +50,7 @@
 		</div>
 		<div class="content">
 			<img src="/resource/허대욱 프로필사진.jpg" class="profession_image" alt="Profession" />
-			<img src="/resource/허대욱 프로필사진.jpg" class="profile_image" alt="Profile" />
+			<img src="/resource/허대욱 프로필사진2.jpg" class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>허대욱</span>
 				<p>Fashion Designer + Model</p>
@@ -89,7 +89,7 @@
 
 	width: 100%;
 	height: 100dvh;
-	background-image: var(--bg-color); 
+/* 	background-image: var(--bg-color);  */
 }
 
 .category_container {
