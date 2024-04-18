@@ -90,24 +90,58 @@ $(function() {
 
 	});
 
-	document.addEventListener("DOMContentLoaded", function() {
-		const newsBtn = document.getElementById("newsBtn");
-		const showBtn = document.getElementById("showBtn");
-		const newsSection = document.querySelector(".news");
-		const showSection = document.querySelector(".shows");
+	var albums = [
+    {
+        image: "/resource/음악앨범 1.jpg",
+        title: "Will It Be Spring Tomorrow?",
+        link: ""
+    },
+    {
+        image: "/resource/음악앨범 2.jpg",
+        title: "Interval Of Parallel",
+        link: ""
+    },
+    {
+        image: "/resource/음악앨범 3.jpg",
+        title: "Trigram",
+        link: "https://youtu.be/KebPgX7_sGA"
+    },
+    {
+        image: "/resource/음악앨범 4.jpg",
+        title: "Le Moment Disperse",
+        link: ""
+    },
+    {
+        image: "/resource/음악앨범 5.jpg",
+        title: "To The West",
+        link: ""
+    },
+    {
+        image: "/resource/음악앨범 6.jpg",
+        title: "스페인의 인상",
+        link: ""
+    }
+];
 
-		// 초기 화면 설정
-		showSection.style.display = "none"; // 초기에는 공연 섹션 숨김
+var currentIndex = 0;
+var interval = 3000; // 이미지를 변경할 간격 (밀리초 단위)
 
-		newsBtn.addEventListener("click", function() {
-			newsSection.style.display = "block";
-			showSection.style.display = "none";
-		});
+function changeAlbum() {
+    var album = albums[currentIndex];
+    document.getElementById("albumImage").src = album.image;
+    document.getElementById("albumTitle").innerHTML = album.title;
+    if (album.link) {
+        document.getElementById("albumImage").parentNode.href = album.link;
+    } else {
+        document.getElementById("albumImage").parentNode.removeAttribute("href");
+    }
+    currentIndex = (currentIndex + 1) % albums.length;
+}
 
-		showBtn.addEventListener("click", function() {
-			newsSection.style.display = "none";
-			showSection.style.display = "block";
-		});
-	});
+// 페이지가 로드되면 시작
+window.onload = function() {
+    changeAlbum(); // 초기 이미지 설정
+    setInterval(changeAlbum, interval); // 주기적으로 이미지 변경
+};
 
 });

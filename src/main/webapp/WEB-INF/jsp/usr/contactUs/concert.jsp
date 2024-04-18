@@ -36,6 +36,7 @@ form {
 .signup-form .formlabel{
 	width: 120px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 .signup-form label {
@@ -56,6 +57,28 @@ form {
 	display: flex; 
 	justify-content: center; 
 	align-items: center;
+}
+
+.signup-form .form-check-input { /* 라디오 박스 */
+	width: 30px;
+	margin-bottom: 0px;
+}
+
+/* 이메일 */
+
+.signup-form .email { 
+ 	width: 10%;
+ 	margin-right: 5px;
+}
+
+.signup-form .emailoption { 
+ 	width: 20%;
+ 	margin-left: 5px;
+}
+
+select {
+	margin-left: 5px;
+	padding: 5px 2px;
 }
 
 /* 주소 */
@@ -85,15 +108,33 @@ form {
 	width: 43.8%;
 }
 
-.signup-form .form-check-input { /* 라디오 박스 */
-	width: 30px;
-	margin-bottom: 0px;
-}
-
 .signup-form .form-check-label {
 	width: 90px;
 	height: 15px; /* 원하는 크기로 설정하세요 */
 	margin: 0; /* 기본 마진 제거 */
+}
+
+.signup-form button {
+	background-color: #f2ede2;
+	color: black;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.8rem;
+}
+
+.signup-form button:hover {
+	background-color: #b3a78f;
+}
+
+.checkform {
+	display: inline-block;
+}
+
+.signup-form .contact-title {
+	padding: 5% 0;
+	height: 200px;
 }
 
 
@@ -158,22 +199,6 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #b3a78f;
 }
 
-/* 버튼 */
-
-.signup-form button {
-	background-color: #f2ede2;
-	color: black;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-size: 0.8rem;
-}
-
-.signup-form button:hover {
-	background-color: #b3a78f;
-}
-   
 </style>
 
 <script>
@@ -183,7 +208,7 @@ textarea::-webkit-scrollbar-thumb {
         var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
         var concertlabel = document.getElementById("concertlabel");
-        
+
         concertRadio.checked = true;
         
         applicationRadio.addEventListener('click', function() {
@@ -234,33 +259,40 @@ textarea::-webkit-scrollbar-thumb {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form1" action="../member/doJoin" method="POST">
+		<form name="form" action="../member/doJoin" method="POST">
 			<div class="box radio-box">
-					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
-					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
+					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
 			<div>
-				<label for="username">이름(기관명)</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
-				<div class="msg" style="display: none;"></div>
+				<label for="name">이름(기관명)</label> <input type="text" id="name" name="name" autocomplete="off" required>
 			</div>
 			<div>
-				<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
-			</div>
+			        <label for="email">이메일</label> 
+			        <input type="text" class="email" id="emailId" value=""> 
+					<span>@</span>
+					<input id="emailoption" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<select id="select">
+				        <option value="" disabled selected>E-Mail 선택</option>
+				        <option value="naver.com" id="naver.com">naver.com</option>
+				        <option value="gmail.com" id="gmail.com">gmail.com</option>
+				        <option value="directly" id="textEmail">직접 입력하기</option>
+			        </select>
+			    </div>
 			<div>
 				<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
 						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
 			</div>
 			<div>
-				<label for="birth">공연날짜</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="날짜 선택이 가능합니다.">
+				<label for="concertdate">공연날짜</label> <input type="text" id="datepicker" name="concertdate" required placeholder="날짜 선택이 가능합니다.">
 			</div>
 			<div class="place mb-3">
 					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
-					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
+					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
-	
 					<script>
 						function execDaumPostcode() {
 							new daum.Postcode(
@@ -324,9 +356,8 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			<div>
-				<label for="text" class="mb-2">문의사항</label> <textarea id="text" name="text" autocomplete="off" required>
-				</textarea>
-			</div>
+					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" class="mb-2" name="inquiry" autocomplete="off" required></textarea>
+				</div>
 			<div>
 				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
 
@@ -354,9 +385,11 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
-
+				<div class="checkform">
 				<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
 				<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
+				</div>
+				
 
 			</div>
 			<div class="box center-text mt-5">
