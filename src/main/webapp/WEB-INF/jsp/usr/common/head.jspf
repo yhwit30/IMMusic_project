@@ -355,8 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
 					</ul>
 				</div>
 			</div>
-
-
 		</div>
 	</header>
 
