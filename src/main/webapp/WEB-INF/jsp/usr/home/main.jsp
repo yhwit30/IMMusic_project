@@ -59,7 +59,7 @@
 					<h3 class="section_suptitle">IMMusic & Art</h3>
 					<h2 class="section_title">News & Show</h2>
 					<div class="section__Text">
-						<p>비바기타앙상블 주요 뉴스나 공연 소식</p>
+						<p>주요 뉴스 및 공연 소식</p>
 					</div>
 				</div>
 
@@ -152,25 +152,7 @@
 				</div>
 			</div>
 
-			<div class="section section-gray">
-				<div class="container">
-					<div class="reviews">
-						<a class="review-button reviews__bt--prev" href="#">Prev</a> <a class="review-button reviews__bt--next" href="#">Next</a>
-						<div class="data-slider">
-
-							<div class="reviews__item">
-								<img class="reviews_photo" src="https://i.postimg.cc/rs5mKwFR/423.png">
-								<div class="reviews_block">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, doloribus
-									sit dolor corporis. Sint modi labore repudiandae. Laboriosam optio velit laudantium dolor, molestiae illo saepe
-									minus, ratione assumenda voluptatum."</div>
-								<div class="reviews__author">Jon Doe</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<section class="section">
+			<section class="section section-gray">
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we you</h3>
@@ -304,8 +286,17 @@
 					</div>
 			</section>
 
-			<div class="section section-gray">
+			<div class="section ">
 				<div class="container">
+				<div class="section_heder">
+						<h3 class="section_suptitle">Albums</h3>
+						<h2 class="section_title">앨범</h2>
+						<div class="section__Text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
+								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
+								blanditiis architecto? Ut!</p>
+						</div>
+					</div>
 					<div class="logos">
 						<div class="logo-items">
 							<img class="logo_imge" src="/resource/음악앨범 1.jpg">
@@ -337,7 +328,7 @@
 				</div>
 			</div>
 
-			<section class="section" id="work">
+			<section class="section section-gray" id="work">
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we do</h3>
