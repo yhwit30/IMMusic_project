@@ -77,7 +77,7 @@
 					<div class="card__item">
 						<div class="inner-card">
 							<div class="card-imag">
-								<img src="https://i.postimg.cc/y30W4YgS/2.jpg" alt="Изображение">
+								<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
 								<div class="card_text">
 									<a href="https://blog.naver.com/jazzjarasum/221102783565">재즈피아니스트 '허대욱'의 유럽과 클래식</a>
 								</div>
@@ -308,22 +308,29 @@
 				<div class="container">
 					<div class="logos">
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/bScGKZT1/12.png">
+							<img class="logo_imge" src="/resource/음악앨범 1.jpg">
+							<div class="card-prof2">Will It Be Spring Tomorrow?</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/fVT3nnxq/13.png">
+							<img class="logo_imge" src="/resource/음악앨범 2.jpg">
+							<div class="card-prof2">Interval Of Parallel</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/nC1sPcQQ/14.png">
+							<a href="https://youtu.be/KebPgX7_sGA"> <img class="logo_imge" src="/resource/음악앨범 3.jpg">
+							</a>
+							<div class="card-prof2">Trigram</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/t7WnFzqk/15.png">
+							<img class="logo_imge" src="/resource/음악앨범 4.jpg">
+							<div class="card-prof2">Le Moment Disperse</div>
 						</div>
 						<div class="logo-items ">
-							<img class="logo_imge " src="https://i.postimg.cc/2LQqmCcM/16.png">
+							<img class="logo_imge " src="/resource/음악앨범 5.jpg">
+							<div class="card-prof2">To The West</div>
 						</div>
 						<div class="logo-items ">
-							<img class="logo_imge" src="https://i.postimg.cc/mt4zjFhs/17.png">
+							<img class="logo_imge" src="/resource/음악앨범 6.jpg">
+							<div class="card-prof2">스페인의 인상</div>
 						</div>
 
 					</div>
@@ -333,7 +340,7 @@
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we do</h3>
-						<h2 class="section_title">same of our work</h2>
+						<h2 class="section_title">공연 및 무대사진</h2>
 						<div class="section__Text">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
 								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
@@ -344,7 +351,7 @@
 				<div class="works">
 					<div class="works__col">
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/bdw24zr4/5.jpg" alt="">
+							<img class="work__image" src="/resource/공연사진.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -353,7 +360,7 @@
 							</div>
 						</div>
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/56v9RGBZ/6.jpg" alt="">
+							<img class="work__image" src="/resource/무대사진.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -415,78 +422,17 @@
 						</div>
 					</div>
 			</section>
-			<div class="section">
-				<div class="container">
-					<div class="reviews">
-						<a class="review-button reviews__bt--prev" href="#">Prev</a> <a class="review-button reviews__bt--next" href="#">Next</a>
-						<div class="reviews__item">
-							<img class="reviews_photo rewies--photo" src="https://i.postimg.cc/rs5mKwFR/423.png">
-							<div class="reviews_block">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, doloribus
-								sit dolor corporis. Sint modi labore repudiandae. Laboriosam optio velit laudantium dolor, molestiae illo saepe
-								minus, ratione assumenda voluptatum."</div>
-							<div class="reviews__author">Jon Doe</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<section class="section section__fons">
-				<div class="container">
-					<div class="section_heder">
-						<h3 class="section_suptitle">Happy Clients</h3>
-						<h2 class="section_title">what people say</h2>
-					</div>
-					<div class="clients">
-						<div class="clients__item">
-							<img class="clients_photo" src="https://i.postimg.cc/N9pNfwKJ/1.png" alt="">
-							<div class="clients__content">
-								<div class="clients_name">Mathwe Dix</div>
-								<div class="clients_prof">Graphic Desing</div>
-								<div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sapiente
-									nostrum incidunt nisi quidem voluptatem voluptatibus itaque ex! Eveniet, unde!</div>
-							</div>
-						</div>
-						<div class="clients__item">
-							<img class="clients_photo" src="https://i.postimg.cc/GTtX4SYc/2.png" alt="">
-							<div class="clients__content">
-								<div class="clients_name">Mathwe Dix</div>
-								<div class="clients_prof">Graphic Desing</div>
-								<div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sapiente
-									nostrum incidunt nisi quidem voluptatem voluptatibus itaque ex! Eveniet, unde!</div>
-							</div>
-						</div>
-						<div class="clients__item">
-							<img class="clients_photo" src="https://i.postimg.cc/9zQ8gzkv/3.png" alt="">
-							<div class="clients__content">
-								<div class="clients_name">Mathwe Dix</div>
-								<div class="clients_prof">Graphic Desing</div>
-								<div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sapiente
-									nostrum incidunt nisi quidem voluptatem voluptatibus itaque ex! Eveniet, unde!</div>
-							</div>
-						</div>
-						<div class="clients__item">
-							<img class="clients_photo" src="https://i.postimg.cc/grtMCmFr/4.png" alt="">
-							<div class="clients__content">
-								<div class="clients_name">Mathwe Dix</div>
-								<div class="clients_prof">Graphic Desing</div>
-								<div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sapiente
-									nostrum incidunt nisi quidem voluptatem voluptatibus itaque ex! Eveniet, unde!</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
 			<section class="section">
 				<div class="container">
 					<div class="section_heder">
-						<h3 class="section_suptitle">Our Storis</h3>
+						<h3 class="section_suptitle">IMMusic % Art</h3>
 						<h2 class="section_title">lates blog</h2>
 					</div>
 					<div class="blog">
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/prqkjRdk/5.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진1.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -509,7 +455,7 @@
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/bwGLGXfH/6.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진2.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -532,7 +478,7 @@
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="https://i.postimg.cc/bwGLGXfH/6.jpg" alt="">
+								<a href="#"> <img class="blog_img" src="/resource/블로그사진3.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -557,101 +503,6 @@
 					<!-- blog-->
 				</div>
 			</section>
-
-			<section class="section section--map">
-				<div class="container">
-					<div class="map">
-						<h2 class="map__title">
-							<div>
-								<i class="fas fa-map-marker-alt"></i>
-							</div>
-							<a href="https://goo.gl/maps/DShw1GyVTTszC85e9" target="_blank">Open Map</a>
-						</h2>
-					</div>
-				</div>
-			</section>
-
-
-			<footer class="footer" id="contact">
-				<div class="container">
-
-					<div class="footer_inner">
-						<div class="footer__col footer_col--first">
-							<div class="footer_logo">MoGo</div>
-							<div class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vitae sapiente
-								sequi consequatur ipsam exercitationem impedit error necessitatibus cupiditate nihil!</div>
-							<div class="footer__social">
-								<div class="footer__social--header">
-									<b>15к</b>followers
-								</div>
-								<div class="footer__social--content">
-									Follow Us: <a href="#"> <i class="fab fa-facebook-f"></i>
-									</a> <a href="#"> <i class="fab fa-twitter"></i>
-									</a> <a href="#"> <i class="fab fa-instagram"></i>
-									</a> <a href="#"> <i class="fab fa-pinterest-p"></i>
-									</a>
-								</div>
-							</div>
-
-							<form class="subst" action="/" method="post">
-								<input class="input_subst" type="Email" name="name" placeholder="Your Email...">
-								<button class="subset_button" type="submit">Subscribe</button>
-							</form>
-
-						</div>
-						<!-- /.footer_col -->
-						<div class="footer__col footer_col--second">
-							<div class="footer__title">Blogs</div>
-
-							<div class="blogs">
-								<div class="blog_item">
-									<img class="blogs_img" src="https://i.postimg.cc/zbbV7kq7/1.jpg" alt="">
-									<div class="blogs_contents">
-										<a class="bloks_title" href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-										<div class="blogs_date">Jan 9, 2016</div>
-									</div>
-								</div>
-							</div>
-							<div class="blogs">
-								<div class="blog_item">
-									<img class="blogs_img" src="https://i.postimg.cc/y30W4YgS/2.jpg" alt="">
-									<div class="blogs_contents">
-										<a class="bloks_title" href="#">Lorem ipsum dolor sit.</a>
-										<div class="blogs_date">Jan 9, 2016</div>
-									</div>
-								</div>
-							</div>
-							<div class="blogs">
-								<div class="blog_item">
-									<img class="blogs_img" src="https://i.postimg.cc/HjMr73Zs/3.jpg" alt="">
-									<div class="blogs_contents">
-										<a class="bloks_title" href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-										<div class="blogs_date">Jan 9, 2016</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="footer__col footer_col--third">
-							<div class="footer__title">Instagram</div>
-							<div class="instagram">
-								<a class="insta_item" href="#"> <img src="https://i.postimg.cc/87Zmqg0t/8.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/BXs5bvWm/9.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/RWSTsZXW/1.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/t7Ft9xc1/2.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/VSTBkB1t/3.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/tnG3hqsC/4.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/BP5xprF5/5.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/G8yP88h5/6.jpg">
-								</a> <a class="insta_item" href="#"> <img src="https://i.postimg.cc/bGd9PFX8/7.jpg">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="copyright">
-						© 2016 MoGo free PSD template by <span>Laaqiq</span>
-					</div>
-				</div>
-			</footer>
 		</div>
 
 
