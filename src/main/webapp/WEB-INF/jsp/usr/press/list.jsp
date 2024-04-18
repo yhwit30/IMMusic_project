@@ -8,7 +8,7 @@
 /* 구글 폰트 서비스에서 Raleway 글꼴을 가져옵니다. */
 body {
 	height: 100vh; /* 화면 전체 높이의 100%로 설정합니다. */
-	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+/* 	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
 	/* 배경 이미지를 선형 그라데이션으로 설정합니다. */
 	font-family: 'Raleway', sans-serif; /* 폰트를 Raleway로 설정합니다. */
 }
