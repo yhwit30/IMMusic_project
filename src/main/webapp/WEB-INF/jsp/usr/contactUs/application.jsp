@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="CONTACT US"></c:set>
+
 <!-- 주소api -->
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
@@ -60,43 +61,11 @@ form {
 	align-items: center;
 }
 
-/* 주소 */
-.place > input {
-	margin-bottom: 10px;
-}
-
-.signup-form .postcode { 
- 	width: 15%;
-}
-
-/* 버튼 */
-.signup-form .findbutton { 
- 	width: 60px;
- 	height: 40px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.findbutton:hover {
-	border-style: none;
-	background-color: #f2ede2;
-}
-
-#detailAddress, #extraAddress {
-	width: 43.8%;
-}
-
 .signup-form .form-check-input { /* 라디오 박스 */
 	width: 30px;
 	margin-bottom: 0px;
 }
 
-.signup-form .form-check-label {
-	width: 90px;
-	height: 15px; /* 원하는 크기로 설정하세요 */
-	margin: 0; /* 기본 마진 제거 */
-}
 
 /* 파일 업로드 */
 .signup-form .filebox {
@@ -133,7 +102,38 @@ form {
     border: 0;
 }
 
+/* 주소 */
+.place > input {
+	margin-bottom: 10px;
+}
+
+.signup-form .postcode { 
+ 	width: 15%;
+}
+
 /* 버튼 */
+.signup-form .findbutton { 
+ 	width: 60px;
+ 	height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.findbutton:hover {
+	border-style: none;
+	background-color: #f2ede2;
+}
+
+#detailAddress, #extraAddress {
+	width: 43.8%;
+}
+
+.signup-form .form-check-label {
+	width: 90px;
+	height: 15px; /* 원하는 크기로 설정하세요 */
+	margin: 0; /* 기본 마진 제거 */
+}
 
 .signup-form button {
 	background-color: #f2ede2;
@@ -149,8 +149,21 @@ form {
 	background-color: #b3a78f;
 }
 
+.checkform {
+	display: inline-block;
+}
+
+.signup-form .contact-title {
+	padding: 5% 0;
+	height: 200px;
+}
+
 /* 개인정보 수집 동의, 자기소개 */
 
+/* .signup-form, .checkform {
+    display: block;
+}
+ */
 .signup-form .information {
 	width: 20%;
 }
