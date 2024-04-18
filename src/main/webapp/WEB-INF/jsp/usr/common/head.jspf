@@ -94,9 +94,9 @@
 }
 
 .head-bg {
-	background-color: #f2ede2;
+/* 	background-color: #f2ede2; */
 	height: 75px;
-	border-bottom: 1px solid #0d121d;
+/* 	border-bottom: 1px solid #0d121d; */
 }
 </style>
 
@@ -302,31 +302,31 @@ background-color:transparent;}
 
 	<c:if
 		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-					<div class="flex justify-center content-center">
-						<div id="intro-top" >
-							<p class="mt-10">LOADING</p>
-						<div class="spinner center">
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			    <div class="spinner-blade"></div>
-			</div>
-						</div>
-						<div id="intro-logo">
-							<img src="/resource/IMMusicLogo자름.png" />
-						</div>
-						<div id="intro-bottom">
-							<p class="mb-10">IMMusic & Art</p>
-						</div>
-					</div>
+<!-- 					<div class="flex justify-center content-center"> -->
+<!-- 						<div id="intro-top" > -->
+<!-- 							<p class="mt-10">LOADING</p> -->
+<!-- 						<div class="spinner center"> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			    <div class="spinner-blade"></div> -->
+<!-- 			</div> -->
+<!-- 						</div> -->
+<!-- 						<div id="intro-logo"> -->
+<!-- 							<img src="/resource/IMMusicLogo자름.png" /> -->
+<!-- 						</div> -->
+<!-- 						<div id="intro-bottom"> -->
+<!-- 							<p class="mb-10">IMMusic & Art</p> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 	</c:if>
 
 
@@ -335,11 +335,12 @@ background-color:transparent;}
 		<div class="head-bg fixed w-full z-10">
 			<div class="flex items-center justify-between">
 				<div class="ml-5">
-					<a href="/"> <img id="logo" src="/resource/IMMusicLogo자름.png" />
+					<a href="/"> <img id="logo" src="/resource/IMMusicLogo누끼.png" />
 					</a>
 				</div>
 				<div class=" mr-20">
 					<ul class="flex gap-x-20 text-base">
+						<li><a href="/usr/home/main2">main실험</a></li>
 						<li><a href="/usr/about">ABOUT</a></li>
 						<li><a href="/usr/test/artistTest">artist실험</a></li>
 						<li><a href="/usr/artist">ARTIST</a></li>
