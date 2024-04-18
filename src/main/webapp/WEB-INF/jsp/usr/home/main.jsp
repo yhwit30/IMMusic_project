@@ -77,7 +77,7 @@
 					<div class="card__item">
 						<div class="inner-card">
 							<div class="card-imag">
-								<img src="https://i.postimg.cc/y30W4YgS/2.jpg" alt="Изображение">
+								<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
 								<div class="card_text">
 									<a href="https://blog.naver.com/jazzjarasum/221102783565">재즈피아니스트 '허대욱'의 유럽과 클래식</a>
 								</div>
@@ -308,22 +308,28 @@
 				<div class="container">
 					<div class="logos">
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/bScGKZT1/12.png">
+							<img class="logo_imge" src="/resource/음악앨범 1.jpg">
+							<div class="card-prof2">Will It Be Spring Tomorrow?</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/fVT3nnxq/13.png">
+							<img class="logo_imge" src="/resource/음악앨범 2.jpg">
+							<div class="card-prof2">Interval Of Parallel</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/nC1sPcQQ/14.png">
+							<img class="logo_imge" src="/resource/음악앨범 3.jpg">
+							<div class="card-prof2">Trigram</div>
 						</div>
 						<div class="logo-items">
-							<img class="logo_imge" src="https://i.postimg.cc/t7WnFzqk/15.png">
+							<img class="logo_imge" src="/resource/음악앨범 4.jpg">
+							<div class="card-prof2">Le Moment Disperse</div>
 						</div>
 						<div class="logo-items ">
-							<img class="logo_imge " src="https://i.postimg.cc/2LQqmCcM/16.png">
+							<img class="logo_imge " src="/resource/음악앨범 5.jpg">
+							<div class="card-prof2">To The West</div>
 						</div>
 						<div class="logo-items ">
-							<img class="logo_imge" src="https://i.postimg.cc/mt4zjFhs/17.png">
+							<img class="logo_imge" src="/resource/음악앨범 6.jpg">
+							<div class="card-prof2">스페인의 인상</div>
 						</div>
 
 					</div>
