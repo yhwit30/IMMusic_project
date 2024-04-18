@@ -77,9 +77,9 @@
 					<div class="card__item">
 						<div class="inner-card">
 							<div class="card-imag">
-								<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
+								<img src="/resource/공연 포스터 2.jpg" alt="Изображение">
 								<div class="card_text">
-									<a href="https://blog.naver.com/jazzjarasum/221102783565">재즈피아니스트 '허대욱'의 유럽과 클래식</a>
+									<a href="https://blog.naver.com/jazzjarasum/221102783565">포스터 2</a>
 								</div>
 							</div>
 						</div>
@@ -87,8 +87,8 @@
 					<div class="card__item">
 						<div class="inner-card">
 							<div class="card-imag">
-								<img src="https://i.postimg.cc/HjMr73Zs/3.jpg" alt="Изображение">
-								<div class="card_text">super team</div>
+								<img src="/resource/공연 포스터 1.jpg" alt="Изображение">
+								<div class="card_text">포스터 1</div>
 							</div>
 						</div>
 					</div>
@@ -336,6 +336,7 @@
 					</div>
 				</div>
 			</div>
+
 			<section class="section" id="work">
 				<div class="container">
 					<div class="section_heder">
