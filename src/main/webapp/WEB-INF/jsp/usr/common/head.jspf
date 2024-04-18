@@ -94,7 +94,7 @@
 }
 
 .head-bg {
- 	background-color: #f2ede2; 
+/*  	background-color: #f2ede2;  */
 	height: 75px;
 /*  	border-bottom: 1px solid #0d121d; */
  	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2);
@@ -357,4 +357,7 @@ background-color:transparent;}
 
 	<div class="head-bg"></div>
 
-	<h2 id="pageTitle">${pageTitle }</h2>
+
+<c:if test="${not fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
+    <h2 id="pageTitle">${pageTitle}</h2>
+</c:if>
