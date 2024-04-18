@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class TestAPI {
+public class Test {
 
 	@RequestMapping("/usr/test/APITest")
 	public String APITest() {
@@ -52,5 +52,11 @@ public class TestAPI {
 	public String testArtist() {
 		
 		return "/usr/test/artistTest";
+	}
+	
+	@RequestMapping("/usr/home/main2")
+	public String testMain() {
+		
+		return "/usr/home/main2";
 	}
 }
