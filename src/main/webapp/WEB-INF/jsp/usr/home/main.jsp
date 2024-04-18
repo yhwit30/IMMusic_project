@@ -339,7 +339,7 @@
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we do</h3>
-						<h2 class="section_title">same of our work</h2>
+						<h2 class="section_title">공연 및 무대사진</h2>
 						<div class="section__Text">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
 								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
@@ -350,7 +350,7 @@
 				<div class="works">
 					<div class="works__col">
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/bdw24zr4/5.jpg" alt="">
+							<img class="work__image" src="/resource/공연사진.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -359,7 +359,7 @@
 							</div>
 						</div>
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/56v9RGBZ/6.jpg" alt="">
+							<img class="work__image" src="/resource/무대사진.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
