@@ -95,15 +95,11 @@ html>body::-webkit-scrollbar-thumb {
 	border: 1px solid rgba(255, 0, 0, 0.1);
 }
 
-
-
-
 /* 페이지 제목 위치 */
 #pageTitle {
 	margin-left: 70px;
+	margin-top: 100px;
+	margin-bottom: 30px;
 	font-size: 5rem;
 	font-weight: bold;
 }
-
-
-

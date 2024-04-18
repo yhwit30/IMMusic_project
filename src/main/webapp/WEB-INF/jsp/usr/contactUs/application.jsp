@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="CONTACT US"></c:set>
+
 <!-- 주소api -->
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
@@ -38,6 +39,7 @@ form {
 .signup-form .formlabel{
 	width: 120px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 .signup-form label {
@@ -60,43 +62,11 @@ form {
 	align-items: center;
 }
 
-/* 주소 */
-.place > input {
-	margin-bottom: 10px;
-}
-
-.signup-form .postcode { 
- 	width: 15%;
-}
-
-/* 버튼 */
-.signup-form .findbutton { 
- 	width: 60px;
- 	height: 40px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.findbutton:hover {
-	border-style: none;
-	background-color: #f2ede2;
-}
-
-#detailAddress, #extraAddress {
-	width: 43.8%;
-}
-
 .signup-form .form-check-input { /* 라디오 박스 */
 	width: 30px;
 	margin-bottom: 0px;
 }
 
-.signup-form .form-check-label {
-	width: 90px;
-	height: 15px; /* 원하는 크기로 설정하세요 */
-	margin: 0; /* 기본 마진 제거 */
-}
 
 /* 파일 업로드 */
 .signup-form .filebox {
@@ -133,7 +103,55 @@ form {
     border: 0;
 }
 
+/* 이메일 */
+
+.signup-form .email { 
+ 	width: 10%;
+ 	margin-right: 5px;
+}
+
+.signup-form .emailoption { 
+ 	width: 20%;
+ 	margin-left: 5px;
+}
+
+select {
+	margin-left: 5px;
+	padding: 5px 2px;
+}
+
+/* 주소 */
+.place > input {
+	margin-bottom: 10px;
+}
+
+.signup-form .postcode { 
+ 	width: 15%;
+}
+
 /* 버튼 */
+.signup-form .findbutton { 
+ 	width: 60px;
+ 	height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.findbutton:hover {
+	border-style: none;
+	background-color: #f2ede2;
+}
+
+#detailAddress, #extraAddress {
+	width: 43.8%;
+}
+
+.signup-form .form-check-label {
+	width: 90px;
+	height: 15px; /* 원하는 크기로 설정하세요 */
+	margin: 0; /* 기본 마진 제거 */
+}
 
 .signup-form button {
 	background-color: #f2ede2;
@@ -149,8 +167,21 @@ form {
 	background-color: #b3a78f;
 }
 
+.checkform {
+	display: inline-block;
+}
+
+.signup-form .contact-title {
+	padding: 5% 0;
+	height: 200px;
+}
+
 /* 개인정보 수집 동의, 자기소개 */
 
+/* .signup-form, .checkform {
+    display: block;
+}
+ */
 .signup-form .information {
 	width: 20%;
 }
@@ -212,11 +243,16 @@ textarea::-webkit-scrollbar-thumb {
 </style>
 <script>
 
+/* 라디오 버튼 클릭 */
     document.addEventListener("DOMContentLoaded", function() {
         var applicationRadio = document.getElementById("application");
         var applicationlabel = document.getElementById("applicationlabel");
         var concertRadio = document.getElementById("concert");
         var concertlabel = document.getElementById("concertlabel");
+        var maleRadio = document.getElementById("male");
+        var malelabel = document.getElementById("malelabel");
+        var femaleRadio = document.getElementById("female");
+        var femalelabel = document.getElementById("femalelabel");
         
         applicationRadio.checked = true;
         
@@ -233,6 +269,13 @@ textarea::-webkit-scrollbar-thumb {
         concertlabel.addEventListener('click', function() {
             window.location.href = '/usr/contactUs/concert';   
         });
+        malelabel.addEventListener('click', function() {
+        	maleRadio.checked = true;
+        });
+        femalelabel.addEventListener('click', function() {
+        	femaleRadio.checked = true;
+        });
+        
     });
 
 </script>
@@ -262,10 +305,11 @@ textarea::-webkit-scrollbar-thumb {
 							yearRange : 'c-30:c+0'
 						});
 	});
-	
+
 	// 파일 업로드
 </script>
 
+<!-- 파일 업로드 -->
 <script>
 $(document).ready(function() {
     $("#file-profile").on('change', function() {
@@ -281,42 +325,66 @@ $(document).ready(function() {
 	
 </script>
 
+<!-- 이메일 select -->
+<script>
+    $(function() {
+        $('#select').change(function() {
+            if ($('#select').val() == 'directly') {
+                $('#textEmail').attr("disabled", false);
+                $('#textEmail').val("");
+                $('#textEmail').focus();
+            } else {
+                $('#textEmail').val($('#select').val());
+            }
+        })
+    });
+</script>
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form" action="../member/doJoin" method="POST">
 			<div>
 				<div class="box radio-box">
-					<input type="radio" id="concert" name="contactUs" class="form-check-input" value="2" required> <label for="open"
-					id="concertlabel" class="formlabel text-lg mr-5">연주문의</label>
-					<input type="radio" id="application" name="contactUs" class="form-check-input" value="1"
-					required> <label for="open" id="applicationlabel" class="formlabel mr-8 text-lg">연주자 가입신청</label>
+					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
+			<div>
 				<div>
-					<label for="username">이름</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
+				<label for="name">이름</label> <input type="text" id="name" name="name" autocomplete="off" required>
 				</div>
 				<div>
 					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
 				<div class = "mb-4">
-					<label for="birth">성별</label> 
-					<input type="radio" id="male" name="sex" class="form-check-input" value="1"
-					required> <label for="open" id="sexlabel" class="formlabel mr-5 text-base">남성</label>
-					<input type="radio" id="female" name="sex" class="form-check-input" value="2" required> <label for="open"
-					id="sexlabel" class="formlabel text-base mr-5">여성</label>
+					<label for="gender">성별</label> 
+					<input type="radio" id="male" name="gender" class="form-check-input" value="1"
+					required> <label for="open" id="malelabel" class="formlabel mr-5 text-base">남성</label>
+					<input type="radio" id="female" name="gender" class="form-check-input" value="2" required> <label for="open"
+					id="femalelabel" class="formlabel text-base mr-5">여성</label>
 				</div>
 				<div>
 					<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
 						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
 				</div>
 				<div>
-					<label for="email">이메일</label> <input type="email" id="email" name="email" autocomplete="off" required>
-				</div>
+			        <label for="email">이메일</label> 
+			        <input type="text" class="email" id="emailId" value=""> 
+					<span>@</span>
+					<input id="textEmail" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<select id="select">
+				        <option value="" disabled selected>E-Mail 선택</option>
+				        <option value="naver.com" id="naver.com">naver.com</option>
+				        <option value="gmail.com" id="gmail.com">gmail.com</option>
+				        <option value="directly" id="textEmail">직접 입력하기</option>
+			        </select>
+			    </div>
 				<div class="place mb-3">
 					<label for="address">주소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
-					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label for="address"></label> <input
+					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
-	
 					<script>
 						function execDaumPostcode() {
 							new daum.Postcode(
@@ -453,7 +521,6 @@ $(document).ready(function() {
 							numericValue.length - 1);
 				}
 			}
-
 		</script>
 	</div>
 </section>
