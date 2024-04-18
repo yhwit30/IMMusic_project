@@ -13,9 +13,9 @@
 
 	</div>
 
-	<div>인사말 Lorem ipsum dolor sit amet, consectetur adipisicing
-		elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut esse
-		voluptates nisi iusto neque repudiandae totam repellendus numquam
+	<div class="greet">인사말 Lorem ipsum dolor sit amet, consectetur
+		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
+		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
 		quasi. Fuga laudantium ipsa. Lorem ipsum dolor sit amet, consectetur
 		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
 		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
@@ -100,12 +100,28 @@ section {
 	padding-bottom: 200px;
 }
 
-section>div:nth-child(2) {
+.greet {
 	width: 600px;
 	height: 700px;
 	border: 2px solid red;
+	opacity: 0; /* 초기에 투명도를 0으로 설정 */
+	position: relative;
+	top: 100px; /* 아래에서 시작할 위치 조정 */
 }
 </style>
+
+
+
+<script>
+$(document).ready(function(){
+    $('.greet').animate({ top: 0, opacity: 1 }, {
+        duration: 1500,
+        start: function() {
+            $(this).fadeIn(); // fadeIn과 animate를 동시에 실행
+        }
+    });
+});
+</script>
 
 
 <%@ include file="../common/foot.jspf"%>
