@@ -345,9 +345,9 @@ $(document).ready(function() {
 		<form name="form" action="../member/doJoin" method="POST">
 			<div>
 				<div class="box radio-box">
-					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
-					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					<input type="radio" id="application" name="performance" class="form-check-input" value="2"
 					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
 			<div>
@@ -359,9 +359,9 @@ $(document).ready(function() {
 				</div>
 				<div class = "mb-4">
 					<label for="gender">성별</label> 
-					<input type="radio" id="male" name="gender" class="form-check-input" value="1"
+					<input type="radio" id="male" name="gender" class="form-check-input" value="0"
 					required> <label for="open" id="malelabel" class="formlabel mr-5 text-base">남성</label>
-					<input type="radio" id="female" name="gender" class="form-check-input" value="2" required> <label for="open"
+					<input type="radio" id="female" name="gender" class="form-check-input" value="1" required> <label for="open"
 					id="femalelabel" class="formlabel text-base mr-5">여성</label>
 				</div>
 				<div>
