@@ -13,6 +13,7 @@ public class Concert {
 	private String c_email;
 	private String c_phone;
 	private String c_date;
+	private String c_postcode;
 	private String c_address;
 	private String c_inquiry;
 	private int c_check;

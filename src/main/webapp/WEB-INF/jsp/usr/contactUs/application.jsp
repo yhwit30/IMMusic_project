@@ -345,9 +345,9 @@ $(document).ready(function() {
 		<form name="form" action="../member/doJoin" method="POST">
 			<div>
 				<div class="box radio-box">
-					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
-					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					<input type="radio" id="application" name="performance" class="form-check-input" value="2"
 					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
 			<div>

@@ -4,6 +4,9 @@
 <c:set var="pageTitle" value="CONTACT US"></c:set>
 <%@ include file="../common/head.jspf"%> 
 
+<!-- 주소api -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 
 <style>
 .signup-form {
@@ -276,7 +279,7 @@ textarea::-webkit-scrollbar-thumb {
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
 	    // 개인정보 동의 체크박스 요소
-	    var personalInformationConsentCheckbox = document.getElementById("personalInformationConsent");
+	    var personalInformationConsentCheckbox = document.getElementById("check");
 	
 	    // 개인정보 동의 체크박스 변경 시 실행되는 함수
 	    personalInformationConsentCheckbox.addEventListener('change', function() {
@@ -297,9 +300,9 @@ textarea::-webkit-scrollbar-thumb {
 		<form name="form" action="../contactUs/signupconcert" method="POST">
 			<input type="hidden" id="consentInput" name="consentInput" value="0"> <!-- 개인정보동의 -->
 			<div class="box radio-box">
-					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
+					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
-					<input type="radio" id="application" name="application" class="form-check-input" value="2"
+					<input type="radio" id="application" name="performance" class="form-check-input" value="2"
 					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
 			<div>
@@ -422,8 +425,8 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
 				<div class="checkform">
-				<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
-				<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
+				<input type="checkbox" class="checkbox" id="check" name="check">
+				<label for="check" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
 
 			</div>
