@@ -59,4 +59,10 @@ public class Test {
 		
 		return "/usr/artist/artist1";
 	}
+	
+	@RequestMapping("/usr/test/slidertest")
+	public String testSlider() {
+		
+		return "/usr/test/sliderTest";
+	}
 }
