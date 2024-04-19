@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="CONTACT US"></c:set>
-<%@ include file="../common/head.jspf"%>
+<%@ include file="../common/head.jspf"%> 
+
 
 <style>
 .signup-form {
@@ -66,7 +67,7 @@ form {
 
 /* 이메일 */
 
-.signup-form .email { 
+.signup-form .emailId { 
  	width: 10%;
  	margin-right: 5px;
 }
@@ -257,9 +258,44 @@ textarea::-webkit-scrollbar-thumb {
 	// 파일 업로드
 </script>
 
+<!-- 이메일 select -->
+<script>
+    $(function() {
+        $('#select').change(function() {
+            if ($('#select').val() == 'directly') {
+                $('#textEmail').attr("disabled", false);
+                $('#textEmail').val("");
+                $('#textEmail').focus();
+            } else {
+                $('#textEmail').val($('#select').val());
+            }
+        })
+    });
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	    // 개인정보 동의 체크박스 요소
+	    var personalInformationConsentCheckbox = document.getElementById("personalInformationConsent");
+	
+	    // 개인정보 동의 체크박스 변경 시 실행되는 함수
+	    personalInformationConsentCheckbox.addEventListener('change', function() {
+	        // 개인정보 동의 체크 상태에 따라 값을 저장
+	        var consentValue = this.checked ? 1 : 0;
+	
+	        // 저장할 input 요소의 ID를 설정
+	        var consentInput = document.getElementById("consentInput");
+	
+	        // 저장할 input 요소에 값 설정
+	        consentInput.value = consentValue;
+	    });
+	});
+</script>
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form" action="../member/doJoin" method="POST">
+		<form name="form" action="../contactUs/signupconcert" method="POST">
+			<input type="hidden" id="consentInput" name="consentInput" value="0"> <!-- 개인정보동의 -->
 			<div class="box radio-box">
 					<input type="radio" id="concert" name="concert" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
@@ -271,9 +307,9 @@ textarea::-webkit-scrollbar-thumb {
 			</div>
 			<div>
 			        <label for="email">이메일</label> 
-			        <input type="text" class="email" id="emailId" value=""> 
+			        <input type="text" class="emailId" id="emailId" value="" name="emailId"> 
 					<span>@</span>
-					<input id="emailoption" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<input id="textEmail" class="emailoption" name="emailoption" placeholder="이메일을 선택하세요."> 
 					<select id="select">
 				        <option value="" disabled selected>E-Mail 선택</option>
 				        <option value="naver.com" id="naver.com">naver.com</option>
@@ -389,7 +425,6 @@ textarea::-webkit-scrollbar-thumb {
 				<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
 				<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
-				
 
 			</div>
 			<div class="box center-text mt-5">
