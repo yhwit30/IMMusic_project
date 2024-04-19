@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%--  <c:set var="main" value="MAIN"></c:set> --%>
-
+<c:set var="pageTitle" value="MAIN"></c:set>
 <%@ include file="../common/head.jspf"%>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MAIN</title>
+<title>${pageTitle }</title>
 <link rel="stylesheet" type="text/css" href="acss/css/mogo.css">
 <link
 	href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap&subset=cyrillic-ext"
@@ -159,6 +159,32 @@
 					<div class="cards">
 						<div class="card__item">
 							<div class="inner-card">
+								<div class="card-imag">
+									<img src="/resource/허원경 프로필사진.png" alt="Изображение">
+									<div class="card_text">
+										<div class="social">
+											<a href="#" class="social_iteam" target="_blank"> <i
+												class="fab fa-facebook-f"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i
+												class="fab fa-twitter"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i
+												class="fab fa-pinterest-p"></i>
+											</a> <a href="#" class="social_iteam" target="_blank"> <i
+												class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-info">
+								<div class="card-name">허원경</div>
+								<div class="card-prof">리더(클래식 기타)</div>
+							</div>
+						</div>
+					
+					
+						<div class="card__item">
+							<div class="inner-card">
 								<div class=" card-imag">
 									<img src="/resource/구보근 프로필사진.png" alt="Изображение">
 									<div class="card_text">
@@ -229,30 +255,7 @@
 								<div class="card-prof">단원(클래식 기타)</div>
 							</div>
 						</div>
-						<div class="card__item">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/허원경 프로필사진.png" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i
-												class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i
-												class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i
-												class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i
-												class="fab fa-instagram"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-info">
-								<div class="card-name">허원경</div>
-								<div class="card-prof">리더(클래식 기타)</div>
-							</div>
-						</div>
+					
 						<div class="card__item">
 							<div class="inner-card">
 								<div class="card-imag">
@@ -280,7 +283,7 @@
 						<div class="card__item">
 							<div class="inner-card">
 								<div class="card-imag">
-									<img src="" alt="Изображение">
+									<img src="/resource/허병훈 프로필사진.jpg" alt="Изображение">
 									<div class="card_text">
 										<div class="social">
 											<a href="#" class="social_iteam" target="_blank"> <i
@@ -297,8 +300,8 @@
 								</div>
 							</div>
 							<div class="card-info">
-								<div class="card-name">매니저</div>
-								<div class="card-prof">매니저</div>
+								<div class="card-name">허병훈</div>
+								<div class="card-prof">고문</div>
 							</div>
 						</div>
 					</div>

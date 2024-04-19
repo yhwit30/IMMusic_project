@@ -372,7 +372,7 @@ CREATE TABLE artist (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   a_name CHAR(10) NOT NULL,
   a_birth CHAR(10) NOT NULL,
-  a_gender TINYINT(1) NOT NULL, # 1=남성, 2=여성
+  a_gender TINYINT(1) NOT NULL, # 0=남성, 1=여성
   a_phone CHAR(10) NOT NULL, 
   a_email CHAR(10) NOT NULL, 
   a_address CHAR(255) NOT NULL, 
@@ -394,7 +394,8 @@ CREATE TABLE concert (
   c_name CHAR(10) NOT NULL,
   c_email CHAR(10) NOT NULL,
   c_phone CHAR(10) NOT NULL,
-  c_date CHAR(10) NOT NULL, 
+  c_date CHAR(10) NOT NULL,
+  c_postcode INT NOT NULL, 
   c_address CHAR(10) NOT NULL, 
   c_inquiry TEXT NOT NULL,
   c_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
