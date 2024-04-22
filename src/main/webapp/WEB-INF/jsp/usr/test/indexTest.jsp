@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="pageTitle" value="ARTIST TEST"></c:set>
+<%@ include file="../common/head.jspf"%>
+
+<style>
 *, *:before, *:after {
 	box-sizing: border-box;
 	outline: none;
@@ -27,14 +33,11 @@ hr {
 	padding: 0 15px;
 }
 
-
-
-
 .intro {
 	width: 100%;
 	height: 100vh;
-/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
- 	background: url("/resource/에오 트리오 사진.jpg"); 
+	/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
+	background: url("/resource/에오 트리오 사진.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -342,7 +345,6 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
 }
 
 .cards1 {
@@ -350,7 +352,7 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	z-index:auto;
+	z-index: auto;
 }
 
 .cards2 {
@@ -358,7 +360,6 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
 }
 
 .card__item {
@@ -370,24 +371,22 @@ hr {
 	width: 33.33333%;
 	padding: 0 15px;
 	position: relative;
-	z-index:2;
+	z-index: 2;
 }
 
 .card__item2 {
 	width: 33.33333%;
 	padding: 0 15px;
 	position: relative;
-	z-index:4;
+	z-index: 4;
 }
 
 .card__item3 {
 	width: 33.33333%;
 	padding: 0 15px;
 	position: relative;
-	z-index:6;
+	z-index: 6;
 }
-
-
 
 .inner-card {
 	background-color: #95e1d3;
@@ -746,7 +745,6 @@ hr {
 	font-style: italic;
 	font-weight: 300px;
 	padding-top: 10px;
-	
 }
 
 .logo_imge {
@@ -1518,7 +1516,6 @@ hr {
 	.blogs_img {
 		width: 80px;
 		height: 50%;
-		
 	}
 	.bloks_title {
 		font-size: 10px;
@@ -1530,3 +1527,142 @@ hr {
 		max-width: 600px;
 	}
 }
+</style>
+
+<div class="center">
+	<div class="card__item">
+		<div class="inner-card-lists">
+			<div class="card-imag-item">
+				<img src="/resource/허원경 프로필사진.png" alt="Изображение">
+			</div>
+			<div class="card_text">
+				<div class="social">
+					<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card-info">
+			<div class="card-name">허원경</div>
+			<div class="card-prof">리더(클래식 기타)</div>
+		</div>
+	</div>
+
+	<div class="card__item2">
+		<div class="inner-card">
+			<div class="card-imag-item">
+				<img src="/resource/구보근 프로필사진.png" alt="Изображение">
+			</div>
+			<div class="card_text">
+				<div class="social">
+					<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+					</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card-info">
+		<div class="card-name">구본근</div>
+		<div class="card-prof">단원(클래식 기타)</div>
+	</div>
+</div>
+
+<div class="card__item3">
+	<div class="inner-card">
+		<div class="card-imag-item">
+			<img src="/resource/원유현 프로필사진.png" alt="Изображение">
+		</div>
+		<div class="card_text">
+			<div class="social">
+				<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+				</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+				</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+				</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card-info">
+	<div class="card-name">원유현</div>
+	<div class="card-prof">단원(클래식 기타)</div>
+</div>
+
+
+<div class="cards2">
+	<div class="card__item">
+		<div class="inner-card">
+			<div class="card-imag">
+				<img src="/resource/임재민 프로필사진2.png" alt="Изображение">
+				<div class="card_text">
+					<div class="social">
+						<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-info">
+			<div class="card-name">임재민</div>
+			<div class="card-prof">단원(클래식 기타)</div>
+		</div>
+	</div>
+
+	<div class="card__item">
+		<div class="inner-card">
+			<div class="card-imag">
+				<img src="/resource/허대욱 프로필사진.jpg" alt="Изображение">
+				<div class="card_text">
+					<div class="social">
+						<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-info">
+			<div class="card-name">허대욱</div>
+			<div class="card-prof">단원(재즈 피아노)</div>
+		</div>
+	</div>
+	<div class="card__item">
+		<div class="inner-card">
+			<div class="card-imag">
+				<img src="/resource/허병훈 프로필사진.jpg" alt="Изображение">
+				<div class="card_text">
+					<div class="social">
+						<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
+						</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-info">
+			<div class="card-name">허병훈</div>
+			<div class="card-prof">고문</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 페이지 하단 -->
+<%@ include file="../common/foot.jspf"%>
