@@ -9,7 +9,9 @@
 <section>
 
 	<div class="greet-bg">
-		<p>IMMusic <br>& Art</p>
+		<p>
+			IMMusic <br>& Art
+		</p>
 	</div>
 
 	<div class="greet">인사말 Lorem ipsum dolor sit amet, consectetur
@@ -38,12 +40,12 @@
 
 
 <style>
-body{
-overflow-x: hidden;
+body {
+	overflow-x: hidden;
 }
+
 section {
 	padding-bottom: 200px;
-	
 }
 
 .greet-bg {
@@ -51,7 +53,7 @@ section {
 	font-size: 20rem;
 	font-weight: bold;
 	font-family: 'Arita buri';
- 	position: absolute;
+	position: absolute;
 	color: rgba(0, 0, 0, 0.1);
 	z-index: -99;
 	transform: rotate(-10deg);
