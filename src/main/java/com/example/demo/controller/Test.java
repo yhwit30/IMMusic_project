@@ -55,9 +55,10 @@ public class Test {
 		return "/usr/test/sliderTest";
 	}
 	
-	@RequestMapping("/usr/test/slidertest")
-	public String testSlider() {
+	@RequestMapping("/usr/test/indexTest")
+	public String testIndex() {
 		
-		return "/usr/test/sliderTest";
+		return "/usr/test/indexTest";
 	}
+	
 }
