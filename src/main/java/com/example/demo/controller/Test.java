@@ -48,16 +48,11 @@ public class Test {
 		return "/usr/test/weatherApiTest";
 	}
 
-	@RequestMapping("/usr/test/artistTest")
-	public String testArtist() {
-		
-		return "/usr/test/artistTest";
-	}
 	
-	@RequestMapping("/usr/artist1")
-	public String testMain() {
+	@RequestMapping("/usr/test/slidertest")
+	public String testSlider() {
 		
-		return "/usr/artist/artist1";
+		return "/usr/test/sliderTest";
 	}
 	
 	@RequestMapping("/usr/test/slidertest")
