@@ -5,10 +5,18 @@
 <%@ include file="../common/head.jspf"%>
 
 
+<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
+	</div>
+	
+
+
 <section class="container_artist">
 	<div class="category_container">
 		<div class="content">
-			<img src="/resource/임재민 프로필사진2.png" class="professio_image"
+			<img src="/resource/임재민 프로필사진2.png" class="profession_image"
 				alt="Profession" /> <img src="/resource/임재민 프로필사진.jpg"
 				class="profile_image" alt="Profile" />
 			<div class="profile_detail">
@@ -129,7 +137,6 @@
 </div>
 
 
-
 <style>
 :root {
 	--light: #ffe6e6;
@@ -139,53 +146,69 @@
 .container_artist {
 	overflow: clip;
 	position: relative;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	padding: 2rem 5rem;
+
 	width: 100%;
 	height: 100dvh;
 }
 
 .category_container {
 	--gap: 0.5rem;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
 	gap: calc(var(--gap) * 2);
+
 	width: 100%;
 	height: 100%;
 }
 
 .content {
 	--active: 0;
+
 	cursor: pointer;
 	overflow: clip;
+
 	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	gap: 1.5rem;
+
  	padding: 2.5rem; 
+
 	width: calc((100% / 3) - var(--gap));
 	height: 100%;
+
 	border-radius: 1rem;
+
 	transition: width 0.5s ease-in-out;
 }
 .content:hover {
 	--active: 1;
+
 	width: calc(70% - var(--gap));
 }
 .content::before {
 	content: "";
+
 	position: absolute;
 	z-index: -10;
 	top: 0;
 	left: 0;
+
 	width: 100%;
 	height: 100%;
 	background-color: var(--dark);
+
 	opacity: 0.6;
 }
 
@@ -194,14 +217,17 @@
 	z-index: -20;
 	top: 0;
 	left: 0;
+
 	width: 100%;
 	height: 100%;
+
 	object-fit: cover;
 	object-position: center;
 }
 
 .content .profile_image {
 	opacity: calc(1 - var(--active));
+
 	transition: opacity 0.3s ease-in-out;
 }
 
@@ -209,8 +235,9 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+
 	width: 12rem;
-	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+	transition: transform 0.5s 0.01s;
 }
 
 .profile_detail span {
@@ -235,17 +262,23 @@
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--light);
+
 	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
-	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
+
+	transition: transform 0.5s  0.1s;
 }
+
+
+
 
 
 .wrapper {
 	display: grid;
   	grid-template-rows: 0fr;
   	overflow: hidden;
-	transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+	transition: grid-template-rows 0.5s  0.01s;
 }
+
 
 .profile_quote { 
 	min-height: 0; 
@@ -253,14 +286,16 @@
 	opacity: 0;
 	transition: 
 		opacity 0.8s ease-in-out,
-		transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s
+		transform 0.8s 0.01s
 	;	
 }
+
 
 
 .content:hover .wrapper {
   	grid-template-rows: 1fr;
 }
+
 
 .content:hover .profile_quote {
 	transform: none;
@@ -271,6 +306,8 @@
 
 
 </style>
+
+
 
 
 

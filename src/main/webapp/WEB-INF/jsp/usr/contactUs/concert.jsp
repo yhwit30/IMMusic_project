@@ -295,6 +295,13 @@ textarea::-webkit-scrollbar-thumb {
 	});
 </script>
 
+
+<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
+	</div>
+	
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form" action="../contactUs/signupconcert" method="POST">

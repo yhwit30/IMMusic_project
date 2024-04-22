@@ -48,18 +48,8 @@ section {
 	padding-bottom: 200px;
 }
 
-.greet-bg {
-	text-align: center;
-	font-size: 20rem;
-	font-weight: bold;
-	font-family: 'Arita buri';
-	position: absolute;
-	color: rgba(0, 0, 0, 0.1);
-	z-index: -99;
-	transform: rotate(-10deg);
-	top: 100px;
-	bottom: 0;
-}
+/* common.css 파일에 있음 */
+/* .greet-bg {} */
 
 .greet {
 	background-color: white;
