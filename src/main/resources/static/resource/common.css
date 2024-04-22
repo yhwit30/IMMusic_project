@@ -8,32 +8,28 @@
 	font-style: normal;
 }
 
-
 html>body {
 	font-family: 'Pretendard-Regular';
 }
 
 /* 커스텀 */
 /* Scrollbar design for .form-control div */
-
 html>body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    background-color: #f2ede2;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: #f2ede2;
 }
 
 html>body::-webkit-scrollbar {
-    width: 12px;
-    background-color: #f2ede2;
+	width: 12px;
+	background-color: #f2ede2;
 }
 
 html>body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #b3a78f;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #b3a78f;
 }
-
-
 
 /* 표 디자인 */
 .table-box-1 {
@@ -66,7 +62,6 @@ html>body::-webkit-scrollbar-thumb {
 	border: 1px solid rgba(255, 0, 0, 0.1);
 }
 
-
 /* 상세보기 테이블 */
 .table-box-detail {
 	width: 40%;
@@ -98,11 +93,23 @@ html>body::-webkit-scrollbar-thumb {
 /* 페이지 제목 위치 */
 #pageTitle {
 	padding-left: 70px;
-	padding-top: 120px;
+	padding-top: 200px;
 	padding-bottom: 30px;
 	font-size: 5rem;
 	font-weight: bold;
 	font-family: 'Arita buri';
 }
 
-
+/* 텍스트로 배경 */
+.greet-bg {
+	text-align: center;
+	font-size: 20rem;
+	font-weight: bold;
+	font-family: 'Arita buri';
+	position: absolute;
+	color: rgba(128, 128, 128, 0.1);
+	z-index: -99;
+	transform: rotate(-10deg);
+	top: 100px;
+	bottom: 0;
+}
