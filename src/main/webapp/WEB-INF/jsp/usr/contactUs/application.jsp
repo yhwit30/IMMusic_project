@@ -340,6 +340,14 @@ $(document).ready(function() {
     });
 </script>
 
+
+<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
+	</div>
+
+
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form" action="../member/doJoin" method="POST">
