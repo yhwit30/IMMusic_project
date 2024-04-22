@@ -6,11 +6,12 @@
 
 
 
-<section class="flex justify-around">
+<section>
 
-	<div>
-		<img id="heoImage" src="/resource/허원경 프로필사진.jpg" />
-
+	<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
 	</div>
 
 	<div class="greet">인사말 Lorem ipsum dolor sit amet, consectetur
@@ -36,72 +37,24 @@
 </section>
 
 
-<div class="stati">
-	<div class="container">
-		<div class="stat_item">
-			<h2 class="section_title">비바기타앙상블 연혁</h2>
-			<div class="stat_count">2019년</div>
-			<div class="stat_text_item">
-				<div class="stat_text">4월 10일 클래식기타와 플라멩코의 밤</div>
-				<div class="stat_text">주최: 주한 스페인 대사관, 연세대학교 학부대학 RC교육원</div>
-				<div class="stat_text">장소: 연세대학교 국제캠퍼스 교육관</div>
-			</div>
 
-			<div class="stat_text_item">
-				<div class="stat_text">6월 15일 비바기타 허원경 임재민 2인 연주회</div>
-				<div class="stat_text">주최: 부산 골방 프로젝트</div>
-				<div class="stat_text">장소: 골방프로젝트</div>
-			</div>
-
-			<div class="stat_text_item">
-				<div class="stat_text">8월 13~18일 제5회 한국 국제 기타 페스티벌</div>
-				<div class="stat_text">주최: 양평군, 한국기타협회</div>
-				<div class="stat_text">장소: 양평군 백하헌</div>
-			</div>
-
-			<div class="stat_item">
-				<div class="stat_count">2021년</div>
-				<div class="stat_text_item">
-					<div class="stat_text">11월4일 이재삼 작가와 함께 하는 연주회</div>
-					<div class="stat_text">주최: 양평문화만들기</div>
-					<div class="stat_text">장소: 이재삼 작가 작업실</div>
-				</div>
-			</div>
-
-			<div class="stat_item">
-				<div class="stat_count">2022년</div>
-				<div class="stat_text_item">
-					<div class="stat_text">12월 3일 허병훈 작가와 만남의 시간</div>
-					<div class="stat_text">장소: 온양민속박물관</div>
-				</div>
-			</div>
-			<div class="stat_item">
-				<div class="stat_count">2023년</div>
-				<div class="stat_text_item">
-					<div class="stat_text">3월 11, 25, 4월 1, 15, 29일 클래식기타연주클리닉</div>
-					<div class="stat_text">장소: 영등포 술술센터 4층 술술홀</div>
-				</div>
-			</div>
-
-		</div>
-
-	</div>
-</div>
 
 <style>
-#heoImage {
-	width: 600px;
-	height: 700px;
-	object-fit: cover;
-	border: 2px solid gold;
+body {
+	overflow-x: hidden;
 }
 
 section {
 	padding-bottom: 200px;
 }
 
+/* common.css 파일에 있음 */
+/* .greet-bg {} */
+
 .greet {
-	width: 600px;
+	background-color: white;
+	margin: auto;
+	width: 1000px;
 	height: 700px;
 	border: 2px solid red;
 	opacity: 0; /* 초기에 투명도를 0으로 설정 */
@@ -113,14 +66,17 @@ section {
 
 
 <script>
-$(document).ready(function(){
-    $('.greet').animate({ top: 0, opacity: 1 }, {
-        duration: 1500,
-        start: function() {
-            $(this).fadeIn(); // fadeIn과 animate를 동시에 실행
-        }
-    });
-});
+	$(document).ready(function() {
+		$('.greet').animate({
+			top : 0,
+			opacity : 1
+		}, {
+			duration : 1500,
+			start : function() {
+				$(this).fadeIn(); // fadeIn과 animate를 동시에 실행
+			}
+		});
+	});
 </script>
 
 

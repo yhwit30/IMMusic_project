@@ -276,29 +276,15 @@ textarea::-webkit-scrollbar-thumb {
     });
 </script>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-	    // 개인정보 동의 체크박스 요소
-	    var personalInformationConsentCheckbox = document.getElementById("check");
+<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
+	</div>
 	
-	    // 개인정보 동의 체크박스 변경 시 실행되는 함수
-	    personalInformationConsentCheckbox.addEventListener('change', function() {
-	        // 개인정보 동의 체크 상태에 따라 값을 저장
-	        var consentValue = this.checked ? 1 : 0;
-	
-	        // 저장할 input 요소의 ID를 설정
-	        var consentInput = document.getElementById("consentInput");
-	
-	        // 저장할 input 요소에 값 설정
-	        consentInput.value = consentValue;
-	    });
-	});
-</script>
-
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
 		<form name="form" action="../contactUs/signupconcert" method="POST">
-			<input type="hidden" id="consentInput" name="consentInput" value="0"> <!-- 개인정보동의 -->
 			<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
@@ -310,9 +296,9 @@ textarea::-webkit-scrollbar-thumb {
 			</div>
 			<div>
 			        <label for="email">이메일</label> 
-			        <input type="text" class="emailId" id="emailId" value="" name="emailId"> 
+			        <input type="text" class="emailId" id="emailId" value="" name="emailId" required> 
 					<span>@</span>
-					<input id="textEmail" class="emailoption" name="emailoption" placeholder="이메일을 선택하세요."> 
+					<input id="textEmail" class="emailoption" name="emailoption" placeholder="이메일을 선택하세요." required> 
 					<select id="select">
 				        <option value="" disabled selected>E-Mail 선택</option>
 				        <option value="naver.com" id="naver.com">naver.com</option>
@@ -322,15 +308,15 @@ textarea::-webkit-scrollbar-thumb {
 			    </div>
 			<div>
 				<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
-						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
+						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다." required>
 			</div>
 			<div>
 				<label for="concertdate">공연날짜</label> <input type="text" id="datepicker" name="concertdate" required placeholder="날짜 선택이 가능합니다.">
 			</div>
 			<div class="place mb-3">
-					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호">
+					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호" required>
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
-						type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
+						type="text" id="address" name="address" placeholder="주소" required><br> <label for="address"></label> <input
 						type="text" id="detailAddress" name="detailAddress" placeholder="상세주소"> <input type="text" id="extraAddress" name="extraAddress" placeholder="참고항목">
 					<script>
 						function execDaumPostcode() {
@@ -395,7 +381,7 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			<div>
-					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" class="mb-2" name="inquiry" autocomplete="off" required></textarea>
+					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" class="mb-2" name="inquiry" autocomplete="off"></textarea>
 				</div>
 			<div>
 				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
@@ -425,7 +411,7 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
 				<div class="checkform">
-				<input type="checkbox" class="checkbox" id="check" name="check">
+				<input type="checkbox" class="checkbox" id="check" name="check" value="1" required>
 				<label for="check" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
 

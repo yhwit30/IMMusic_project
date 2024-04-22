@@ -165,6 +165,12 @@ body {
 </style>
 
 
+<div class="greet-bg">
+		<p>
+			IMMusic <br>& Art
+		</p>
+	</div>
+
 <div class="hover_wrap">
 	<figure class="effect">
 		<img src="/resource/허대욱_트리오.png" alt="이미지">
