@@ -346,9 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				<div class=" mr-20">
 					<ul class="flex gap-x-20 text-base blending-head-text">
 						<li><a href="/usr/about">ABOUT</a></li>
-						<li><a href="/usr/test/artistTest">ARTIST1</a></li>
-						<li><a href="/usr/artist">ARTIST2</a></li>
-						<li><a href="/usr/artist1">ARTIST3</a></li>
+						<li><a href="/usr/artist">ARTIST</a></li>
 						<li><a href="/usr/press/list">PRESS</a></li>
 						<li><a href="/usr/contactUs/concert">CONTACT US</a></li>
 
