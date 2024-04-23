@@ -143,7 +143,7 @@ public class Rq {
 	
 	// 이미지 업로드 관련
 	public String getImgUri(int id) {
-		return "/common/genFile/file/article/" + id + "/extra/Img/1";
+		return "/common/genFile/file/press/" + id + "/extra/Img/1";
 	}
 
 	public String getProfileFallbackImgUri() {
