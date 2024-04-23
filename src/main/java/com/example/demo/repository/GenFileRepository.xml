@@ -100,16 +100,16 @@
 	<update id="changeRelId">
 		UPDATE genFile
 		<set>
-	updateDate = NOW(),
-	relId = #{relId}
+			updateDate = NOW(),
+			relId = #{relId}
 		</set>
 		WHERE id = #{id}
 	</update>
 
 	<delete id="deleteFiles">
-	DELETE FROM genFile
-	WHERE relTypeCode = #{relTypeCode}
-	AND relId = #{relId}
+		DELETE FROM genFile
+		WHERE relTypeCode = #{relTypeCode}
+		AND relId = #{relId}
 	</delete>
 
 	<delete id="deleteFile">
