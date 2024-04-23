@@ -13,6 +13,7 @@
 	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
+	background-color: rgba(255,255,255,0.8);
 }
 
 form {
@@ -106,7 +107,7 @@ form {
 /* 이메일 */
 
 .signup-form .email { 
- 	width: 10%;
+ 	width: 15%;
  	margin-right: 5px;
 }
 
