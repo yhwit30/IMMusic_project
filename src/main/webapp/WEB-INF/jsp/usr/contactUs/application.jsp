@@ -350,7 +350,7 @@ $(document).ready(function() {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form" action="../contactUs/joinapplication" method="POST">
+		<form name="form" action="../contactUs/joinapplication" method="POST" enctype="multipart/form-data">
 			<div>
 				<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"

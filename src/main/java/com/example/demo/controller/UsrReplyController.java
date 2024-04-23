@@ -79,8 +79,7 @@ public class UsrReplyController {
 	@RequestMapping("/usr/reply/doModify")
 	@ResponseBody
 	public String doModify(HttpServletRequest req, int id, String body) {
-		System.err.println(id);
-		System.err.println(body);
+
 		Rq rq = (Rq) req.getAttribute("rq");
 
 		Reply reply = replyService.getReply(id);
