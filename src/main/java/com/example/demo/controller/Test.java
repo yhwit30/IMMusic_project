@@ -54,12 +54,11 @@ public class Test {
 		
 		return "/usr/test/sliderTest";
 	}
-	
-	@RequestMapping("/usr/test/indexTest")
-	public String testIndex() {
+	@RequestMapping("/usr/home/main3")
+	public String main3() {
 		
-		return "/usr/test/indexTest";
+		return "/usr/home/main3";
 	}
 	
-	
+		
 }
