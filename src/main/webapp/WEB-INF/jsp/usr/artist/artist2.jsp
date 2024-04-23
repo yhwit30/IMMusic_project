@@ -225,11 +225,11 @@
 	object-position: center;
 }
 
-.content .profile_image {
-	opacity: calc(1 - var(--active));
+/* .content .profile_image { */
+/* 	opacity: calc(1 - var(--active)); */
 
-	transition: opacity 0.3s ease-in-out;
-}
+/* 	transition: opacity 0.3s ease-in-out; */
+/* } */
 
 .profile_detail {
 	display: flex;
