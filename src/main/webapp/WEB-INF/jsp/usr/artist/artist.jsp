@@ -230,6 +230,7 @@
 }
 
 .profile_quote {
+	text-align: right;
 	width: 22rem;
 	transform: translate(0, calc(( 1 - var(--active))* (100%+ 2.5rem)));
 }
@@ -241,6 +242,7 @@
 	transform: translate(0, calc(( 1 - var(--active))* (100%+ 2.5rem)));
 	transition: transform 0.5s 0.1s;
 }
+
 
 .wrapper {
 	display: grid;
