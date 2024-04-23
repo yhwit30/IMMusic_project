@@ -16,6 +16,7 @@
 <section class="container_artist">
 	<div class="category_container">
 		<div class="content">
+
 			<!-- 			<img src="/resource/임재민 프로필사진2.png" class="profession_image" -->
 			<!-- 				alt="Profession" />  -->
 			<img src="/resource/임재민 프로필사진.jpg" class="profile_image"
@@ -28,10 +29,14 @@
 				<div class="profile_quote">
 					<p>"UI is the saddle, the stirrups, & the reins. UX is the
 						feeling you get being able to ride the horse."</p>
+					<button class="btn">
+						<a href="/usr/artist1">자세히보기</a>
+					</button>
 				</div>
 			</div>
 
 		</div>
+
 		<div class="content">
 			<!-- 			<img src="/resource/구보근 프로필사진.png" class="profession_image" -->
 			<!-- 				alt="Profession" /> -->
@@ -135,69 +140,55 @@
 .container_artist {
 	overflow: clip;
 	position: relative;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	padding: 2rem 5rem;
-
+	padding: 2rem 10rem;
 	width: 100%;
 	height: 100dvh;
 }
 
 .category_container {
 	--gap: 0.5rem;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
 	gap: calc(var(--gap) * 2);
-
 	width: 100%;
 	height: 100%;
 }
 
 .content {
 	--active: 0;
-
 	cursor: pointer;
 	overflow: clip;
-
 	position: relative;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	gap: 1.5rem;
-
- 	padding: 2.5rem; 
-
-	width: calc((100% / 3) - var(--gap));
+	padding: 2.5rem;
+	width: calc((100%/ 3) - var(--gap));
 	height: 100%;
-
 	border-radius: 1rem;
-
-	transition: width 0.3s ease-in-out;
+	transition: width 0.5s ease-in-out;
 }
+
 .content:hover {
 	--active: 1;
-
 	width: calc(60% - var(--gap));
 }
+
 .content::before {
 	content: "";
-
 	position: absolute;
 	z-index: -10;
 	top: 0;
 	left: 0;
-
 	width: 100%;
 	height: 100%;
 	background-color: var(--dark);
-
 	opacity: 0.6;
 }
 
@@ -206,24 +197,21 @@
 	z-index: -20;
 	top: 0;
 	left: 0;
-
 	width: 100%;
 	height: 100%;
-
 	object-fit: cover;
 	object-position: center;
 }
 
 /* .content .profile_image { */
 /* 	opacity: calc(1 - var(--active)); */
+
 /* 	transition: opacity 0.3s ease-in-out; */
 /* } */
-
 .profile_detail {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-
 	width: 12rem;
 	transition: transform 0.5s 0.01s;
 }
@@ -243,47 +231,39 @@
 
 .profile_quote {
 	width: 22rem;
-	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+	transform: translate(0, calc(( 1 - var(--active))* (100%+ 2.5rem)));
 }
 
 .profile_quote p {
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--light);
-
-	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
-
-	transition: transform 0.5s  0.1s;
+	transform: translate(0, calc(( 1 - var(--active))* (100%+ 2.5rem)));
+	transition: transform 0.5s 0.1s;
 }
-
-
 
 .wrapper {
 	display: grid;
-  	grid-template-rows: 0fr;
-  	overflow: hidden;
-	transition: grid-template-rows 0.5s  0.01s;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.5s 0.01s;
 }
 
-.profile_quote { 
-	min-height: 0; 
+.profile_quote {
+	min-height: 0;
 	transform: translateY(50%);
 	opacity: 0;
-	transition: 
-		opacity 0.8s ease-in-out,
-		transform 0.8s 0.01s
-	;	
+	transition: opacity 0.8s ease-in-out, transform 0.8s 0.01s;
 }
 
 .content:hover .wrapper {
-  	grid-template-rows: 1fr;
+	grid-template-rows: 1fr;
 }
 
 .content:hover .profile_quote {
 	transform: none;
-	opacity: 1;	
+	opacity: 1;
 }
-
 </style>
 
 
