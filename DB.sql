@@ -372,13 +372,14 @@ CREATE TABLE artist (
   a_birth CHAR(10) NOT NULL,
   a_gender TINYINT(1) NOT NULL, # 0=남성, 1=여성
   a_phone CHAR(10) NOT NULL, 
-  a_email CHAR(10) NOT NULL, 
+  a_email CHAR(255) NOT NULL, 
+  a_postcode CHAR(10) NOT NULL, 
   a_address CHAR(255) NOT NULL, 
   a_major CHAR(10) NOT NULL, 
   a_sns CHAR(50) NOT NULL, 
   # a_photo CHAR(255) NOT NULL,
   # a_career CHAR(255) NOT NULL,
-  # a_introduction TEXT NOT NULL,
+  a_introduction TEXT NOT NULL,
   a_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
   regDate DATETIME DEFAULT NULL, # 작성날짜
   updateDate DATETIME DEFAULT NULL, # 갱신날짜
