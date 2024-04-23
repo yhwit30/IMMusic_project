@@ -23,11 +23,11 @@ public class ContactUsService {
 	}
 
 	public ResultData<Integer> join(String name, String birth, String gender, String cellphoneNum, String fullemail,
-			String postcode, String fulladdress, String major, String sns, String introduce, int check) {
+			String postcode, String fulladdress, String major, String sns, String introduction, int check) {
 
-		contactUsRepository.join(name, birth, gender, cellphoneNum, fullemail, postcode, fulladdress, major, sns, introduce, check);
+		contactUsRepository.join(name, birth, gender, cellphoneNum, fullemail, postcode, fulladdress, major, sns, introduction, check);
 		
-		return ResultData.from("S-1", "연주문의가 완료되었습니다.");
+		return ResultData.from("S-1", "연주자 가입신청이 완료되었습니다.");
 	}
 
 }

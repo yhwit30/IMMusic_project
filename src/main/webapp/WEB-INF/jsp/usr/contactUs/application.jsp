@@ -350,7 +350,7 @@ $(document).ready(function() {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form" action="../member/doJoin" method="POST">
+		<form name="form" action="../contactUs/joinapplication" method="POST">
 			<div>
 				<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
@@ -477,7 +477,7 @@ $(document).ready(function() {
 						</div>
 				</div>	
 				<div>
-					<label for="introduce" class="mb-2">자기소개</label> <textarea type="text" id="introduce" class="mb-2" name="introduce" autocomplete="off" required></textarea>
+					<label for="introduction" class="mb-2">자기소개</label> <textarea type="text" id="introduction" class="mb-2" name="introduction" autocomplete="off" required></textarea>
 				</div>
 				<div>
 					<label for="positive" class="information mb-2">개인정보 수집 동의</label>

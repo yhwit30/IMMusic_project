@@ -124,6 +124,8 @@ public class GenFileService {
 	public ResultData save(MultipartFile multipartFile, int relId) {
 		String fileInputName = multipartFile.getName();
 
+		System.err.println(fileInputName);
+		
 		String[] fileInputNameBits = fileInputName.split("__");
 
 		String relTypeCode = fileInputNameBits[1];
