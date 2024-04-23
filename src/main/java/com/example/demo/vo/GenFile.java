@@ -26,7 +26,7 @@ public class GenFile {
 	private String fileExt;
 	private String fileDir;
 	private String originFileName;
-
+	
 	@JsonIgnore
 	public String getFilePath(String genFileDirPath) {
 		return genFileDirPath + getBaseFileUri();
@@ -38,7 +38,11 @@ public class GenFile {
 	}
 
 	public String getFileName() {
-		return id + "." + fileExt;
+		
+		String GenFileName[] = originFileName.split(fileExt);
+		String NewGenFileName = GenFileName[0].substring(0, GenFileName[0].length()-1);
+		
+		return id + "_" + NewGenFileName + "." + fileExt;
 	}
 
 	public String getForPrintUrl() {

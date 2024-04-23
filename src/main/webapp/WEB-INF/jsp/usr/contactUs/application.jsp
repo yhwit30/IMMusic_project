@@ -13,6 +13,7 @@
 	margin: 30px auto;
 	padding: 20px;
 	border-radius: 8px;
+	background-color: rgba(255,255,255,0.8);
 }
 
 form {
@@ -106,7 +107,7 @@ form {
 /* 이메일 */
 
 .signup-form .email { 
- 	width: 10%;
+ 	width: 15%;
  	margin-right: 5px;
 }
 
@@ -167,42 +168,9 @@ select {
 	background-color: #b3a78f;
 }
 
-.checkform {
-	display: inline-block;
-}
-
 .signup-form .contact-title {
 	padding: 5% 0;
 	height: 200px;
-}
-
-/* 개인정보 수집 동의, 자기소개 */
-
-/* .signup-form, .checkform {
-    display: block;
-}
- */
-.signup-form .information {
-	width: 20%;
-}
-
-.signup-form .form-control, textarea{
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	overflow-y: auto;
-	width: 98.3%;
-	height: 150px;
-	padding: 10px;
-}
-
-.signup-form .checkbox {
-	width: 20px;
-	height: 20px;
-}
-
-.signup-form .checklabel {
-	width: 70%;
 }
 
 /* 스크롤바 디자인 */
@@ -238,6 +206,38 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #b3a78f;
+}
+
+/* 개인정보 수집 동의 */
+
+.signup-form .information {
+	width: 20%;
+}
+
+.signup-form .form-control, textarea{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	width: 98.3%;
+	height: 150px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.signup-form .checkbox {
+	width: 20px;
+	height: 20px;
+	margin-bottom: 0;
+}
+
+.signup-form .checklabel {
+	width: 70%;
+}
+
+.signup-form .checkform {
+	display: flex; /* 플렉스 박스로 요소들을 배치합니다. */
+	align-items: center; /* 요소들을 세로 방향 가운데로 정렬합니다. */
 }
 
 </style>
@@ -312,14 +312,14 @@ textarea::-webkit-scrollbar-thumb {
 <!-- 파일 업로드 -->
 <script>
 $(document).ready(function() {
-    $("#file-profile").on('change', function() {
+    $("#file-photo").on('change', function() {
         var profilefile = $(this).val();
-        $(".upload-profile").val(profilefile);
+        $(".upload-photo").val(profilefile);
     });
     
-    $("#file-resume").on('change', function() {
+    $("#file-career").on('change', function() {
         var resumefile = $(this).val();
-        $(".upload-resume").val(resumefile);
+        $(".upload-career").val(resumefile);
     });
 });
 	
@@ -350,7 +350,7 @@ $(document).ready(function() {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form" action="../member/doJoin" method="POST">
+		<form name="form" action="../contactUs/joinapplication" method="POST">
 			<div>
 				<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
@@ -374,13 +374,13 @@ $(document).ready(function() {
 				</div>
 				<div>
 					<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
-						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다.">
+						name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11"  placeholder="-없이 숫자만 입력가능합니다." required>
 				</div>
 				<div>
 			        <label for="email">이메일</label> 
-			        <input type="text" class="email" id="emailId" value=""> 
+			        <input type="text" class="email" id="emailId" name="emailId" value=""> 
 					<span>@</span>
-					<input id="textEmail" class="emailoption" placeholder="이메일을 선택하세요."> 
+					<input id="textEmail" class="emailoption" name="emailoption" placeholder="이메일을 선택하세요." required> 
 					<select id="select">
 				        <option value="" disabled selected>E-Mail 선택</option>
 				        <option value="naver.com" id="naver.com">naver.com</option>
@@ -455,33 +455,33 @@ $(document).ready(function() {
 					</script>
 				</div>
 				<div>
-					<label for="email">전공악기</label> <input type="email" id="email" name="email" autocomplete="off" required>
+					<label for="major">전공악기</label> <input type="text" id="major" name="major" autocomplete="off" required>
 				</div>
 				<div>
-					<label for="email">SNS ID</label> <input type="email" id="email" name="email" autocomplete="off" required>
+					<label for="sns">SNS ID</label> <input type="text" id="sns" name="sns" autocomplete="off">
 				</div>
 				<div>
-					<label for="email">사진등록</label>
+					<label for="photo">사진등록</label>
 						<div class="filebox">
-							<input class="upload-profile" placeholder="파일을 선택해주세요.">
-    						<label for="file-profile" class="mb-2.5">파일찾기</label> 
-    						<input type="file" id="file-profile">
+							<input class="upload-photo" placeholder="파일을 선택해주세요." name="photo">
+    						<label for="file-photo" class="mb-2.5">파일찾기</label> 
+    						<input type="file" id="file-photo">
 						</div>
 				</div>
 				<div>
-					<label for="email">연주이력</label> 
+					<label for="career">연주이력</label> 
 						<div class="filebox">
-							<input class="upload-resume" placeholder="파일을 선택해주세요.">
-    						<label for="file-resume" class="mb-2.5">파일찾기</label> 
-    						<input type="file" id="file-resume">
+							<input class="upload-career" placeholder="파일을 선택해주세요." name="career">
+    						<label for="file-career" class="mb-2.5">파일찾기</label> 
+    						<input type="file" id="file-career">
 						</div>
 				</div>	
 				<div>
-					<label for="introduce" class="mb-2">자기소개</label> <textarea type="text" id="email" class="mb-2" name="email" autocomplete="off" required></textarea>
+					<label for="introduction" class="mb-2">자기소개</label> <textarea type="text" id="introduction" name="introduction" autocomplete="off" required></textarea>
 				</div>
 				<div>
 					<label for="positive" class="information mb-2">개인정보 수집 동의</label>
-					<div class="form-control mb-3">
+					<div class="form-control">
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
@@ -504,10 +504,11 @@ $(document).ready(function() {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					</div>
-					<input type="checkbox" class="checkbox" id="personalInformationConsent" name="personalInformationConsent">
-					<label for="personalInformationConsent" class="checklabel">개인정보 수집에 동의합니다.</label>
+				<div class="checkform">
+				<input type="checkbox" class="checkbox mr-2" id="check" name="check" value="1" required>
+				<label for="check" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
-			
+							
 			<div class="box center-text mt-5">
 				<button type="submit" class="mr-3">신청</button>
 				<button type="button" onclick="history.back();">뒤로가기</button>

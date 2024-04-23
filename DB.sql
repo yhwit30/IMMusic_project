@@ -355,8 +355,6 @@ CREATE TABLE genFile (
 UPDATE `member`
 SET loginPw = SHA2(loginPw,256);
 
-
-
 ############### IMMusic DB 작성 -> 이후에 위의 쿼리들하고 자바 레포지터리 다 정리 ###########
 
 # about 테이블 추가
@@ -374,12 +372,13 @@ CREATE TABLE artist (
   a_birth CHAR(10) NOT NULL,
   a_gender TINYINT(1) NOT NULL, # 0=남성, 1=여성
   a_phone CHAR(10) NOT NULL, 
-  a_email CHAR(10) NOT NULL, 
+  a_email CHAR(255) NOT NULL, 
+  a_postcode CHAR(10) NOT NULL, 
   a_address CHAR(255) NOT NULL, 
   a_major CHAR(10) NOT NULL, 
   a_sns CHAR(50) NOT NULL, 
-  a_photo CHAR(255) NOT NULL,
-  a_career CHAR(255) NOT NULL,
+  # a_photo CHAR(255) NOT NULL,
+  # a_career CHAR(255) NOT NULL,
   a_introduction TEXT NOT NULL,
   a_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
   regDate DATETIME DEFAULT NULL, # 작성날짜
@@ -389,14 +388,17 @@ CREATE TABLE artist (
 );
 
 # contact 테이블 추가
+
+# drop table concert
+
 CREATE TABLE concert (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   c_name CHAR(10) NOT NULL,
-  c_email CHAR(10) NOT NULL,
+  c_email CHAR(255) NOT NULL,
   c_phone CHAR(10) NOT NULL,
   c_date CHAR(10) NOT NULL,
-  c_postcode INT NOT NULL, 
-  c_address CHAR(10) NOT NULL, 
+  c_postcode CHAR(10) NOT NULL, 
+  c_address CHAR(255) NOT NULL, 
   c_inquiry TEXT NOT NULL,
   c_check TINYINT(1) UNSIGNED NOT NULL, # 개인정보 동의(0:비동의,1:동의)
   regDate DATETIME DEFAULT NULL, # 작성날짜
@@ -425,6 +427,6 @@ SELECT * FROM about;
 
 SELECT * FROM artist;
 
-SELECT * FROM contact;
+SELECT * FROM concert;
 
-SELECT * FROM contact_board;
+
