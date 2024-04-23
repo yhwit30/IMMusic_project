@@ -63,19 +63,20 @@ public class UsrContactUsController {
 		String fulladdress = address + detailAddress + extraAddress;
 		
 		ResultData<Integer> joinRd = contactUsService.join(name, birth, gender, cellphoneNum, fullemail, postcode, fulladdress, major, sns, introduction, check);
-	
-		/*
-		 * // 작성된 게시글 번호 가져오기 int id = (int) joinRd.getData1();
-		 * 
-		 * // 이미지 업로드 Map<String, MultipartFile> fileMap =
-		 * multipartRequest.getFileMap();
-		 * 
-		 * for (String fileInputName : fileMap.keySet()) { MultipartFile multipartFile =
-		 * fileMap.get(fileInputName);
-		 * 
-		 * if (multipartFile.isEmpty() == false) { genFileService.save(multipartFile,
-		 * id); } }
-		 */
+
+		 // 작성된 게시글 번호 가져오기 
+		// int id = (int) joinRd.getData1(); // -> 이거 널이래ㅐ래래ㅐㅐㅐㅐ;;;
+		 
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
+		 // 이미지 업로드 
+//		Map<String, MultipartFile> fileMap = multipartRequest.getFileMap();
+//		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//		for (String fileInputName : fileMap.keySet()) { MultipartFile multipartFile =
+//		fileMap.get(fileInputName);
+//		
+//		if (multipartFile.isEmpty() == false) { genFileService.save(multipartFile,
+//		id); } }
 				
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
