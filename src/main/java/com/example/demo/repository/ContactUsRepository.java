@@ -30,9 +30,9 @@ public interface ContactUsRepository {
 	
 	@Insert("""
 			INSERT INTO
-			concert SET
+			artist SET
 			a_name = #{name},
-			a_birth = #{birth}
+			a_birth = #{birth},
 		    a_gender = #{gender},
 		    a_phone = #{cellphoneNum},
 		    a_email = #{fullemail},
@@ -40,13 +40,13 @@ public interface ContactUsRepository {
 		    a_address = #{fulladdress},
 		    a_major = #{major},
 		    a_sns = #{sns},
-		    a_introduction = #{introduce},
+		    a_introduction = #{introduction},
 		    a_check = #{check},
 		    regDate = NOW(),
 		    updateDate = NOW()
 			""")
 	public void join(String name, String birth, String gender, String cellphoneNum, String fullemail, String postcode,
-			String fulladdress, String major, String sns, String introduce, int check);
+			String fulladdress, String major, String sns, String introduction, int check);
 
 
 }

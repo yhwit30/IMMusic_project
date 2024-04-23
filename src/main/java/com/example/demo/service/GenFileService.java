@@ -81,6 +81,9 @@ public class GenFileService {
 		ResultData saveMetaRd = saveMeta(relTypeCode, relId, typeCode, type2Code, fileNo, originFileName,
 				fileExtTypeCode, fileExtType2Code, fileExt, fileSize, fileDir);
 		int newGenFileId = (int) saveMetaRd.getBody().get("id");
+		
+		String GenFileName[] = originFileName.split(fileExt);
+		String NewGenFileName = GenFileName[0].substring(0, GenFileName[0].length()-1);
 
 		// 새 파일이 저장될 폴더(io파일) 객체 생성
 		String targetDirPath = genFileDirPath + "/" + relTypeCode + "/" + fileDir;
@@ -91,7 +94,7 @@ public class GenFileService {
 			targetDir.mkdirs();
 		}
 
-		String targetFileName = newGenFileId + "." + fileExt;
+		String targetFileName = newGenFileId + "_" + NewGenFileName + "." + fileExt; // 파일 다운로드 시 파일명
 		String targetFilePath = targetDirPath + "/" + targetFileName;
 
 		// 파일 생성(업로드된 파일을 지정된 경로롤 옮김)
@@ -120,7 +123,9 @@ public class GenFileService {
 
 	public ResultData save(MultipartFile multipartFile, int relId) {
 		String fileInputName = multipartFile.getName();
+
 		System.err.println(fileInputName);
+		
 		String[] fileInputNameBits = fileInputName.split("__");
 
 		String relTypeCode = fileInputNameBits[1];
@@ -152,6 +157,7 @@ public class GenFileService {
 			if (multipartFile.isEmpty() == false) {
 				ResultData fileResultData = save(multipartFile);
 				int genFileId = (int) fileResultData.getBody().get("id");
+				
 				genFileIds.add(genFileId);
 
 				filesResultData.put(fileInputName, fileResultData);

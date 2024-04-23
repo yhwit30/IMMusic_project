@@ -132,39 +132,9 @@ select {
 	background-color: #b3a78f;
 }
 
-.checkform {
-	display: inline-block;
-}
-
 .signup-form .contact-title {
 	padding: 5% 0;
 	height: 200px;
-}
-
-
-/* 개인정보 수집 동의, 자기소개 */
-
-.signup-form .information {
-	width: 20%;
-}
-
-.signup-form .form-control, textarea{
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	overflow-y: auto;
-	width: 98.3%;
-	height: 150px;
-	padding: 10px;
-}
-
-.signup-form .checkbox {
-	width: 20px;
-	height: 20px;
-}
-
-.signup-form .checklabel {
-	width: 70%;
 }
 
 /* 스크롤바 디자인 */
@@ -202,6 +172,39 @@ textarea::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #b3a78f;
 }
+
+/* 개인정보 수집 동의 */
+
+.signup-form .information {
+	width: 20%;
+}
+
+.signup-form .form-control, textarea{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	width: 98.3%;
+	height: 150px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.signup-form .checkbox {
+	width: 20px;
+	height: 20px;
+	margin-bottom: 0;
+}
+
+.signup-form .checklabel {
+	width: 70%;
+}
+
+.signup-form .checkform {
+	display: flex; /* 플렉스 박스로 요소들을 배치합니다. */
+	align-items: center; /* 요소들을 세로 방향 가운데로 정렬합니다. */
+}
+
 
 </style>
 
@@ -381,7 +384,7 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			<div>
-					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" class="mb-2" name="inquiry" autocomplete="off"></textarea>
+					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" name="inquiry" autocomplete="off"></textarea>
 				</div>
 			<div>
 				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
@@ -411,7 +414,7 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
 				<div class="checkform">
-				<input type="checkbox" class="checkbox" id="check" name="check" value="1" required>
+				<input type="checkbox" class="checkbox mr-2" id="check" name="check" value="1" required>
 				<label for="check" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
 
