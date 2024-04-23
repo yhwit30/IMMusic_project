@@ -50,8 +50,6 @@
 		</div>
 
 		<div class="content">
-			<!-- 			<img src="/resource/허원경 프로필사진.png" class="profession_image" -->
-			<!-- 				alt="Profession" />  -->
 			<img src="/resource/허원경 프로필사진2.jpg" class="profile_image"
 				alt="Profile" />
 			<div class="profile_detail">
@@ -76,8 +74,6 @@
 		<div class="content">
 			<img src="/resource/허대욱 프로필사진.jpg" class="profession_image"
 				alt="Profession" />
-			<!-- 				<img src="/resource/허대욱 프로필사진2.jpg" -->
-			<!-- 				class="profile_image" alt="Profile" /> -->
 			<div class="profile_detail">
 				<span>허대욱</span>
 				<p>Fashion Designer + Model</p>
