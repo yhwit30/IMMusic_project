@@ -4,6 +4,11 @@
 <%@ include file="../common/head.jspf"%>
 
 <style>
+
+
+
+/*여기까지 앨범 슬라이드*/
+
 *, *:before, *:after {
 	box-sizing: border-box;
 	outline: none;
@@ -1526,13 +1531,38 @@ hr {
 	.works-item {
 		max-width: 600px;
 	}
+	.box {
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		line-height: 100px;
+		color: #fff;
+		border-radius: 15px;
+	}
+	.red {
+		background: red;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		z-index: 1;
+	}
+	.blue {
+		background: blue;
+		position: absolute;
+		top: 60px;
+		left: 60px;
+		z-index: -1;
+	}
+	.green {
+		background: green;
+	}
 }
 </style>
 
 <div class="center">
-	<div class="card__item">
-		<div class="inner-card-lists">
-			<div class="card-imag-item">
+	<div class="card__item box">
+		<div class="inner-card red">
+			<div class="card-imag">
 				<img src="/resource/허원경 프로필사진.png" alt="Изображение">
 			</div>
 			<div class="card_text">
@@ -1551,9 +1581,9 @@ hr {
 		</div>
 	</div>
 
-	<div class="card__item2">
-		<div class="inner-card">
-			<div class="card-imag-item">
+	<div class="card__item box">
+		<div class="inner-card blue">
+			<div class="card-imag">
 				<img src="/resource/구보근 프로필사진.png" alt="Изображение">
 			</div>
 			<div class="card_text">
@@ -1573,9 +1603,9 @@ hr {
 	</div>
 </div>
 
-<div class="card__item3">
-	<div class="inner-card">
-		<div class="card-imag-item">
+<div class="card__item box">
+	<div class="inner-card green">
+		<div class="card-imag">
 			<img src="/resource/원유현 프로필사진.png" alt="Изображение">
 		</div>
 		<div class="card_text">
