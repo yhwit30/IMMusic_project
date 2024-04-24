@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+
 html,body{
     width: 100%;
     height: 100%;
@@ -1621,26 +1622,37 @@ hr {
 <body>
 	<div class="page">
 
+		<!-- 이 섹션은 다중 이미지 슬라이드쇼를 포함하고 있습니다 -->
 		<section id="silder-container">
+
+			<!-- 각 이미지는 고유한 ID를 가진 'slider' div 내에 포함됩니다 -->
 			<div class="slider fade" id="slider-1">
 				<img src="/resource/에오 트리오 사진.jpg" alt="">
 			</div>
 			<div class="slider fade" id="slider-2">
-				<img src="https://preview.ibb.co/dePJOK/img3.jpg" alt="">
+				<img src="/resource/허대욱 사진 2.jpg" alt="">
 			</div>
 			<div class="slider fade" id="slider-3">
-				<img src="https://preview.ibb.co/jZkQ3K/img2.jpg" alt="">
+				<img src="/resource/허대욱 사진 3.jpg" alt="">
 			</div>
-			<!--Arrow-->
+
+			<!-- 슬라이드 간 이동을 위한 내비게이션 화살표 -->
 			<div class="arrows-wrrapper">
+				<!-- 이전 화살표 -->
 				<p class="slider-arrows center_y" id="arrow-prev">&#10094</p>
+				<!-- 다음 화살표 -->
 				<p class="slider-arrows center_y" id="arrow-next">&#10095</p>
 			</div>
+
+			<!-- 현재 활성화된 슬라이드를 나타내는 점들 -->
 			<div class="center_x" id="dots-wrapper">
+				<!-- 활성화된 점 -->
 				<div class="dot-navigation active-dot"></div>
+				<!-- 비활성화된 점들 -->
 				<div class="dot-navigation"></div>
 				<div class="dot-navigation"></div>
 			</div>
+
 		</section>
 
 		<div class="intro" id="intro">
@@ -2054,38 +2066,62 @@ hr {
 				</div>
 			</section>
 		</div>
-<script>
-var sliderIndex = 0;
-showSlider(sliderIndex);
-function showSlider(index){
-    var slider = document.querySelectorAll('.slider');
-    var dots   = document.querySelectorAll('.dot-navigation');
-    if(index >= slider.length) sliderIndex = 0;
-    if(index < 0) sliderIndex = slider.length - 1;
-    for(var i = 0 ; i < slider.length ; i++ ){
-        slider[i].style.display = "none";
-        dots[i].classList.remove('active-dot');
-    } 
-    slider[sliderIndex].style.display = "block";
-    dots[sliderIndex].classList.add('active-dot');
-}
-document.querySelector('#arrow-prev').addEventListener('click',function(){
-    showSlider(--sliderIndex);
-});
-document.querySelector('#arrow-next').addEventListener('click',function(){
-    showSlider(++sliderIndex);
-});
-
-document.querySelectorAll('.dot-navigation').forEach(function(element){
-    element.addEventListener('click',function(){
-        var dots = Array.prototype.slice.call(this.parentElement.children);
-        var dotIndex = dots.indexOf(element);
-        showSlider(sliderIndex = dotIndex);
+		<script>
+    // 현재 슬라이드의 인덱스를 저장하는 변수 초기화
+    var sliderIndex = 0;
+    
+    // 초기에 첫 번째 슬라이드를 표시하는 함수 호출
+    showSlider(sliderIndex);
+    
+    // 슬라이드를 표시하는 함수 정의
+    function showSlider(index) {
+        // 슬라이드와 점들을 선택
+        var slider = document.querySelectorAll('.slider');
+        var dots = document.querySelectorAll('.dot-navigation');
+        
+        // 인덱스가 슬라이드 개수를 초과하면 첫 번째 슬라이드로 이동
+        if (index >= slider.length)
+            sliderIndex = 0;
+        
+        // 인덱스가 음수면 마지막 슬라이드로 이동
+        if (index < 0)
+            sliderIndex = slider.length - 1;
+        
+        // 모든 슬라이드를 숨기고, 모든 점을 활성화하지 않은 상태로 초기화
+        for (var i = 0; i < slider.length; i++) {
+            slider[i].style.display = "none";
+            dots[i].classList.remove('active-dot');
+        }
+        
+        // 현재 슬라이드를 표시하고, 해당 슬라이드의 점을 활성화
+        slider[sliderIndex].style.display = "block";
+        dots[sliderIndex].classList.add('active-dot');
+    }
+    
+    // 이전 화살표 클릭 시 이벤트 리스너 추가
+    document.querySelector('#arrow-prev').addEventListener('click', function() {
+        showSlider(--sliderIndex);
     });
-});
-setInterval(function(){
-    showSlider(++sliderIndex);
-},2000);
+    
+    // 다음 화살표 클릭 시 이벤트 리스너 추가
+    document.querySelector('#arrow-next').addEventListener('click', function() {
+        showSlider(++sliderIndex);
+    });
+
+    // 각 점 클릭 시 이벤트 리스너 추가
+    document.querySelectorAll('.dot-navigation').forEach(function(element) {
+        element.addEventListener('click', function() {
+            // 점의 인덱스를 찾아 해당 슬라이드 표시
+            var dots = Array.prototype.slice.call(this.parentElement.children);
+            var dotIndex = dots.indexOf(element);
+            showSlider(sliderIndex = dotIndex);
+        });
+    });
+    
+    // 일정 시간마다 자동으로 슬라이드 전환
+    setInterval(function() {
+        showSlider(++sliderIndex);
+    }, 3500);
 </script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
