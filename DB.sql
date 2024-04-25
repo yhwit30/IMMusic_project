@@ -366,12 +366,34 @@ CREATE TABLE about(
 );
 
 # artist 테이블 추가
-CREATE TABLE artist (
+CREATE TABLE artist(
+  id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
+  `name` CHAR(10) NOT NULL,
+  birth CHAR(10) NOT NULL,
+  gender TINYINT(1) NOT NULL, # 0=남성, 1=여성
+  phone CHAR(255) NOT NULL, 
+  email CHAR(255) NOT NULL, 
+  postcode CHAR(10) NOT NULL, 
+  address CHAR(255) NOT NULL, 
+  major CHAR(20) NOT NULL, 
+  sns CHAR(50) NOT NULL, 
+  photo CHAR(255) NOT NULL,
+  career CHAR(255) NOT NULL,
+  introduction TEXT NOT NULL,
+  regDate DATETIME DEFAULT NULL, # 작성날짜
+  updateDate DATETIME DEFAULT NULL, # 갱신날짜
+  delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, # 삭제상태(0:미삭제,1:삭제)
+  delDate DATETIME DEFAULT NULL # 삭제날짜
+);
+
+
+# artist_contact 테이블 추가
+CREATE TABLE artist_contact (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   a_name CHAR(10) NOT NULL,
   a_birth CHAR(10) NOT NULL,
   a_gender TINYINT(1) NOT NULL, # 0=남성, 1=여성
-  a_phone CHAR(10) NOT NULL, 
+  a_phone CHAR(255) NOT NULL, 
   a_email CHAR(255) NOT NULL, 
   a_postcode CHAR(10) NOT NULL, 
   a_address CHAR(255) NOT NULL, 
@@ -391,11 +413,11 @@ CREATE TABLE artist (
 
 # drop table concert
 
-CREATE TABLE concert (
+CREATE TABLE concert_contact (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   c_name CHAR(10) NOT NULL,
   c_email CHAR(255) NOT NULL,
-  c_phone CHAR(10) NOT NULL,
+  c_phone CHAR(255) NOT NULL,
   c_date CHAR(10) NOT NULL,
   c_postcode CHAR(10) NOT NULL, 
   c_address CHAR(255) NOT NULL, 
@@ -427,6 +449,8 @@ SELECT * FROM about;
 
 SELECT * FROM artist;
 
-SELECT * FROM concert;
+SELECT * FROM artist_contact;
+
+SELECT * FROM concert_contact;
 
 
