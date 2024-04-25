@@ -65,12 +65,12 @@ public class ContactUsService {
 		
 	}
 
-	public void sendsingupMessage(String cellphoneNum) {
+	public void sendsignupMessage(String cellphoneNum) {
 		
 		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-		message.setFrom("01076070903");
+		message.setFrom("발신자번호");
 		message.setTo(cellphoneNum);
 		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
 		

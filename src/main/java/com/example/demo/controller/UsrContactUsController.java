@@ -42,7 +42,7 @@ public class UsrContactUsController {
 		
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
 		
-		contactUsService.sendsingupMessage(cellphoneNum);
+		contactUsService.sendsignupMessage(cellphoneNum);
 		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
 	}
