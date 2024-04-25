@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%--  <c:set var="main" value="MAIN"></c:set> --%>
 <c:set var="pageTitle" value="MAIN"></c:set>
@@ -12,9 +13,12 @@
 <title>${pageTitle }</title>
 <link rel="stylesheet" type="text/css" href="acss/css/mogo.css">
 <script src="https://use.fontawesome.com/692e9fe4aa.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
 
@@ -50,14 +54,11 @@ hr {
 	padding: 0 15px;
 }
 
-
-
-
 .intro {
 	width: 100%;
 	height: 100vh;
-/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
- 	background: url("/resource/에오 트리오 사진.jpg"); 
+	/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
+	background: url("/resource/에오 트리오 사진.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -99,7 +100,6 @@ hr {
 	font-family: 'Kaushan Script', cursive;
 }
 
-
 .section {
 	padding: 100px;
 }
@@ -116,7 +116,6 @@ hr {
 	color: #333;
 	font-family: 'Kaushan Script', cursive;
 }
-
 
 .section_title {
 	font-size: 30px;
@@ -144,52 +143,55 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
 }
 
-.cards1 {
-	margin: 80px -15px 0;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	z-index:auto;
-}
 
-.cards2 {
-	margin: 80px -15px 0;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	
-}
 
+/* 뉴스소식 */
 .card__item {
 	width: 33.33333%;
 	padding: 0 15px;
 }
 
+/* 아티스트 */
+.artist-cards {
+	height: 700px;
+	border: 2px solid blue;
+}
+
+.cards1 {
+	display: flex;
+/* 	justify-content: center; */
+	flex-wrap: wrap;
+/* 	z-index: auto; */
+	position: relative;
+	border: 1px solid red;
+}
+
 .card__item1 {
 	width: 33.33333%;
 	padding: 0 15px;
-	position: relative;
-	z-index:2;
+	position: absolute;
+	z-index: 2;
 }
 
 .card__item2 {
 	width: 33.33333%;
 	padding: 0 15px;
-	position: relative;
-	z-index:4;
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	z-index: 4;
 }
 
 .card__item3 {
 	width: 33.33333%;
 	padding: 0 15px;
-	position: relative;
-	z-index:6;
+	position: absolute;
+	top: 20px;
+	left: 500px;
+	z-index: 6;
 }
-
-
 
 .inner-card {
 	background-color: #95e1d3;
@@ -226,7 +228,7 @@ hr {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 18px;
-	position: absolute;
+	/* 	position: absolute; */
 	text-align: center;
 	opacity: 0;
 	top: 50%;
@@ -260,12 +262,9 @@ hr {
 	border-right: 1px solid #b5eae0;
 }
 
-
-
 .section-gray {
 	background-color: #f8f8f8;
 }
-
 
 .social_iteam {
 	width: 55px;
@@ -319,10 +318,7 @@ hr {
 	font-style: italic;
 	font-weight: 300px;
 	padding-top: 10px;
-	
 }
-
-
 
 .works {
 	display: flex;
@@ -404,8 +400,6 @@ hr {
 .logo-items {
 	padding: 0 15px;
 }
-
-
 
 .blog {
 	display: flex;
@@ -494,9 +488,6 @@ hr {
 	margin-right: 5px;
 }
 
-
-
-
 @media ( max-width : 1230px) {
 	/* intro */
 	.intro__title {
@@ -534,7 +525,6 @@ hr {
 	.stat_item:last-child {
 		border-right: none;
 	}
-	
 }
 
 @media ( max-width : 770px) {
@@ -650,7 +640,8 @@ hr {
 								<div class=" card-imag">
 									<img src="/resource/에오 트리오 사진.jpg" alt="Изображение">
 									<div class="card_text">
-										<a href="https://blog.naver.com/jazzjarasum/221102783565">피아니스트 허대욱, 에오 트리오로 만나다.</a>
+										<a href="https://blog.naver.com/jazzjarasum/221102783565">피아니스트
+											허대욱, 에오 트리오로 만나다.</a>
 									</div>
 								</div>
 							</div>
@@ -660,7 +651,8 @@ hr {
 								<div class="card-imag">
 									<img src="/resource/공연 포스터 2.jpg" alt="Изображение">
 									<div class="card_text">
-										<a href="https://blog.naver.com/jazzjarasum/221102783565">포스터 2</a>
+										<a href="https://blog.naver.com/jazzjarasum/221102783565">포스터
+											2</a>
 									</div>
 								</div>
 							</div>
@@ -678,144 +670,175 @@ hr {
 				</div>
 			</section>
 
-			<section class="section section-gray">
+			<section class="section section-gray ">
 				<div class="container">
 					<div class="section_heder">
 						<h3 class="section_suptitle">Who we are</h3>
 						<h2 class="section_title">아티스트 소개</h2>
 						<div class="section__Text">
-<!-- 							<p>“비바기타앙상블”은 2012년부터 기타리스트 허원경이 이끄는 앙상블 팀으로 서울대학교 동문으로 이루어진 클래식기타 연주팀이다.</p> -->
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aspernatur numquam dolorem
-								nostrum veritatis maxime iure ullam vitae hic consequuntur quia molestiae consectetur. Incidunt deserunt
-								recusandae vel eveniet aspernatur delectus.</p>
+							<!-- 							<p>“비바기타앙상블”은 2012년부터 기타리스트 허원경이 이끄는 앙상블 팀으로 서울대학교 동문으로 이루어진 클래식기타 연주팀이다.</p> -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Minima aspernatur numquam dolorem nostrum veritatis maxime iure
+								ullam vitae hic consequuntur quia molestiae consectetur.
+								Incidunt deserunt recusandae vel eveniet aspernatur delectus.</p>
 						</div>
 					</div>
 
+					<div class="artist-cards">
+						<div class="cards1">
+							<div class="card__item1">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/허원경 프로필사진.png" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info">
+									<div class="card-name">허원경</div>
+									<div class="card-prof">리더(클래식 기타)</div>
+								</div>
+							</div>
 
-					<div class="cards1">
-						<div class="card__item1">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/허원경 프로필사진.png" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
+							<div class="card__item2">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/구보근 프로필사진.png" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
+								<div class="card-info">
+									<div class="card-name">구본근</div>
+									<div class="card-prof">단원(클래식 기타)</div>
+								</div>
 							</div>
-							<div class="card-info">
-								<div class="card-name">허원경</div>
-								<div class="card-prof">리더(클래식 기타)</div>
-							</div>
-						</div>
 
-						<div class="card__item2">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/구보근 프로필사진.png" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-info">
-								<div class="card-name">구본근</div>
-								<div class="card-prof">단원(클래식 기타)</div>
-							</div>
-						</div>
 
-						<div class="card__item3">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/원유현 프로필사진.png" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
+							<div class="card__item3">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/원유현 프로필사진.png" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="card-info">
-								<div class="card-name">원유현</div>
-								<div class="card-prof">단원(클래식 기타)</div>
-							</div>
-						</div>
-						
-						<div class="cards2">
-						<div class="card__item">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/임재민 프로필사진2.png" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
-										</div>
-									</div>
+								<div class="card-info">
+									<div class="card-name">원유현</div>
+									<div class="card-prof">단원(클래식 기타)</div>
 								</div>
 							</div>
-							<div class="card-info">
-								<div class="card-name">임재민</div>
-								<div class="card-prof">단원(클래식 기타)</div>
-							</div>
 						</div>
+					</div>
 
-						<div class="card__item">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/허대욱 프로필사진.jpg" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
+					<div class="artist-cards">
+						<div class="cards1">
+							<div class="card__item1">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/임재민 프로필사진2.png" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
+								<div class="card-info">
+									<div class="card-name">임재민</div>
+									<div class="card-prof">단원(클래식 기타)</div>
+								</div>
 							</div>
-							<div class="card-info">
-								<div class="card-name">허대욱</div>
-								<div class="card-prof">단원(재즈 피아노)</div>
-							</div>
-						</div>
-						<div class="card__item">
-							<div class="inner-card">
-								<div class="card-imag">
-									<img src="/resource/허병훈 프로필사진.jpg" alt="Изображение">
-									<div class="card_text">
-										<div class="social">
-											<a href="#" class="social_iteam" target="_blank"> <i class="fab fa-facebook-f"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-twitter"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-pinterest-p"></i>
-											</a> <a href="#" class="social_iteam" target="_blank"> <i class="fab fa-instagram"></i>
-											</a>
+
+							<div class="card__item2">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/허대욱 프로필사진.jpg" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
+								<div class="card-info">
+									<div class="card-name">허대욱</div>
+									<div class="card-prof">단원(재즈 피아노)</div>
+								</div>
 							</div>
-							<div class="card-info">
-								<div class="card-name">허병훈</div>
-								<div class="card-prof">고문</div>
+
+							<div class="card__item3">
+								<div class="inner-card">
+									<div class="card-imag">
+										<img src="/resource/허병훈 프로필사진.jpg" alt="Изображение">
+										<div class="card_text">
+											<div class="social">
+												<a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-facebook-f"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-twitter"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-pinterest-p"></i>
+												</a> <a href="#" class="social_iteam" target="_blank"> <i
+													class="fab fa-instagram"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info">
+									<div class="card-name">허병훈</div>
+									<div class="card-prof">고문</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -827,9 +850,10 @@ hr {
 						<h3 class="section_suptitle">Albums</h3>
 						<h2 class="section_title">앨범</h2>
 						<div class="section__Text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
-								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
-								blanditiis architecto? Ut!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate
+								iure quis corrupti totam, nesciunt nemo voluptatem possimus
+								doloribus similique perferendis blanditiis architecto? Ut!</p>
 						</div>
 					</div>
 					<div class="logos">
@@ -842,7 +866,8 @@ hr {
 							<div class="card-prof2">Interval Of Parallel</div>
 						</div>
 						<div class="logo-items">
-							<a href="https://youtu.be/KebPgX7_sGA"> <img class="logo_imge" src="/resource/음악앨범 3.jpg">
+							<a href="https://youtu.be/KebPgX7_sGA"> <img
+								class="logo_imge" src="/resource/음악앨범 3.jpg">
 							</a>
 							<div class="card-prof2">Trigram</div>
 						</div>
@@ -869,9 +894,10 @@ hr {
 						<h3 class="section_suptitle">What we do</h3>
 						<h2 class="section_title">공연 및 무대사진</h2>
 						<div class="section__Text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum atque, nihil impedit laboriosam ullam
-								ipsa voluptate iure quis corrupti totam, nesciunt nemo voluptatem possimus doloribus similique perferendis
-								blanditiis architecto? Ut!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate
+								iure quis corrupti totam, nesciunt nemo voluptatem possimus
+								doloribus similique perferendis blanditiis architecto? Ut!</p>
 						</div>
 					</div>
 				</div>
@@ -898,7 +924,8 @@ hr {
 					</div>
 					<div class="works__col">
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/WhcW7SM1/2.jpg" alt="">
+							<img class="work__image"
+								src="https://i.postimg.cc/WhcW7SM1/2.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -907,7 +934,8 @@ hr {
 							</div>
 						</div>
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/0MTj6qG0/4.jpg" alt="">
+							<img class="work__image"
+								src="https://i.postimg.cc/0MTj6qG0/4.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -918,7 +946,8 @@ hr {
 					</div>
 					<div class="works__col">
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/nM9nX5PC/3.jpg[/img][/url]" alt="">
+							<img class="work__image"
+								src="https://i.postimg.cc/nM9nX5PC/3.jpg[/img][/url]" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -930,7 +959,8 @@ hr {
 					<div class="works__col">
 
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/3Wvfpz0q/1.jpg" alt="">
+							<img class="work__image"
+								src="https://i.postimg.cc/3Wvfpz0q/1.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -939,7 +969,8 @@ hr {
 							</div>
 						</div>
 						<div class="works-item">
-							<img class="work__image" src="https://i.postimg.cc/pmMjG4SS/7.jpg" alt="">
+							<img class="work__image"
+								src="https://i.postimg.cc/pmMjG4SS/7.jpg" alt="">
 							<div class="work-info">
 								<a class="works-icon" href="#"> <i class="fas fa-mountain"></i>
 								</a>
@@ -948,6 +979,7 @@ hr {
 							</div>
 						</div>
 					</div>
+				</div>
 			</section>
 
 			<section class="section">
@@ -959,7 +991,8 @@ hr {
 					<div class="blog">
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="/resource/블로그사진1.jpg" alt="">
+								<a href="#"> <img class="blog_img"
+									src="/resource/블로그사진1.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -970,19 +1003,23 @@ hr {
 								<div class="blog_title">
 									<a href="#">Lorem ipsum dolor sit amet.</a>
 								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem earum!</div>
+								<div class="blog-text">Lorem ipsum dolor sit amet,
+									consectetur adipisicing elit. Sed perspiciatis magni,
+									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
+									earum!</div>
 							</div>
 							<div class="blog_footer">
 								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span> <span class="blog-stat-item"><i
+									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
+									<span class="blog-stat-item"><i
 										class="far fa-comment-dots"></i>17</span>
 								</div>
 							</div>
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="/resource/블로그사진2.jpg" alt="">
+								<a href="#"> <img class="blog_img"
+									src="/resource/블로그사진2.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -993,19 +1030,23 @@ hr {
 								<div class="blog_title">
 									<a href="#">Lorem ipsum dolor sit amet.</a>
 								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem earum!</div>
+								<div class="blog-text">Lorem ipsum dolor sit amet,
+									consectetur adipisicing elit. Sed perspiciatis magni,
+									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
+									earum!</div>
 							</div>
 							<div class="blog_footer">
 								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span> <span class="blog-stat-item"><i
+									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
+									<span class="blog-stat-item"><i
 										class="far fa-comment-dots"></i>17</span>
 								</div>
 							</div>
 						</div>
 						<div class="blo_item">
 							<div class="blog-header">
-								<a href="#"> <img class="blog_img" src="/resource/블로그사진3.jpg" alt="">
+								<a href="#"> <img class="blog_img"
+									src="/resource/블로그사진3.jpg" alt="">
 								</a>
 								<div class="blog_date">
 									<div class="blog-date-day">15</div>
@@ -1016,12 +1057,15 @@ hr {
 								<div class="blog_title">
 									<a href="#">Lorem ipsum dolor sit amet.</a>
 								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem earum!</div>
+								<div class="blog-text">Lorem ipsum dolor sit amet,
+									consectetur adipisicing elit. Sed perspiciatis magni,
+									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
+									earum!</div>
 							</div>
 							<div class="blog_footer">
 								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span> <span class="blog-stat-item"><i
+									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
+									<span class="blog-stat-item"><i
 										class="far fa-comment-dots"></i>17</span>
 								</div>
 							</div>
