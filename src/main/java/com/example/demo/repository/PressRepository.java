@@ -46,6 +46,12 @@ public interface PressRepository {
 			HAVING P.id = #{id}
 			""")
 	public Press getForPrintPress(int id);
+	
+	@Select("""
+			SELECT id, title, `body`
+			FROM press
+			""")
+	public List<Press> getAllPrintPress();
 
 	@Delete("DELETE FROM press WHERE id = #{id}")
 	public void deletePress(int id);
