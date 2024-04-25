@@ -340,6 +340,20 @@ $(document).ready(function() {
     });
 </script>
 
+<script type="text/javascript">
+	let JoinApplication__submitFormDone = false;
+	function JoinApplication__submit(form) {
+		if (JoinApplication__submitFormDone) {
+			return;
+		}
+		
+		$('#file-photo').attr('name', 'file__press__' + ${currentId} + '__extra__file__1'); // 프로필 사진
+		$('#file-career').attr('name', 'file__press__' + ${currentId} + '__extra__file__2'); // 연주이력
+
+		JoinApplication__submitFormDone = true;
+		form.submit();
+	}
+</script>
 
 <div class="greet-bg">
 		<p>
@@ -350,8 +364,9 @@ $(document).ready(function() {
 
 <section class="mt-8 text-xl px-4">
 	<div class="signup-form">
-		<form name="form" action="../contactUs/joinapplication" method="POST" enctype="multipart/form-data">
+		<form name="form" action="../contactUs/joinapplication" method="POST" onsubmit="JoinApplication__submit(this); return false;" enctype="multipart/form-data">
 			<div>
+				<input type="hidden" name=">${currentId }"> <!-- artist의 현재 id -->
 				<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
 					id="concertlabel" class="formlabel mr-5">연주문의</label>
