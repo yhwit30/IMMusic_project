@@ -46,14 +46,14 @@ public class ContactUsService {
 		return contactUsRepository.getCurrentPressId();
 	}
 
-	public void certifiedPhoneNumber() {
-				
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSPXAU1FTBQFE6H", "MB2MMY4IRIOTXHMUWHEF8AEWD4HLWKSR", "https://api.coolsms.co.kr");
+	public void sendjoinMessage(String cellphoneNum) {
+
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-		message.setFrom("01076070903");
-		message.setTo("01075183408");
-		message.setText("가입됐어~");
+		message.setFrom("발신자번호");
+		message.setTo(cellphoneNum);
+		message.setText("[IMMusic] 연주자 가입신청이 완료되었습니다.");
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
@@ -65,6 +65,29 @@ public class ContactUsService {
 		} catch (Exception exception) {
 		  System.out.println(exception.getMessage());
 		}
+		
+	}
+
+	public void sendsingupMessage(String cellphoneNum) {
+		
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
+		Message message = new Message();
+		message.setFrom("01076070903");
+		message.setTo(cellphoneNum);
+		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
+		
+		try {
+		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
+		  messageService.send(message);
+		} catch (NurigoMessageNotReceivedException exception) {
+		  // 발송에 실패한 메시지 목록을 확인할 수 있습니다!
+		  System.out.println(exception.getFailedMessageList());
+		  System.out.println(exception.getMessage());
+		} catch (Exception exception) {
+		  System.out.println(exception.getMessage());
+		}
+		
 		
 	}
 
