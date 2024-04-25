@@ -1,16 +1,9 @@
 package com.example.demo.service;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.ContactUsRepository;
-import com.example.demo.util.Ut;
-import com.example.demo.vo.Concert;
-import com.example.demo.vo.Member;
 import com.example.demo.vo.ResultData;
 
 import net.nurigo.sdk.NurigoApp;
@@ -70,10 +63,10 @@ public class ContactUsService {
 
 	public void sendsingupMessage(String cellphoneNum) {
 		
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSW9EFTDYNNQEYA", "JUHJQDE2B4ROZTNE6A7V9FPVMCTYNHXE", "https://api.coolsms.co.kr");
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-		message.setFrom("발신자번호");
+		message.setFrom("01030841288");
 		message.setTo(cellphoneNum);
 		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
 		

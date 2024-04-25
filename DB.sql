@@ -388,7 +388,7 @@ CREATE TABLE artist(
 
 
 # artist_contact 테이블 추가
-CREATE TABLE artist_contact (
+CREATE TABLE contact_artist (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   a_name CHAR(10) NOT NULL,
   a_birth CHAR(10) NOT NULL,
@@ -413,7 +413,7 @@ CREATE TABLE artist_contact (
 
 # drop table concert
 
-CREATE TABLE concert_contact (
+CREATE TABLE contact_concert (
   id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, # 번호
   c_name CHAR(10) NOT NULL,
   c_email CHAR(255) NOT NULL,
