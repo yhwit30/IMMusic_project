@@ -43,6 +43,8 @@ public class UsrContactUsController {
 		
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
 		
+		contactUsService.sendsingupMessage(cellphoneNum);
+		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
 	}
 	
@@ -85,7 +87,9 @@ public class UsrContactUsController {
 		id, relTypeCode); } 
 		
 		}
-				
+		
+		contactUsService.sendjoinMessage(cellphoneNum);
+		
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
 	
