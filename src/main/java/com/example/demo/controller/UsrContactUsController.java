@@ -85,7 +85,9 @@ public class UsrContactUsController {
 		id, relTypeCode); } 
 		
 		}
-				
+		
+		contactUsService.certifiedPhoneNumber();
+		
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
 	
