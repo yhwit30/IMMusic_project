@@ -97,6 +97,9 @@ public class GenFileService {
 		String targetFileName = newGenFileId + "_" + NewGenFileName + "." + fileExt; // 파일 다운로드 시 파일명
 		String targetFilePath = targetDirPath + "/" + targetFileName;
 
+		System.err.println("targetFileName: "  + targetFileName);
+		System.err.println("targetFilePath: "  + targetFilePath);
+		
 		// 파일 생성(업로드된 파일을 지정된 경로롤 옮김)
 		try {
 			multipartFile.transferTo(new File(targetFilePath));
@@ -110,6 +113,9 @@ public class GenFileService {
 
 	public ResultData save(MultipartFile multipartFile) {
 		String fileInputName = multipartFile.getName();
+		
+		System.err.println("fileInputName: " + fileInputName);
+		
 		String[] fileInputNameBits = fileInputName.split("__");
 
 		String relTypeCode = fileInputNameBits[1];
@@ -129,6 +135,20 @@ public class GenFileService {
 		String[] fileInputNameBits = fileInputName.split("__");
 
 		String relTypeCode = fileInputNameBits[1];
+		String typeCode = fileInputNameBits[3];
+		String type2Code = fileInputNameBits[4];
+		int fileNo = Integer.parseInt(fileInputNameBits[5]);
+
+		return save(multipartFile, relTypeCode, relId, typeCode, type2Code, fileNo);
+	}
+	
+	public ResultData save(MultipartFile multipartFile, int relId, String relTypeCode) {
+		String fileInputName = multipartFile.getName();
+
+		System.err.println(fileInputName);
+		
+		String[] fileInputNameBits = fileInputName.split("__");
+
 		String typeCode = fileInputNameBits[3];
 		String type2Code = fileInputNameBits[4];
 		int fileNo = Integer.parseInt(fileInputNameBits[5]);

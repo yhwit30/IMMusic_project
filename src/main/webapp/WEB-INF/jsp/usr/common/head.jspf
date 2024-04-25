@@ -98,6 +98,12 @@
 }
 
 
+.head-text-style{
+	font-weight: normal;
+	font-size: 19px;
+	text-transform: uppercase;
+}
+
 </style>
 
 
@@ -344,8 +350,8 @@ document.addEventListener('DOMContentLoaded', function() {
 					</a>
 				</div>
 				<div class=" mr-20">
-					<ul class="flex gap-x-20 text-base blending-head-text">
-						<li><a href="/usr/about">ABOUT</a></li>
+					<ul class="flex gap-x-20 head-text-style">
+						<li><a href="/usr/about">about</a></li>
 						<li><a href="/usr/artist">ARTIST</a></li>
 						<li><a href="/usr/press/list">PRESS</a></li>
 						<li><a href="/usr/contactUs/concert">CONTACT US</a></li>
