@@ -5,37 +5,26 @@
 <%@ include file="../common/head.jspf"%>
 
 
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
 
-<section>
 
-	<div class="greet-bg">
-		<p>
-			IMMusic <br>& Art
-		</p>
+<section class="section-greet">
+	<div class="greet">
+		<p>아이엠뮤직앤아트는 클래식음악계를 이끌어 갈 재능 있는 예술가를 발굴·육성합니다.</p>
+		<p>체계적인 매니지먼트와 전문 교육·지원을 통해 예술가가 자신의 예술 활동에 집중할 수 있도록 지원합니다.</p>
 	</div>
 
-	<div class="greet">인사말 Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa. Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa.Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa.Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa.Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa.Lorem ipsum dolor sit amet, consectetur
-		adipisicing elit. Itaque natus atque aut laborum culpa sunt. Ipsa ut
-		esse voluptates nisi iusto neque repudiandae totam repellendus numquam
-		quasi. Fuga laudantium ipsa.</div>
+	<div>
+		<!-- 	<p><img src="/resource/IMMusicLogo자름.png" alt="" /></p> -->
+		<p>IMMusic & Art</p>
+	</div>
+
 
 </section>
-
 
 
 
@@ -44,23 +33,39 @@ body {
 	overflow-x: hidden;
 }
 
-section {
+.section-greet {
 	padding-bottom: 200px;
 }
 
-/* common.css 파일에 있음 */
-/* .greet-bg {} */
+.section-greet>div:nth-child(2) {
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Arita buri';
+	font-size: 50px;
+}
 
+/* .greet-bg {} -> common.css 파일에 있음*/
 .greet {
 	background-color: white;
 	margin: auto;
-	width: 1000px;
+	width: 1200px;
 	height: 700px;
-	border: 2px solid red;
-	opacity: 0; /* 초기에 투명도를 0으로 설정 */
+	/* 	border: 2px solid red; */
+	background-color: rgba(255, 255, 255, 0.8);
 	position: relative;
-	top: 100px; /* 아래에서 시작할 위치 조정 */
+	opacity: 0; /* 초기에 투명도를 0으로 설정 */
+	top: 100px;
+	opacity: 0; /* 아래에서 시작할 위치 조정 */
 }
+
+.greet>p:nth-child(1) {
+	font-size: 50px;
+}
+
+.greet>p:nth-child(2) {
+	font-size: 25px;
+}
+
 </style>
 
 

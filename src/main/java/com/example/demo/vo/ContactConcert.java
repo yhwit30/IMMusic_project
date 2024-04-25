@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Concert {
+public class ContactConcert {
 	private int id;
 	private String c_name;
 	private String c_email;

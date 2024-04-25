@@ -13,9 +13,9 @@
       <p id="by-line">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
       <div class="heading">
-        <h3 id="heading1">Decouvrez</h3>
-        <h3 id="heading2">la Jeune,</h3>
-        <h1 id="heading3">Beaute</h1>
+        <h3 id="heading1">passionate</h3>
+        <h3 id="heading2">player,</h3>
+        <h1 id="heading3">Jaemin</h1>
       </div>
 
       <div class="short-bio">
@@ -23,7 +23,8 @@
    
       </div>
 
-      <a href="#" class="link" onclick="readMore()">Read More</a>
+<!--       <a href="#" class="link" onclick="readMore()">Read More</a> -->
+      <button class="link" onclick="readMore()">Read More</button>
       </div>
       
       <div class="more-info " id="more-info-js">
@@ -151,11 +152,15 @@ body {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 300px;
   width: 1200px;
   height: 700px;
-  background-color: #D7CCC8;
+/*   background-color: #D7CCC8; */
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+  
+  border: 2px solid red;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .container .container-inner {

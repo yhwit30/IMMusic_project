@@ -88,6 +88,9 @@
 					<p>"My mission in life is not merely to survive, but to thrive
 						and to do so with some passion, some compassion, some humor, and
 						some style."</p>
+							<button class="btn">
+						<a href="/usr/artist2">자세히보기</a>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -114,6 +117,61 @@
 				class="profile_image" alt="Profile" />
 			<div class="profile_detail">
 				<span>VIVA GUITAR QUARTET</span>
+				<p>Fashion Designer + Model</p>
+			</div>
+			<div class="wrapper">
+				<div class="profile_quote">
+					<p>"My mission in life is not merely to survive, but to thrive
+						and to do so with some passion, some compassion, some humor, and
+						some style."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="container_artist">
+	<div class="category_container">
+		<div class="content">
+			<img src="/resource/원유현 프로필사진.png" class="profession_image"
+				alt="Profession" />
+			<div class="profile_detail">
+				<span>허대욱</span>
+				<p>Fashion Designer + Model</p>
+			</div>
+			<div class="wrapper">
+				<div class="profile_quote">
+					<p>"My mission in life is not merely to survive, but to thrive
+						and to do so with some passion, some compassion, some humor, and
+						some style."</p>
+<!-- 							<button class="btn"> -->
+<!-- 						<a href="/usr/artist2">자세히보기</a> -->
+<!-- 					</button> -->
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<img src="/resource/허병훈 프로필사진2.jpg" class="profile_image"
+				alt="Profile" />
+			<div class="profile_detail">
+				<span>허병훈</span>
+				<p>Photographer + Model</p>
+			</div>
+			<div class="wrapper">
+				<div class="profile_quote">
+					<p>"If you see something that moves you, and then snap it, you
+						keep a moment."</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<img src="" class="profession_image" alt="Profession" /> <img src=""
+				class="profile_image" alt="Profile" />
+			<div class="profile_detail">
+				<span>VIVA GUITAR ENSEMBLE</span>
 				<p>Fashion Designer + Model</p>
 			</div>
 			<div class="wrapper">
@@ -241,6 +299,10 @@
 	color: var(--light);
 	transform: translate(0, calc(( 1 - var(--active))* (100%+ 2.5rem)));
 	transition: transform 0.5s 0.1s;
+}
+
+.profile_quote button {
+	z-index: 1;
 }
 
 

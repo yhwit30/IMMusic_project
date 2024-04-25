@@ -1380,6 +1380,7 @@ hr {
 	}
 	.nav.active {
 		display: block;
+		
 	}
 	.nav-link {
 		display: block;

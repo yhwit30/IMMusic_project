@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Artist {
+public class ContactArtist {
 	private int id;
 	private String a_name;
 	private String a_birth;
