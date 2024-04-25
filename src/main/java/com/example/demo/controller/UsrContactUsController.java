@@ -13,7 +13,6 @@ import org.springframework.web.multipart.MultipartRequest;
 import com.example.demo.service.ContactUsService;
 import com.example.demo.service.GenFileService;
 import com.example.demo.util.Ut;
-import com.example.demo.vo.Concert;
 import com.example.demo.vo.ResultData;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,6 +41,8 @@ public class UsrContactUsController {
 		String fulladdress = address + detailAddress + extraAddress;
 		
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
+		
+		contactUsService.sendsingupMessage(cellphoneNum);
 		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
 	}
@@ -85,7 +86,9 @@ public class UsrContactUsController {
 		id, relTypeCode); } 
 		
 		}
-				
+		
+		contactUsService.sendjoinMessage(cellphoneNum);
+		
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
 	
