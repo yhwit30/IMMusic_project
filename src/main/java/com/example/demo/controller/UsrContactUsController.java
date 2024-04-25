@@ -87,7 +87,7 @@ public class UsrContactUsController {
 		
 		}
 		
-		contactUsService.sendjoinMessage(cellphoneNum);
+		contactUsService.sendjoinMessage(cellphoneNum, name);
 		
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
