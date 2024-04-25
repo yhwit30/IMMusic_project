@@ -3,17 +3,13 @@ package com.example.demo.repository;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
-
-import com.example.demo.vo.Concert;
-import com.example.demo.vo.Member;
 
 @Mapper
 public interface ContactUsRepository {
 
 	@Insert("""
 			INSERT INTO
-			concert SET
+			contact_concert SET
 			c_name = #{name},
 		    c_email = #{fullemail},
 		    c_phone = #{cellphoneNum},
@@ -30,7 +26,7 @@ public interface ContactUsRepository {
 	
 	@Insert("""
 			INSERT INTO
-			artist SET
+			contact_artist SET
 			a_name = #{name},
 			a_birth = #{birth},
 		    a_gender = #{gender},
@@ -53,7 +49,7 @@ public interface ContactUsRepository {
 
 	@Select("""
 			SELECT IFNULL(MAX(id) + 1,0)
-			FROM artist;
+			FROM contact_artist;
 			""")
 	public int getCurrentPressId();
 

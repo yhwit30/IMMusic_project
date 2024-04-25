@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.ContactUsRepository;
-import com.example.demo.util.Ut;
-import com.example.demo.vo.Concert;
-import com.example.demo.vo.Member;
 import com.example.demo.vo.ResultData;
 
 import net.nurigo.sdk.NurigoApp;
