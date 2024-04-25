@@ -252,10 +252,13 @@ public class UsrPressController {
 
 		// 작성된 게시글 번호 가져오기
 		int id = (int) writePressRd.getData1();
-
+		System.err.println("multipartRequest: " + multipartRequest);
+		
 		// 이미지 업로드
 		Map<String, MultipartFile> fileMap = multipartRequest.getFileMap();
 
+		System.err.println("fileMap" + fileMap);
+		
 		for (String fileInputName : fileMap.keySet()) {
 			MultipartFile multipartFile = fileMap.get(fileInputName);
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.ContactUsRepository;
+import com.example.demo.util.Ut;
 import com.example.demo.vo.Concert;
 import com.example.demo.vo.Member;
 import com.example.demo.vo.ResultData;
@@ -18,16 +19,23 @@ public class ContactUsService {
 			String postcode, String fulladdress, String inquiry, int check) {
 		
 		contactUsRepository.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
+		int id = contactUsRepository.getLastInsertId();
 		
-		return ResultData.from("S-1", "연주문의가 완료되었습니다.");
+		return ResultData.from("S-1", "연주문의가 완료되었습니다", "id", id);
 	}
 
 	public ResultData<Integer> join(String name, String birth, String gender, String cellphoneNum, String fullemail,
 			String postcode, String fulladdress, String major, String sns, String introduction, int check) {
 
 		contactUsRepository.join(name, birth, gender, cellphoneNum, fullemail, postcode, fulladdress, major, sns, introduction, check);
+		int id = contactUsRepository.getLastInsertId();
 		
-		return ResultData.from("S-1", "연주자 가입신청이 완료되었습니다.");
+		return ResultData.from("S-1", "연주자 가입신청이 완료되었습니다.", "id", id);
 	}
+
+	public int getCurrentPressId() {
+		return contactUsRepository.getCurrentPressId();
+	}
+
 
 }

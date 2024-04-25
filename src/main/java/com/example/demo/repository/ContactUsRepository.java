@@ -48,5 +48,13 @@ public interface ContactUsRepository {
 	public void join(String name, String birth, String gender, String cellphoneNum, String fullemail, String postcode,
 			String fulladdress, String major, String sns, String introduction, int check);
 
+	@Select("SELECT LAST_INSERT_ID()")
+	public int getLastInsertId();
+
+	@Select("""
+			SELECT IFNULL(MAX(id) + 1,0)
+			FROM artist;
+			""")
+	public int getCurrentPressId();
 
 }
