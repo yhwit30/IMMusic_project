@@ -143,8 +143,8 @@ img {
 					<img src="https://picsum.photos/500/300/?image=5">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">${press.get(0).getTitle() }</h2>
-					<p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+					<h2 class="card_title">${press.get(1).getTitle() }</h2>
+					<p class="card_text">${press.get(1).getBody() }</p>
 					<button class="btn card_btn">Read More</button>
 				</div>
 			</div>
@@ -155,8 +155,8 @@ img {
 					<img src="https://picsum.photos/500/300/?image=11">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">${press.get(0).getTitle() }</h2>
-					<p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+					<h2 class="card_title">${press.get(2).getTitle() }</h2>
+					<p class="card_text">${press.get(2).getBody() }</p>
 					<button class="btn card_btn">Read More</button>
 				</div>
 			</div>
@@ -167,8 +167,8 @@ img {
 					<img src="https://picsum.photos/500/300/?image=14">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">Card Grid Layout</h2>
-					<p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+					<h2 class="card_title">${press.get(3).getTitle() }</h2>
+					<p class="card_text">${press.get(3).getBody() }</p>
 					<button class="btn card_btn">Read More</button>
 				</div>
 			</div>
@@ -179,8 +179,8 @@ img {
 					<img src="https://picsum.photos/500/300/?image=17">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">Card Grid Layout</h2>
-					<p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+					<h2 class="card_title">${press.get(3).getTitle() }</h2>
+					<p class="card_text">${press.get(3).getBody() }</p>
 					<button class="btn card_btn">Read More</button>
 				</div>
 			</div>
@@ -191,8 +191,8 @@ img {
 					<img src="https://picsum.photos/500/300/?image=2">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">Card Grid Layout</h2>
-					<p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+					<h2 class="card_title">${press.get(2).getTitle() }</h2>
+					<p class="card_text">${press.get(2).getBody() }</p>
 					<button class="btn card_btn">Read More</button>
 				</div>
 			</div>
