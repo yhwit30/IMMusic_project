@@ -75,6 +75,10 @@
 	color: white;
 }
 
+.foot-list2 {
+	font-size: 14px;
+}
+
 .foot-list3 {
 	text-align: right;
 	margin-right: 70px;
