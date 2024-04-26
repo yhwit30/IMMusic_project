@@ -23,6 +23,11 @@ public class ContactUsService {
 	@Autowired
 	private ContactUsRepository contactUsRepository;
 	
+	// 문자메시지에 날짜 입력
+	LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    String timestamp = now.format(formatter);
+    
 	public ResultData<Integer> signup(String name, String fullemail, String cellphoneNum, String concertdate,
 			String postcode, String fulladdress, String inquiry, int check) {
 		
@@ -69,18 +74,19 @@ public class ContactUsService {
 		} catch (Exception exception) {
 		  System.out.println(exception.getMessage());
 		}
-		
 	}
-
-	public void sendsignupMessage(String cellphoneNum) {
+	
+	public void sendsignupMessage(String cellphoneNum, String name) {
 		
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSPXAU1FTBQFE6H", "MB2MMY4IRIOTXHMUWHEF8AEWD4HLWKSR", "https://api.coolsms.co.kr");
+		
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
 
 		message.setFrom("발신자번호");
 		message.setTo(cellphoneNum);
-		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
+		message.setText("[IMMusic&Art]\n" + name + "님의 연주문의가 완료되었습니다.\n" + "검토 후 연락드리겠습니다.");
+		message.setSubject(timestamp); // 제목 설정
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!

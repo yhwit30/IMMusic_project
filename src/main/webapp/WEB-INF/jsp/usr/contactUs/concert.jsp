@@ -35,13 +35,14 @@ form {
 }
 
 .signup-form .radio-box{
-	padding-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .signup-form .formlabel{
-	width: 120px;
+	width: 170px;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 20px;
+	font-weight: 800;
 }
 
 .signup-form label {
@@ -51,7 +52,7 @@ form {
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -87,6 +88,10 @@ select {
 }
 
 /* 주소 */
+.place {
+	margin-bottom: 30px;
+}
+
 .place > input {
 	margin-bottom: 10px;
 }
@@ -188,7 +193,7 @@ textarea::-webkit-scrollbar-thumb {
 	width: 98.3%;
 	height: 150px;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .signup-form .checkbox {
@@ -206,6 +211,9 @@ textarea::-webkit-scrollbar-thumb {
 	align-items: center; /* 요소들을 세로 방향 가운데로 정렬합니다. */
 }
 
+.signup-form .form-control {
+	margin-bottom: 5px;
+}
 
 </style>
 
@@ -291,7 +299,7 @@ textarea::-webkit-scrollbar-thumb {
 		<form name="form" action="../contactUs/signupconcert" method="POST">
 			<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
-					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					id="concertlabel" class="formlabel mr-10">연주문의</label>
 					<input type="radio" id="application" name="performance" class="form-check-input" value="2"
 					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
@@ -317,7 +325,7 @@ textarea::-webkit-scrollbar-thumb {
 			<div>
 				<label for="concertdate">공연날짜</label> <input type="text" id="datepicker" name="concertdate" required placeholder="날짜 선택이 가능합니다.">
 			</div>
-			<div class="place mb-3">
+			<div class="place">
 					<label for="address">공연장소</label> <input type="text" class="postcode" id="postcode" name="postcode" placeholder="우편번호" required>
 					<input type="button" onclick="execDaumPostcode()" class="findbutton" value="찾기"><br> <label></label> <input
 						type="text" id="address" name="address" placeholder="주소" required><br> <label for="address"></label> <input
@@ -385,13 +393,12 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			<div>
-					<label for="inquiry" class="mb-2">문의사항</label> <textarea type="text" id="inquiry" name="inquiry" autocomplete="off"></textarea>
+					<label for="inquiry" class="inquiry">문의사항</label> <textarea type="text" id="inquiry" name="inquiry" autocomplete="off"></textarea>
 				</div>
 			<div>
-				<label for="positive" class="information mb-2">개인정보 수집 동의</label>
+				<label for="positive" class="information">개인정보 수집 동의</label>
 
-				<div class="form-control mb-3">
-
+				<div class="form-control">
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
@@ -420,7 +427,7 @@ textarea::-webkit-scrollbar-thumb {
 				</div>
 
 			</div>
-			<div class="box center-text mt-5">
+			<div class="box center-text mt-10">
 				<button type="submit" class="mr-3">문의</button>
 				<button type="button" onclick="history.back();">뒤로가기</button>
 			</div>

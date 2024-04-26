@@ -34,13 +34,24 @@ form {
 }
 
 .signup-form .radio-box{
-	padding-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .signup-form .formlabel{
-	width: 120px;
+	width: 170px;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.signup-form .gender {
+	margin-bottom: 30px;
+}
+
+.signup-form .genderlabel{
+	width: 170px;
+	cursor: pointer;
+	font-size: 17px;
 }
 
 .signup-form label {
@@ -50,7 +61,7 @@ form {
 
 .signup-form input {
 	padding: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	width: 88%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -122,6 +133,10 @@ select {
 }
 
 /* 주소 */
+.place {
+	margin-bottom: 30px;
+}
+
 .place > input {
 	margin-bottom: 10px;
 }
@@ -222,7 +237,7 @@ textarea::-webkit-scrollbar-thumb {
 	width: 98.3%;
 	height: 150px;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .signup-form .checkbox {
@@ -238,6 +253,10 @@ textarea::-webkit-scrollbar-thumb {
 .signup-form .checkform {
 	display: flex; /* 플렉스 박스로 요소들을 배치합니다. */
 	align-items: center; /* 요소들을 세로 방향 가운데로 정렬합니다. */
+}
+
+.signup-form .form-control {
+	margin-bottom: 5px;
 }
 
 </style>
@@ -369,7 +388,7 @@ $(document).ready(function() {
 				<input type="hidden" name=">${currentId }"> <!-- artist의 현재 id -->
 				<div class="box radio-box">
 					<input type="radio" id="concert" name="performance" class="form-check-input" value="1" required> <label for="open"
-					id="concertlabel" class="formlabel mr-5">연주문의</label>
+					id="concertlabel" class="formlabel mr-10">연주문의</label>
 					<input type="radio" id="application" name="performance" class="form-check-input" value="2"
 					required> <label for="open" id="applicationlabel" class="formlabel mr-8">연주자 가입신청</label>
 				</div>
@@ -380,12 +399,12 @@ $(document).ready(function() {
 				<div>
 					<label for="birth">생년월일</label> <input type="text" id="datepicker" name="birth" required max="" placeholder="생년월일 선택이 가능합니다.">
 				</div>
-				<div class = "mb-4">
+				<div class = "gender">
 					<label for="gender">성별</label> 
 					<input type="radio" id="male" name="gender" class="form-check-input" value="0"
-					required> <label for="open" id="malelabel" class="formlabel mr-5 text-base">남성</label>
+					required> <label for="open" id="malelabel" class="genderlabel mr-5 text-base">남성</label>
 					<input type="radio" id="female" name="gender" class="form-check-input" value="1" required> <label for="open"
-					id="femalelabel" class="formlabel text-base mr-5">여성</label>
+					id="femalelabel" class="genderlabel text-base mr-5">여성</label>
 				</div>
 				<div>
 					<label for="cellphoneNum">연락처</label> <input class="cellphoneNum" type="text" id="cellphoneNum"

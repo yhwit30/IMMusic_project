@@ -42,7 +42,7 @@ public class UsrContactUsController {
 		
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
 		
-		contactUsService.sendsignupMessage(cellphoneNum);
+		contactUsService.sendsignupMessage(cellphoneNum, name);
 		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
 	}
@@ -97,6 +97,13 @@ public class UsrContactUsController {
 
 		return "usr/contactUs/artist";
 	}
+	
+	@RequestMapping("/usr/contactUs/contactUs")
+	public String contactUst() {
+
+		return "usr/contactUs/contactUs";
+	}
+	
 
 
 
