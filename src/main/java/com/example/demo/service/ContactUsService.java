@@ -23,6 +23,11 @@ public class ContactUsService {
 	@Autowired
 	private ContactUsRepository contactUsRepository;
 	
+	// 문자메시지에 날짜 입력
+	LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    String timestamp = now.format(formatter);
+    
 	public ResultData<Integer> signup(String name, String fullemail, String cellphoneNum, String concertdate,
 			String postcode, String fulladdress, String inquiry, int check) {
 		
@@ -47,18 +52,14 @@ public class ContactUsService {
 
 	public void sendjoinMessage(String cellphoneNum, String name) {
 
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSPXAU1FTBQFE6H", "MB2MMY4IRIOTXHMUWHEF8AEWD4HLWKSR", "https://api.coolsms.co.kr");
-		
-		LocalDateTime now = LocalDateTime.now();
-	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-	    String timestamp = now.format(formatter);
-	    
-	    // Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
 		message.setFrom("01076070903");
-		message.setTo(cellphoneNum);
-		message.setText("[IMMusic&Art] " + timestamp + "\n" + name + "님의 연주자 가입신청이 완료되었습니다.\n" + "검토 후 연락드리겠습니다.");
- 
+		message.setTo("수신번호 입력");
+		message.setText("한글 45자, 영자 90자 이상 입력되면 자동으로 LMS타입의 문자메시지가 발송됩니다. 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		// message.setSubject("문자 제목 입력"); // LMS, MMS 전용 옵션, SMS에서 해당 파라미터 추가될 경우 자동으로 LMS로 변환됩니다!
+
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
 		  messageService.send(message);
@@ -69,18 +70,20 @@ public class ContactUsService {
 		} catch (Exception exception) {
 		  System.out.println(exception.getMessage());
 		}
-		
 	}
 
-	public void sendsignupMessage(String cellphoneNum) {
+	
+	
+	public void sendsignupMessage(String cellphoneNum, String name) {
 		
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSPXAU1FTBQFE6H", "MB2MMY4IRIOTXHMUWHEF8AEWD4HLWKSR", "https://api.coolsms.co.kr");
+		
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-
-		message.setFrom("발신자번호");
+		message.setFrom("01076070903");
 		message.setTo(cellphoneNum);
-		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
+		message.setText("[IMMusic&Art]\n" + name + "님의 연주문의가 완료되었습니다.\n" + "검토 후 연락드리겠습니다.");
+		message.setSubject(timestamp); // 제목 설정
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!

@@ -422,7 +422,7 @@ textarea::-webkit-scrollbar-thumb {
 					제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의제1조 개인정보 수집에 대한 동의
 				</div>
 				<div class="checkform">
-				<input type="checkbox" class="checkbox" id="check" name="check" value="1" required>
+				<input type="checkbox" class="checkbox mr-2" id="check" name="check" value="1" required>
 				<label for="check" class="checklabel">개인정보 수집에 동의합니다.</label>
 				</div>
 
