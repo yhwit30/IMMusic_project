@@ -66,6 +66,13 @@ public class PressService {
 
 		return press;
 	}
+	
+	public List<Press> getAllPrintPress() {
+		
+		List<Press> press = pressRepository.getAllPrintPress();
+		
+		return press;
+	}
 
 	// PressVO에다가 참,거짓값 심어주기 -> jsp 수정,삭제 버튼 권한체크용
 	private void controlForPrintPress(int loginedMemberId, Press press) {
