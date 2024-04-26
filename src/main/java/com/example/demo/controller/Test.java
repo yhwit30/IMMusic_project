@@ -1,7 +1,15 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.demo.service.PressService;
+import com.example.demo.vo.Press;
+import com.example.demo.vo.Rq;
 
 @Controller
 public class Test {
@@ -60,5 +68,21 @@ public class Test {
 		return "/usr/home/main3";
 	}
 	
+	@Autowired
+	private Rq rq;
+	
+	@Autowired
+	private PressService pressService; 
+	
+	@RequestMapping("/usr/press/listTest")
+	public String listTest( Model model) {
+		System.err.println("!!!!!!!!!!!!!!");
+		List<Press> press = pressService.getAllPrintPress();
+		System.err.println("$$$$" + press.get(0).getBody());
+		model.addAttribute("press", press);
+		
+
+		return "/usr/press/listTest";
+	}
 		
 }

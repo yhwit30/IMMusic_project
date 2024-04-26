@@ -47,7 +47,7 @@ public class UsrPressController {
 
 	@Autowired
 	private GenFileService genFileService;
-
+	
 	// 액션 메소드
 	@RequestMapping("/usr/press/detail")
 	public String getPressAction(Integer id, Model model) { // null 체크하려고 Integer로 바꿨다.
@@ -61,6 +61,7 @@ public class UsrPressController {
 		// 게시글 db에서 가져오기 + 로그인 중인 아이디 권한체크까지 다 끝내고 가져온다.
 		Press press = pressService.getForPrintPress(rq.getLoginedMemberId(), id);
 
+		System.err.println(press.getTitle());
 		// 댓글 db에서 가져오기
 		List<Reply> replies = replyService.getForPrintReplies(rq.getLoginedMemberId(), "press", id);
 
