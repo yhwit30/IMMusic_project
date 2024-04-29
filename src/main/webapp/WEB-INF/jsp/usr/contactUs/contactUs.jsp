@@ -102,10 +102,24 @@ section {
 	font-weight: 700;
 }
 
+.blank {
+	height:7px;
+}
+
 .card_subinfo {
 	font-size: 13px;
 	font-weight: 500;
 	color: #868686;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+
+.card_subinfo img {
+	display: inline-block; /* Display inline */
+    vertical-align: middle; /* Align vertically */
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
 }
 
 .card_title {
@@ -137,6 +151,13 @@ section {
 .card:hover .card_info-hover {
 	opacity: 1;
 }
+
+/* sns hover */
+.git:hover, 
+.velog:hover {
+    color: #b3a78f;
+    font-weight: 600;
+}
 </style>
 
 
@@ -162,11 +183,12 @@ section {
 			</a>
 			<div class="card_info">
 				<span class="card_name">원유현</span>
-				<div class="card_subinfo">1994.10.23</div>
-				<div class="card_subinfo">010-3084-1288</div>
-				<div class="card_subinfo">yhwit30@gmail.com</div>
-				<div class="card_subinfo"><a href="https://velog.io/@yhwit30/posts" class="">https://velog.io/@yhwit30/posts</a></div>
-				<div class="card_subinfo"><a href="https://github.com/yhwit30?tab=repositories" class="">https://github.com/yhwit30?tab=repositories</a></div>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">1994.10.23</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-3084-1288</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">yhwit30@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@yhwit30/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@yhwit30/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/yhwit30?tab=repositories" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/yhwit30</a></div>
 			</div>
 		</article>
 
@@ -179,11 +201,12 @@ section {
 			</a>
 			<div class="card_info">
 				<span class="card_name">오효주</span>
-				<div class="card_subinfo">1997.02.06</div>
-				<div class="card_subinfo">010-7607-0903</div>
-				<div class="card_subinfo">555gywn@gmail.com</div>
-				<div class="card_subinfo"><a href="https://velog.io/@ohyo555/posts" class="">https://velog.io/@ohyo555/posts</a></div>
-				<div class="card_subinfo"><a href="https://github.com/ohyo555" class="">https://github.com/ohyo555</a></div>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">1997.02.06</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-7607-0903</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">555gywn@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@ohyo555/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@ohyo555/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/ohyo555" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/ohyo555</a></div>
 			</div>
 		</article>
 
@@ -196,11 +219,12 @@ section {
 			</a>
 			<div class="card_info">
 				<span class="card_name">강민창</span>
-				<div class="card_subinfo">2001.02.19</div>
-				<div class="card_subinfo">010-7518-3408</div>
-				<div class="card_subinfo">itkang0219@gmail.com</div>
-				<div class="card_subinfo"><a href="https://velog.io/@itkang0219/posts" class="">https://velog.io/@itkang0219/posts</a></div>
-				<div class="card_subinfo"><a href="https://github.com/itkmc" class="">https://github.com/itkmc</a></div>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">2001.02.19</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-7518-3408</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">itkang0219@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@itkang0219/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@itkang0219/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/itkmc" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/itkmc</a></div>
 			</div>
 		</article>
 
@@ -213,11 +237,12 @@ section {
 			</a>
 			<div class="card_info">
 				<span class="card_name">신우철</span>
-				<div class="card_subinfo">2000.08.08</div>
-				<div class="card_subinfo">010-9915-0734</div>
-				<div class="card_subinfo">shinwc147369@gmail.com</div>
-				<div class="card_subinfo"><a href="https://velog.io/@shinwc0808/posts" class="">https://velog.io/@shinwc0808/posts</a></div>
-				<div class="card_subinfo"><a href="https://github.com/tlsdncjf" class="">https://github.com/tlsdncjf</a></div>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">2000.08.08</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-9915-0734</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">shinwc147369@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@shinwc0808/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@shinwc0808/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/tlsdncjf" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/tlsdncjf</a></div>
 			</div>
 		</article>
 	</div>
