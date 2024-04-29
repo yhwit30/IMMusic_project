@@ -140,6 +140,13 @@ section {
 </style>
 
 
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
+
+
 <section>
 	<div class="cards">
 		<article class="card card--1">

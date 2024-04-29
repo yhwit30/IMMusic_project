@@ -5,47 +5,63 @@
 <%@ include file="../common/head.jspf"%>
 
 
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
+
+
+
 
 <div class="container-profile">
-  <div class="container-inner">
-    <div class="main-content">
-      <div class="main-headings" id="main-headings-js">
-     <p id="by-line">IMMusic & Art</p>
+	<div class="container-inner">
+		<div class="main-content">
+			<div class="main-headings" id="main-headings-js">
+				<p id="by-line">IMMusic & Art</p>
 
-      <div class="heading">
-        <h3 id="heading1">passionate</h3>
-        <h3 id="heading2">player,</h3>
-        <h1 id="heading3">Jaemin</h1>
-      </div>
+				<div class="heading">
+					<h3 id="heading1">elegant</h3>
+					<h3 id="heading2">player,</h3>
+					<h1 id="heading3">Wongyung</h1>
+				</div>
 
-      <div class="short-bio">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellat, quod sed optio nesciunt aspernatur inventore ab, nostrum accusantium harum dolor voluptate nulla!</p>
-   
-      </div>
+				<div class="short-bio">
+					<p>기타리스트 허원경 짧은 프로필(todo)</p>
 
-<!--       <a href="#" class="link" onclick="readMore()">Read More</a> -->
-      <button class="link" onclick="readMore()">Read More</button>
-      </div>
+				</div>
+
+				<!--       <a href="#" class="link" onclick="readMore()">Read More</a> -->
+				<button class="link" onclick="readMore()">Read More</button>
+			</div>
+
+			<div class="more-info " id="more-info-js">
+
+			<p>기타리스트 허원경은 서울대학교 음악대학을 졸업하고 스페인 국비 장학생으로 마드리드 왕립음악원(Real Conservatorio Superior de Música de Madrid)의 최고 교수 및 최고 연주자 학위를 취득하였다. 
+대학교 재학 중 대전일보 주최 콩쿠르에서 1위를 하며 데뷔 리사이틀을 가졌으며 스페인 U.N.E.F. 주최 국제 음악학교,  Musica en Santiago 과정의 장학생으로 선발되기도 하였다.  
       
-      <div class="more-info " id="more-info-js">
-        
-        <h4>Lorem ipsum dolor sit.</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse expedita impedit iste, quibusdam debitis fugit repudiandae voluptatum vero quod nulla!</p>
-        
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus iusto facere dignissimos quaerat facilis voluptatibus fuga quod impedit. Atque tenetur amet officia repudiandae odit.</p>
-        
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni saepe suscipit deleniti porro fugit! Atque nisi alias a porro fugiat incidunt exercitationem! Nihil, consectetur. Expedita.</p>
-      </div>
-      
-    </div>
+캐나다 La Salle Francoys-Bernier, 스즈키 국제페스티발 초청연주, 한서교류 음악회(마드리드,톨레도,그라나다 및 바르셀로나 순회 연주), 한국기타앙상블 페스티벌, SICMF 서울국제컴퓨터 음악제, ACL-Korea 뉴뮤직 콘서트, KOCOA 뮤직페스티벌, 한국국제기타 포럼&페스티벌 등에 독주자 및 협연자로 초청되었으며 그가 리더로 이끄는 “VIVA Guitar Ensemble”로 실내악과 현대음악 연주 그리고 매년 리사이틀로 관객들과의 소통의 창구를 열어 놓고 현재 활발하게 활동 중이다. 
+또한 2021년 전곡 스페인 곡으로 이루어진 앨범인 “Aire de España”(스페인의 인상)는 전문가들과 음악애호가 들에게 큰 호응을 끌어냈다. 
+후학 양성에 큰 힘을 쏟고 있는 그는 해마다 클래식기타 캠프를 열어오며 국내 유수의 
+대학에서 교편을 잡았다. 서울대학교, 연세대학교, 평택대학교, 가천대학교, 목원대학교,  예원예술대학교, 경기예고, 안양예고 등의 학교에서 강사 역임 하였으며, 
+       
+현재 수원대학교 겸임교수 및 동대학원 기타페다고지 전공 교수,  
+총신콘서바토리, 예원학교, 서울예고, 선화예고, 계원예고에 출강중이다.</p>
+				
+					
+					
+			</div>
 
-    <div class="image-wrapper">
-    <div class="image-container">
-<!--       <img class="image" src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=755bbb2b0afd5808494a8723774cd141" alt="image of a young woman."> -->
-     <img class="image"  src="/resource/임재민 프로필사진2.png" class="profession_image" alt="Profession" />
-    </div>
-  </div>
-</div>
+		</div>
+
+		<div class="image-wrapper">
+			<div class="image-container">
+				<!--       <img class="image" src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=755bbb2b0afd5808494a8723774cd141" alt="image of a young woman."> -->
+				<img class="image" src="/resource/허원경 프로필사진.jpg"
+					class="profession_image" alt="Profession" />
+			</div>
+		</div>
+	</div>
 <div class="social">
 	<a href="#" class="social_iteam" target="_blank"> <i
 		class="fab fa-facebook-f"></i>
@@ -58,6 +74,7 @@
 	</a>
 </div>
 </div>
+
 
 
 
@@ -76,8 +93,16 @@
 					
 					
 <div class="border-2 border-red-400">
-임재민 프로필 칸
-</div>
+기타리스트 허원경은 서울대학교 음악대학을 졸업하고 스페인 국비 장학생으로 마드리드 왕립음악원(Real Conservatorio Superior de Música de Madrid)의 최고 교수 및 최고 연주자 학위를 취득하였다. 
+대학교 재학 중 대전일보 주최 콩쿠르에서 1위를 하며 데뷔 리사이틀을 가졌으며 스페인 U.N.E.F. 주최 국제 음악학교,  Musica en Santiago 과정의 장학생으로 선발되기도 하였다.  
+      
+캐나다 La Salle Francoys-Bernier, 스즈키 국제페스티발 초청연주, 한서교류 음악회(마드리드,톨레도,그라나다 및 바르셀로나 순회 연주), 한국기타앙상블 페스티벌, SICMF 서울국제컴퓨터 음악제, ACL-Korea 뉴뮤직 콘서트, KOCOA 뮤직페스티벌, 한국국제기타 포럼&페스티벌 등에 독주자 및 협연자로 초청되었으며 그가 리더로 이끄는 “VIVA Guitar Ensemble”로 실내악과 현대음악 연주 그리고 매년 리사이틀로 관객들과의 소통의 창구를 열어 놓고 현재 활발하게 활동 중이다. 
+또한 2021년 전곡 스페인 곡으로 이루어진 앨범인 “Aire de España”(스페인의 인상)는 전문가들과 음악애호가 들에게 큰 호응을 끌어냈다. 
+후학 양성에 큰 힘을 쏟고 있는 그는 해마다 클래식기타 캠프를 열어오며 국내 유수의 
+대학에서 교편을 잡았다. 서울대학교, 연세대학교, 평택대학교, 가천대학교, 목원대학교,  예원예술대학교, 경기예고, 안양예고 등의 학교에서 강사 역임 하였으며, 
+       
+현재 수원대학교 겸임교수 및 동대학원 기타페다고지 전공 교수,  
+총신콘서바토리, 예원학교, 서울예고, 선화예고, 계원예고에 출강중이다.</div>
 
 
 
@@ -101,53 +126,35 @@
 <div class=" border-2 border-yellow-300">
 주요 페스티벌 및 공연
 
-임재민 경력칸
+
 
 </div>
 </div>
 </div>
 
 
-<!-- <div class="section stati"> -->
-<!-- 				<div class="container1"> -->
-<!-- 					<div class="section_heder"> -->
-<!-- 						<h3 class="section_suptitle">Albums</h3> -->
-<!-- 						<h2 class="section_title">앨범</h2> -->
-<!-- 						<div class="section__Text"> -->
-<!-- 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. -->
-<!-- 								Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate -->
-<!-- 								iure quis corrupti totam, nesciunt nemo voluptatem possimus -->
-<!-- 								doloribus similique perferendis blanditiis architecto? Ut!</p> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="logos"> -->
-<!-- 						<div class="logo-items"> -->
-<!-- 							<img class="logo_imge" src="/resource/음악앨범 1.jpg"> -->
-<!-- 							<div class="card-prof2">Will It Be Spring Tomorrow?</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="logo-items"> -->
-<!-- 							<img class="logo_imge" src="/resource/음악앨범 2.jpg"> -->
-<!-- 							<div class="card-prof2">Interval Of Parallel</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="logo-items"> -->
-<!-- 							<a href="https://youtu.be/KebPgX7_sGA"> <img -->
-<!-- 								class="logo_imge" src="/resource/음악앨범 3.jpg"> -->
-<!-- 							</a> -->
-<!-- 							<div class="card-prof2">Trigram</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="logo-items"> -->
-<!-- 							<img class="logo_imge" src="/resource/음악앨범 4.jpg"> -->
-<!-- 							<div class="card-prof2">Le Moment Disperse</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="logo-items "> -->
-<!-- 							<img class="logo_imge " src="/resource/음악앨범 5.jpg"> -->
-<!-- 							<div class="card-prof2">To The West</div> -->
-<!-- 						</div> -->
+<div class="section stati">
+				<div class="container">
+					<div class="section_heder">
+						<h3 class="section_suptitle">Albums</h3>
+						<h2 class="section_title">앨범</h2>
+						<div class="section__Text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate
+								iure quis corrupti totam, nesciunt nemo voluptatem possimus
+								doloribus similique perferendis blanditiis architecto? Ut!</p>
+						</div>
+					</div>
+					<div class="logos">
+						<div class="logo-items ">
+							<img class="logo_imge" src="/resource/음악앨범 6.jpg">
+							<div class="card-prof2">스페인의 인상</div>
+						</div>
 
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-			
+					</div>
+				</div>
+			</div>
+
 
 <!-- sns 아이콘 -->
 <style>
@@ -184,15 +191,13 @@
 }
 </style>
 
-
-
 <!-- 프로필 배경 -->
 <style>
 .stati {
 	background-color: #f2ede2;
 }
 
-.container {
+.container1 {
 	width: 100%;
 	max-width: 1230px;
 	margin: 0 auto;
@@ -264,48 +269,57 @@
 
 </style>
 
+
+<!-- 상세히 보기 애니메이션 -->
 <style>
 /* Font */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import
+	url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 /* Variables */
 :root {
-  --mobile-breakpoint: 350px;
-  --large-mobile-breakpoint: 530px;
-  --tablet-breakpoint: 700px;
-  --desktop-breakpoint: 1200px;
+	--mobile-breakpoint: 350px;
+	--large-mobile-breakpoint: 530px;
+	--tablet-breakpoint: 700px;
+	--desktop-breakpoint: 1200px;
 }
 
 /* Mixins */
 /* Centering Mixins */
-@mixin horizontal-center {
-  margin-left: auto;
-  margin-right: auto;
+@
+mixin horizontal-center {
+	margin-left: auto;
+	margin-right: auto;
 }
 
-@mixin vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+@
+mixin vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* Media Query mixins */
-@mixin mobile {
-  @media (min-width: var(--mobile-breakpoint)) and (max-width: calc(var(--large-mobile-breakpoint) - 1px)) {
-    @content;
-  }
+@
+mixin mobile {@media (min-width : var(--mobile-breakpoint)) and
+	(max-width: calc(var(--large-mobile-breakpoint) - 1px)) { @content ;
+	
 }
 
-@mixin tablet {
-  @media (min-width: var(--large-mobile-breakpoint)) and (max-width: calc(var(--tablet-breakpoint) - 1px)) {
-    @content;
-  }
+}
+@
+mixin tablet {@media (min-width : var(--large-mobile-breakpoint)) and
+	(max-width: calc(var(--tablet-breakpoint) - 1px)) { @content ;
+	
 }
 
-@mixin desktop {
-  @media (min-width: var(--tablet-breakpoint)) and (max-width: var(--desktop-breakpoint)) {
-    @content;
-  }
+}
+@
+mixin desktop {@media (min-width : var(--tablet-breakpoint)) and
+	(max-width: var(--desktop-breakpoint)) { @content ;
+	
+}
+
 }
 
 /* Animations */
@@ -662,6 +676,11 @@ body {
 		expandInfo.style.height = "350px";
 	}
 </script>
+
+
+
+
+
 
 
 
