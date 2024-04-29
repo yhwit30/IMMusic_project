@@ -7,16 +7,7 @@
 * {
 	box-sizing: border-box;
 }
-/* 
-body {
-  background-color: #D2DBDD;
-  display: flex;
-  display: -webkit-flex;
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  align-items: center;
-} */
+
 section {
 	height: 700px;
 }
@@ -85,7 +76,8 @@ section {
 	position: relative;
 	border-radius: 12px;
 	overflow: hidden;
-	box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 13px 8px -7px rgba(0, 0, 0, 0.1), /* 하단 그림자 */
+                8px 0px 10px -7px rgba(0, 0, 0, 0.1); /* 오른쪽 그림자 */
 }
 
 .card:last-child {
