@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,11 @@ public class ContactUsService {
 	@Autowired
 	private ContactUsRepository contactUsRepository;
 	
+	// 문자메시지에 날짜 입력
+	LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    String timestamp = now.format(formatter);
+    
 	public ResultData<Integer> signup(String name, String fullemail, String cellphoneNum, String concertdate,
 			String postcode, String fulladdress, String inquiry, int check) {
 		
@@ -43,14 +50,20 @@ public class ContactUsService {
 		return contactUsRepository.getCurrentPressId();
 	}
 
-	public void sendjoinMessage(String cellphoneNum) {
+	public void sendjoinMessage(String cellphoneNum, String name) {
 
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
-		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSW9EFTDYNNQEYA", "JUHJQDE2B4ROZTNE6A7V9FPVMCTYNHXE", "https://api.coolsms.co.kr");
+		
+		LocalDateTime now = LocalDateTime.now();
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+	    String timestamp = now.format(formatter);
+	    
+	    // Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-		message.setFrom("발신자번호");
+		
+		message.setFrom("01030841288");
 		message.setTo(cellphoneNum);
-		message.setText("[IMMusic] 연주자 가입신청이 완료되었습니다.");
+		message.setText( name + "님의 연주자 가입신청이 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art -");
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
@@ -62,17 +75,18 @@ public class ContactUsService {
 		} catch (Exception exception) {
 		  System.out.println(exception.getMessage());
 		}
-		
 	}
-
-	public void sendsingupMessage(String cellphoneNum) {
+	
+	public void sendsignupMessage(String cellphoneNum, String name) {
 		
-		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("API 키 입력", "API 시크릿 키 입력", "https://api.coolsms.co.kr");
+		DefaultMessageService messageService =  NurigoApp.INSTANCE.initialize("NCSW9EFTDYNNQEYA", "JUHJQDE2B4ROZTNE6A7V9FPVMCTYNHXE", "https://api.coolsms.co.kr");
+		
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
-		message.setFrom("01076070903");
+		
+		message.setFrom("01030841288");
 		message.setTo(cellphoneNum);
-		message.setText("[IMMusic] 연주문의가 완료되었습니다.");
+		message.setText(name + "님의 연주문의가 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art -");
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!

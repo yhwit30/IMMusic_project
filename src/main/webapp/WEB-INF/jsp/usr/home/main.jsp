@@ -145,52 +145,38 @@ hr {
 	flex-wrap: wrap;
 }
 
-
-
-/* 뉴스소식 */
 .card__item {
-	width: 33.33333%;
+	width: 33.333333%;
 	padding: 0 15px;
-}
-
-/* 아티스트 */
-.artist-cards {
-	height: 700px;
-	border: 2px solid blue;
 }
 
 .cards1 {
+	margin: 80px -15px 0;
 	display: flex;
-/* 	justify-content: center; */
+	justify-content: center;
 	flex-wrap: wrap;
-/* 	z-index: auto; */
-	position: relative;
-	border: 1px solid red;
+	z-index: auto;
 }
 
 .card__item1 {
-	width: 33.33333%;
+	width: 25%;
 	padding: 0 15px;
-	position: absolute;
-	z-index: 2;
+	position: relative;
+	z-index: 1;
 }
 
 .card__item2 {
-	width: 33.33333%;
+	width: 25%;
 	padding: 0 15px;
-	position: absolute;
-	top: 10px;
-	left: 250px;
-	z-index: 4;
+	position: relative;
+	z-index: 2;
 }
 
 .card__item3 {
-	width: 33.33333%;
+	width: 25%;
 	padding: 0 15px;
-	position: absolute;
-	top: 20px;
-	left: 500px;
-	z-index: 6;
+	position: relative;
+	z-index: 3;
 }
 
 .inner-card {
@@ -218,6 +204,7 @@ hr {
 .card-imag img {
 	width: 100%;
 	height: 500px;
+	object-fit: cover;
 	display: block;
 	transition: opacity .1s linear;
 }
@@ -228,7 +215,7 @@ hr {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 18px;
-	/* 	position: absolute; */
+	position: absolute;
 	text-align: center;
 	opacity: 0;
 	top: 50%;
@@ -668,6 +655,10 @@ hr {
 					</div>
 
 				</div>
+
+				<div class="text-center mt-24">
+					<a class="btn btn-outline" href="/usr/press/list">소식 더보기</a>
+				</div>
 			</section>
 
 			<section class="section section-gray ">
@@ -841,6 +832,11 @@ hr {
 								</div>
 							</div>
 						</div>
+					</div>
+
+
+					<div class="text-center mt-24">
+						<a class="btn btn-outline" href="/usr/artist">아티스트 더보기</a>
 					</div>
 			</section>
 

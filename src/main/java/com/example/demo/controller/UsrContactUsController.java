@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.multipart.MultipartRequest;
 import com.example.demo.service.ContactUsService;
 import com.example.demo.service.GenFileService;
 import com.example.demo.util.Ut;
+import com.example.demo.vo.Blog;
 import com.example.demo.vo.ResultData;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,9 +28,14 @@ public class UsrContactUsController {
 	@Autowired
 	private GenFileService genFileService;
 	
+	@Autowired
+	private UsrCrawlingController blog;
+	
 	@RequestMapping("/usr/contactUs/concert")
 	public String contactUsconcert() {
 
+		List<Blog> Blog = blog.crawl();
+		
 		return "usr/contactUs/concert";
 	}
 	
@@ -36,13 +43,13 @@ public class UsrContactUsController {
 	@ResponseBody
 	public String signupconcert(String name, String emailId, String emailoption, String cellphoneNum, String concertdate,
 			String postcode, String address, String detailAddress, String extraAddress, String inquiry, int check, HttpSession httpSession, HttpServletRequest req) {
-		
+
 		String fullemail = emailId + "@" + emailoption;
 		String fulladdress = address + detailAddress + extraAddress;
 		
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
 		
-		contactUsService.sendsingupMessage(cellphoneNum);
+		contactUsService.sendsignupMessage(cellphoneNum, name);
 		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
 	}
@@ -87,7 +94,7 @@ public class UsrContactUsController {
 		
 		}
 		
-		contactUsService.sendjoinMessage(cellphoneNum);
+		contactUsService.sendjoinMessage(cellphoneNum, name);
 		
 		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
 	}
@@ -97,6 +104,13 @@ public class UsrContactUsController {
 
 		return "usr/contactUs/artist";
 	}
+	
+	@RequestMapping("/usr/contactUs/contactUs")
+	public String contactUst() {
+
+		return "usr/contactUs/contactUs";
+	}
+	
 
 
 

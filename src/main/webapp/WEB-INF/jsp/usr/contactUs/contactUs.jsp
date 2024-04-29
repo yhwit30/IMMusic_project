@@ -1,281 +1,261 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="CONTACT US"></c:set>
 <%@ include file="../common/head.jspf"%>
 
 <style>
-.signup-form {
-	max-width: 380px;
-	background-color: rgba(255, 255, 255, 0.4);
-	margin: 100px auto;
-	padding: 20px;
-	border-radius: 8px;
-}
-
-form {
-	text-align: center;
-}
-
-.signup-form .text {
-	font-size: 0.7rem;
-	margin-left: 15rem;
-	color: #a32222;
-}
-
-.signup-form div {
-	display: inline-block;
-	width: 100%;
-	font-size: 1rem;
-	text-align: left;
-}
-
-.signup-form div:last-child {
-	text-align: center;
-	padding-right: 40px;
-}
-
-.signup-form label {
-	width: 20%;
-	display: inline-block;
-}
-
-.signup-form div .msg {
-	color: #800808;
-	font-size: 0.75rem;
-}
-
-.signup-form input {
-	padding: 5px;
-	margin-bottom: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+* {
 	box-sizing: border-box;
 }
 
-.signup-form .form-check-label {
-    width: 90px;
-    height: 15px; /* 원하는 크기로 설정하세요 */
-    margin: 0; /* 기본 마진 제거 */
+section {
+	height: 700px;
 }
 
-.signup-form .cellphoneNum {
-	margin-bottom: 0px;
+.cards {
+	width: 75%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	margin: 0 auto;
 }
 
-.signup-form button {
-	background-color: #800808;
-	color: white;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-size: 0.75rem;
+.card--1 .card_img, .card--1 .card_img--hover {
+	background-image:
+		url('https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Download-Image.png');
 }
 
-.signup-form button:hover {
-	background-color: #260301;
+.card--2 .card_img, .card--2 .card_img--hover {
+	background-image:
+		url('/resource/원유현.jpg');
+	background-size: cover; /* Adjusts the background image to cover the entire container */
+    background-repeat: no-repeat; /* Ensures the background image is not repeated */
+    /* Additional styles */
+    width: 300px; /* Set a width for the container */
+    height: 235px; /* Set a height for the container */
 }
 
-/* 안내문구 */
-.signup-form .info {
-	font-size: 0.75rem;
-	color: #a32222;
+.card_img {
+	visibility: hidden;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 235px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
 }
-    
+
+.card_info-hover {
+	position: absolute;
+	padding: 16px;
+	width: 100%;
+	opacity: 0;
+	top: 0;
+}
+
+.card_img--hover {
+	transition: 0.2s all ease-out;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	position: absolute;
+	height: 235px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	top: 0;
+}
+
+.card {
+	margin-right: 80px;
+	transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+	background-color: #fff;
+	width: 33.3%;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0px 13px 8px -7px rgba(0, 0, 0, 0.1), /* 하단 그림자 */
+                8px 0px 10px -7px rgba(0, 0, 0, 0.1); /* 오른쪽 그림자 */
+}
+
+.card:last-child {
+	margin-right: 0;
+}
+
+.card:hover {
+	box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+	transform: scale(1.10, 1.10);
+}
+
+.card_info {
+	z-index: 2;
+	background-color: #fff;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	padding: 16px 24px 24px 24px;
+}
+
+.card_name {
+	/* text-transform: uppercase; 대문자처리*/
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.blank {
+	height:7px;
+}
+
+.card_subinfo {
+	font-size: 13px;
+	font-weight: 500;
+	color: #868686;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+
+.card_subinfo img {
+	display: inline-block; /* Display inline */
+    vertical-align: middle; /* Align vertically */
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+}
+
+.card_title {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.card_by {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.card_author {
+	font-weight: 600;
+	text-decoration: none;
+	color: #AD7D52;
+}
+
+.card:hover .card_img--hover {
+	height: 100%;
+	opacity: 0.3;
+}
+
+.card:hover .card_info {
+	background-color: transparent;
+	position: relative;
+}
+
+.card:hover .card_info-hover {
+	opacity: 1;
+}
+
+/* sns hover */
+.git:hover, 
+.velog:hover {
+    color: #b3a78f;
+    font-weight: 600;
+}
 </style>
 
-<script>
-        $(function() {
-            $("#birthdate").datepicker({
-            	dateFormat: 'yy-mm-dd',
-                changeMonth: true,
-                changeYear: true,
-                yearRange: 'c-100:c+0'
-        });
-</script>
 
-<script>
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
 
-	// 폼 이동 이벤트
-	
-	var goldRadio = document.getElementById("gold");
-    // 연주 문의 라디오 버튼
-    var silverRadio = document.getElementById("silver");
-    
-	artistRadio.addEventListener('click', function() {
-        // 페이지 이동
-        window.location.href = '/usr/contactUs/artist';
-    });
 
-    // 연주 문의 라디오 버튼 클릭 이벤트 처리
-    silverRadio.addEventListener('click', function() {
-        // 페이지 이동
-        window.location.href = '/usr/contactUs/contactUs';
-    });
-    
-
-	var ajaxCalled = false;
-
-	function callByAjax(loginId) {
-		
-		var form = document.form1;
-		
-		var action = "../member/doAction";
-		var loginId = form.loginId.value;
-		
-		$.get(action, {
-			loginId : loginId,
-		}, function(data) {
-			$('.msg').text(data);
-			ajaxCalled = true;
-			console.log(ajaxCalled);
-			updatePage();
-		}, 'html');
-		
-	}
-	
-	function updatePage() {
-        if (ajaxCalled) {
-            // ajaxCalled 값이 true일 때만 메시지를 표시합니다.
-            $('.msg').show();
-        }
-    }
-</script>
-
-<section class="mt-8 text-xl px-4">
-	<div class="signup-form">
-		<form name="form1" action="../member/doJoin" method="POST">
-			<div class="text">*는 필수정보</div>
-			<div>
-				<label for="level">*등급:</label>
-		        <input type="radio" id="artist" name="level" class="form-check-input" value="1" required>
-		        <label for="open" class="form-check-label mr-5 text-xs" onclick = "">연주자 가입신청</label>
-		        <input type="radio" id="performance" name="level" class="form-check-input" value="2" required>
-		        <label for="open" class="form-check-label text-xs mr-5">연주문의</label>
+<section>
+	<div class="cards">
+		<article class="card card--2">
+			<div class="card_info-hover">
+		<!-- 		<svg class="card_like" viewBox="0 0 24 24">
+		    <path fill="#000000"
+						d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+		</svg>
+				<div class="card_clock-info">
+					<svg class="card_clock" viewBox="0 0 24 24">
+						<path
+							d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+		        </svg>
+					<span class="card_time">15 min</span>
+				</div> -->
 			</div>
-			<div>
-				<label for="username">*아이디:</label> <input type="text" id="loginId" name="loginId" autocomplete="off" required>
-				<%-- console.log("${ajaxCalled}"); --%>
-				<div class="msg" style="display: none;"></div>
+			<div class="card_img"></div>
+			<a href="#" class="card_link">
+				<div class="card_img--hover"></div>
+			</a>
+			<div class="card_info">
+				<span class="card_name">원유현</span>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">1994.10.23</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-3084-1288</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">yhwit30@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@yhwit30/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@yhwit30/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/yhwit30?tab=repositories" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/yhwit30</a></div>
 			</div>
+		</article>
 
-			<div>
-				<label for="password">*비밀번호:</label> <input type="password" id="loginPw" name="loginPw" autocomplete="off"
-					onclick="callByAjax();" required>
+		<article class="card card--1">
+			<div class="card_info-hover">
 			</div>
-
-			<div>
-				<label for="birth">*생년월일:</label> <input type="date" id="birth" name="birth" required max="">
+			<div class="card_img"></div>
+			<a href="#" class="card_link">
+				<div class="card_img--hover"></div>
+			</a>
+			<div class="card_info">
+				<span class="card_name">오효주</span>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">1997.02.06</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-7607-0903</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">555gywn@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@ohyo555/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@ohyo555/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/ohyo555" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/ohyo555</a></div>
 			</div>
+		</article>
 
-			<div>
-				<label for="name">*이름:</label> <input type="text" id="text" name="mname" autocomplete="off" required>
+		<article class="card card--1">
+			<div class="card_info-hover">
 			</div>
-
-			<div>
-				<label for="cellphoneNum">전화번호:</label> <input class="cellphoneNum" type="text" id="cellphoneNum"
-					name="cellphoneNum" autocomplete="off" oninput="validateContactNumber(this)" maxlength="11">
+			<div class="card_img"></div>
+			<a href="#" class="card_link">
+				<div class="card_img--hover"></div>
+			</a>
+			<div class="card_info">
+				<span class="card_name">강민창</span>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">2001.02.19</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-7518-3408</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">itkang0219@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@itkang0219/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@itkang0219/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/itkmc" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/itkmc</a></div>
 			</div>
-			<div class="info">※ -없이 숫자만 입력가능합니다.</div>
-			<div>
-				<label for="email">*이메일:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+		</article>
+
+		<article class="card card--1">
+			<div class="card_info-hover">
 			</div>
-
-			<div>
-				<label for="address">주소:</label> <input type="text" class="w-20" id="postcode" name="postcode" placeholder="우편번호">
-				<input type="button" onclick="execDaumPostcode()" value="찾기"><br> <label for="address"></label> <input
-					type="text" id="address" name="address" placeholder="주소"><br> <label for="address"></label> <input
-					type="text" class="w-25" id="detailAddress" name="detailAddress" placeholder="상세주소"><br> <label
-					for="address"></label> <input type="text" class="w-20" id="extraAddress" name="extraAddress" placeholder="참고항목">
-
-				<script>
-				    function execDaumPostcode() {
-				        new daum.Postcode({
-				            oncomplete: function(data) {
-				                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-				
-				                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-				                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-				                var addr = ''; // 주소 변수
-				                var extraAddr = ''; // 참고항목 변수
-				
-				                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-				                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-				                    addr = data.roadAddress;
-				                } else { // 사용자가 지번 주소를 선택했을 경우(J)
-				                    addr = data.jibunAddress;
-				                }
-				
-				                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-				                if(data.userSelectedType === 'R'){
-				                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-				                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-				                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-				                        extraAddr += data.bname;
-				                    }
-				                    // 건물명이 있고, 공동주택일 경우 추가한다.
-				                    if(data.buildingName !== '' && data.apartment === 'Y'){
-				                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-				                    }
-				                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-				                    if(extraAddr !== ''){
-				                        extraAddr = ' (' + extraAddr + ')';
-				                    }
-				                    // 조합된 참고항목을 해당 필드에 넣는다.
-				                    document.getElementById("extraAddress").value = extraAddr;
-				                
-				                } else {
-				                    document.getElementById("extraAddress").value = '';
-				                }
-				
-				                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-				                document.getElementById('postcode').value = data.zonecode;
-				                document.getElementById("address").value = addr;
-				                // 커서를 상세주소 필드로 이동한다.
-				                document.getElementById("detailAddress").focus();
-				            }
-				        }).open();
-				    }
-				</script>
+			<div class="card_img"></div>
+			<a href="#" class="card_link">
+				<div class="card_img--hover"></div>
+			</a>
+			<div class="card_info">
+				<span class="card_name">신우철</span>
+				<div class="blank"></div>
+				<div class="card_subinfo"><img src="/resource/birth.png" alt="Icon Image">2000.08.08</div>
+				<div class="card_subinfo"><img src="/resource/phone.png" alt="Icon Image">010-9915-0734</div>
+				<div class="card_subinfo"><img src="/resource/gmail.png" alt="Icon Image">shinwc147369@gmail.com</div>
+				<div class="card_subinfo"><a href="https://velog.io/@shinwc0808/posts" class="velog"><img src="/resource/velog.png" alt="Icon Image">https://velog.io/@shinwc0808/posts</a></div>
+				<div class="card_subinfo"><a href="https://github.com/tlsdncjf" class="git"><img src="/resource/github.png" alt="Icon Image">https://github.com/tlsdncjf</a></div>
 			</div>
-
-			<div class="center-text mt-5">
-				<button type="submit">가입</button>
-				<button type="button" onclick="history.back();">뒤로가기</button>
-			</div>
-		</form>
-
-		<script>
-	
-		// 전화번호 입력 시 숫자만 입력 가능하고 최대 11자리 가능
-        function validateContactNumber(input) {
-            // 숫자만 포함된 정규표현식
-            var regex = /^[0-9]+$/;
-
-            // 입력된 값에서 숫자만 추출
-            var numericValue = input.value.replace(/\D/g, '');
-
-            // 정규표현식에 맞지 않는 경우 입력값을 재설정
-            if (!regex.test(numericValue)) {
-                input.value = numericValue.substring(0, numericValue.length - 1);
-            }
-        }
-        
-     	// 페이지 로딩 시에 updateMaxDate() 호출
-        document.addEventListener('DOMContentLoaded', function() {
-		    updateMaxDate();  // 이벤트는 문서 내용이 JavaScript를 통해 안전하게 조작하고 액세스할 수 있는 준비가 된 시점, 이벤트는 문서 내용이 JavaScript를 통해 안전하게 조작하고 액세스할 수 있는 준비가 된 시점
-		});
-     	
-     	// 날짜 선택
-        function updateMaxDate() {
-            var today = new Date().toISOString().split('T')[0];
-            document.getElementById('birth').max = today;
-        }
-			
-	    </script>
+		</article>
 	</div>
-</section>
 
+</section>
 <!-- 페이지 하단 -->
 <%@ include file="../common/foot.jspf"%>
