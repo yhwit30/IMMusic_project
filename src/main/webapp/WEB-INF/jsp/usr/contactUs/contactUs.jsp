@@ -35,6 +35,16 @@ section {
 		url('https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Download-Image.png');
 }
 
+.card--2 .card_img, .card--2 .card_img--hover {
+	background-image:
+		url('/resource/원유현.jpg');
+	background-size: cover; /* Adjusts the background image to cover the entire container */
+    background-repeat: no-repeat; /* Ensures the background image is not repeated */
+    /* Additional styles */
+    width: 300px; /* Set a width for the container */
+    height: 235px; /* Set a height for the container */
+}
+
 .card_img {
 	visibility: hidden;
 	background-size: cover;
@@ -163,7 +173,7 @@ section {
 
 <section>
 	<div class="cards">
-		<article class="card card--1">
+		<article class="card card--2">
 			<div class="card_info-hover">
 		<!-- 		<svg class="card_like" viewBox="0 0 24 24">
 		    <path fill="#000000"
