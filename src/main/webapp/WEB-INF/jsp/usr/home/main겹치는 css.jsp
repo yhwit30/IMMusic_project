@@ -54,14 +54,11 @@ hr {
 	padding: 0 15px;
 }
 
-
-
-
 .intro {
 	width: 100%;
 	height: 100vh;
-/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
- 	background: url("/resource/에오 트리오 사진.jpg"); 
+	/* 	background: url("https://i.postimg.cc/3JYVfWCW/img-intro-01.jpg"); */
+	background: url("/resource/에오 트리오 사진.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -103,7 +100,6 @@ hr {
 	font-family: 'Kaushan Script', cursive;
 }
 
-
 .section {
 	padding: 100px;
 }
@@ -120,7 +116,6 @@ hr {
 	color: #333;
 	font-family: 'Kaushan Script', cursive;
 }
-
 
 .section_title {
 	font-size: 30px;
@@ -148,44 +143,55 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
 }
 
+
+
+/* 뉴스소식 */
 .card__item {
-	width: 33.333333%;
+	width: 33.33333%;
 	padding: 0 15px;
+}
+
+/* 아티스트 */
+.artist-cards {
+	height: 700px;
+	border: 2px solid blue;
 }
 
 .cards1 {
-	margin: 80px -15px 0;
 	display: flex;
-	justify-content: center;
+/* 	justify-content: center; 
 	flex-wrap: wrap;
-	z-index:auto;
+/* 	z-index: auto; */
+	position: relative;
+	border: 1px solid red;
 }
 
 .card__item1 {
-	width: 25%;
+	width: 33.33333%;
 	padding: 0 15px;
-	position: relative;
-	z-index:1;
+	position: absolute;
+	z-index: 1;
 }
 
 .card__item2 {
-	width: 25%;
- 	padding: 0 15px;
-	position: relative;
-	z-index:2;
+	width: 33.33333%;
+	padding: 0 15px;
+	position: absolute;
+	top: 10px;
+	left: 200px;
+	z-index: 2;
 }
 
 .card__item3 {
-	width: 25%;
- 	padding: 0 15px; 
-	position: relative;
-	z-index:3;
+	width: 33.33333%;
+	padding: 0 15px;
+	position: absolute;
+	top: 20px;
+	left: 400px;
+	z-index: 3;
 }
-
-
 
 .inner-card {
 	background-color: #95e1d3;
@@ -212,7 +218,6 @@ hr {
 .card-imag img {
 	width: 100%;
 	height: 500px;
-	object-fit: cover;
 	display: block;
 	transition: opacity .1s linear;
 }
@@ -223,7 +228,7 @@ hr {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 18px;
-	position: absolute;
+	/* 	position: absolute; */
 	text-align: center;
 	opacity: 0;
 	top: 50%;
@@ -257,12 +262,9 @@ hr {
 	border-right: 1px solid #b5eae0;
 }
 
-
-
 .section-gray {
 	background-color: #f8f8f8;
 }
-
 
 .social_iteam {
 	width: 55px;
@@ -316,10 +318,7 @@ hr {
 	font-style: italic;
 	font-weight: 300px;
 	padding-top: 10px;
-	
 }
-
-
 
 .works {
 	display: flex;
@@ -401,8 +400,6 @@ hr {
 .logo-items {
 	padding: 0 15px;
 }
-
-
 
 .blog {
 	display: flex;
@@ -491,9 +488,6 @@ hr {
 	margin-right: 5px;
 }
 
-
-
-
 @media ( max-width : 1230px) {
 	/* intro */
 	.intro__title {
@@ -531,7 +525,6 @@ hr {
 	.stat_item:last-child {
 		border-right: none;
 	}
-	
 }
 
 @media ( max-width : 770px) {

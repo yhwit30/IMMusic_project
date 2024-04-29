@@ -137,7 +137,7 @@
 			<img src="/resource/원유현 프로필사진.png" class="profession_image"
 				alt="Profession" />
 			<div class="profile_detail">
-				<span>허대욱</span>
+				<span>원유현</span>
 				<p>Fashion Designer + Model</p>
 			</div>
 			<div class="wrapper">
@@ -153,7 +153,7 @@
 		</div>
 
 		<div class="content">
-			<img src="/resource/허병훈 프로필사진2.jpg" class="profile_image"
+			<img src="/resource/허병훈 프로필사진.jpg" class="profile_image"
 				alt="Profile" />
 			<div class="profile_detail">
 				<span>허병훈</span>
