@@ -63,8 +63,7 @@ public class ContactUsService {
 		
 		message.setFrom("01030841288");
 		message.setTo(cellphoneNum);
-		message.setText(timestamp + "\n" + name + "님의 연주자 가입신청이 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art");
-		message.setSubject("연주자 가입신청 완료"); // 제목 설정
+		message.setText( name + "님의 연주자 가입신청이 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art -");
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
@@ -87,8 +86,7 @@ public class ContactUsService {
 		
 		message.setFrom("01030841288");
 		message.setTo(cellphoneNum);
-		message.setText(timestamp + "\n" + name + "님의 연주문의가 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art");
-		message.setSubject("연주문의 완료"); // 제목 설정
+		message.setText(name + "님의 연주문의가 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art -");
 		
 		try {
 		  // send 메소드로 ArrayList<Message> 객체를 넣어도 동작합니다!
