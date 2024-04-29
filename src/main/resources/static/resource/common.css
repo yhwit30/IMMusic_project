@@ -113,5 +113,6 @@ html>body::-webkit-scrollbar-thumb {
 	top: 100px;
 	bottom: 0;
 	pointer-events: none;
+	overflow-y: hidden;
 }
 
