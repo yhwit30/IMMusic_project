@@ -52,7 +52,7 @@ public class UsrCrawlingController {
 				 String post_url = element.findElement(By.cssSelector("div > div:nth-child(2) > div.thumb_area__IdmrJ > a")).getAttribute("href");
 				 String post_title = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > strong > span")).getText();
 				 String be_post_content = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > span > span")).getText();
-				 String post_content = be_post_content.substring(0, 70);
+				 String post_content = be_post_content.substring(0, 135) + "···";
 				 
 				 Blog blog = new Blog(post_date, post_url, post_title, post_content);
 	             blogList.add(blog);

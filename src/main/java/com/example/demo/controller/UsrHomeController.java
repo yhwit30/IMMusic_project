@@ -33,11 +33,11 @@ public class UsrHomeController {
 		return "redirect:/usr/home/main";
 	}
 	
-	@RequestMapping("/usr/home/test")
+	@RequestMapping("/usr/home/main1")
 	public String showMain12(Model model) {
 
 		model.addAttribute("blog", ucc.crawl());
 		
-		return "/usr/home/test";
+		return "/usr/home/main1";
 	}
 }
