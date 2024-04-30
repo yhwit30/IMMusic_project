@@ -421,93 +421,35 @@ hr {
 	padding: 0 15px;
 }
 
-.blog {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-.blo_item {
-	width: 31%;
-}
-
-.blog-header {
+/* 블로그 크롤링 부분 */
+tr {
 	position: relative;
-	margin-bottom: 14px;
 }
 
-.blog_img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+tr:after {
+    content: '';
+    display: inline-block;
+    width: 500px;
+    height: 1px;
+    position: absolute;
+    background-color: #fff;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    bottom: -1px;
+    left: 50%; 
+    transform: translateX(-50%);
 }
 
-.blog-content {
-	margin-bottom: 10px;
+tr:hover {
+	cursor: pointer;
+	color: #b3a78f;
 }
 
-.blog_date {
-	padding: 10px 20px;
-	color: #fff;
-	font-size: 15px;
-	font-style: italic;
-	background-color: #95e1d3;
-	position: absolute;
-	font-weight: 300px;
-	text-align: center;
-	bottom: 10px;
-	left: -10px;
-	z-index: 1;
-	line-height: 1;
+tr > td {
+	text-align: left;
+	padding: 15px 0px;
 }
 
-.blog-date-day {
-	font-weight: 700;
-	font-size: 30px;
-	font-style: normal;
-}
-
-.blog_title {
-	font-size: 14px;
-	font-weight: 300;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-}
-
-.blog_title a {
-	color: inherit;
-	text-decoration: none;
-}
-
-.blog_title a:hover {
-	text-decoration: underline;
-}
-
-.blog-text {
-	font-size: 15px;
-	color: #999;
-}
-
-.blog_footer {
-	border-top: 1px solid #e5e5e5;
-	padding-top: 14px;
-	font-size: 14px;
-	font-weight: 300;
-	color: #999;
-	font-style: italic;
-}
-
-.blog-stat-item {
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 10px;
-}
-
-.blog-stat-item i {
-	color: #95e1d3;
-	margin-right: 5px;
-}
-
+/* 더보기 */
 .button-form {
 	background-color: #f2ede2;
 	color: black;
@@ -1009,92 +951,44 @@ hr {
 						<h3 class="section_suptitle">IMMusic & Art</h3>
 						<h2 class="section_title">lates blog</h2>
 					</div>
-					<div class="blog">
-						<div class="blo_item">
-							<div class="blog-header">
-								<a href="#"> <img class="blog_img"
-									src="/resource/블로그사진1.jpg" alt="">
-								</a>
-								<div class="blog_date">
-									<div class="blog-date-day">15</div>
-									Jan
-								</div>
-							</div>
-							<div class="blog-content">
-								<div class="blog_title">
-									<a href="#">Lorem ipsum dolor sit amet.</a>
-								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
-									earum!</div>
-							</div>
-							<div class="blog_footer">
-								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
-									<span class="blog-stat-item"><i
-										class="far fa-comment-dots"></i>17</span>
-								</div>
-							</div>
-						</div>
-						<div class="blo_item">
-							<div class="blog-header">
-								<a href="#"> <img class="blog_img"
-									src="/resource/블로그사진2.jpg" alt="">
-								</a>
-								<div class="blog_date">
-									<div class="blog-date-day">15</div>
-									Jan
-								</div>
-							</div>
-							<div class="blog-content">
-								<div class="blog_title">
-									<a href="#">Lorem ipsum dolor sit amet.</a>
-								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
-									earum!</div>
-							</div>
-							<div class="blog_footer">
-								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
-									<span class="blog-stat-item"><i
-										class="far fa-comment-dots"></i>17</span>
-								</div>
-							</div>
-						</div>
-						<div class="blo_item">
-							<div class="blog-header">
-								<a href="#"> <img class="blog_img"
-									src="/resource/블로그사진3.jpg" alt="">
-								</a>
-								<div class="blog_date">
-									<div class="blog-date-day">15</div>
-									Jan
-								</div>
-							</div>
-							<div class="blog-content">
-								<div class="blog_title">
-									<a href="#">Lorem ipsum dolor sit amet.</a>
-								</div>
-								<div class="blog-text">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sed perspiciatis magni,
-									reprehenderit doloribus aliquid saepe commodi sit dolor, rem
-									earum!</div>
-							</div>
-							<div class="blog_footer">
-								<div class="blog-stat">
-									<span class="blog-stat-item"><i class="far fa-eye"></i>542</span>
-									<span class="blog-stat-item"><i
-										class="far fa-comment-dots"></i>17</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- blog-->
+
+					<!-- 					블로그 크롤링 -->
+					<table>
+						<colgroup>
+							<col style="width: 10%" />
+							<col style="width: 25%" />
+							<col style="width: 65%" />
+						</colgroup>
+						<!--                 <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>제목</th>
+                        <th>내용</th>
+                    </tr>
+                </thead> -->
+						<tbody>
+							<c:forEach var="blog" items="${blog}">
+								<tr class="mb-5" onclick="redirectToPost('${blog.post_url}')">
+									<td>${blog.post_date}</td>
+									<td>${blog.post_title}</td>
+									<td>${blog.post_content}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+
+
 				</div>
 			</section>
+
+			<script>
+				function redirectToPost(postUrl) {
+					console.log('Redirecting to: ' + postUrl);
+					// var windowFeatures = 'width=800,height=600,resizable=yes,scrollbars=yes';
+					window.open(postUrl, '_blank');
+				}
+			</script>
+
 		</div>
 
 
