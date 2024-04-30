@@ -50,9 +50,10 @@ public class UsrCrawlingController {
 			 for (WebElement element : elements) {
 				 String post_date = element.findElement(By.cssSelector("div > div.meta_head__nWqoo > div")).getText();
 				 String post_url = element.findElement(By.cssSelector("div > div:nth-child(2) > div.thumb_area__IdmrJ > a")).getAttribute("href");
-				 String post_title = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > span > span")).getText();
-				 String post_content = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > strong > span")).getText();
-			 
+				 String post_title = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > strong > span")).getText();
+				 String be_post_content = element.findElement(By.cssSelector("div > div > div.text_area__mOuKZ > a > span > span")).getText();
+				 String post_content = be_post_content.substring(0, 70);
+				 
 				 Blog blog = new Blog(post_date, post_url, post_title, post_content);
 	             blogList.add(blog);
 			 }
@@ -65,6 +66,11 @@ public class UsrCrawlingController {
 			driver.quit();
 		}
 		return blogList;
+	}
+
+	private String truncateString(String post_content, int i) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 		
 }
