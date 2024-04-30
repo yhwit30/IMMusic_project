@@ -22,5 +22,10 @@ public class UsrArtistController {
 		
 		return "usr/artist/artist2";
 	}
+	@RequestMapping("/usr/artist3")
+	public String showArtist3() {
+		
+		return "usr/artist/artist3";
+	}
 
 }

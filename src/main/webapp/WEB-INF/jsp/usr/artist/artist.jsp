@@ -66,6 +66,9 @@
 					<p>"My mission in life is not merely to survive, but to thrive
 						and to do so with some passion, some compassion, some humor, and
 						some style."</p>
+							<button class="btn">
+						<a href="/usr/artist3">자세히보기</a>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -137,7 +140,7 @@
 			<img src="/resource/원유현 프로필사진.png" class="profession_image"
 				alt="Profession" />
 			<div class="profile_detail">
-				<span>허대욱</span>
+				<span>원유현</span>
 				<p>Fashion Designer + Model</p>
 			</div>
 			<div class="wrapper">
@@ -153,7 +156,7 @@
 		</div>
 
 		<div class="content">
-			<img src="/resource/허병훈 프로필사진2.jpg" class="profile_image"
+			<img src="/resource/허병훈 프로필사진.jpg" class="profile_image"
 				alt="Profile" />
 			<div class="profile_detail">
 				<span>허병훈</span>
