@@ -10,14 +10,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${pageTitle }</title>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <link rel="stylesheet" type="text/css" href="acss/css/mogo.css">
 <link
 	href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap&subset=cyrillic-ext"
 	rel="stylesheet">
+
 <script src="https://use.fontawesome.com/692e9fe4aa.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
 
@@ -37,95 +38,140 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-html, body {
+section {
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-container {
 	width: 100%;
 	height: 100%;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-.center_y {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.center_x {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.slider {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
-.slider img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-
-.slider-arrows {
-	color: white;
-	font-size: 50px;
-	cursor: pointer;
-	position: absolute;
-}
-
-#arrow-prev {
-	left: 20px;
-	z-index: 1;
-}
-
-#arrow-next {
-	right: 20px;
-	z-index: 1;
-}
-
-#dots-wrapper {
-	position: absolute;
+.slide {
 	display: flex;
-	bottom: 30px;
-	z-index: 1;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	overflow: hidden;
 }
 
-.dot-navigation {
-	width: 15px;
-	height: 15px;
-	border-radius: 100%;
+.slide-image {
+	position: absolute;
+	top: -200px;
+	left: -200px;
+	width: calc(100% + 400px);
+	height: calc(100% + 400px);
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.slide-title {
+	font-size: 4rem;
+	line-height: 1;
+	max-width: 50%;
+	white-space: normal;
+	word-break: break-word;
+	color: #fff;
+	z-index: 100;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.slide-title span {
+	white-space: pre;
+	display: inline-block;
+	opacity: 0;
+}
+
+@media ( min-width : 45em) {
+	.slide-title {
+		font-size: 7vw;
+		max-width: none;
+	}
+}
+
+.slideshow {
+	position: relative;
+}
+
+.slideshow-pagination {
+	position: absolute;
+	bottom: 5rem;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	transition: .3s opacity;
+	z-index: 10;
+}
+
+.slideshow-pagination-item {
+	display: flex;
+	align-items: center;
+}
+
+.slideshow-pagination-item .pagination-number {
+	opacity: 0.5;
+}
+
+.slideshow-pagination-item:hover, .slideshow-pagination-item:focus {
 	cursor: pointer;
-	margin: 0 8px;
-	border: 2px solid white;
-	transition: .5s background-color;
 }
 
-.dot-navigation:hover {
-	background-color: white;
+.slideshow-pagination-item:last-of-type .pagination-separator {
+	width: 0;
 }
 
-.active-dot {
-	background-color: white;
-}
-
-.fade {
-	animation: fade 5s;
-}
-
-@
-keyframes fade {form { opacity:.4;
-	
-}
-
-to {
+.slideshow-pagination-item.active .pagination-number {
 	opacity: 1;
 }
 
+.slideshow-pagination-item.active .pagination-separator {
+	width: 10vw;
 }
+
+.pagination-number {
+	font-size: 1.8rem;
+	color: #fff;
+	font-family: 'Oswald', sans-serif;
+	padding: 0 0.5rem;
+}
+
+.pagination-separator {
+	display: none;
+}
+
+@media ( min-width : 45em) {
+	.pagination-separator {
+		display: block;
+	}
+}
+
+.pagination-separator {
+	position: relative;
+	width: 40px;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.25);
+	transition: all .3s ease;
+}
+
+.pagination-separator-loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transform-origin: 0 0;
+}
+
 hr {
 	border: none;
 	display: block;
@@ -269,114 +315,246 @@ hr {
 	<div class="page">
 
 		<!-- 이 섹션은 다중 이미지 슬라이드쇼를 포함하고 있습니다 -->
-		<section id="silder-container">
+		<section>
 
-			<!-- 각 이미지는 고유한 ID를 가진 'slider' div 내에 포함됩니다 -->
-			<div class="slider fade" id="slider-1">
-				<img src="/resource/에오 트리오 사진.jpg" alt="">
-			</div>
-			<div class="slider fade" id="slider-2">
-				<img src="/resource/허대욱 사진 2.jpg" alt="">
-			</div>
-			<div class="slider fade" id="slider-3">
-				<img src="/resource/허대욱 사진 3.jpg" alt="">
-			</div>
+			<div class="swiper-container slideshow">
 
-			<!-- 슬라이드 간 이동을 위한 내비게이션 화살표 -->
-			<div class="arrows-wrrapper">
-				<!-- 이전 화살표 -->
-				<p class="slider-arrows center_y" id="arrow-prev">&#10094</p>
-				<!-- 다음 화살표 -->
-				<p class="slider-arrows center_y" id="arrow-next">&#10095</p>
-			</div>
+				<div class="swiper-wrapper">
 
-			<!-- 현재 활성화된 슬라이드를 나타내는 점들 -->
-			<div class="center_x" id="dots-wrapper">
-				<!-- 활성화된 점 -->
-				<div class="dot-navigation active-dot"></div>
-				<!-- 비활성화된 점들 -->
-				<div class="dot-navigation"></div>
-				<div class="dot-navigation"></div>
-			</div>
-			<div class="intro" id="intro">
-				<div class="container">
-					<div class="intro_inner">
-						<h2 class="intro__suptitle">IMMusic & Art</h2>
-						<h1 class="intro__title">
-							<a href="/usr/about">Welcome</a>
-						</h1>
-						<!-- 					<a href="#" class="btn">Learn More</a> -->
+					<div class="swiper-slide slide">
+						<div class="slide-image"
+							style="background-image: url(https://images.unsplash.com/photo-1538083024336-555cf8943ddc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66b476a51b19889e13182c0e4827af18&auto=format&fit=crop&w=1950&q=80)"></div>
+						<span class="slide-title">Exotic places</span>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="slide-image"
+							style="background-image: url(https :// images.unsplash.com/ photo-1500375592092-40eb2168fd21 ? ixlib = rb-0.3.5 &amp; amp;"></div>
+						<span class="slide-title">Meet ocean</span>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="slide-image"
+							style="background-image: url(https :// images.unsplash.com/ photo-1482059470115-0aadd6bf6834 ? ixlib = rb-0.3.5 &amp; amp;"></div>
+						<span class="slide-title">Around the world</span>
+					</div>
+
+					<!--         <div class="swiper-slide slide">
+          <div class="slide-imageswiper-lazy" data-background="https://images.unsplash.com/photo-1538083024336-555cf8943ddc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66b476a51b19889e13182c0e4827af18&auto=format&fit=crop&w=1950&q=80">
+          </div>
+          </div>
+          <span class="slide-title">Exotic places</span>
+        </div>
+      
+        <div class="swiper-slide slide">
+          <div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e07d2457879a4e15577ec75a31023e47&auto=format&fit=crop&w=2134&q=80">
+          </div>
+          <span class="slide-title">Meet ocean</span>
+        </div>
+      
+        <div class="swiper-slide slide">
+          <div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1482059470115-0aadd6bf6834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=267bba9a4e280ec64388fe8fb01e9d1b&auto=format&fit=crop&w=1950&q=80">
+          </div>
+          <span class="slide-title">Around the world</span>
+        </div> -->
+
+				</div>
+
+				<div class="slideshow-pagination"></div>
+
+				<div class="slideshow-navigation">
+					<div class="slideshow-navigation-button prev">
+						<span class="fas fa-chevron-left"></span>
+					</div>
+					<div class="slideshow-navigation-button next">
+						<span class="fas fa-chevron-right"></span>
 					</div>
 				</div>
+
 			</div>
+
 		</section>
 
 
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="acss/js/app.js"></script>
 	</div>
 </body>
-		<script>
-			// 현재 슬라이드의 인덱스를 저장하는 변수 초기화
-			var sliderIndex = 0;
+<script>
+		// The Slideshow class.
+		class Slideshow {
+		    constructor(el) {
+		        
+		        this.DOM = {el: el};
+		      
+		        this.config = {
+		          slideshow: {
+		            delay: 3000,
+		            pagination: {
+		              duration: 3,
+		            }
+		          }
+		        };
+		        
+		        // Set the slideshow
+		        this.init();
+		      
+		    }
+		    init() {
+		      
+		      var self = this;
+		      
+		      // Charmed title
+		      this.DOM.slideTitle = this.DOM.el.querySelectorAll('.slide-title');
+		      this.DOM.slideTitle.forEach((slideTitle) => {
+		        charming(slideTitle);
+		      });
+		      
+		      // Set the slider
+		      this.slideshow = new Swiper (this.DOM.el, {
+		          
+		          loop: true,
+		          autoplay: {
+		            delay: this.config.slideshow.delay,
+		            disableOnInteraction: false,
+		          },
+		          speed: 500,
+		          preloadImages: true,
+		          updateOnImagesReady: true,
+		          
+		          // lazy: true,
+		          // preloadImages: false,
 
-			// 초기에 첫 번째 슬라이드를 표시하는 함수 호출
-			showSlider(sliderIndex);
+		          pagination: {
+		            el: '.slideshow-pagination',
+		            clickable: true,
+		            bulletClass: 'slideshow-pagination-item',
+		            bulletActiveClass: 'active',
+		            clickableClass: 'slideshow-pagination-clickable',
+		            modifierClass: 'slideshow-pagination-',
+		            renderBullet: function (index, className) {
+		              
+		              var slideIndex = index,
+		                  number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
+		              
+		              var paginationItem = '<span class="slideshow-pagination-item">';
+		              paginationItem += '<span class="pagination-number">' + number + '</span>';
+		              paginationItem = (index <= 8) ? paginationItem + '<span class="pagination-separator"><span class="pagination-separator-loader"></span></span>' : paginationItem;
+		              paginationItem += '</span>';
+		            
+		              return paginationItem;
+		              
+		            },
+		          },
 
-			// 슬라이드를 표시하는 함수 정의
-			function showSlider(index) {
-				// 슬라이드와 점들을 선택
-				var slider = document.querySelectorAll('.slider');
-				var dots = document.querySelectorAll('.dot-navigation');
+		          // Navigation arrows
+		          navigation: {
+		            nextEl: '.slideshow-navigation-button.next',
+		            prevEl: '.slideshow-navigation-button.prev',
+		          },
 
-				// 인덱스가 슬라이드 개수를 초과하면 첫 번째 슬라이드로 이동
-				if (index >= slider.length)
-					sliderIndex = 0;
+		          // And if we need scrollbar
+		          scrollbar: {
+		            el: '.swiper-scrollbar',
+		          },
+		        
+		          on: {
+		            init: function() {
+		              self.animate('next');
+		            },
+		          }
+		        
+		        });
+		      
+		        // Init/Bind events.
+		        this.initEvents();
+		        
+		    }
+		    initEvents() {
+		        
+		        this.slideshow.on('paginationUpdate', (swiper, paginationEl) => this.animatePagination(swiper, paginationEl));
+		        //this.slideshow.on('paginationRender', (swiper, paginationEl) => this.animatePagination());
 
-				// 인덱스가 음수면 마지막 슬라이드로 이동
-				if (index < 0)
-					sliderIndex = slider.length - 1;
-
-				// 모든 슬라이드를 숨기고, 모든 점을 활성화하지 않은 상태로 초기화
-				for (var i = 0; i < slider.length; i++) {
-					slider[i].style.display = "none";
-					dots[i].classList.remove('active-dot');
-				}
-
-				// 현재 슬라이드를 표시하고, 해당 슬라이드의 점을 활성화
-				slider[sliderIndex].style.display = "block";
-				dots[sliderIndex].classList.add('active-dot');
-			}
-
-			// 이전 화살표 클릭 시 이벤트 리스너 추가
-			document.querySelector('#arrow-prev').addEventListener('click',
-					function() {
-						showSlider(--sliderIndex);
-					});
-
-			// 다음 화살표 클릭 시 이벤트 리스너 추가
-			document.querySelector('#arrow-next').addEventListener('click',
-					function() {
-						showSlider(++sliderIndex);
-					});
-
-			// 각 점 클릭 시 이벤트 리스너 추가
-			document.querySelectorAll('.dot-navigation').forEach(
-					function(element) {
-						element.addEventListener('click', function() {
-							// 점의 인덱스를 찾아 해당 슬라이드 표시
-							var dots = Array.prototype.slice
-									.call(this.parentElement.children);
-							var dotIndex = dots.indexOf(element);
-							showSlider(sliderIndex = dotIndex);
+		        this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
+		        
+		        this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
+		            
+		    }
+		    animate(direction = 'next') {
+		      
+		        // Get the active slide
+		        this.DOM.activeSlide = this.DOM.el.querySelector('.swiper-slide-active'),
+		        this.DOM.activeSlideImg = this.DOM.activeSlide.querySelector('.slide-image'),
+		        this.DOM.activeSlideTitle = this.DOM.activeSlide.querySelector('.slide-title'),
+		        this.DOM.activeSlideTitleLetters = this.DOM.activeSlideTitle.querySelectorAll('span');
+		      
+		        // Reverse if prev  
+		        this.DOM.activeSlideTitleLetters = direction === "next" ? this.DOM.activeSlideTitleLetters : [].slice.call(this.DOM.activeSlideTitleLetters).reverse();
+		      
+		        // Get old slide
+		        this.DOM.oldSlide = direction === "next" ? this.DOM.el.querySelector('.swiper-slide-prev') : this.DOM.el.querySelector('.swiper-slide-next');
+		        if (this.DOM.oldSlide) {
+		          // Get parts
+		          this.DOM.oldSlideTitle = this.DOM.oldSlide.querySelector('.slide-title'),
+		          this.DOM.oldSlideTitleLetters = this.DOM.oldSlideTitle.querySelectorAll('span'); 
+		          // Animate
+		          this.DOM.oldSlideTitleLetters.forEach((letter,pos) => {
+		            TweenMax.to(letter, .3, {
+		              ease: Quart.easeIn,
+		              delay: (this.DOM.oldSlideTitleLetters.length-pos-1)*.04,
+		              y: '50%',
+		              opacity: 0
+		            });
+		          });
+		        }
+		      
+		        // Animate title
+		        this.DOM.activeSlideTitleLetters.forEach((letter,pos) => {
+							TweenMax.to(letter, .6, {
+								ease: Back.easeOut,
+								delay: pos*.05,
+								startAt: {y: '50%', opacity: 0},
+								y: '0%',
+								opacity: 1
+							});
 						});
-					});
+		      
+		        // Animate background
+		        TweenMax.to(this.DOM.activeSlideImg, 1.5, {
+		            ease: Expo.easeOut,
+		            startAt: {x: direction === 'next' ? 200 : -200},
+		            x: 0,
+		        });
+		      
+		        //this.animatePagination()
+		    
+		    }
+		    animatePagination(swiper, paginationEl) {
+		            
+		      // Animate pagination
+		      this.DOM.paginationItemsLoader = paginationEl.querySelectorAll('.pagination-separator-loader');
+		      this.DOM.activePaginationItem = paginationEl.querySelector('.slideshow-pagination-item.active');
+		      this.DOM.activePaginationItemLoader = this.DOM.activePaginationItem.querySelector('.pagination-separator-loader');
+		      
+		      console.log(swiper.pagination);
+		      // console.log(swiper.activeIndex);
+		      
+		      // Reset and animate
+		        TweenMax.set(this.DOM.paginationItemsLoader, {scaleX: 0});
+		        TweenMax.to(this.DOM.activePaginationItemLoader, this.config.slideshow.pagination.duration, {
+		          startAt: {scaleX: 0},
+		          scaleX: 1,
+		        });
+		      
+		      
+		    }
+		    
+		}
 
-			// 일정 시간마다 자동으로 슬라이드 전환
-			setInterval(function() {
-				showSlider(++sliderIndex);
-			}, 3500);
+		const slideshow = new Slideshow(document.querySelector('.slideshow'));
+
 		</script>
 
 </html>
