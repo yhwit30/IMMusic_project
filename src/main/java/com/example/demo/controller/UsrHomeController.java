@@ -17,8 +17,10 @@ public class UsrHomeController {
 	private UsrCrawlingController ucc;
 
 	@RequestMapping("/usr/home/main")
-	public String showMain() {
+	public String showMain(Model model) {
 
+		model.addAttribute("blog", ucc.crawl());
+		
 		return "/usr/home/main";
 	}
 	@RequestMapping("/usr/home/main2")
