@@ -122,7 +122,11 @@ public class UsrPressController {
 			// 게시판 번호로 게시글 가져오기 및 페이지네이션
 			List<Press> presses = pressService.getForPrintPresses(boardId, pagination.getItemsInAPage(), page,
 					searchKeywordTypeCode, searchKeyword);
+			
+//			todo
+			List<Press> press = pressService.getAllPrintPress();
 
+			model.addAttribute("press", press);
 			model.addAttribute("pressesCount", pressesCount);
 			model.addAttribute("page", page);
 			model.addAttribute("pagination", pagination);
@@ -145,6 +149,10 @@ public class UsrPressController {
 		List<Press> presses = pressService.getForPrintPresses(boardId, pagination.getItemsInAPage(), page,
 				searchKeywordTypeCode, searchKeyword);
 
+//		todo
+		List<Press> press = pressService.getAllPrintPress();
+
+		model.addAttribute("press", press);
 		model.addAttribute("pressesCount", pressesCount);
 		model.addAttribute("page", page);
 		model.addAttribute("pagination", pagination);
