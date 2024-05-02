@@ -34,8 +34,10 @@
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <!-- 글꼴 아리따 부리 가져오기 -->
-<link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.css">
-<link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://webfontbox.github.io/Arita/font.css">
+<link rel="stylesheet" type="text/css"
+	href="https://webfontbox.github.io/Arita/font.min.css">
 
 <!-- 구글api 글꼴 가져오기 -->
 <link
@@ -64,26 +66,26 @@
 #intro-logo>img {
 	width: 100%;
 	height: 100%;
-/* 	box-shadow: 5px 5px 3px #666; */
-/* 	border: 1px solid rgba(209, 213, 219); */
+	/* 	box-shadow: 5px 5px 3px #666; */
+	/* 	border: 1px solid rgba(209, 213, 219); */
 }
 
 #intro-top {
 	position: absolute;
 	width: 100%;
 	height: 50%;
-/* 	background-color: #f2ede2; */
-	background-color:#0d121d;
+	/* 	background-color: #f2ede2; */
+	background-color: #0d121d;
 	z-index: 998;
 	text-align: center;
-	color:white;
+	color: white;
 }
 
 #intro-bottom {
 	position: absolute;
 	width: 100%;
 	height: 50%;
-/* 	background-color: #f2ede2;  */
+	/* 	background-color: #f2ede2;  */
 	background-color: #0d121d;
 	top: 50%;
 	z-index: 998;
@@ -91,23 +93,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	color:white;
+	color: white;
 }
 
 .head-bg {
-/* 자바스크립트로 효과 줌 */
-/*   	background-color: #f2ede2;   */
-/*   	border-bottom: 1px solid #0d121d;  */
-/*  	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2); */
+	/* 자바스크립트로 효과 줌 */
+	/*   	background-color: #f2ede2;   */
+	/*   	border-bottom: 1px solid #0d121d;  */
+	/*  	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.2); */
+	
 }
 
-
-.head-text-style{
+.head-text-style {
 	font-weight: normal;
 	font-size: 18px;
 	text-transform: uppercase;
 }
-
 </style>
 
 
@@ -239,9 +240,26 @@
 	transform: rotate(330deg);
 }
 
-@keyframes spinner-fade9234 { 0% {
-	background-color: #69717d;}100%{
-background-color:transparent;}
+@
+keyframes spinner-fade9234 { 0% {
+	background-color: #69717d;
+}
+100
+
+
+%
+{
+background-color
+
+
+:
+
+
+transparent
+;
+
+
+}
 }
 </style>
 
@@ -250,7 +268,10 @@ background-color:transparent;}
 
 <script>
 	$(document).ready(function() {
+		// 애니메이션이 시작되기 전에 스크롤을 막습니다.
+		$('body').css('overflow', 'hidden');
 		setTimeout(function() {
+
 			$('#intro-top').animate({
 				top : '-100%' // 화면 위로 이동
 			}, 'slow');
@@ -260,6 +281,9 @@ background-color:transparent;}
 				top : '100%' // 화면 아래로 이동
 			}, 'slow', function() {
 				$(this).hide(); // 애니메이션 완료 후 숨김
+				
+				scroll();
+				
 			});
 		}, 3500); // 3000 밀리초 = 3초
 
@@ -273,42 +297,53 @@ background-color:transparent;}
 				$('#intro-top > p').fadeOut();
 				$('#intro-bottom > p').fadeOut();
 				$('.spinner').fadeOut();
+
+				
 			}, 500);
 		});
 	});
+
+	function scroll() {
+		// 애니메이션이 완료된 후에 스크롤을 다시 활성화합니다.
+		$('body').css('overflow', 'auto');
+	}
 </script>
 
 
 <!-- 헤드 맨 위 투명, 그외 색 -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var headBg = document.querySelector('.head-bg');
-    var scrolled = false;
+	document
+			.addEventListener(
+					'DOMContentLoaded',
+					function() {
+						var headBg = document.querySelector('.head-bg');
+						var scrolled = false;
 
-    // 초기 상태에서 배경을 투명하게 설정
-    headBg.style.backgroundColor = 'transparent';
-    headBg.style.borderBottom = 'none';
+						// 초기 상태에서 배경을 투명하게 설정
+						headBg.style.backgroundColor = 'transparent';
+						headBg.style.borderBottom = 'none';
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY === 0) {
-            // 스크롤이 0이면 배경을 투명하게 설정
-            headBg.style.transition = 'background-color 0.3s';
-            headBg.style.backgroundColor = 'transparent';
-            headBg.style.borderBottom = 'none';
-            headBg.style.boxShadow = 'none';
-            // 스크롤이 0일 때 scrolled 변수 초기화
-            scrolled = false;
-        } else if (!scrolled) {
-            scrolled = true;
-            // 배경색과 효과 추가
-            headBg.style.transition = 'background-color 0.3s, border-bottom 0.3s, box-shadow 0.3s';
-            headBg.style.backgroundColor = '#f2ede2';
-            headBg.style.boxShadow = '0px 0px 15px 0px rgba(0,0,0,.2)';
-        }
-    });
-});
-
-
+						window
+								.addEventListener(
+										'scroll',
+										function() {
+											if (window.scrollY === 0) {
+												// 스크롤이 0이면 배경을 투명하게 설정
+												headBg.style.transition = 'background-color 0.3s';
+												headBg.style.backgroundColor = 'transparent';
+												headBg.style.borderBottom = 'none';
+												headBg.style.boxShadow = 'none';
+												// 스크롤이 0일 때 scrolled 변수 초기화
+												scrolled = false;
+											} else if (!scrolled) {
+												scrolled = true;
+												// 배경색과 효과 추가
+												headBg.style.transition = 'background-color 0.3s, border-bottom 0.3s, box-shadow 0.3s';
+												headBg.style.backgroundColor = '#f2ede2';
+												headBg.style.boxShadow = '0px 0px 15px 0px rgba(0,0,0,.2)';
+											}
+										});
+					});
 </script>
 
 
@@ -317,31 +352,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	<c:if
 		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-<!-- 					<div class="flex justify-center content-center"> -->
-<!-- 						<div id="intro-top" > -->
-<!-- 							<p class="mt-10">LOADING</p> -->
-<!-- 						<div class="spinner center"> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			</div> -->
-<!-- 						</div> -->
-<!-- 						<div id="intro-logo"> -->
-<!-- 							<img src="/resource/IMMusicLogo자름.png" /> -->
-<!-- 						</div> -->
-<!-- 						<div id="intro-bottom"> -->
-<!-- 							<p class="mb-10">IMMusic & Art</p> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
+		<div class="flex justify-center content-center">
+			<div id="intro-top">
+				<p class="mt-10">LOADING</p>
+				<div class="spinner center">
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+					<div class="spinner-blade"></div>
+				</div>
+			</div>
+			<div id="intro-logo">
+				<img src="/resource/IMMusicLogo자름.png" />
+			</div>
+			<div id="intro-bottom">
+				<p class="mb-10">IMMusic & Art</p>
+			</div>
+		</div>
 	</c:if>
 
 
@@ -368,6 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<c:if test="${not fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-    <h2 id="pageTitle">${pageTitle}</h2>
-</c:if>
+	<c:if
+		test="${not fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
+		<h2 id="pageTitle">${pageTitle}</h2>
+	</c:if>
