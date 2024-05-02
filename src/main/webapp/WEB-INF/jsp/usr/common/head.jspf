@@ -317,31 +317,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	<c:if
 		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-<!-- 					<div class="flex justify-center content-center"> -->
-<!-- 						<div id="intro-top" > -->
-<!-- 							<p class="mt-10">LOADING</p> -->
-<!-- 						<div class="spinner center"> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			    <div class="spinner-blade"></div> -->
-<!-- 			</div> -->
-<!-- 						</div> -->
-<!-- 						<div id="intro-logo"> -->
-<!-- 							<img src="/resource/IMMusicLogo자름.png" /> -->
-<!-- 						</div> -->
-<!-- 						<div id="intro-bottom"> -->
-<!-- 							<p class="mb-10">IMMusic & Art</p> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
+					<div class="flex justify-center content-center">
+						<div id="intro-top" >
+							<p class="mt-10">LOADING</p>
+						<div class="spinner center">
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			    <div class="spinner-blade"></div>
+			</div>
+						</div>
+						<div id="intro-logo">
+							<img src="/resource/IMMusicLogo자름.png" />
+						</div>
+						<div id="intro-bottom">
+							<p class="mb-10">IMMusic & Art</p>
+						</div>
+					</div>
 	</c:if>
 
 
