@@ -15,6 +15,7 @@ import com.example.demo.vo.Blog;
 public class UsrCrawlingController {
 
 	public List<Blog> crawl() {
+
 		System.setProperty("webdriver.chrome.driver", "C:\\work\\sts-4.21.0.RELEASE-workspace\\IMMusic_project\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ohyo9\\git\\IMMusic_project\\chromedriver.exe");
 
