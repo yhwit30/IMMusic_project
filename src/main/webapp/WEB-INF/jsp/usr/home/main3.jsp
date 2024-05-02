@@ -25,42 +25,48 @@
 
 <style>
 /* 이미지 슬라이드쇼 */
-#testbox {
-   overflow:hidden;
-   position:relative;
-   width:1200px; /* 테스트를 위한 임시 값*/
-   height:200px;
-}
-.test {
-   width:3200px; /* 보여야 하는 이미지 + 클론이미지 전체 합 */
-   height:100%;
-   display:flex;
-   flex-wrap:nowrap;
-   animation: bannermove 10s linear infinite;
-   padding-bottom: 30px;
-}
-   
-.test > div {
-   flex:0 0 auto;
-   height:200px;
-   line-height:200px;
-   vertical-align:top;
-   text-align:center;
-}
-img {
-   width:100%;
-   height:100%;
-   padding: 10px;
-}
+ #testbox {
+    overflow: hidden; /* 넘치는 부분을 잘라냅니다. */
+    position: relative; /* 자식 요소의 위치를 상대적으로 지정합니다. */
+    width: 1200px; /* 테스트를 위한 임시 값으로 슬라이더의 가로 크기를 설정합니다. */
+    height: 200px; /* 슬라이더의 세로 크기를 설정합니다. */
+  }
 
-@keyframes bannermove {
-  0% {
-      transform: translate(0, 0);
+  .test {
+    width: 3200px; /* 모든 이미지와 클론 이미지를 포함하는 슬라이더의 가로 크기를 설정합니다. */
+    height: 100%; /* 슬라이더의 세로 크기를 100%로 설정하여 부모 요소의 높이에 맞게 설정합니다. */
+    display: flex; /* 내부 요소를 수평으로 배치하기 위해 flexbox 레이아웃을 사용합니다. */
+    flex-wrap: nowrap; /* 내부 요소가 한 줄에 정렬되도록 합니다. */
+    animation: bannermove 10s linear infinite; /* 슬라이드 애니메이션을 적용합니다. */
+    padding-bottom: 30px; /* 하단 여백을 추가하여 이미지와 테두리가 겹치는 것을 방지합니다. */
   }
-  100% {
-      transform: translate(-50%, 0);
+
+  .test > div {
+    flex: 0 0 auto; /* 내부 요소가 flexbox의 아이템으로 동작하도록 설정합니다. */
+    height: 200px; /* 내부 요소의 높이를 슬라이더의 높이와 일치시킵니다. */
+    line-height: 200px; /* 텍스트를 수직으로 가운데 정렬하기 위해 사용합니다. */
+    vertical-align: top; /* 내부 요소를 위쪽으로 정렬합니다. */
+    text-align: center; /* 내부 요소의 텍스트를 가운데 정렬합니다. */
   }
-}
+
+  img {
+    width: 100%; /* 이미지를 부모 요소의 너비에 맞게 설정합니다. */
+    height: 100%; /* 이미지를 부모 요소의 높이에 맞게 설정합니다. */
+    padding: 10px; /* 이미지 주위에 여백을 추가합니다. */
+  }
+
+  @keyframes bannermove {
+    0% {
+      transform: translate(0, 0); /* 애니메이션 시작 지점으로 이동합니다. */
+    }
+    100% {
+      transform: translate(-50%, 0); /* 애니메이션 종료 지점으로 이동합니다. */
+    }
+  }
+
+  #testbox:hover .test {
+    animation-play-state: paused; /* 마우스를 올리면 애니메이션을 일시정지합니다. */
+  }
 /* 앨범 슬라이드 */
 
 *, *:before, *:after {
@@ -1587,11 +1593,13 @@ hr {
 }
 </style>
 
+<script>
+
+</script>
+
+
 <body>
 	<div class="page">
-
-
-
 		<div class="intro" id="intro">
 			<div class="container">
 				<div class="intro_inner">
@@ -1805,7 +1813,7 @@ hr {
 						</div>
 					</div>
 					<div id="testbox">
-						<div class="test">
+						<div class="test" id="slider">
 							<div>
 								<img src="/resource/음악앨범 1.jpg" />
 							</div>
@@ -1822,7 +1830,7 @@ hr {
 								<img src="/resource/음악앨범 5.jpg" />
 							</div>
 							<div>
-								<img src="/resource/음악앨범 6.jpg" />
+								<img src="/resource/음악앨범 7.jpg" />
 							</div>
 							<div>
 								<img src="/resource/음악앨범 1.jpg" />
@@ -1847,7 +1855,7 @@ hr {
 								<img src="/resource/음악앨범 5.jpg" />
 							</div>
 							<div class="clone">
-								<img src="/resource/음악앨범 6.jpg" />
+								<img src="/resource/음악앨범 7.jpg" />
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 1.jpg" />
