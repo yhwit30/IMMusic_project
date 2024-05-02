@@ -281,6 +281,9 @@ transparent
 				top : '100%' // 화면 아래로 이동
 			}, 'slow', function() {
 				$(this).hide(); // 애니메이션 완료 후 숨김
+				
+				scroll();
+				
 			});
 		}, 3500); // 3000 밀리초 = 3초
 
@@ -297,7 +300,6 @@ transparent
 
 				
 			}, 500);
-				scroll();
 		});
 	});
 
