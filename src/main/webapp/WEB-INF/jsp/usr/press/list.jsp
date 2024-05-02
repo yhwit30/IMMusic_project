@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="#{board.code } PRESS LIST"></c:set>
 <%@ include file="../common/head.jspf"%>
@@ -9,15 +10,13 @@
 	box-sizing: border-box;
 }
 
-
-
 body {
 	color: #272727;
 	font-family: 'Quicksand', serif;
 	font-style: normal;
 	font-weight: 400;
 	letter-spacing: 0;
-/* 	padding: 1rem; */
+	/* 	padding: 1rem; */
 }
 
 .main {
@@ -123,6 +122,10 @@ img {
 
 <div class="main">
 
+
+	<div>${press}</div>
+
+
 	<ul class="cards">
 		<li class="cards_item">
 			<div class="card">
@@ -132,7 +135,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(0).getTitle() }</h2>
 					<p class="card_text">${press.get(0).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(0).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(0).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -144,7 +148,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(1).getTitle() }</h2>
 					<p class="card_text">${press.get(1).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(1).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(1).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -156,7 +161,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(2).getTitle() }</h2>
 					<p class="card_text">${press.get(2).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(2).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(2).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -168,7 +174,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(3).getTitle() }</h2>
 					<p class="card_text">${press.get(3).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(3).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(3).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -180,7 +187,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(3).getTitle() }</h2>
 					<p class="card_text">${press.get(3).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(3).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(3).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -192,7 +200,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(2).getTitle() }</h2>
 					<p class="card_text">${press.get(2).getBody() }</p>
-					<a class="btn card_btn" href="detailTest?id=${press.get(2).getId() }">Read More</a>
+					<a class="btn card_btn"
+						href="detailTest?id=${press.get(2).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
