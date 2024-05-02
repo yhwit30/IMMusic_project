@@ -5,8 +5,6 @@
 <c:set var="pageTitle" value="MAIN"></c:set>
 <%@ include file="../common/head.jspf"%>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -427,16 +425,17 @@ tr {
 }
 
 tr:after {
-    content: '';
-    display: inline-block;
-    width: 500px;
-    height: 1px;
-    position: absolute;
-    background-color: #fff;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    bottom: -1px;
-    left: 50%; 
-    transform: translateX(-50%);
+	content: '';
+	display: inline-block;
+	width: 500px;
+	height: 1px;
+	position: absolute;
+	background-color: #fff;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	bottom: -1px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 tr:hover {
@@ -444,7 +443,7 @@ tr:hover {
 	color: #b3a78f;
 }
 
-tr > td {
+tr>td {
 	text-align: left;
 	padding: 15px 0px;
 }
@@ -584,8 +583,6 @@ tr > td {
 </style>
 
 
-
-<body>
 	<div class="page">
 
 
@@ -959,21 +956,17 @@ tr > td {
 							<col style="width: 25%" />
 							<col style="width: 65%" />
 						</colgroup>
-						<!--                 <thead>
-                    <tr>
-                        <th>날짜</th>
-                        <th>제목</th>
-                        <th>내용</th>
-                    </tr>
-                </thead> -->
-						<tbody>
-							<c:forEach var="blog" items="${blog}">
-								<tr class="mb-5" onclick="redirectToPost('${blog.post_url}')">
-									<td>${blog.post_date}</td>
-									<td>${blog.post_title}</td>
-									<td>${blog.post_content}</td>
-								</tr>
-							</c:forEach>
+						<tbody id="blogContent">
+<!-- 						ajax script로 태그 그림 -->
+						
+						
+<%-- 							<c:forEach var="blog" items="${blog}"> --%>
+<%-- 								<tr class="mb-5" onclick="redirectToPost('${blog.post_url}')"> --%>
+<%-- 									<td>${blog.post_date}</td> --%>
+<%-- 									<td>${blog.post_title}</td> --%>
+<%-- 									<td>${blog.post_content}</td> --%>
+<!-- 								</tr> -->
+<%-- 							</c:forEach> --%>
 						</tbody>
 					</table>
 
@@ -993,8 +986,48 @@ tr > td {
 
 
 	</div>
-</body>
 
-</html>
+<!-- 블로그 크롤링 -->
+<script>
+$(document).ready(function() {
+    // AJAX 요청을 보냅니다.
+    $.ajax({
+        url: "/usr/home/crawl",
+        type: "GET",
+        success: function(data) {
+        	console.log("data: "+ data);
+        	
+        	 // 받은 데이터를 이용하여 HTML을 생성합니다.
+            var html = "";
+            data.forEach(function(blog) {
+                var postDate = blog.post_date;
+                var postTitle = blog.post_title;
+                var postContent = blog.post_content;
+                var postUrl = blog.post_url;
+
+                // 생성한 HTML을 추가합니다.
+                 html += "<tr class='mb-5' onclick='redirectToPost(\"" + postUrl + "\")'>";
+                html += "<td>" + postDate + "</td>";
+                html += "<td>" + postTitle + "</td>";
+                html += "<td>" + postContent + "</td>";
+                html += "</tr>";
+            });
+
+            // 생성한 HTML을 해당 요소에 추가합니다.
+            $("#blogContent").html(html);
+            
+            
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX 요청 실패:", status, error);
+        }
+    });
+});
+	
+		
+</script>
+
+
+
 <!-- 페이지 하단 -->
 <%@ include file="../common/foot.jspf"%>
