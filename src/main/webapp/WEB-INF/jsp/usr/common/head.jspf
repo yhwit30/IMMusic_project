@@ -120,7 +120,7 @@
 		if ($('body').hasClass('main-page')) {
 
 			// 애니메이션이 시작되기 전에 스크롤을 막습니다.
-			$('body').css('overflow', 'hidden');
+// 			$('body').css('overflow', 'hidden');
 			setTimeout(function() {
 
 				$('#intro-top').animate({
@@ -133,7 +133,7 @@
 				}, 'slow', function() {
 					$(this).hide(); // 애니메이션 완료 후 숨김
 
-					scroll();
+// 					scroll();
 
 				});
 			}, 3500); // 3000 밀리초 = 3초
@@ -212,17 +212,17 @@
 
 <c:if
 	test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-	<div class="flex justify-center content-center">
-		<div id="intro-top">
-			<p class="mt-10">LOADING</p>
-		</div>
-		<div id="intro-logo">
-			<img src="/resource/IMMusicLogo자름.png" />
-		</div>
-		<div id="intro-bottom">
-			<p class="mb-10">IMMusic & Art</p>
-		</div>
-	</div>
+<!-- 	<div class="flex justify-center content-center"> -->
+<!-- 		<div id="intro-top"> -->
+<!-- 			<p class="mt-10">LOADING</p> -->
+<!-- 		</div> -->
+<!-- 		<div id="intro-logo"> -->
+<!-- 			<img src="/resource/IMMusicLogo자름.png" /> -->
+<!-- 		</div> -->
+<!-- 		<div id="intro-bottom"> -->
+<!-- 			<p class="mb-10">IMMusic & Art</p> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
 </c:if>
 
 
