@@ -153,7 +153,7 @@ a.slide_btn {
 
 .previous_btn, .next_btn {
 	cursor: pointer; /* 커서 포인터로 변경 */
-	height: 65px; /* 높이 설정 */
+	height: 100%; /* 높이 설정 */
 	opacity: 0.5; /* 투명도 설정 */
 	-webkit-transition: opacity 0.4s ease-in-out; /* 웹킷 브라우저용 트랜지션 설정 */
 	-moz-transition: opacity 0.4s ease-in-out; /* 모질라 브라우저용 트랜지션 설정 */
@@ -163,6 +163,13 @@ a.slide_btn {
 	width: 65px; /* 너비 설정 */
 }
 
+.previous_btn:hover,
+.previous_btn:focus,
+.next_btn:hover,
+.next_btn:focus{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
 /* 슬라이드 버튼 호버 시 투명도 변경 */
 .previous_btn:hover, .next_btn:hover {
 	opacity: 1; /* 투명도 1로 설정 */
@@ -745,8 +752,8 @@ tr>td {
 					</h1>
 				</div>
 			</div>
-			<div class="previous_btn" title="Previous">◁</div>
-			<div class="next_btn" title="Next">▷</div>
+			<div class="previous_btn" title="Previous"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #f2ede2;"></i></div>
+			<div class="next_btn" title="Next"><i class="fa-solid fa-arrow-right fa-2xl" style="color: #f2ede2;"></i></div>
 			<!-- 	</div> -->
 
 		</div>
