@@ -21,8 +21,8 @@ public class PressService {
 	}
 
 	// 서비스 메서드
-	public ResultData<Integer> writePress(String title, String body, int loginedMemberId, int boardId) {
-		pressRepository.writePress(title, body, loginedMemberId, boardId);
+	public ResultData<Integer> writePress(String title, String body) {
+		pressRepository.writePress(title, body);
 		int id = pressRepository.getLastInsertId();
 		return ResultData.from("S-1", Ut.f("%d번 글이 생성되었습니다", id), "id", id);
 	}
@@ -59,10 +59,10 @@ public class PressService {
 	}
 
 	// 게시글 가져와서 아이디 권한체크 메소드 실행
-	public Press getForPrintPress(int loginedMemberId, int id) {
+	public Press getForPrintPress(int id) {
 		Press press = pressRepository.getForPrintPress(id);
 
-		controlForPrintPress(loginedMemberId, press);
+		//controlForPrintPress(loginedMemberId, press);
 
 		return press;
 	}

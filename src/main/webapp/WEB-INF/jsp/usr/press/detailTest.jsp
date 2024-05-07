@@ -49,8 +49,11 @@ margin-left: 790.5px;
 		<strong>${press.getTitle() }</strong> <span>2024-04-25</span>
 	</div>
 	<div class="text_w">
-		<p class="MsoNoSpacing" align="center" style="text-align: center">피프티 피프티의 ‘큐피드’가 틱톡이 발표한 2023 글로벌 인기 음악 차트 1위를
-			차지했다.</p>
+	    <c:if test="${genfilecnt != 0}">
+				<img class="w-full rounded-xl" src="${rq.getImgUri(article.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}"
+							alt="" />
+		</c:if>
+		<p class="MsoNoSpacing" align="center" style="text-align: center">${press.getBody() }</p>
 	</div>
 </div>
 
