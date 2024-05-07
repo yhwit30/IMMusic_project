@@ -1142,6 +1142,13 @@ tr>td {
 			</div>
 		</section>
 
+		<script>
+				function redirectToPost(postUrl) {
+					console.log('Redirecting to: ' + postUrl);
+					// var windowFeatures = 'width=800,height=600,resizable=yes,scrollbars=yes';
+					window.open(postUrl, '_blank');
+				}
+		</script>
 
 	</div>
 
