@@ -45,6 +45,15 @@ margin-left: 790.5px;
 </style>
 
 <div id="sub" class="view">
+		<div>
+			<c:if test="${press.userCanModify }">
+				<a class="btn btn-outline text-xs" style="border: none; background-color: transparent;" href="../press/modify?id=${press.id }">수정</a>
+			</c:if>
+			<c:if test="${press.userCanDelete }">
+				<a class="btn btn-outline text-xs" style="border: none; background-color: transparent;" onclick="if(confirm('정말 삭제하시겠습니까?') == false) return false;"
+					href="../press/doDelete?id=${press.id }">삭제</a>
+			</c:if>
+		</div>
 	<div class="title">
 		<strong>${press.getTitle() }</strong> <span>2024-04-25</span>
 	</div>

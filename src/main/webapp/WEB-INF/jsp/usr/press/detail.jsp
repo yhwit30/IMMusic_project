@@ -7,6 +7,12 @@
 
 
 <style>
+
+.buttons {
+	display: inline-block;
+	margin-left: 92%;
+}
+
 #sub.view {
 padding-left: 70px;
 padding-right: 30px;
@@ -39,18 +45,32 @@ padding-right: 30px;
 }
 
 .btn {
-margin-left: 790.5px;
+margin-left: 5px;
+}
+
+.btn:hover {
+	color: #b3a78f;
 }
 
 </style>
 
 <div id="sub" class="view">
+		<div class="buttons">
+			<c:if test="${press.userCanModify }">
+				<a class="btn btn-outline text-xs" style="border: none; background-color: transparent;" href="../press/modify?id=${press.id }">수정</a>
+			</c:if>
+			<c:if test="${press.userCanDelete }">
+				<a class="btn btn-outline text-xs" style="border: none; background-color: transparent;" onclick="if(confirm('정말 삭제하시겠습니까?') == false) return false;"
+					href="../press/doDelete?id=${press.id }">삭제</a>
+			</c:if>
+		</div>
+		
 	<div class="title">
 		<strong>${press.getTitle() }</strong> <span>2024-04-25</span>
 	</div>
 	<div class="text_w">
 	    <c:if test="${genfilecnt != 0}">
-				<img class="w-full rounded-xl" src="${rq.getImgUri(article.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}"
+				<img class="w-full rounded-xl" src="${rq.getImgUri(press.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}"
 							alt="" />
 		</c:if>
 		<p class="MsoNoSpacing" align="center" style="text-align: center">${press.getBody() }</p>
