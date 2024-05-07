@@ -1,15 +1,15 @@
 package com.example.demo.service;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.ContactUsRepository;
+import com.example.demo.vo.ContactArtist;
+import com.example.demo.vo.ContactConcert;
 import com.example.demo.vo.ResultData;
 
 import net.nurigo.sdk.NurigoApp;
@@ -53,7 +53,12 @@ public class ContactUsService {
 
 	public void sendjoinMessage(String cellphoneNum, String name) {
 
-		DefaultMessageService messageService = NurigoApp.INSTANCE.initialize("NCSW9EFTDYNNQEYA", "secret_key",
+		String text = name + "님의 가입신청이 완료되었습니다.\n" + "검토 후 연락드리겠습니다.\n" + "- IMMusic&Art -";
+		if (cellphoneNum.equals("01030841288")) {
+			text = name + "님의 가입신청이 완료되었습니다.\n" + "확인바랍니다.\n" + "- IMMusic&Art -";
+		}
+
+		DefaultMessageService messageService = NurigoApp.INSTANCE.initialize("api_key", "secret_key",
 				"https://api.coolsms.co.kr");
 
 		LocalDateTime now = LocalDateTime.now();
@@ -86,8 +91,8 @@ public class ContactUsService {
 			text = name + "님의 연주문의가 완료되었습니다.\n" + "확인바랍니다.\n" + "- IMMusic&Art -";
 		}
 
-		DefaultMessageService messageService = NurigoApp.INSTANCE.initialize("NCSW9EFTDYNNQEYA",
-				"JUHJQDE2B4ROZTNE6A7V9FPVMCTYNHXE", "https://api.coolsms.co.kr");
+		DefaultMessageService messageService = NurigoApp.INSTANCE.initialize("api_key", "secret_key",
+				"https://api.coolsms.co.kr");
 
 		// Message 패키지가 중복될 경우 net.nurigo.sdk.message.model.Message로 치환하여 주세요
 		Message message = new Message();
@@ -113,6 +118,25 @@ public class ContactUsService {
 
 		sendsignupMessage(cellphoneNum, name);
 
+	}
+
+	public void sendjoinMessageToAdmin(String cellphoneNum, String name) {
+
+		sendjoinMessage(cellphoneNum, name);
+	}
+
+	public List<ContactArtist> getContactArtistList() {
+
+		List<ContactArtist> contactArtists = contactUsRepository.getContactArtistList();
+
+		return contactArtists;
+	}
+
+	public List<ContactConcert> getContactConcertList() {
+
+		List<ContactConcert> contactConcerts = contactUsRepository.getContactConcertList();
+
+		return contactConcerts;
 	}
 
 }
