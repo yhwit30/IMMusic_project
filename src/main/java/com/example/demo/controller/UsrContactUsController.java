@@ -49,7 +49,7 @@ public class UsrContactUsController {
 		
 		contactUsService.sendsignupMessage(cellphoneNum, name);
 		
-		return Ut.jsReplace("S-1", signupRd.getMsg(), "../home/main");
+		return Ut.jsReplace("S-1", signupRd.getMsg(), "../contactUs/inquiry");
 	}
 	
 	@RequestMapping("/usr/contactUs/application")
@@ -94,7 +94,7 @@ public class UsrContactUsController {
 		
 		contactUsService.sendjoinMessage(cellphoneNum, name);
 		
-		return Ut.jsReplace("S-1", joinRd.getMsg(), "../home/main");
+		return Ut.jsReplace("S-1", joinRd.getMsg(), "../contactUs/inquiry");
 	}
 	
 	@RequestMapping("/usr/contactUs/artist")
@@ -108,8 +108,11 @@ public class UsrContactUsController {
 
 		return "usr/contactUs/contactUs";
 	}
-	
 
+	@RequestMapping("/usr/contactUs/inquiry")
+	public String Inquiry() {
 
+		return "usr/contactUs/inquiry";
+	}
 
 }
