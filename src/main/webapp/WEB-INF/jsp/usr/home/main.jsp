@@ -127,21 +127,21 @@ a.slide_btn {
 .previous_btn {
 	position: absolute; /* 위치 지정 */
 	top: 0;
-	left: 5px; /* 왼쪽 여백 설정 */
+	left: 0; /* 왼쪽 여백 설정 */
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 }
 
 .next_btn {
 	position: absolute; /* 위치 지정 */
 	top: 0;
-	right: 5px;
+	right: 0;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .previous_btn, .next_btn {
