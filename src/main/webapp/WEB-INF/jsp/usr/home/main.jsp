@@ -718,7 +718,7 @@ tr>td {
 }
 
 .test {
-	width: 3720px; /* 모든 이미지와 클론 이미지를 포함하는 슬라이더의 가로 크기를 설정합니다. */
+	width: 2520px; /* 모든 이미지와 클론 이미지를 포함하는 슬라이더의 가로 크기를 설정합니다. */
 	height: 450px;
 	display: flex; /* 내부 요소를 수평으로 배치하기 위해 flexbox 레이아웃을 사용합니다. */
 	flex-wrap: nowrap; /* 내부 요소가 한 줄에 정렬되도록 합니다. */
@@ -787,7 +787,7 @@ tr>td {
 }
 
 .test2 {
-	width: 3720px; /* 이미지 하나의 너비로 설정합니다. */
+	width: 4652px; /* 이미지 하나의 너비로 설정합니다. */
 	height: 450px;
 	display: flex;
 	flex-wrap: nowrap;
