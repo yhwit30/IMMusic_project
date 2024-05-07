@@ -718,8 +718,8 @@ tr>td {
 }
 
 .test {
-	width: 3200px; /* 모든 이미지와 클론 이미지를 포함하는 슬라이더의 가로 크기를 설정합니다. */
-	height: 100%; /* 슬라이더의 세로 크기를 100%로 설정하여 부모 요소의 높이에 맞게 설정합니다. */
+	width: 3720px; /* 모든 이미지와 클론 이미지를 포함하는 슬라이더의 가로 크기를 설정합니다. */
+	height: 450px;
 	display: flex; /* 내부 요소를 수평으로 배치하기 위해 flexbox 레이아웃을 사용합니다. */
 	flex-wrap: nowrap; /* 내부 요소가 한 줄에 정렬되도록 합니다. */
 	animation: bannermove 25s linear infinite; /* 슬라이드 애니메이션을 적용합니다. */
@@ -732,12 +732,34 @@ tr>td {
 	line-height: 200px; /* 텍스트를 수직으로 가운데 정렬하기 위해 사용합니다. */
 	vertical-align: top; /* 내부 요소를 위쪽으로 정렬합니다. */
 	text-align: center; /* 내부 요소의 텍스트를 가운데 정렬합니다. */
+	position: relative;
+	margin: 0 10px;
 }
 
-.testbox img {
+.test img {
 	width: 100%; /* 이미지를 부모 요소의 너비에 맞게 설정합니다. */
 	height: 100%; /* 이미지를 부모 요소의 높이에 맞게 설정합니다. */
-	padding: 10px; /* 이미지 주위에 여백을 추가합니다. */
+	border-radius: 5px;
+}
+
+.text-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+ 	background-color: rgba(0, 0, 0, 0.7); 
+	color: white;
+	transition: opacity 0.3s ease;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.test>div:hover .text-overlay {
+	opacity: 1;
 }
 
 @keyframes slideAnimation {
@@ -1284,81 +1306,155 @@ tr>td {
 				</div>
 				
 				<div id="testbox">
-						<div class="test" >
-							<div>
-								<img src="/resource/음악앨범 1.jpg" />
-							</div>
+    					<div class="test" >
+        					<div>
+            					<img src="/resource/음악앨범 1.jpg" />
+            					<div class="text-overlay">
+                					<p>will it be spring tomorrow</p>
+            					</div>
+        					</div>
+							
 							<div>
 								<img src="/resource/음악앨범 2.jpg" />
+								<div class="text-overlay">
+                					<p>interval of parallel</p>
+            					</div>
 							</div>
+							
 							<div>
 								<img src="/resource/음악앨범 3.jpg" />
+								<div class="text-overlay">
+                					<p>trigram</p>
+            					</div>
 							</div>
 							<div>
 								<img src="/resource/음악앨범 4.jpg" />
+								<div class="text-overlay">
+                					<p>Le Moment Disperse</p>
+            					</div>
 							</div>
 							<div>
 								<img src="/resource/음악앨범 5.jpg" />
+								<div class="text-overlay">
+                					<p>to the west</p>
+            					</div>
 							</div>
 							<div>
 								<img src="/resource/음악앨범 7.jpg" />
+								<div class="text-overlay">
+                					<p>Aire de Espana</p>
+            					</div>
 							</div>
-							<div>
-								<img src="/resource/음악앨범 1.jpg" />
-							</div>
-							<div>
-								<img src="/resource/음악앨범 2.jpg" />
-							</div>
+<!-- 							<div> -->
+<!-- 								<img src="/resource/음악앨범 1.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>will it be spring tomorrow</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
+<!-- 							<div> -->
+<!-- 								<img src="/resource/음악앨범 2.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>interval of parallel</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
 							<!--   clone     -->
 							<div class="clone">
 								<img src="/resource/음악앨범 1.jpg" />
+								<div class="text-overlay">
+                					<p>will it be spring tomorrow</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 2.jpg" />
+								<div class="text-overlay">
+                					<p>interval of parallel</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 3.jpg" />
+								<div class="text-overlay">
+                					<p>trigram</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 4.jpg" />
+								<div class="text-overlay">
+                					<p>Le Moment Disperse</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 5.jpg" />
+								<div class="text-overlay">
+                					<p>to the west</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 7.jpg" />
+								<div class="text-overlay">
+                					<p>Aire de Espana</p>
+            					</div>
 							</div>
-							<div class="clone">
-								<img src="/resource/음악앨범 1.jpg" />
-							</div>
-							<div class="clone">
-								<img src="/resource/음악앨범 2.jpg" />
-							</div>
+<!-- 							<div class="clone"> -->
+<!-- 								<img src="/resource/음악앨범 1.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>will it be spring tomorrow</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="clone"> -->
+<!-- 								<img src="/resource/음악앨범 2.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>interval of parallel</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
 							<!--   clone2     -->
 							<div class="clone">
 								<img src="/resource/음악앨범 1.jpg" />
+								<div class="text-overlay">
+                					<p>will it be spring tomorrow</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 2.jpg" />
+								<div class="text-overlay">
+                					<p>interval of parallel</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 3.jpg" />
+								<div class="text-overlay">
+                					<p>trigram</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 4.jpg" />
+								<div class="text-overlay">
+                					<p>Le Moment Disperse</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 5.jpg" />
+								<div class="text-overlay">
+                					<p>to the west</p>
+            					</div>
 							</div>
 							<div class="clone">
 								<img src="/resource/음악앨범 7.jpg" />
+								<div class="text-overlay">
+                					<p>Aire de Espana</p>
+            					</div>
 							</div>
-							<div class="clone">
-								<img src="/resource/음악앨범 1.jpg" />
-							</div>
-							<div class="clone">
-								<img src="/resource/음악앨범 2.jpg" />
-							</div>
+<!-- 							<div class="clone"> -->
+<!-- 								<img src="/resource/음악앨범 1.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>will it be spring tomorrow</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="clone"> -->
+<!-- 								<img src="/resource/음악앨범 2.jpg" /> -->
+<!-- 								<div class="text-overlay"> -->
+<!--                 					<p>interval of parallel</p> -->
+<!--             					</div> -->
+<!-- 							</div> -->
 						</div>
 					</div>
 				
