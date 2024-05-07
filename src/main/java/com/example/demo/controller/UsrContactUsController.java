@@ -48,6 +48,8 @@ public class UsrContactUsController {
 		ResultData<Integer> signupRd = contactUsService.signup(name, fullemail, cellphoneNum, concertdate, postcode, fulladdress, inquiry, check);
 		
 		contactUsService.sendsignupMessage(cellphoneNum, name);
+		contactUsService.sendsignupMessageToAdmin("01030841288", name);
+		
 		
 		return Ut.jsReplace("S-1", signupRd.getMsg(), "../contactUs/inquiry");
 	}
