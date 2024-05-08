@@ -18,6 +18,11 @@ padding-left: 70px;
 padding-right: 30px;
 }
 
+img {
+	padding: 60px 30px;
+	width: 50%;
+	height: 50%;
+}
 
 #sub.view .title {
 	border-bottom: 1px solid #d6d6d6;
@@ -54,6 +59,12 @@ margin-left: 5px;
 
 </style>
 
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
+
 <div id="sub" class="view">
 		<div class="buttons">
 			<c:if test="${press.userCanModify }">
@@ -70,10 +81,10 @@ margin-left: 5px;
 	</div>
 	<div class="text_w">
 	    <c:if test="${genfilecnt != 0}">
-				<img class="w-full rounded-xl" src="${rq.getImgUri(press.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}"
+				<img src="${rq.getImgUri(press.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}"
 							alt="" />
 		</c:if>
-		<p class="MsoNoSpacing" align="center" style="text-align: center">${press.getBody() }</p>
+		<p class="MsoNoSpacing mt-10" align="center" style="text-align: center">${press.getBody() }</p>
 	</div>
 </div>
 
