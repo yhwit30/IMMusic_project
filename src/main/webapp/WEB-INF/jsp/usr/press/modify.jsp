@@ -86,7 +86,7 @@
 					</div>
 					<div class="ml-1 mt-2 mb-1">작성일: ${press.regDate.substring(0,10) }</div>
 					<div class="ml-1 mt-2 mb-1">수정일: ${press.updateDate.substring(0,10) }</div>
-					<div class = "ml-1 mt-2 mb-1">첨부 이미지:
+					<div class = "ml-1 mt-2 mb-1">첨부이미지    
 						<input id="fileInput" placeholder="이미지를 선택해주세요" type="file" />
 					</div>
 				</div>
