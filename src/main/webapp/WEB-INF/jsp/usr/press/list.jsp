@@ -36,7 +36,7 @@ img {
 	vertical-align: middle;
 }
 
-.btn {
+.listButton {
 	color: #ffffff;
 	padding: 0.8rem;
 	font-size: 14px;
@@ -48,9 +48,10 @@ img {
 	cursor: pointer;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	background: transparent;
+	text-align: center;
 }
 
-.btn:hover {
+.listButton:hover {
 	background-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -130,10 +131,10 @@ img {
 	text-align: center;
 }
 
-/* .page {
-	color: #b3a78f;
+.btn-group{
+	display: block;
+	color: black;
 }
- */
 </style>
 
 <div class="greet-bg">
@@ -154,7 +155,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(0).getTitle() }</h2>
 					<p class="card_text">${press.get(0).getBody() }</p>
-					<a class="btn card_btn" href="detail?id=${press.get(0).getId() }">Read
+					<a class="listButton " href="detail?id=${press.get(0).getId() }">Read
 						More</a>
 				</div>
 			</div>
@@ -167,7 +168,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(1).getTitle() }</h2>
 					<p class="card_text">${press.get(1).getBody() }</p>
-					<a class="btn card_btn" href="detail?id=${press.get(1).getId() }">Read
+					<a class="listButton " href="detail?id=${press.get(1).getId() }">Read
 						More</a>
 				</div>
 			</div>
@@ -180,7 +181,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(2).getTitle() }</h2>
 					<p class="card_text">${press.get(2).getBody() }</p>
-					<a class="btn card_btn" href="detail?id=${press.get(2).getId() }">Read
+					<a class="listButton " href="detail?id=${press.get(2).getId() }">Read
 						More</a>
 				</div>
 			</div>
@@ -193,7 +194,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(3).getTitle() }</h2>
 					<p class="card_text">${press.get(3).getBody() }</p>
-					<a class="btn card_btn" href="detail?id=${press.get(3).getId() }">Read
+					<a class="listButton " href="detail?id=${press.get(3).getId() }">Read
 						More</a>
 				</div>
 			</div>
@@ -206,7 +207,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(4).getTitle() }</h2>
 					<p class="card_text">${press.get(4).getBody() }</p>
-					<a class="btn card_btn"
+					<a class="listButton "
 						href="detail?id=${press.get(4).getId() }">Read More</a>
 				</div>
 			</div>
@@ -219,7 +220,7 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(5).getTitle() }</h2>
 					<p class="card_text">${press.get(5).getBody() }</p>
-					<a class="btn card_btn"
+					<a class="listButton "
 						href="detail?id=${press.get(5).getId() }">Read More</a>
 				</div>
 			</div>
