@@ -182,10 +182,10 @@ img {
 					<img src="https://picsum.photos/500/300/?image=17">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">${press.get(3).getTitle() }</h2>
-					<p class="card_text">${press.get(3).getBody() }</p>
+					<h2 class="card_title">${press.get(4).getTitle() }</h2>
+					<p class="card_text">${press.get(4).getBody() }</p>
 					<a class="btn card_btn"
-						href="detail?id=${press.get(3).getId() }">Read More</a>
+						href="detail?id=${press.get(4).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
@@ -195,10 +195,10 @@ img {
 					<img src="https://picsum.photos/500/300/?image=2">
 				</div>
 				<div class="card_content">
-					<h2 class="card_title">${press.get(2).getTitle() }</h2>
-					<p class="card_text">${press.get(2).getBody() }</p>
+					<h2 class="card_title">${press.get(5).getTitle() }</h2>
+					<p class="card_text">${press.get(5).getBody() }</p>
 					<a class="btn card_btn"
-						href="detail?id=${press.get(2).getId() }">Read More</a>
+						href="detail?id=${press.get(5).getId() }">Read More</a>
 				</div>
 			</div>
 		</li>
