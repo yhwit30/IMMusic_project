@@ -90,7 +90,7 @@ img {
 
 .card_content {
 	padding: 1rem;
-	 background: linear-gradient(to bottom left, #b3a78f 20%, #f2ede2 80%); 
+	background: linear-gradient(to bottom left, #b3a78f 20%, #f2ede2 80%);
 	/* background: #b3a78f; */
 }
 
@@ -119,21 +119,26 @@ img {
 }
 </style>
 
+<div class="greet-bg">
+	<p>
+		IMMusic <br>& Art
+	</p>
+</div>
 
 <div class="main">
-
 
 	<ul class="cards">
 		<li class="cards_item">
 			<div class="card">
 				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=10">
+					<img src="${rq.getImgUri(press.get(0).getId())}"
+				onerror="${rq.profileFallbackImgOnErrorHtml}" alt="">
 				</div>
 				<div class="card_content">
 					<h2 class="card_title">${press.get(0).getTitle() }</h2>
 					<p class="card_text">${press.get(0).getBody() }</p>
-					<a class="btn card_btn"
-						href="detail?id=${press.get(0).getId() }">Read More</a>
+					<a class="btn card_btn" href="detail?id=${press.get(0).getId() }">Read
+						More</a>
 				</div>
 			</div>
 		</li>
@@ -145,8 +150,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(1).getTitle() }</h2>
 					<p class="card_text">${press.get(1).getBody() }</p>
-					<a class="btn card_btn"
-						href="detail?id=${press.get(1).getId() }">Read More</a>
+					<a class="btn card_btn" href="detail?id=${press.get(1).getId() }">Read
+						More</a>
 				</div>
 			</div>
 		</li>
@@ -158,8 +163,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(2).getTitle() }</h2>
 					<p class="card_text">${press.get(2).getBody() }</p>
-					<a class="btn card_btn"
-						href="detail?id=${press.get(2).getId() }">Read More</a>
+					<a class="btn card_btn" href="detail?id=${press.get(2).getId() }">Read
+						More</a>
 				</div>
 			</div>
 		</li>
@@ -171,8 +176,8 @@ img {
 				<div class="card_content">
 					<h2 class="card_title">${press.get(3).getTitle() }</h2>
 					<p class="card_text">${press.get(3).getBody() }</p>
-					<a class="btn card_btn"
-						href="detail?id=${press.get(3).getId() }">Read More</a>
+					<a class="btn card_btn" href="detail?id=${press.get(3).getId() }">Read
+						More</a>
 				</div>
 			</div>
 		</li>
