@@ -80,12 +80,24 @@ img {
 }
 
 .card {
+	width: 100%;
+	height: 100%;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.15);
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+}
+
+.card_image {
+	width: 100%;
+	height: 100%;
+}
+
+.card_image > img {
+	width: 100%;
+	height: 100%;
 }
 
 .card_content {
@@ -117,6 +129,11 @@ img {
 	margin-top: 35px;
 	text-align: center;
 }
+
+/* .page {
+	color: #b3a78f;
+}
+ */
 </style>
 
 <div class="greet-bg">
@@ -219,17 +236,17 @@ img {
 		<a
 			href="list??boardId=${boardId }&page=1&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">맨앞</a>
 		<c:if test="${page > pagination.pageSize }">
-			<a
+			<a 
 				href="list?boardId=${boardId }&page=${pagination.from - 1}&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">◀</a>
 		</c:if>
 
 		<c:forEach begin="${pagination.from }" end="${pagination.end}" var="i">
-			<a class="btn btn-sm ${page == i ? 'btn-active' : '' }"
+			<a class=" btn btn-sm ${page == i ? 'btn-active' : '' }"
 				href="?boardId=${boardId }&page=${i }&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">${i }</a>
 		</c:forEach>
 
 		<c:if test="${pagination.end < pagination.totalPage }">
-			<a
+			<a 
 				href="list?boardId=${boardId }&page=${pagination.from + pagination.pageSize}&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">▶</a>
 		</c:if>
 		<a
