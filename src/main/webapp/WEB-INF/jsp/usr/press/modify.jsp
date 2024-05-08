@@ -75,6 +75,7 @@
 
 <section>
 	<form action="../press/doModify" method="POST" onsubmit="pressModify__submit(this); return false;">
+		<input type="hidden" name="id" value="${press.id }" >
 		<input type="hidden" name="body">
 		<div class="post-container">
 			<div style="display: flex; justify-content: space-between;">
