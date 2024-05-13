@@ -27,4 +27,5 @@ https://ahead-addition-51b.notion.site/IMMusic-Art-0d28f70b6b9f4ad19fff72dd064f9
 
 ## 로컬실행 설명서 
 
-[개발설명서.pdf](https://github.com/yhwit30/IMMusic_project/files/15291403/default.pdf)
+[IMmusicnArt개발설명서.pdf](https://github.com/yhwit30/IMMusic_project/files/15291440/IMmusicnArt.pdf)
+
