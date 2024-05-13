@@ -23,4 +23,6 @@
 
 https://ahead-addition-51b.notion.site/IMMusic-Art-0d28f70b6b9f4ad19fff72dd064f969d
 
+## 사용설명서 
 
+[개발설명서.pdf](https://github.com/yhwit30/IMMusic_project/files/15291403/default.pdf)
