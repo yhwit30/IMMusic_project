@@ -1,6 +1,9 @@
 # 클래식 음악가 소속사 홈페이지
 <br>
 
+![제목 없음](https://github.com/yhwit30/IMMusic_project/assets/153142837/fc977713-3b03-4b3d-88c1-4743981e6ae7)
+
+
 ## 팀프로젝트
 <p>
 구성원 : 원유현(팀장) 등 4명
