@@ -108,7 +108,6 @@
 	font-weight: normal;
 	font-size: 18px;
 	text-transform: uppercase;
-	color: #fff;
 }
 </style>
 
@@ -169,12 +168,17 @@
 					'DOMContentLoaded',
 					function() {
 						var headBg = document.querySelector('.head-bg');
-						var headText = document.querySelector('.head-text-style');
+						var headText = document
+								.querySelector('.head-text-style');
 						var scrolled = false;
 
 						// 초기 상태에서 배경을 투명하게 설정
 						headBg.style.backgroundColor = 'transparent';
 						headBg.style.borderBottom = 'none';
+
+						if (window.location.pathname === "/usr/home/main") {
+							headText.style.color = '#fff';
+						}
 
 						window
 								.addEventListener(
@@ -186,7 +190,12 @@
 												headBg.style.backgroundColor = 'transparent';
 												headBg.style.borderBottom = 'none';
 												headBg.style.boxShadow = 'none';
-												headText.style.color = '#fff';
+												if (window.location.pathname === "/usr/home/main") {
+													headText.style.color = '#fff';
+												} else {
+													headText.style.color = 'black';
+												}
+
 												// 스크롤이 0일 때 scrolled 변수 초기화
 												scrolled = false;
 											} else if (!scrolled) {
@@ -203,15 +212,17 @@
 
 
 
+
 </head>
 
 <c:choose>
-    <c:when test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
-        <body class="main-page">
-    </c:when>
-    <c:otherwise>
-        <body>
-    </c:otherwise>
+	<c:when
+		test="${fn:contains(pageContext.request.requestURI, '/usr/home/main')}">
+		<body class="main-page">
+	</c:when>
+	<c:otherwise>
+		<body>
+	</c:otherwise>
 </c:choose>
 
 <c:if
