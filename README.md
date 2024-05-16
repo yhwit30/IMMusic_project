@@ -28,7 +28,7 @@
 
 <br>
 
-- 개발자 명함 이스터에그 페이지
+- 개발자 명함 이스터에그 페이지 (http://[도메인]/usr/contactUs/contactUs)
 
 ![image](https://github.com/yhwit30/IMMusic_project/assets/153142837/56fd6537-30e3-4f7c-90d8-261a50737814)
 
