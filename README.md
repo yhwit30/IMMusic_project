@@ -40,7 +40,7 @@
 
 <br>
 
-## 자세한 내용 : 노션
+## 자세한 내용 : 노션(팀장)
 
 https://ahead-addition-51b.notion.site/IMMusic-Art-0d28f70b6b9f4ad19fff72dd064f969d
 
