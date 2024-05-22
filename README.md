@@ -21,18 +21,19 @@
 
 <br>
 
-### 개발자 포트폴리오
+### 개발자 벨로그
 <p>
-- 원유현 : https://ahead-addition-51b.notion.site/7a0c476ab6b844ee92f9c8be01ac1a6c
+- 원유현 : https://velog.io/@yhwit30/posts
 </p>
 <p>
-- 오효주 :
+- 오효주 : https://velog.io/@ohyo555/posts
 </p>
 <p>
-- 강민창 : 
+- 강민창 : https://velog.io/@itkang0219/posts
 </p>
 <p>
-- 신우철 : 
+- 신우철 : https://velog.io/@shinwc0808/posts 
+
 </p>
 
 <br>
