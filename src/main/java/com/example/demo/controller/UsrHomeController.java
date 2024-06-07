@@ -15,27 +15,24 @@ import com.example.demo.vo.Rq;
 public class UsrHomeController {
 
 	@Autowired
-	private Rq rq;
-	
-	@Autowired
 	private UsrCrawlingController ucc;
 
 	@RequestMapping("/usr/home/main")
 	public String showMain() {
 
-		return "/usr/home/main";
+		return "usr/home/main";
 	}
 	
 	@RequestMapping("/usr/home/main2")
 	public String showMain2() {
 
-		return "/usr/home/main2";
+		return "usr/home/main2";
 	}
 	
 	@RequestMapping("/")
 	public String showRoot() {
 
-		return "redirect:/usr/home/main";
+		return "redirect:usr/home/main";
 	}
 	
 //	크롤링 ajx

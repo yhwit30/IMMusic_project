@@ -12,9 +12,10 @@
 	text-align: right;
 }
 
+
 #sub.view {
-	padding-left: 70px;
-	padding-right: 30px;
+	margin: 0 70px ;
+	background-color: rgba(255,255,255,0.8);
 }
 
 .detailImage {
@@ -98,7 +99,7 @@
 </div>
 
 <div class="text-center mb-10">
-	<a class="button" href="list">list로 가기</a>
+	<a class="button" href="list">목록으로 가기</a>
 </div>
 
 <%@ include file="../common/foot.jspf"%>

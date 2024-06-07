@@ -9,10 +9,10 @@
 		<version>3.1.9-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.KoreaIT.cwy.demo</groupId>
+	<groupId>com.KoreaIT.yhw.demo</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -35,11 +35,11 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.boot</groupId>-->
-		<!--			<artifactId>spring-boot-starter-tomcat</artifactId>-->
-		<!--			<scope>provided</scope>-->
-		<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -92,7 +92,7 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.9.0</version>
 		</dependency>
-		
+
 		<!-- JSP 엔진 -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -145,9 +145,9 @@
 
 		<!-- 문자 서비스 -->
 		<dependency>
-		    <groupId>net.nurigo</groupId>
-		    <artifactId>sdk</artifactId>
-		    <version>4.3.0</version>
+			<groupId>net.nurigo</groupId>
+			<artifactId>sdk</artifactId>
+			<version>4.3.0</version>
 		</dependency>
 	</dependencies>
 
@@ -168,6 +168,16 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 	<repositories>

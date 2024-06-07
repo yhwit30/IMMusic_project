@@ -1699,48 +1699,48 @@ tr>td {
 
 <!-- 블로그 크롤링 -->
 <script>
-	$(document)
-			.ready(
-					function() {
-						// AJAX 요청을 보냅니다.
-						$
-								.ajax({
-									url : "/usr/home/crawl",
-									type : "GET",
-									success : function(data) {
-										console.log("data: " + data);
+// 	$(document)
+// 			.ready(
+// 					function() {
+// 						// AJAX 요청을 보냅니다.
+// 						$
+// 								.ajax({
+// 									url : "/usr/home/crawl",
+// 									type : "GET",
+// 									success : function(data) {
+// 										console.log("data: " + data);
 
-										// 받은 데이터를 이용하여 HTML을 생성합니다.
-										var html = "";
-										data
-												.forEach(function(blog) {
-													var postDate = blog.post_date;
-													var postTitle = blog.post_title;
-													var postContent = blog.post_content;
-													var postUrl = blog.post_url;
+// 										// 받은 데이터를 이용하여 HTML을 생성합니다.
+// 										var html = "";
+// 										data
+// 												.forEach(function(blog) {
+// 													var postDate = blog.post_date;
+// 													var postTitle = blog.post_title;
+// 													var postContent = blog.post_content;
+// 													var postUrl = blog.post_url;
 
-													// 생성한 HTML을 추가합니다.
-													html += "<tr class='mb-5' onclick='redirectToPost(\""
-															+ postUrl + "\")'>";
-													html += "<td>" + postDate
-															+ "</td>";
-													html += "<td>" + postTitle
-															+ "</td>";
-													html += "<td>"
-															+ postContent
-															+ "</td>";
-													html += "</tr>";
-												});
+// 													// 생성한 HTML을 추가합니다.
+// 													html += "<tr class='mb-5' onclick='redirectToPost(\""
+// 															+ postUrl + "\")'>";
+// 													html += "<td>" + postDate
+// 															+ "</td>";
+// 													html += "<td>" + postTitle
+// 															+ "</td>";
+// 													html += "<td>"
+// 															+ postContent
+// 															+ "</td>";
+// 													html += "</tr>";
+// 												});
 
-										// 생성한 HTML을 해당 요소에 추가합니다.
-										$("#blogContent").html(html);
-									},
-									error : function(xhr, status, error) {
-										console.error("AJAX 요청 실패:", status,
-												error);
-									}
-								});
-					});
+// 										// 생성한 HTML을 해당 요소에 추가합니다.
+// 										$("#blogContent").html(html);
+// 									},
+// 									error : function(xhr, status, error) {
+// 										console.error("AJAX 요청 실패:", status,
+// 												error);
+// 									}
+// 								});
+// 					});
 </script>
 
 

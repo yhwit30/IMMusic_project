@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="#{board.code } PRESS LIST"></c:set>
 <%@ include file="../common/head.jspf"%>
@@ -87,7 +86,7 @@ img {
 	border-radius: 10px;
 	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.15);
 	display: flex;
-	flex-direction: column;
+/* 	flex-direction: column; */
 	overflow: hidden;
 }
 
@@ -96,7 +95,7 @@ img {
 	height: 100%;
 }
 
-.card_image > img {
+.card_image>img {
 	width: 100%;
 	height: 100%;
 }
@@ -131,7 +130,7 @@ img {
 	text-align: center;
 }
 
-.btn-group{
+.btn-group {
 	display: block;
 	color: black;
 }
@@ -139,92 +138,28 @@ img {
 
 <div class="greet-bg">
 	<p>
-		IMMusic <br>& Art
+		IMMusic
+		<br>
+		& Art
 	</p>
 </div>
 
 <div class="main">
-
 	<ul class="cards">
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="${rq.getImgUri(press.get(0).getId())}"
-				onerror="${rq.profileFallbackImgOnErrorHtml}" alt="">
+		<c:forEach var="press" items="${press }">
+			<li class="cards_item">
+				<div class="card">
+					<div class="card_image">
+						<img src="${rq.getImgUri(press.id)}" onerror="${rq.profileFallbackImgOnErrorHtml}" alt="">
+					</div>
+					<div class="card_content">
+						<h2 class="card_title">${press.title }</h2>
+						<p class="card_text">${press.body }</p>
+						<a class="listButton " href="detail?id=${press.id }">Read More</a>
+					</div>
 				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(0).getTitle() }</h2>
-					<p class="card_text">${press.get(0).getBody() }</p>
-					<a class="listButton " href="detail?id=${press.get(0).getId() }">Read
-						More</a>
-				</div>
-			</div>
-		</li>
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=5">
-				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(1).getTitle() }</h2>
-					<p class="card_text">${press.get(1).getBody() }</p>
-					<a class="listButton " href="detail?id=${press.get(1).getId() }">Read
-						More</a>
-				</div>
-			</div>
-		</li>
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=11">
-				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(2).getTitle() }</h2>
-					<p class="card_text">${press.get(2).getBody() }</p>
-					<a class="listButton " href="detail?id=${press.get(2).getId() }">Read
-						More</a>
-				</div>
-			</div>
-		</li>
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=14">
-				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(3).getTitle() }</h2>
-					<p class="card_text">${press.get(3).getBody() }</p>
-					<a class="listButton " href="detail?id=${press.get(3).getId() }">Read
-						More</a>
-				</div>
-			</div>
-		</li>
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=17">
-				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(4).getTitle() }</h2>
-					<p class="card_text">${press.get(4).getBody() }</p>
-					<a class="listButton "
-						href="detail?id=${press.get(4).getId() }">Read More</a>
-				</div>
-			</div>
-		</li>
-		<li class="cards_item">
-			<div class="card">
-				<div class="card_image">
-					<img src="https://picsum.photos/500/300/?image=2">
-				</div>
-				<div class="card_content">
-					<h2 class="card_title">${press.get(5).getTitle() }</h2>
-					<p class="card_text">${press.get(5).getBody() }</p>
-					<a class="listButton "
-						href="detail?id=${press.get(5).getId() }">Read More</a>
-				</div>
-			</div>
-		</li>
+			</li>
+		</c:forEach>
 	</ul>
 </div>
 
@@ -237,7 +172,7 @@ img {
 		<a
 			href="list??boardId=${boardId }&page=1&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">맨앞</a>
 		<c:if test="${page > pagination.pageSize }">
-			<a 
+			<a
 				href="list?boardId=${boardId }&page=${pagination.from - 1}&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">◀</a>
 		</c:if>
 
@@ -247,7 +182,7 @@ img {
 		</c:forEach>
 
 		<c:if test="${pagination.end < pagination.totalPage }">
-			<a 
+			<a
 				href="list?boardId=${boardId }&page=${pagination.from + pagination.pageSize}&searchKeywordTypeCode=${param.searchKeywordTypeCode}&searchKeyword=${param.searchKeyword}">▶</a>
 		</c:if>
 		<a
