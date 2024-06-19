@@ -913,12 +913,12 @@ tr>td {
 				<div class="section_heder">
 					<h3 class="section_suptitle">IMMusic & Art</h3>
 					<h2 class="section_title">주요 뉴스 및 공연 소식</h2>
-					<div class="section__Text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Ab nulla recusandae quam dolor quod sapiente doloremque
-							asperiores quisquam amet quaerat nam officiis odio provident
-							aspernatur natus at ex laudantium debitis.</p>
-					</div>
+<!-- 					<div class="section__Text"> -->
+<!-- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. -->
+<!-- 							Ab nulla recusandae quam dolor quod sapiente doloremque -->
+<!-- 							asperiores quisquam amet quaerat nam officiis odio provident -->
+<!-- 							aspernatur natus at ex laudantium debitis.</p> -->
+<!-- 					</div> -->
 				</div>
 
 				<div class="cards">
@@ -966,176 +966,7 @@ tr>td {
 				<div class="section_heder">
 					<h3 class="section_suptitle">Who we are</h3>
 					<h2 class="section_title">아티스트</h2>
-					<div class="section__Text">
-													<p>“비바기타앙상블”은 2012년부터 기타리스트 허원경이 이끄는 앙상블 팀으로 서울대학교 동문으로 이루어진 클래식기타 연주팀이다.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Minima aspernatur numquam dolorem nostrum veritatis maxime iure
-							ullam vitae hic consequuntur quia molestiae consectetur. Incidunt
-							deserunt recusandae vel eveniet aspernatur delectus.</p>
-					</div>
 				</div>
-				
-<!-- 				<div class="artist-cards"> -->
-<!-- 					<div class="cards1"> -->
-<!-- 						<div class="card__item1"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<a href="/usr/artist3"> <img src="/resource/허원경 프로필사진.png" -->
-<!-- 										alt="Изображение"></a> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name"> -->
-<!-- 									<a class=" hover:text-gray-300" href="/usr/artist3">허원경</a> -->
-<!-- 								</div> -->
-<!-- 								<div class="card-prof">리더(클래식 기타)</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-
-<!-- 						<div class="card__item2"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<img src="/resource/구보근 프로필사진.png" alt="Изображение"> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name">구본근</div> -->
-<!-- 								<div class="card-prof">단원(클래식 기타)</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-
-
-<!-- 						<div class="card__item3"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<img src="/resource/원유현 프로필사진.png" alt="Изображение"> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name">원유현</div> -->
-<!-- 								<div class="card-prof">단원(클래식 기타)</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-
-<!-- 				<div class="artist-cards"> -->
-<!-- 					<div class="cards1"> -->
-<!-- 						<div class="card__item1"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<img src="/resource/임재민 프로필사진2.png" alt="Изображение"> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name">임재민</div> -->
-<!-- 								<div class="card-prof">단원(클래식 기타)</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-
-<!-- 						<div class="card__item2"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<img src="/resource/허대욱 프로필사진.jpg" alt="Изображение"> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name">허대욱</div> -->
-<!-- 								<div class="card-prof">단원(재즈 피아노)</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-
-<!-- 						<div class="card__item3"> -->
-<!-- 							<div class="inner-card"> -->
-<!-- 								<div class="card-imag"> -->
-<!-- 									<img src="/resource/허병훈 프로필사진.jpg" alt="Изображение"> -->
-<!-- 									<div class="card_text"> -->
-<!-- 										<div class="social"> -->
-<!-- 											<a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-facebook-f"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-twitter"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-youtube"></i> -->
-<!-- 											</a> <a href="#" class="social_iteam" target="_blank"> <i -->
-<!-- 												class="fab fa-instagram"></i> -->
-<!-- 											</a> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="card-info"> -->
-<!-- 								<div class="card-name">허병훈</div> -->
-<!-- 								<div class="card-prof">고문</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
 
 				<div id="testbox2">
 					<div class="test2">
@@ -1297,12 +1128,6 @@ tr>td {
 				<div class="section_heder">
 					<h3 class="section_suptitle">Albums</h3>
 					<h2 class="section_title">앨범</h2>
-					<div class="section__Text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate iure
-							quis corrupti totam, nesciunt nemo voluptatem possimus doloribus
-							similique perferendis blanditiis architecto? Ut!</p>
-					</div>
 				</div>
 				
 				<div id="testbox">
@@ -1504,12 +1329,6 @@ tr>td {
 				<div class="section_heder">
 					<h3 class="section_suptitle">What we do</h3>
 					<h2 class="section_title">공연 및 무대사진</h2>
-					<div class="section__Text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Dolorum atque, nihil impedit laboriosam ullam ipsa voluptate iure
-							quis corrupti totam, nesciunt nemo voluptatem possimus doloribus
-							similique perferendis blanditiis architecto? Ut!</p>
-					</div>
 				</div>
 			</div>
 			<div class="works">
@@ -1699,48 +1518,48 @@ tr>td {
 
 <!-- 블로그 크롤링 -->
 <script>
-// 	$(document)
-// 			.ready(
-// 					function() {
-// 						// AJAX 요청을 보냅니다.
-// 						$
-// 								.ajax({
-// 									url : "/usr/home/crawl",
-// 									type : "GET",
-// 									success : function(data) {
-// 										console.log("data: " + data);
+	$(document)
+			.ready(
+					function() {
+						// AJAX 요청을 보냅니다.
+						$
+								.ajax({
+									url : "/usr/home/crawl",
+									type : "GET",
+									success : function(data) {
+										console.log("data: " + data);
 
-// 										// 받은 데이터를 이용하여 HTML을 생성합니다.
-// 										var html = "";
-// 										data
-// 												.forEach(function(blog) {
-// 													var postDate = blog.post_date;
-// 													var postTitle = blog.post_title;
-// 													var postContent = blog.post_content;
-// 													var postUrl = blog.post_url;
+										// 받은 데이터를 이용하여 HTML을 생성합니다.
+										var html = "";
+										data
+												.forEach(function(blog) {
+													var postDate = blog.post_date;
+													var postTitle = blog.post_title;
+													var postContent = blog.post_content;
+													var postUrl = blog.post_url;
 
-// 													// 생성한 HTML을 추가합니다.
-// 													html += "<tr class='mb-5' onclick='redirectToPost(\""
-// 															+ postUrl + "\")'>";
-// 													html += "<td>" + postDate
-// 															+ "</td>";
-// 													html += "<td>" + postTitle
-// 															+ "</td>";
-// 													html += "<td>"
-// 															+ postContent
-// 															+ "</td>";
-// 													html += "</tr>";
-// 												});
+													// 생성한 HTML을 추가합니다.
+													html += "<tr class='mb-5' onclick='redirectToPost(\""
+															+ postUrl + "\")'>";
+													html += "<td>" + postDate
+															+ "</td>";
+													html += "<td>" + postTitle
+															+ "</td>";
+													html += "<td>"
+															+ postContent
+															+ "</td>";
+													html += "</tr>";
+												});
 
-// 										// 생성한 HTML을 해당 요소에 추가합니다.
-// 										$("#blogContent").html(html);
-// 									},
-// 									error : function(xhr, status, error) {
-// 										console.error("AJAX 요청 실패:", status,
-// 												error);
-// 									}
-// 								});
-// 					});
+										// 생성한 HTML을 해당 요소에 추가합니다.
+										$("#blogContent").html(html);
+									},
+									error : function(xhr, status, error) {
+										console.error("AJAX 요청 실패:", status,
+												error);
+									}
+								});
+					});
 </script>
 
 
