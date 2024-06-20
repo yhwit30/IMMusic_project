@@ -1,0 +1,39 @@
+server:
+  port: 8081
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 
+#    password: 앱 비밀번호
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/IMMusicDB
+    username: IMMusicUser
+    password: IMMusicUser_y1Z290
+mybatis:
+ type-aliases-package: com.example.demo.vo
+
+custom:
+  siteName: 2024_01_Spring_AM
+  siteMainUri: https://immusicnart.com
+  emailFrom: no-reply@localhost
+  emailFromName: 2024_01_Spring_AM
+
+  genFileDirPath: /home/ubuntu/immusicnart/downloads
+
+  
